@@ -1,0 +1,187 @@
+/*=========================
+ 	FAQ's PAGE STYLING
+===========================*/
+.faqs-section {
+  background: url(../img/second-line.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.faqsDiv {
+  padding: 30px 0 60px;
+  border-top: 1px solid rgba(0, 0, 0, 10%);
+  border-bottom: 1px solid rgba(0, 0, 0, 10%);
+  margin: 30px 0;
+  overflow: auto;
+}
+
+.faqsDiv .tabs {
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+
+.faqsWrap .collapsible-header {
+  border-left: 3px solid #1e3a6d;
+  box-shadow: 0 0 4px #ddd;
+  align-items: center;
+  background: #f1f5fe;
+  transition: all 0.3s;
+  padding: 1px 2rem;
+}
+
+.collapsible-header strong {
+  display: block;
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--blue-color);
+}
+
+.collapsible-header {
+  padding: 2rem;
+}
+
+.collapsible-header span {
+  color: #1e3a6d;
+  font-weight: 700;
+  padding-right: 30px;
+  font-size: 31px;
+}
+
+.faqsDiv .collapsible {
+  border: none;
+  box-shadow: none;
+}
+
+.faqsDiv .collapsible li {
+  margin-bottom: 30px;
+}
+
+.collapsible-body p {
+  display: inline-block;
+  margin-left: 8px;
+  flex: 0 0 90%;
+  max-width: 90%;
+  vertical-align: middle;
+  margin: 0px 0;
+  line-height: 1.7;
+}
+
+.collapsible-body span {
+  flex: 0 0 10%;
+  max-width: 10%;
+  vertical-align: middle;
+  /* color: #000; */
+  font-weight: 500;
+  padding-right: 30px;
+  /* font-size: 31px; */
+}
+
+.collapsible-body {
+  border-left: 2px solid #60d8ca;
+  box-shadow: 0 0 4px #ddd;
+  align-items: center;
+  background: #fff;
+}
+
+.faqsDiv .tabs .tab a {
+  color: var(--text-light);
+}
+
+.faqsDiv .tabs .tab a.active {
+  color: var(--block-color);
+  font-weight: 700;
+}
+
+.faqsDiv .tabs .indicator {
+  background-color: var(--mint-color);
+}
+
+.faqsDiv .tabs .tab a:focus,
+.faqsDiv .tabs .tab a:focus.active {
+  background: transparent;
+}
+
+.faqsEnd {
+  padding: 70px 0;
+}
+
+.collapsible-body {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+/* ========== start pagination css ========== */
+.pages-num .pagination li a {
+  text-align: center;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.pages-num .pagination li:first-child a,
+.pagination li:last-child a {
+  padding: 0;
+}
+
+.pages-num .pagination li:first-child:hover,
+.pagination li:last-child:hover {
+  background: #24B3BA;
+  color: var(--white-color);
+}
+
+.pages-num .pagination li:first-child,
+.pages-num .pagination li:last-child {
+  width: 40px;
+  border-radius: 50px;
+  box-shadow: 0 0 6px #ccc;
+  transition: all 0.3s;
+  height: 40px;
+}
+
+.pages-num .pagination {
+  text-align: center;
+  margin: 0;
+}
+
+.pages-num .pagination li.active {
+  background-color: transparent;
+  color: #039be5 !important;
+}
+
+.pages-num .pagination li.active a {
+  color: #24B3BA;
+}
+
+.pages-num .pagination li a:hover {
+  color: #24B3BA;
+}
+
+.pages-num .pagination li:first-child a:hover,
+.pages-num .pagination li:last-child a:hover {
+  color: var(--white-color);
+}
+
+.pages-num .pagination li i {
+  height: 40px;
+  line-height: 40px;
+  font-size: 35px;
+}
+
+.collapsible-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 17px;
+}
+
+a.viewBtn.clickButton {
+  background-color: var(--blue-color);
+  border-radius: 50px;
+  color: var(--white-color);
+  margin-right: unset;
+  padding: 9px 35px 9px 35px;
+}
+
+/* ========== end pagination css ========== */

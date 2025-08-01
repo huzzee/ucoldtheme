@@ -1,0 +1,784 @@
+/* Shared Styles */
+
+/* Experience Tabs */
+section.experience-inner-tabDetails {
+  padding: 0px 15px;
+}
+
+.tab-container {
+  border-bottom: 1px solid #a6a6a8;
+  display: flex;
+  padding: 20px 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tab-button {
+  border: none;
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  color: var(--blue-color);
+  font-weight: 600;
+}
+
+.tab-content {
+  display: none;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+
+.tab-Content .tab-content .tabContent-Heading span.tabContent-Nights {
+  color: var(--blue-color);
+}
+
+.tab-Content .tab-content .starsContent {
+  display: flex;
+  align-items: center;
+}
+
+.tab-Content .tab-content .starsContent .stars-row {
+  display: flex;
+  align-items: center;
+}
+
+.tab-Content .tab-content .starsContent .stars-row i {
+  color: gold;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.tab-Content .tab-content .starsContent span {
+  color: var(--text-color);
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Tour Package Amenities */
+
+.tourPackage-Amenities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.tourPackage-Amenities .package-amenity {
+  display: flex;
+  align-items: center;
+  flex-basis: calc(50% - 7.5px);
+  margin-bottom: 15px;
+}
+
+.tourPackage-Amenities.amenitySpacing .package-amenity:first-child {
+  display: none;
+}
+
+.tourPackage-Amenities .package-amenity:nth-child(3),
+.tourPackage-Amenities .package-amenity:nth-child(4),
+.tourPackage-Amenities.amenitySpacing {
+  padding-top: 10px;
+}
+
+.tourPackage-Amenities.amenitySpacing .package-amenity:last-child {
+  padding-top: unset;
+}
+
+.tourPackage-Amenities .package-amenity span.packageSpan-Detail {
+  padding-left: 10px;
+}
+
+/* Experience Tour Detail */
+
+.experience-tour-detail {
+  background-image: url(../img/experiences-tour/tour-detail-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 15px;
+}
+
+.experience-tour-detail .bannerButtons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.experience-tour-detail .tour-video-button {
+  margin-left: 10px;
+}
+
+.experience-tour-detail .tour-gallery-button,
+.experience-tour-detail .tour-video-button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.experience-tour-detail .tour-gallery-button button,
+.experience-tour-detail .tour-video-button button {
+  background-color: var(--blue-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 7px 20px;
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
+.experience-tour-detail .tour-gallery-button button span,
+.experience-tour-detail .tour-video-button button span {
+  margin-left: 10px;
+}
+
+.border-seperator {
+  border-bottom: 1px solid #a6a6a8;
+  margin: 20px 0px 40px 0px;
+}
+
+.experience-inner-tabDetails .tab-container button:first-child {
+  padding-left: unset;
+}
+
+.experience-inner-tabDetails .tab-container button:hover,
+.experience-inner-tabDetails .tab-container button:focus,
+.experience-inner-tabDetails .tab-container button:active {
+  background-color: transparent;
+}
+
+.tab-Content .package-detail-content h3 {
+  color: var(--blue-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tab-Content .package-detail-content p {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.tab-Content .packageSteps {
+  padding-left: 10px;
+}
+
+.tab-Content .packageSteps li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.tab-Content .packageSteps li span {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  padding-left: 15px;
+}
+
+/* Right Column */
+.experience-inner-tabDetails .tab-Content .hotel-bookingForm .booking-form {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 20px 30px 50px 30px;
+}
+
+.hotel-bookingForm .booking-form h3 {
+  color: var(--blue-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.booking-form-seperator {
+  border-bottom: 1px solid #a6a6a8;
+  margin: 30px 0px 30px 0px;
+}
+
+.booking-form .experience-package-price {
+  display: flex;
+  align-items: center;
+}
+
+.booking-form .experience-package-price .currencyPrice {
+  display: flex;
+  align-items: baseline;
+  padding-left: 20px;
+}
+
+.booking-form .experience-package-price .overline-price span {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--blue-color);
+  padding-left: 15px;
+}
+
+.booking-form .experience-package-price .overline-price strong {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--blue-color);
+  padding-left: 5px;
+}
+
+/* .booking-form .experience-package-price .updatedPrice {
+  padding-left: 20px;
+} */
+
+/* .booking-form .experience-package-price .updatedPrice span {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--blue-color);
+}
+
+.booking-form .experience-package-price .updatedPrice strong {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--blue-color);
+  padding-left: ;
+} */
+
+.booking-form-seperator-two {
+  border-bottom: 1px solid #a6a6a8;
+  margin: 25px 0px 30px 0px;
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-select {
+  border: 1px solid #ced4da;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  right: 0;
+  z-index: 1000;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  width: 81%;
+  max-width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #212529;
+}
+
+.custom-dropdown .date-dropdown,
+.custom-dropdown .roomType-dropdown,
+.custom-dropdown .select-adult-child {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-dropdown .date-dropdown img,
+.custom-dropdown .roomType-dropdown img,
+.custom-dropdown .select-adult-child label {
+  margin-right: 20px;
+  width: 30px;
+}
+
+.custom-dropdown.dateDropdown {
+  margin-top: 10px;
+}
+
+.custom-dropdown.roomDropdown {
+  margin-bottom: 10px;
+}
+
+.vertical-line {
+  border-left: 1px solid #a6a6a8;
+  height: 40px;
+  margin: 20px 0px 20px 18px;
+}
+
+/* Select Adult and Child Dropdown */
+.select-adult {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.select-adult-child label {
+  margin-right: 10px;
+}
+
+/* .dropdown-menu.adult-dropdown-menu,
+.dropdown-menu.child-dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 50px;
+} */
+
+.form-group.date-placeholder {
+  padding: unset;
+}
+
+.form-group.date-placeholder input[type="text"]::placeholder {
+  color: var(--black-color);
+}
+
+.custom-dropdown.selectRoom-Dropdown {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.selectRoom-Dropdown .display-select-inline {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 80%;
+}
+
+.selectRoom-Dropdown .select-adult,
+.selectRoom-Dropdown .select-child {
+  max-width: 100%;
+  width: 49%;
+}
+
+.custom-dropdown button {
+  background-image: url(../img/experiences-tour/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px);
+}
+
+.custom-dropdown .selectRoom-Dropdown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom-dropdown .dateInput-field {
+  padding: unset;
+}
+
+.custom-dropdown .roomType-dropdown select {
+  padding: 12px 15px 12px 15px;
+}
+
+.form-group.book-button {
+  padding: unset;
+}
+
+.form-group button.bookButton {
+  width: 100%;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 11px 15px 11px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.room-select-seperator {
+  border-bottom: 1px solid #a6a6a8;
+  margin: 30px 0px 30px 0px;
+}
+
+/* Datepicker */
+.date-picker-popup {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #f5f5f5;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust width as needed */
+  z-index: 99;
+}
+
+.dateInput-field {
+  position: relative;
+}
+
+#datepicker {
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 8px; */
+  border: 1px solid #ccc;
+}
+
+.calendar {
+  padding: 10px;
+}
+
+.month-year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#currentMonthYear {
+  font-size: 18px;
+}
+
+#prevMonth,
+#nextMonth {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+.days,
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  justify-content: center;
+  align-items: center; /* Add this line for vertical alignment */
+}
+
+.day,
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.date:hover {
+  background-color: #e0e0e0;
+}
+
+.date-picker-popup .month-dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 50%;
+}
+
+.date-picker-popup .month-dropdown select.month-select,
+.date-picker-popup .month-dropdown select.year-select {
+  width: 45%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-size: 12px;
+  background-position: calc(100% - 10px);
+}
+
+.date-picker-popup .dates .disabled.current-date {
+  background-color: var(
+    --blue-color
+  ); /* Change this to your desired background color */
+  color: var(--white-color); /* Change this to your desired text color */
+}
+
+.date-picker-popup .month-dropdown select.year-select {
+  width: 50%;
+}
+
+.date-picker-popup .dates .disabled {
+  color: #a6a6a8;
+}
+
+.hidden-option {
+  display: none;
+}
+
+/* FAQ's */
+.faq-spacing {
+  margin-top: 30px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-spacing .faq-question-container span {
+  padding-left: 15px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 20px 20px 20px 20px;
+}
+
+.faq-answer.active {
+  display: block;
+}
+
+.faq-spacing .faq-answer.active li {
+  color: var(--text-color);
+  padding-bottom: 10px;
+}
+
+/* Add styles for the circle icons */
+.icon {
+  font-size: 16px;
+  margin-left: 10px;
+  transition: border-color 0.3s; /* Add a smooth border color transition */
+}
+
+.faq-question.active span,
+.faq-question-container.active .faq-question {
+  color: var(--blue-color); /* Change to the desired color for active heading */
+}
+
+.icon.active.fas.fa-minus {
+  color: var(--blue-color); /* Change to the desired color for active icon */
+}
+
+/* Images */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally within the container */
+  margin-top: 30px;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.small-images {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of each row */
+}
+
+.small-images img {
+  /* width: calc(24% - 10px); */
+
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Map */
+#Map iframe {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+  .experience-tour-detail {
+    height: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tourPackage-Amenities {
+    flex-wrap: nowrap;
+  }
+
+  .tourPackage-Amenities .package-amenity:last-child {
+    display: none;
+  }
+
+  .tourPackage-Amenities.amenitySpacing .package-amenity:first-child,
+  .tourPackage-Amenities.amenitySpacing .package-amenity:last-child {
+    display: flex;
+  }
+
+  .tourPackage-Amenities .package-amenity:nth-child(3),
+  .tourPackage-Amenities .package-amenity:nth-child(4) {
+    padding-top: unset;
+  }
+
+  .custom-dropdown .dropdown-menu {
+    width: 92%;
+  }
+
+  .selectRoom-Dropdown .display-select-inline {
+    width: 90%;
+  }
+
+  /* .custom-dropdown .roomType-dropdown select {
+    padding: 14px 15px 13px 15px;
+  } */
+}
+
+@media (min-width: 992px) {
+  .experience-tour-detail {
+    height: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  section.experience-inner-tabDetails {
+    padding: 0px 25px 60px 25px;
+  }
+
+  .tab-Content,
+  .tourPackage-Amenities {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tab-Content .tab-content h3.tabContent-Heading {
+    color: var(--black-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .tab-Content .tabs-left-content {
+    width: 58%;
+  }
+
+  .tab-Content .hotel-bookingForm {
+    width: 38%;
+  }
+
+  .tourPackage-Amenities {
+    padding-top: 40px;
+  }
+
+  .tourPackage-Amenities.amenitySpacing {
+    padding-top: 10px;
+  }
+
+  .tourPackage-Amenities .package-amenity {
+    display: flex;
+    align-items: center;
+  }
+
+  .tourPackage-Amenities .package-amenity span.packageSpan-Detail {
+    padding-left: 10px;
+  }
+
+  .tourPackage-Amenities.amenitySpacing .package-amenity {
+    margin-bottom: unset;
+  }
+
+  .border-seperator {
+    margin: 40px 0px 40px 0px;
+  }
+
+  .experience-inner-tabDetails .tab-container button:first-child {
+    padding-left: unset;
+  }
+
+  .custom-dropdown .dropdown-menu {
+    width: 83%;
+  }
+
+  .selectRoom-Dropdown .display-select-inline {
+    width: 80%;
+  }
+
+  .experience-inner-tabDetails .hotel-bookingForm {
+    margin-top: -10em;
+    background-color: var(--white-color);
+    z-index: 999;
+  }
+
+  /* .image-container img {
+    margin-bottom: unset;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .experience-tour-detail {
+    position: relative;
+    display: block;
+    height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .experience-tour-detail .bannerButtons {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .experience-tour-detail .tour-gallery-button,
+  .experience-tour-detail .tour-video-button {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .custom-dropdown .dropdown-menu {
+    width: 86%;
+  }
+
+  .dropdown-menu.adult-dropdown-menu {
+    width: 37%;
+    left: 80px;
+  }
+
+  .dropdown-menu.children-dropdown-menu {
+    width: 37%;
+  }
+
+  .selectRoom-Dropdown .display-select-inline {
+    width: 80%;
+  }
+}

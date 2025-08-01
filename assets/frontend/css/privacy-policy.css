@@ -1,0 +1,28 @@
+/* .privacy-sec {
+  padding: 0px 0 30px;
+  background: url(../img/second-line.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+section.privacy-sec {
+  padding-bottom: 100px;
+}
+
+.privacy-sec .row {
+  margin-bottom: 30px;
+}
+
+.privacy-sec strong {
+  color: var(--blue-color);
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.privacy-sec p {
+  color: var(--text-color);
+  font-size: 17px;
+  margin: 0;
+}

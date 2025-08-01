@@ -1,0 +1,153 @@
+/*========================
+BLOG PAGE STYLING
+==========================*/
+.top-List {display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;position: relative;}
+.topText strong {font-size: 15px;color: var(--text-light);}
+.topText span {font-weight: 600;}
+.filterText a {background: #F4F4F4;text-transform: uppercase;align-items: center;color: #CECECE;font-size: 12px;padding: 5px 15px;font-weight: 600;border-radius: 34px;display: inline-block;margin-bottom: 5px;}
+.blogForm form {position: relative;height: 44px;border-radius: 10px;  border: 1px solid #cecece;display: flex;flex-wrap: nowrap;}
+.blogForm input {height: 40px !important;color: var(--text-color);border: none !important;height: auto;background: var(--white-color);flex: 0 0 80%;
+max-width: 80%;padding: 0 2px;}
+.newBtn {height: 42px;background-color: transparent;flex: 0 0 18%;max-width: 18%;padding: 0 0 0 5px;margin: 0;border-radius: 0;}
+.newBtn i {color: #CECECE;font-size: 12px;}
+.newBtn:hover {background: transparent;box-shadow: none;}
+.boxBlog {border-radius: 30px;display: block;position: relative;margin-bottom: 15px;}
+.boxBlog img {border-radius: 30px;width: 100%;height: 350px;object-fit: cover;box-shadow: 0 0 10px #ccc;transition: all 0.3s;}
+.boxBlog img:hover {transform: scale(1.02);}
+.textBlog { position: absolute;bottom: 20%;width: 271px;left: 0;right: 0;text-align: center;color: var(--white-color);margin-right: auto;margin-left: auto;
+font-weight: 700;transition: all 0.3s;}
+.blogInnerS {padding: 30px 0 50px;background: url(../img/second-line.png);background-size: contain;background-repeat: no-repeat;
+background-position: center;}
+.blogForm input:focus {box-shadow: none !important;}
+/* ========== start pagination css ========== */
+/* ========== start pagination css ========== */
+.pages-num .pagination li a {text-align: center;font-weight: 700;height: 40px;line-height: 40px;font-size: 20px;}
+.pages-num .pagination li:first-child a, .pagination li:last-child a {padding: 0;}
+.pages-num .pagination li:first-child:hover, .pagination li:last-child:hover {background: #24B3BA;color: var(--white-color);}
+.pages-num .pagination li:first-child, .pages-num .pagination li:last-child  {width: 40px;border-radius: 50px;box-shadow: 0 0 6px #ccc;
+  transition: all 0.3s;height: 40px;}
+.pages-num .pagination {text-align: center;margin: 0;}
+.pages-num .pagination li.active {background-color: transparent;color: #039be5 !important;}
+.pages-num .pagination li.active a {color: #24B3BA;}
+.pages-num .pagination li a:hover {color: #24B3BA;}
+.pages-num .pagination li:first-child a:hover, .pages-num .pagination li:last-child a:hover {color: var(--white-color);}
+.pages-num .pagination li i {height: 40px;line-height: 40px;font-size: 35px;}
+
+/* ========== end pagination css ========== */
+/* ========== end pagination css ========== */
+/*===============================
+EXPERIENCES PAGE STYLING
+=================================*/
+.experienceInnerS {padding: 70px 0 50px;border-top: 1px solid rgba(0, 0, 0, 10%);background: url(../img/second-line.png);background-size: contain;background-repeat: no-repeat;
+background-position: center;}
+.boxExperi {position: relative;transition: all 0.3s;height: 470px;}
+.boxExperi img:hover {transform: scale(1.02);}
+.boxExperi img {height: 320px;width:100%;object-fit: cover;border-radius: 30px;transition: all 0.3s;margin-bottom: 5px;}
+.heart2 {position: absolute;top: 15px;right: 15px;transition: all 0.3s;}
+.heart2 i {color: #403a3a;font-size: 22px;transition: all 0.3s;}
+.heart2 i:hover {color: #b51c10;}
+.ExperiText strong {display: block;font-size: 20px;font-weight: 700;color: var(--blue-color);}
+.ExperiText span {color: #24B3BA;}
+/*========================
+RESET PASSWORD PAGE
+==========================*/
+.reset-password-S {height: 700px;background: url(../img/second-line.png);background-size: cover;background-repeat: no-repeat;
+background-position: top center;}
+.reset-password-S p {margin-top: 30px;}
+.reset-password-form {padding-top: 10px;}
+.reset-password-form input[type=email], .reset-password-form input.valid[type=password]:not(.browser-default), .reset-password-form input[type=password]:not(.browser-default),
+.reset-password-form input[type=password]:not(.browser-default).validate+label, .reset-password-form input[type=email]:not(.browser-default).validate+label, 
+.reset-password-form input[type=email]:not(.browser-default).validate+label {border-color: #CECECE;padding: 0 20px;}
+.pasBtn {margin-top: 15px;background-color: var(--green-color);line-height: 42px;height: 40px;}
+.pasBtn:hover {background: var(--blue-color);}
+/*========================
+CHECK EMAIL PAGE
+==========================*/
+.check-email-S {height: 420px;background: url(../img/second-line.png);background-size: cover;background-repeat: no-repeat;
+background-position: center;}
+.e-templateBtn {position: relative; top: 0; color: var(--text-light);font-size: 12px;text-align: center;padding: 15px;display: block;box-shadow: 0 0 4px rgb(0 0 0 / 30%);border-radius: 20px;background: #f1f1f1;margin-top: 35px;}
+.check-email-S p {margin-top: 30px;}
+/*============================
+PASSWORD RESET SUCCESSFUL
+==============================*/
+.reset-successful {background-position: unset;}
+.success-animation { margin:50px auto 0;}
+.checkmark-s {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+display: block;
+stroke-width: 3;
+stroke: var(--mint-color);
+stroke-miterlimit: 10;
+box-shadow: inset 0px 0px 0px var(--mint-color);
+animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+position:relative;
+top: 5px;
+right: 5px;
+margin: 0 auto;
+}
+.checkmark__circle {
+stroke-dasharray: 166;
+stroke-dashoffset: 166;
+stroke-width: 3;
+stroke-miterlimit: 10;
+stroke: var(--mint-color);
+animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+.checkmark__check-s {
+transform-origin: 50% 50%;
+stroke-dasharray: 48;
+stroke-dashoffset: 48;
+animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+100% {stroke-dashoffset: 0;}
+}
+@keyframes scale {
+0%, 100% {transform: none;}
+50% {transform: scale3d(1.1, 1.1, 1);}
+}
+/*===================================
+BLOG PAGE STYLING RESPONSIVE
+=====================================*/
+@media only screen and (max-width:992px) {
+.top-List-blog-detail .blogForm {position: relative;bottom: 0;}
+}
+@media only screen and (max-width:800px) {
+.filterText a {font-size: 10px;font-weight: 500;padding: 5px;}
+.reset-password-form input[type=email],  .reset-password-form input.valid[type=password]:not(.browser-default), .reset-password-form input[type=password]:not(.browser-default)
+, .reset-password-form input[type=password]:not(.browser-default).validate+label, .reset-password-form input[type=email]:not(.browser-default).validate+label, 
+.reset-password-form input[type=email]:not(.browser-default).validate+label  {width: 90%;}
+}
+@media only screen and (max-width:600px) {
+.topText {flex: 0 0 100%;max-width: 100%;}
+.top-List {flex-wrap: wrap;}
+.blogForm {position: absolute;bottom: -50px;}
+.innerPage-banner {height: 200px;background-position: top;}
+.blogInnerS {padding-top: 70px;}
+.boxBlog {max-width: 350px;margin: 0 auto 15px;}
+}
+
+
+/* Home Page blog Css */
+  .blogWrap {display: flex;flex-wrap: wrap;/* flex-direction: column; */border-radius: 30px;box-shadow: 0 0 10px #ccc;background: var(--white-color);transition: all 0.3s;height: 390px;}
+  .blogWrap:hover {transform: scale(1.02);}
+  .blogWrap a {line-height: 1;}
+  .blogWrap a img {height: 190px;object-fit: cover;border-radius: 30px 30px 0 0;width: 100%;}
+  .blogText {padding: 20px 15px;}
+  .blogText p {font-size: 13px;}
+  .blogText h4 { overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: 40px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 0;
+  line-height: 1.4;}
+  .blogText span {font-size: 12px;}
+  .readMore {border: none;box-shadow: none;background: transparent;color: var(--mint-color);padding: 0px;line-height: initial;font-weight: 700;height: inherit;}
+  .readMore:hover {background: transparent;color: var(--blue-color); box-shadow: none;background: transparent;}
+/* Home Page blog Css */
