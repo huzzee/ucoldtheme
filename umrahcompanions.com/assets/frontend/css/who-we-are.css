@@ -1,0 +1,172 @@
+.about-sec1 {
+  padding: 50px 0;
+}
+
+.about-sec1 .main-heading {
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+.abtSec1Wrap {
+  padding: 20px 0;
+}
+.abtSec1Wrap h3 {
+  color: var(--blue-color);
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.col.s12.m12.l8.offset-l2.valueSpacing {
+  margin-left: unset;
+  margin-bottom: 50px;
+  padding-left: unset;
+  padding-right: unset;
+  width: 100%;
+}
+
+.coreWrap img {
+  width: 100%;
+  object-fit: contain;
+  height: 90px;
+}
+.coreUl {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.coreUl li {
+  text-align: center;
+}
+.coreUl li strong {
+  color: var(--blue-color);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.coreWrap h3 {
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+.aboutS {
+  background: url(../img/bg-path.webp) no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  padding: 0 0 230px;
+  margin-top: -80px;
+}
+.abtImg img {
+  width: 100%;
+  height: 360px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.col.s12.wrSpacing,
+.col.s12.m12.l7.weText {
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.leftText.findText {
+  padding-top: unset;
+}
+
+.leftText {
+  padding-top: 30px;
+}
+
+.leftText p {
+  font-size: 16px;
+  margin-bottom: 23px;
+}
+
+.chng-head h3 {
+  color: var(--blue-color);
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.chng-head h3 strong {
+  font-weight: 600;
+  color: var(--green-color);
+}
+
+.chng-head h3 span {
+  display: block;
+  font-size: inherit;
+}
+.onlyTextS {
+  padding: 100px 0 50px;
+}
+
+.onlyTextS .textS {
+  border-radius: 30px;
+  height: 230px;
+  box-shadow: 0 0 10px #ccc;
+  background: var(--ocean-color);
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .topbar {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+  span.sp1 {
+    font-size: 11px !important;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: unset;
+  }
+
+  .sp1 strong,
+  .unitTop,
+  span.sp2 {
+    display: none !important;
+  }
+
+  .registerBtn,
+  .loginBtn,
+  .border-btn {
+    font-size: 13px;
+    padding: 5px 25px 5px 25px;
+  }
+
+  .login-btn-div .linkA.linkA3 {
+    padding-left: unset;
+  }
+
+  .h-w2 {
+    padding: 20px 0 0 0;
+  }
+
+  ul.coreUl li {
+    width: 50%;
+  }
+
+  .col.s12.wrSpacing,
+  .col.s12.m12.l7.weText {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .chng-head h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

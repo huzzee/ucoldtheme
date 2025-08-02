@@ -1,0 +1,431 @@
+/*========================
+    CONTACT PAGE STYLING
+    ==========================*/
+.contactInnerS-1 {
+  padding: 0px 0 80px;
+}
+
+.formDiv-2 button.sendButton {
+  background-color: var(--blue-color);
+  border-radius: 50px;
+  color: var(--white-color);
+  padding: 10px 50px 10px 50px;
+  line-height: 15px;
+  height: auto;
+  border: none;
+}
+
+.contactText1 {
+  text-align: center;
+}
+
+.contactText1 p,
+.contactText2 p {
+  color: var(--text-light);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.headingbtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contactText2 {
+  padding: 80px 0;
+}
+/* .contactText2 p {
+  color: var(--blue-color);
+  padding-top: 10px;
+} */
+
+h2.main-heading.get-touchHeading,
+h2.main-heading.supportHeading {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.contactText2 img {
+  width: 100%;
+  vertical-align: middle;
+}
+.contLink {
+  align-items: center;
+  height: 270px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #ccc;
+  transition: all 0.3s;
+  justify-content: center;
+}
+.contLink:hover {
+  transform: scale(1.02);
+}
+.contLink a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contLink a img {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
+  margin-top: 5px;
+}
+.ocean-color {
+  background: var(--ocean-color);
+}
+.new-color {
+  background-color: #b9cff8;
+}
+.lg-color {
+  background-color: #e2fcda;
+}
+.formWrap {
+  background-color: #f8f8f8;
+  padding: 60px 50px 80px;
+  border-radius: 30px;
+  position: relative;
+}
+.formWrap:before {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  width: 1px;
+  height: 81%;
+  background-color: var(--text-light);
+  right: 40%;
+}
+.formWrap h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--blue-color);
+  margin-top: 0;
+}
+.contactForm {
+  padding-bottom: 120px;
+}
+
+.formDiv-2 {
+  margin-top: 30px;
+}
+
+.col.s12.m7.formSpacing {
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.iti {
+  width: 84%;
+}
+
+.input-field.textSpacing {
+  width: 98%;
+}
+
+.iti__flag {
+  background-image: url("../img/flags.png");
+}
+
+li.iti__country {
+  display: flex;
+  align-items: center;
+}
+
+li.iti__country span {
+  margin-top: unset;
+}
+
+/* .formDiv-2 .input-field {
+  background: var(--white-color);
+  border-radius: 15px;
+  border: 1px solid #cecece;
+} */
+
+.input-field label {
+  padding-left: 15px !important;
+}
+
+.input-field label.active {
+  padding-left: 7px !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  background: var(--white-color) !important;
+  border: 1px solid #ccc !important;
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+  padding: 0px 15px 0px 15px !important;
+}
+
+.iti__flag-container {
+  background: var(--white-color) !important;
+  border: 1px solid #ccc !important;
+  border-radius: 10px !important;
+}
+
+.input-field.textSpacing {
+  margin-top: 5px;
+}
+
+.formDiv-2 textarea {
+  height: 260px;
+  resize: none;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 20px;
+  border-color: #cecece;
+  margin: 0;
+}
+.formDiv-2 textarea.materialize-textarea:focus:not([readonly]) {
+  border: 1px solid #26a69a;
+}
+.formDiv-2 .input-field > label {
+  color: var(--dark-text);
+}
+.formDiv-2 ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--black-color);
+}
+.formDiv-2 ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--black-color);
+}
+.formDiv-2 :-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--black-color);
+}
+.formDiv-2 :-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--black-color);
+}
+.formDiv-2 textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--grey-text);
+  font-style: italic;
+}
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type="text"],
+.iti--allow-dropdown input[type="tel"],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type="text"],
+.iti--separate-dial-code input[type="tel"] {
+  padding-left: 0;
+  margin-left: 52px;
+  border-color: #cecece;
+  padding: 0 20px;
+}
+.formDiv-2 input[type="email"],
+.formDiv-2 input.valid[type="text"]:not(.browser-default),
+.formDiv-2 input[type="text"]:not(.browser-default),
+.formDiv-2 input[type="text"]:not(.browser-default).validate + label,
+.formDiv-2 input[type="email"]:not(.browser-default).validate + label,
+.formDiv-2 input[type="email"]:not(.browser-default).validate + label {
+  border-color: #cecece;
+  padding: 0 5px 0 5px;
+  background-color: transparent;
+  width: 92%;
+}
+input {
+  background-color: transparent;
+}
+.formDiv-2 span {
+  /* padding-left: 20px; */
+  display: block;
+  margin-top: 30px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/flags%402x.png");
+  }
+}
+
+.cont-text {
+  padding: 32px 0 0 40px;
+}
+
+.cont-text strong {
+  color: var(--blue-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cont-text p {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.cont-text iframe {
+  border: 1px solid #cecece;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 0 2px #cecece;
+}
+
+.text-field {
+  margin-bottom: 30px;
+}
+
+.formDiv-2 a.sendButton {
+  background-color: var(--blue-color);
+  border-radius: 50px;
+  color: var(--white-color);
+  padding: 10px 50px 10px 50px;
+}
+
+.formDiv-2 a.sendButton:hover {
+  background-color: var(--dark-ocean);
+}
+
+.formDiv-2 .viewBtn {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.contactText3 .main-heading {
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .contLink {
+    height: 160px;
+  }
+  .contLink a img {
+    height: 30px;
+  }
+  .contactText3 .main-heading {
+    font-size: 18px !important;
+  }
+  .contactText2 {
+    padding: 50px 0;
+  }
+  .formWrap {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .cont-text {
+    padding: 15px 0 0 15px;
+  }
+  .formDiv-2 input[type="email"],
+  .formDiv-2 input.valid[type="text"]:not(.browser-default),
+  .formDiv-2 input[type="text"]:not(.browser-default),
+  .formDiv-2 input[type="text"]:not(.browser-default).validate + label,
+  .formDiv-2 input[type="email"]:not(.browser-default).validate + label,
+  .formDiv-2 input[type="email"]:not(.browser-default).validate + label {
+    width: 90%;
+    padding: 0 10px;
+  }
+  .iti {
+    width: 75%;
+  }
+  .cont-text iframe {
+    margin-top: 20px;
+    height: 200px !important;
+  }
+  .formDiv-2 textarea {
+    height: 200px;
+  }
+  .iti--allow-dropdown input,
+  .iti--allow-dropdown input[type="text"],
+  .iti--allow-dropdown input[type="tel"],
+  .iti--separate-dial-code input,
+  .iti--separate-dial-code input[type="text"],
+  .iti--separate-dial-code input[type="tel"] {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .topbar {
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+
+  span.sp1 {
+    font-size: 11px !important;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: unset;
+  }
+
+  .sp1 strong,
+  .unitTop,
+  span.sp2 {
+    display: none !important;
+  }
+
+  .registerBtn,
+  .loginBtn,
+  .border-btn {
+    font-size: 13px;
+    padding: 5px 25px 5px 25px;
+  }
+
+  .login-btn-div .linkA.linkA3 {
+    padding-left: unset;
+  }
+
+  .h-w2 {
+    padding: 20px 0 0 0;
+  }
+
+  .contLink {
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .formWrap h3 {
+    padding: 30px 20px 30px 3px;
+  }
+
+  .col.s12.m7.formSpacing {
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contactText2 img {
+    height: 100px;
+    object-fit: contain;
+  }
+  .innerPage-banner {
+    height: 200px;
+    background-position: top;
+  }
+  /* .contLink {
+    max-width: 280px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  } */
+  .contactInnerS-1 {
+    padding-bottom: 30px;
+  }
+  .contactText2 {
+    padding: 30px 0;
+  }
+  .formWrap:before {
+    display: none;
+  }
+  .formWrap {
+    padding: 20px 5px 20px 5px;
+  }
+  .cont-text {
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contLink {
+    max-width: 390px;
+  }
+}
