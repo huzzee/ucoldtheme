@@ -13,7 +13,8 @@
   --box-background-color: #ffffff;
   --background-color: #f1f5f9;
   --primary-color: #1d3a6d;
-  --heading-color: #26b4bb;
+  --secondary-color:#EBEBEB;
+  --heading-color: #1E3A6D;
   --border-color: #a6a6a8;
   --placeholder-color: #656565;
   --sub-heading-color: #292d32;
@@ -30,7 +31,7 @@
     /*margin-bottom: 20px;*/
 }
 
-.col.wrap_spacing input {
+.col.wrap_spacing input:not([type="checkbox"])  {
     width: 100%;
 }
 
@@ -42,7 +43,8 @@
   .box-shadow {
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
     border-radius: 20px;
-    margin: 1.15rem 1rem 1rem 1rem;
+    margin: 0rem 0rem 0rem 1rem;
+    padding: 10px 0px 0px 0px;
     border: 1px solid #ddd;
   }
 
@@ -76,9 +78,9 @@
     /*flex-direction: row;*/
   }
 
-  .inquiry_form h2.main_heading {
+   h2.main_heading {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 35px;
     font-weight: bold;
     color: var(--heading-color);
     margin-bottom: 2rem;
@@ -86,9 +88,10 @@
 
   .col.wrap_spacing {
     margin-bottom: 1rem;
+
   }
 
-  .col.wrap_spacing input,
+  .col.wrap_spacing input:not([type="checkbox"]),
   .col.wrap_spacing select,
   .col.wrap_Spacing,
   .col.wrap_Spacing select {
@@ -99,13 +102,13 @@
     margin-bottom: 10px;
   }
 
-  .form_row input, .form_row select {
+  .form_row input:not([type="checkbox"]), .form_row select {
     border-radius: 7px !important;
     border: 1px solid var(--border-color) !important;
     padding: 8px 15px 8px 15px !important;
     color: var(--placeholder-color) !important;
     height: auto !important;
-    background-color: white !important;
+    background-color: #F1F5F9 !important;
     font-size: inherit !important;
     margin: 0 !important;
     box-sizing: inherit !important;
@@ -297,9 +300,9 @@
         /* flex-direction: row; */
     }
     
-    .inquiry_form h2.main_heading {
+     h2.main_heading {
         text-align: center;
-        font-size: 1.75rem;
+        font-size: 35px;
         font-weight: 600;
         color: var(--heading-color);
         margin-bottom: 2rem;
@@ -314,7 +317,7 @@
 
   .container {
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 45px auto;
   }
 
   .top-padding {
@@ -322,9 +325,10 @@
   }
 
   .side-bar {
-    background-color: var(--primary-color);
-    padding: 3rem 0rem 2rem 0rem;
-    margin: 30px 0px 0px 0px;
+    background-color: var(--secondary-color);
+    color: #161C24;
+    padding: 0rem 0rem 4rem 0rem;
+    margin: 0px 0px 0px 0px;
     border-radius: 30px;
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
     width: 33.33%;
@@ -333,6 +337,7 @@
   .column_Flex {
     display: flex;
     justify-content: space-between;
+    align-items: start;
   }
 
   .logo {
@@ -343,12 +348,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3.75rem 0rem 0rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
   }
 
   .personal-information img,
   .additional-information img {
-    width: 80px;
+    width: 60px;
   }
 
   .personal-information h6,
@@ -361,7 +366,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4rem 0rem 0rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
   }
 
   .additional-information.opacity.disabled {
@@ -374,7 +379,7 @@
 
   .personal-information h6,
   .additional-information h6 {
-    color: var(--text-color2);
+    color: #161C24;
     margin-left: 1rem;
   }
 
@@ -383,10 +388,19 @@
   }
 
   .progress_bar h6 {
-    color: var(--text-color2);
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0.25rem;
+  }
+
+  .side-bar .vr{
+    height: 3vh;
+    width: 20px;
+    border-left: 3px dotted #BFCADE;
+    margin-left: 5rem;
+    padding: 5rem 0rem 0rem 2rem;
+    margin-top: 1rem;
   }
 
   #myProgress {
@@ -394,7 +408,39 @@
     background-color: var(--border-color);
     border-radius: 20px;
   }
+  .partner{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
 
+  }
+  .custom-card{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: 95%;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .custom-card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #7F98C466;
+  }
+  .custom-card .vr{
+    height: 4vh;
+    width: 1px;
+    border-left:1px solid #7F98C466;
+    margin-left: 1rem;
+    padding: 0rem 0rem 0rem 1rem;
+    margin-top: 1rem;
+  }
   #myBar {
     width: 50%;
     height: 10px;
@@ -415,13 +461,15 @@
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
     border-radius: 20px;
     margin: 2rem 0rem 0rem 2rem;
-    width: 66.33%;
+    padding:0px 40px
+    /* width: 66.33%; */
   }
-
+ 
   .box-shadow {
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
     border-radius: 20px;
-    margin: 1.15rem 1rem 1rem 1rem;
+    margin: 1rem 0rem 0rem 1rem;
+    padding:10px 0px 0px 0px;
     border: 1px solid #ddd;
   }
 
@@ -444,13 +492,22 @@
     color: var(--primary-color);
   }
 
-  .inquiry_form h2.main_heading {
+  h2.main_heading {
     color: var(--heading-color);
     font-weight: bold;
     text-align: center;
     padding: 2rem 0rem 1.5rem 0rem;
     line-height: 0;
-    font-size: 1.5em;
+    font-size: 35px;    
+    margin: 0rem 0 0rem 0;
+  }
+  h5.sub-heading{
+    color: var(--heading-color);
+    font-weight: bold;
+    text-align: left;
+    padding: 2rem 0rem 2rem 2rem;
+    line-height: 0;
+    font-size: 20px;    
     margin: 0rem 0 0rem 0;
   }
 
@@ -460,19 +517,22 @@
     padding: 0rem 2rem 0rem 1.25rem;
   }
 
-  .form_row input,
+  .form_row input:not([type="checkbox"]),
   .form_row select {
-    border-radius: 7px !important;
-    border: 1px solid var(--border-color) !important;
-    padding: 8px 15px 8px 15px !important;
+    border-radius: 10px !important;
+    /* border: 1px solid var(--border-color) !important; */
+    padding: 20px 15px 20px 15px !important;
     color: var(--placeholder-color) !important;
     height: auto !important;
-    background-color: white !important;
+    background-color: #F1F5F9 !important;
     font-size: inherit !important;
     margin: 0 !important;
-    box-sizing: inherit !important;
+    border-bottom: none !important;
+    /* box-sizing: inherit !important; */
     transition: none !important;
     line-height: 0rem !important;
+    width: 239.6666717529297;
+
   }
 
   .form_Row {
@@ -483,13 +543,14 @@
     color: var(--sub-heading-color);
   }
 
-  .col.wrap_spacing input,
+  .col.wrap_spacing input:not([type="checkbox"]),
   .col.wrap_spacing select {
-    width: 310px;
+    width:168px;
   }
 
   .col.wrap_Spacing {
     width: 100%;
+    display: inline-grid;
   }
 
   .col.wrap_Spacing select {
@@ -720,9 +781,9 @@
     color: var(--heading-color);
     font-weight: bold;
     text-align: center;
-    padding: 3.5rem 0rem 3rem 0rem;
+    padding: 3.5rem 0rem 3.5rem 0rem;
     line-height: 0;
-    font-size: 1.85em;
+    font-size: 35px;
     font-weight: 600;
     margin: 0rem 0 0rem 0;
 }
@@ -734,11 +795,12 @@ label.option.option-1 {
     .form_row {
         display: flex;
         justify-content: space-between;
-        padding: 0rem 2rem 0rem 1.25rem;
+        /* padding: 0rem 2rem 0rem 1.25rem; */
+        gap: 10px;
     }
 
-    .col.wrap_spacing input, .col.wrap_spacing select {
-        width: 300px;
+    .col.wrap_spacing input:not([type="checkbox"]), .col.wrap_spacing select  {
+        width: 168px;
     }
 
     h6.selct_passengers {
@@ -750,7 +812,7 @@ label.option.option-1 {
 
     .top-padding {
         padding-top: 1.5rem;
-        padding-bottom: 6rem;
+        padding-bottom: 1.5rem;
     }
     
     .next_btn a, .next_btn button {
@@ -764,9 +826,10 @@ label.option.option-1 {
 }
 
 .side-bar {
-    background-color: var(--primary-color);
-    padding: 5rem 0rem 0rem 0rem;
-    margin: 30px 0px 0px 0px;
+    background-color: var(--secondary-color);
+    color: #161C24;
+    padding: 2rem 0rem 2rem 0rem;
+    margin: 15px 0px 0px 0px;
     border-radius: 30px;
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 7%), 0 6px 20px 0 rgb(0 0 0 / 7%);
     width: 33.33%;
@@ -833,11 +896,149 @@ h6.selct_passengers {
 .input_Labels {
     margin-bottom: 0.35rem;
 }
+.input_Labels .checkbox{
+
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+  opacity: 1;
+  position: relative;
+  left: 0;
+  width: min-content;
+}
+ input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 10px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 2.5px;
+  width: 4px;
+  height: 9px;
+  border: solid #1E3A6D; /* same as switch bg */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.row .col{
+  padding: 0;
+  margin: 0;
+}
+.row .col.m3{
+  margin-left: 0;
+}
+.row .col.m4{
+  display: inline-grid;
+}
+/* Checked state */
+ input[type="checkbox"]:checked {
+  background-color: white;
+}
+
+/* Show tick when checked */
+ input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+.switch div{
+ background-color: #F1F5F9;
+    border-radius: 5rem;
+    display: flex;
+    gap:10px;
+    justify-content: start;
+    align-items: center;
+    width: min-content;
+    padding: 5px 15px;
+}
 
 label.wrap_Labels {
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 14px;
     color: #292d32;
+}
+
+.passenger-wrapper {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.counter-container {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.counter-label {
+  color: #1e3a6d;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-btn {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  color: #1e3a6d;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.counter-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.counter-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e3a6d;
+  min-width: 20px;
+  text-align: center;
+}
+
+.next-btn {
+  background-color: #1e3a6d;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #162c53;
 }
 
 #inquiry_phone{
