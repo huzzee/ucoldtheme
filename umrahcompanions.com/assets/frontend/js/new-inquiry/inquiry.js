@@ -269,6 +269,7 @@ checkboxes.forEach((checkbox) => {
       parent.style.backgroundColor = '#1E3A6D';
       label.style.color = 'white';
       checkbox.style.backgroundColor = 'white';
+      console.log(checkbox.checked)
     } else {
       parent.style.backgroundColor = '#F1F5F9';
       label.style.color = '#292d32';
@@ -276,6 +277,7 @@ checkboxes.forEach((checkbox) => {
     }
   });
 });
+console.log(checkboxes[1])
 
 document.querySelectorAll('.pilgrim-section .counter-container').forEach(container => {
   const minusBtn = container.querySelector('.minus');
@@ -306,3 +308,17 @@ document.querySelectorAll('.pilgrim-section .counter-container').forEach(contain
 
   updateDisplay();
 });
+$('.Nextbtn').on('click',function(e){
+        e.preventDefault();
+        var form = $("#InquiryForm");
+        console.log(form, "inquiry form");
+        if(checkboxes[0].checked){
+          console.log("visa is checked")
+        } if(checkboxes[1].checked){
+          console.log("flight is checked")
+        } if(checkboxes[2].checked){
+          console.log("transport is checked")
+        } if(checkboxes[3].checked){
+          console.log("hotel is checked")
+        }
+})

@@ -85,24 +85,19 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   
    <link rel="shortcut icon" href="assets/images/favicon.ico" />
-   
    <meta name="ahrefs-site-verification" content="dbde1a46c8ea67f34745d810b7c1ec9ef038e7678e438a5fdf45f7494e74b2a5">
 
-   <!-- Style -->
-      <!-- Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
+  <!-- Style -->
+  <!-- Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+  <!--Import materialize.css-->
   <!-- Materialize CSS (optional for styling) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
   <!-- Select2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
   <!-- jQuery (required by Select2) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
   <!-- Select2 JS -->
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
@@ -113,6 +108,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  />
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/common.css">
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/footer.css">
+
 <style type="text/css">
       .iti__flag {background-image: url(approot/storage/app/public/images/frontend/flags.png) !important}
       .wrapper{
@@ -177,6 +173,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/new-inquiry.css">
 <link href="assets/backoffice/vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet"
   type="text/css">
+  <link rel="stylesheet" href="assets/frontend/css/popbox.css">
 
 <style type="text/css">
   /*.datepicker-date-display{*/
@@ -185,62 +182,11 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
   /*.text-danger{color:red;}*/
   /*.flex_Row {margin-top: 110px;}*/
 </style>
-<!-- Section Style -->   <!-- Style -->
 
-   <!-- Popbox Css -->
-    <style type="text/css">
-      #subscribe{background:#143159;padding:15px 30px 15px 30px;margin:10px;border:none;cursor:pointer;border-radius:10px;color:#fff}
-      #subscribe:hover{background:#24b3ba;}
-      .popup-wrapper {width: 100%;height: 100%;display: none;position: absolute;top: 0px;left: 0px;content: "";}
-      .popup-box {transform: translate(-50%, -50%) scale(.5);position: absolute;top: 50%;left: 50%;border-radius: 20px;z-index: 102;width: 520px;padding:30px;border: 4px solid #ccdf8a;text-align: center;box-shadow: 0px 0px 20px 0px #55c5c8;background-image: url(http://umrah-v8.test/approot/storage/app/public/images/frontend/imgG15.webp);background-repeat: no-repeat;background-size: cover;background-position: center;}
-      .popup-box h2 {color: #24b3ba;margin-bottom: 10px;font-size: 32px;text-shadow: 2px 2px 6px black;}
-      .popup-box h3 {color: #888;font-size: 16px;}
-      .popup-box p{text-shadow: 2px 2px 4px black;font-size: 16px;color: #fff;}
-      .popup-box input{color: #fff;border: 1px solid #fff !important;padding: 5px 10px !important;background: #24b3ba;width: 95% !important;}
-      .popup-box input::placeholder {color: #24b3ba;opacity: 1;}
-      .popup-box input:-ms-input-placeholder {color: #24b3ba;}
-      .popup-box input::-ms-input-placeholder {color: #24b3ba;}
-      .popup-box .close-button {width: 35px;height: 35px;display: inline-block;position: absolute;top: 10px;right: 10px;-webkit-transition: all ease 0.5s;transition: all ease 0.5s;border-radius: 1000px;/*background: #7b78ff;*/font-weight: bold;text-decoration: none;color: #fff;line-height: 190%;}
-      .popup-box .close-button:hover {color: #15325a;}
-      .transform-in, .transform-out {display: block;-webkit-transition: all ease 0.5s;transition: all ease 0.5s;}
-      .transform-in {-webkit-transform: translate(-50%, -50%) scale(1);transform: translate(-50%, -50%) scale(1);}
-      .transform-out {-webkit-transform: translate(-50%, -50%) scale(0.5);transform: translate(-50%, -50%) scale(0.5);}
-      .fixed-whatsapp {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          border: 3px solid #d9d9d9;
-          background-color: #25D366;
-          color: #ffffff;
-          border-radius: 100%;
-          padding: 10px 12px;
-          z-index: 9999;
-          cursor: pointer;
-          box-shadow: rgb(0 0 0 / 15%) 0px 3px 12px;
-      }
-    </style>
-   <!-- Popbox Css -->
 </head>
 <body class="bodyHome">
-
-  
-
    <!-- page loader start -->
-      <div class="main-loader">
-          <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue-only">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-      </div>
+    <div id="loader-container"></div>
    <!-- page loader end -->
 
    <div class="popup-wrapper">
@@ -257,615 +203,346 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
     </div>
    </div>
    
-   <div data-scroll-container>
+    <div data-scroll-container>
                   
       <!-- Header -->
-         <!-- Top Header -->
-<div class="topbar">
-    <div class="container">
-        <div class="topbar-Text">
-            <span class="sp1">Select Pre Designed Umrah Package or Customize it for personalized Spiritual
-                Experience
-        </div>
-        <div class="unitTop">
-            <div class="pricD">
-                <select class="browser-default changecurrency">
-                                                                                 <option value="SAR">SAR</option>
-                                                                                    <option value="USD">USD</option>
-                                                                                    <option value="GBP">GBP</option>
-                                                                                    <option value="CAD">CAD</option>
-                                                                                    <option value="PKR" selected style="background-color: #ccc;">PKR</option>
-                                                       </select>
-                <form id="currency-form" action="https://umrahcompanions.com/currencychange" method="POST" style="display: none;">
-                   <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
-                </form>
-            </div>
-            
-        </div>
-    </div>
-</div><!-- Top Header -->
-<!-- nav bar -->
-<div class="forScrolltopbar innerHeader sticky">
-   <div class="h-w2">
-      <div class="container-n">
-         <div class="linkWrapper">
-            <div class="linkB" style="z-index: 9999;">
-               <a href="index.html"><img src="approot/storage/app/public/images/frontend/new_UC_Logo.svg"></a>
-            </div>
-                        <nav>
-               <div class="nav-wrapper">
-                  <a href="javascript:void(0)" class="sidenav-trigger" data-target="mobile-nav">
-                     <i class="material-icons">menu</i></a>
-                  <ul class="hide-on-med-and-down center">
-                     <li class="menu-item-has-child">
-                        <a href="packages.html" class="">Packages<i
-                              class="fas fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                           <li><a href="packages4cc0.html?type=flight_package">Flight Packages</a></li>
-                           <li><a href="packagesbc9d.html?type=land_package">Land Packages</a></li>
-                           <li><a href="packages4b15.html?type=umrah_plus">Umrah Plus</a></li>
-                           
-                           
-                           
-                        </ul>
-                     </li>
-                     <li><a href="visaprices.html">Umrah Visa</a></li>
-                     
-                           
-                           
-                           
-                           
-                           
-                           
-                     <li class="menu-item-has-child">
-                        <a href="experiences.html">Experiences</a>
-                     </li>
-                     <li class="menu-item-has-child">
-                        <a
-                           href="reservehotel_table1f95.html?city=56772&amp;dates=2025-07-31+-+2025-08-01&amp;total_travellers=2&amp;total_rooms=1&amp;rooms%5Badults%5D%5B%5D=2&amp;rooms%5Bchilds%5D%5B%5D=0&amp;rooms%5Broom%5D%5B%5D=1">Hotels</a>
-                     </li>
-
-                     <li><a href="inquiry.html">Inquire Now</a></li>
-                     <li class="menu-item-has-child">
-                        <a class="dropdown-trigger" data-target="dropdown1" href="javascript:void(0)">Support<i
-                              class="fas fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                           <li><a href="contact-us.html">Contact</a></li>
-                           <li><a href="faqs.html">FAQ's</a></li>
-                           <li><a href="affiliate.html">Affiliate Page</a></li>
-                           
-                           <li><a href="blog.html">Blog</a></li>
-                           <li><a href="who_we_are.html">Who We Are</a></li>
-                        </ul>
-                     </li>
-                     
-                     
-                  </ul>
-               </div>
-            </nav>
-            
-
-                        <div class="login-btn-div">
-               <div class="linkA linkA3 ">
-                  <a class="loginBtn modal-trigger" data-target="modalLogin">Login</a>
-               </div>
-               <div class="linkC linkA2">
-                  <div class="lnkIn">
-                     <a href="javascript:void(0)" class="registerBtn modal-trigger"
-                        data-target="modalRegister">Register</a>
-                  </div>
-               </div>
-            </div>
-            
-                        <!-- linkC -->
-         </div>
-      </div>
-   </div>
-   <!-- h-w2 -->
-   <ul class="sidenav" id="mobile-nav">
-
-      <li class="menu-item-has-child">
-         <a href="index.html" class="active"><i class="fa fa-home"></i></a>
-      </li>
-
-      <li class="menu-item-has-child">
-         <a href="packages.html" class="">Packages</a>
-         <i class="fas fa-angle-down droptrigger" id=""></i>
-         <ul class=" dropcontent">
-            <li><a href="packages4cc0.html?type=flight_package">Packages with Flights</a></li>
-            <li><a href="packagesbc9d.html?type=land_package">Land Packages</a></li>
-            <li><a href="packages4b15.html?type=umrah_plus">Umrah Plus</a></li>
-            
-         </ul>
-      </li>
-
-      <li><a href="visaprices.html">Umrah Visa</a></li>
-
-      <li><a href="reservetransport.html">Transport</a></li>
-
-      <li class="menu-item-has-child"><a href="experiences.html">Experiences</a></li>
-
-
-
-      <li><a
-            href="reservehotel_table1f95.html?city=56772&amp;dates=2025-07-31+-+2025-08-01&amp;total_travellers=2&amp;total_rooms=1&amp;rooms%5Badults%5D%5B%5D=2&amp;rooms%5Bchilds%5D%5B%5D=0&amp;rooms%5Broom%5D%5B%5D=1">Hotels</a>
-      </li>
-
-
-
-      <li><a href="inquiry.html">Inquire Now</a></li>
-
-      <li class="menu-item-has-child">
-         <a href="javascript:void(0)">Support</a>
-         <i class="fas fa-angle-down droptrigger" id=""></i>
-         <ul class=" dropcontent">
-            <li><a href="contact-us.html">Contact</a></li>
-            <li><a href="faqs.html">FAQ's</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="who_we_are.html">Who We Are</a></li>
-         </ul>
-      </li>
-
-      <li class="menu-item-has-child">
-         <a href='javascript:void(0);' data-target='modalLogin' class="active modal-trigger">Login</a>
-      </li>
-      <li class="menu-item-has-child">
-         <a href="javascript:void(0);" data-target='modalRegister' class="modal-trigger active">Register</a>
-      </li>
-
-      
-   </ul>
-</div>      <!-- Header -->
-
+      <div id="header"></div>
       <!-- Section Content -->
          
-<div class="container">
-  
-  <div class=" top-padding  box-background-color">
-   <h2 class="main_heading">Inquiry Form</h2>
-   <div class="row column_Flex">
-      <div class="col-md-4 side-bar">
-        <div class="personal-information">
-          <img src="approot/storage/app/public/images/frontend/personal_information.svg" alt="info" />
-          <h6>Personal Information</h6>
-        </div>
-        <div class="vr">
-
-        </div>
-        <div class="additional-information opacity disabled">
-          <img src="approot/storage/app/public/images/frontend/additional_information.svg" alt="info" />
-          <h6>Additional Information</h6>
-        </div>
-        <div class="progress_bar">
-          <h6>1 of 2 Completed</h6>
-          <div id="myProgress">
-            <div id="myBar"></div>
-          </div>
-        </div>
-        <div class="partner">
-          <div class="custom-card">
-            <div class="">
-              <img src="/umrahcompanions.com/assets/frontend/img/handshake.svg" alt="">
-              <p >Nusuk Partner</p>
-
-            </div>
-            <!-- <span class="vr"></span> -->
-
-            <div class="">
-              <img src="/umrahcompanions.com/assets/frontend/img/light_glob.svg" alt="">
-              <p>Global Offices</p>
-            </div>
-            <!-- <span class="vr"></span> -->
-            <div class="">
-              <img src="/umrahcompanions.com/assets/frontend/img/seal_check.svg" alt="">
-              <p>Local Support</p>
-
-            </div>
-
-          </div>
-        </div>
-
-       
-      </div>
-      <div class="col-lg-box ">
-        <div class="box-shadow">
-          <form action="#" class="needs-validation" method="POST" enctype="multipart/form-data"
-            action="https://umrahcompanions.com/inquiry" id="InquiryForm">
-            <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
-            <div class="inquiry_form step1">
-
-              <h5 class="sub-heading">Select Required Services</h5>
-              <div class="row form_row" style="justify-content: start; gap: 10px;">
-                <div class="col s6 m3 wrap_spacing" style="width: min-content;">
-                  <div class="switch">
-                    <div class="input_Labels">
-                      <input type="checkbox" id="question2" class="checkbox-main" name="question2">
-                      <label for="question2" class="wrap_Labels">Visa</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                  <div class="switch">
-                    <div class="input_Labels">
-                      <input type="checkbox" id="question3" class="checkbox-main" name="question3">
-                      <label for="question3" class="wrap_Labels">Flight</label>                    
-                    </div>
-                  </div>
-                </div>
-                <!-- Start Date -->
-                <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                  <div class="switch" >
-                    <div class="input_Labels">
-                      <input type="checkbox" id="question1" class="checkbox-main" name="question1">
-                      <label for="question1" class="wrap_Labels">Transport</label>       
-                    </div>
-                  </div>
-                </div>
-                <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                  <div class="switch">
-                    <div class="input_Labels">                      
-                      <input type="checkbox" id="hotel_type" class="checkbox-main" name="hotel_type">
-                      <label for="hotel_type" class="wrap_Labels">Hotel</label>    
-                    </div>
-                  </div>
-                </div>
+      <div class="container">
+        
+        <div class=" top-padding  box-background-color">
+        <h2 class="main_heading">Inquiry Form</h2>
+        <div class="row column_Flex">
+            <div class="col-md-4 side-bar">
+              <div class="steps">
+                 <div class="personal-information">
+                <img src="approot/storage/app/public/images/frontend/personal_information.svg" alt="info" />
+                <h6>Personal Information</h6>
+              </div>
+              <div class="vr">
+              </div>
+              <div class="additional-information opacity disabled">
+                <img src="approot/storage/app/public/images/frontend/additional_information.svg" alt="info" />
+                <h6>Additional Information</h6>
               </div>
 
-              <h5 class="sub-heading">Personal Information</h5>
-              <div class="row form_row">
-                <!-- Name -->
-                <div class="col s12 m4 wrap_spacing" >
-                  <input type="text" class="form-control active-state" placeholder="Name" aria-label="Name"
-                    name="first_name" value="" />
-                </div>
-                <!-- Name -->
-                <!-- Email -->
-                <div class="col s12 m4 wrap_spacing">
-                  <input type="email" class="form-control active-state" placeholder="Email Address"
-                  aria-label="Email Address" name="email" value="" />
-                </div>
-                <!-- Email -->  
-                 <!-- Phone No -->
-                <div class="col s12 m4 wrap_spacing">
-                  <input type="text" class="form-control active-state" placeholder="Phone Number"
-                   aria-label="Phone Number" name="phoneno" value=""
-                   onkeypress="return onlyNumberKey(event)" />
-                </div>
-                <!-- Phone No -->
               </div>
-
-              <div class="row form_row">
-                <!-- Nationality -->
-                <div class="col s12 m4 wrap_spacing">
-                  <select class="select-dropdown active-state" name="nationality" id="nationality">
-                    <option value=""  >Select Nationality <span class="text-danger">*</span></option>
-                  </select>
-                </div>
-                <!-- Nationality -->
-                <!-- Departure City -->
-                <div class="col s12 m4 wrap_spacing">
-                  <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
-                 </div>
-                <!-- Departure City -->
-                <div class="col s12 m4 wrap_spacing wrap_datePicker">
-                  <input type="text" class="form-control active-state package-datepicker"
-                    placeholder="Select Arrival Date *" aria-label="Arrival Date" name="start_date"
-                    value="" />
-                </div>
-                <!-- Private Transport -->
-
-                <!-- Private Transport -->
-              </div>
-              
-          
-              <h5 class="sub-heading">Select Pilgrims</h5>
-              
-              <div class="pilgrim-section">
-                <div class="passenger-wrapper">
-                  <div class="counter-container" data-type="Adults">
-                    <label class="counter-label">Adults</label>
-                    <div class="counter-controls">
-                      <button type="button" class="counter-btn minus">−</button>
-                      <span class="counter-value">01</span>
-                      <button type="button" class="counter-btn plus">+</button>
-                    </div>
-                  </div>
-
-                  <div class="counter-container" data-type="Child">
-                    <label class="counter-label">Child</label>
-                    <div class="counter-controls">
-                      <button type="button" class="counter-btn minus">−</button>
-                      <span class="counter-value">00</span>
-                      <button type="button" class="counter-btn plus">+</button>
-                    </div>
-                  </div>
-
-                  <div class="counter-container" data-type="Infants">
-                    <label class="counter-label">Infants</label>
-                    <div class="counter-controls">
-                      <button type="button" class="counter-btn minus">−</button>
-                      <span class="counter-value">00</span>
-                      <button type="button" class="counter-btn plus">+</button>
-                    </div>
-                  </div>
-
-                <div class="next_btn">
-                  <a href="javascript:void(0)" class="n_btn Nextbtn">Next</a>
-                </div>                </div>
-              </div>
-
              
-            </div>
-
-            <div class="inquiry_form step2" style="display:none;">
-              <div class="row form_row flex_direction wrap_hotel_Type "></div>
-              <div class="row form_row route_show">
-                <div class="col s12 ">
-                  <div class="input_Labels">
-                    <label class="wrap_Labels">Route </label>
-                  </div>
-                  <select class="form-select active-state route_id" name="route">
-                    <option value="" disabled selected>Select Route <span class="text-danger">*</span></option>
-                                      <option value="1" 
-                      data-routedata="{&quot;id&quot;:1,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Jeddah Airport</option>
-                                      <option value="2" 
-                      data-routedata="{&quot;id&quot;:2,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
-                                      <option value="3" 
-                      data-routedata="{&quot;id&quot;:3,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport &quot;,&quot;no_of_pickups&quot;:4,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;JED&quot;,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
-                                      <option value="4" 
-                      data-routedata="{&quot;id&quot;:4,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MDA&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
-                                      <option value="5" 
-                      data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
-                                      <option value="6" 
-                      data-routedata="{&quot;id&quot;:6,&quot;description&quot;:&quot;Jeddha Airport \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
-                                      <option value="7" 
-                      data-routedata="{&quot;id&quot;:7,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
-                                      <option value="8" 
-                      data-routedata="{&quot;id&quot;:8,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:6,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MAK&quot;,&quot;pickup6_code&quot;:&quot;MAK&quot;,&quot;dropof6_code&quot;:&quot;JED&quot;,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
-                                      <option value="9" 
-                      data-routedata="{&quot;id&quot;:9,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MDA&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
-                                      <option value="10" 
-                      data-routedata="{&quot;id&quot;:10,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAK&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
-                                      <option value="11" 
-                      data-routedata="{&quot;id&quot;:11,&quot;description&quot;:&quot;Jeddah Airport \/ Madinah \/ Makkah \/Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
-                                      <option value="39" 
-                      data-routedata="{&quot;id&quot;:39,&quot;description&quot;:&quot;Makkah to Taif to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:&quot;TAF&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Makkah to Taif to Makkah</option>
-                                      <option value="41" 
-                      data-routedata="{&quot;id&quot;:41,&quot;description&quot;:&quot;Makkah to Al baha to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;ALB&quot;}">Makkah to Al baha to Makkah</option>
-                                      <option value="42" 
-                      data-routedata="{&quot;id&quot;:42,&quot;description&quot;:&quot;Jeddah to Al baha to Jeddah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah to Al baha to Jeddah</option>
-                                      <option value="44" 
-                      data-routedata="{&quot;id&quot;:44,&quot;description&quot;:&quot;Jeddah Airport To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Jeddah Airport To Makkah Hotel</option>
-                                      <option value="45" 
-                      data-routedata="{&quot;id&quot;:45,&quot;description&quot;:&quot;Makkah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah Airport</option>
-                                      <option value="46" 
-                      data-routedata="{&quot;id&quot;:46,&quot;description&quot;:&quot;Jeddah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Jeddah Airport To Madinah Hotel</option>
-                                      <option value="47" 
-                      data-routedata="{&quot;id&quot;:47,&quot;description&quot;:&quot;Madinah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Hotel To Jeddah Airport</option>
-                                      <option value="54" 
-                      data-routedata="{&quot;id&quot;:54,&quot;description&quot;:&quot;Jeddah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Hotel To Jeddah City Tour</option>
-                                      <option value="55" 
-                      data-routedata="{&quot;id&quot;:55,&quot;description&quot;:&quot;Makkah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah City Tour</option>
-                                      <option value="56" 
-                      data-routedata="{&quot;id&quot;:56,&quot;description&quot;:&quot;Madinah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Airport To Madinah Hotel</option>
-                                      <option value="57" 
-                      data-routedata="{&quot;id&quot;:57,&quot;description&quot;:&quot;Madinah Hotel To Madinah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Madinah Hotel To Madinah Airport</option>
-                                      <option value="58" 
-                      data-routedata="{&quot;id&quot;:58,&quot;description&quot;:&quot;Makkah Hotel To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Madinah Hotel</option>
-                                      <option value="59" 
-                      data-routedata="{&quot;id&quot;:59,&quot;description&quot;:&quot;Madinah HotelTo Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah HotelTo Makkah Hotel</option>
-                                      <option value="60" 
-                      data-routedata="{&quot;id&quot;:60,&quot;description&quot;:&quot;Makkah Hotel To Makkah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Ziyarat</option>
-                                      <option value="61" 
-                      data-routedata="{&quot;id&quot;:61,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat</option>
-                                      <option value="62" 
-                      data-routedata="{&quot;id&quot;:62,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
-                                      <option value="63" 
-                      data-routedata="{&quot;id&quot;:63,&quot;description&quot;:&quot;Makkah Hotel To Taif Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Taif Ziarat</option>
-                                      <option value="64" 
-                      data-routedata="{&quot;id&quot;:64,&quot;description&quot;:&quot;Madinah Hotel To Badar Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Badar Ziarat</option>
-                                      <option value="65" 
-                      data-routedata="{&quot;id&quot;:65,&quot;description&quot;:&quot;Makkah Hotel To Makkah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Train Station</option>
-                                      <option value="66" 
-                      data-routedata="{&quot;id&quot;:66,&quot;description&quot;:&quot;Makkah Train Station To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Train Station To Makkah Hotel</option>
-                                      <option value="67" 
-                      data-routedata="{&quot;id&quot;:67,&quot;description&quot;:&quot;Madinah Hotel To Madinah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Train Station</option>
-                                      <option value="68" 
-                      data-routedata="{&quot;id&quot;:68,&quot;description&quot;:&quot;Madinah Train Station To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Train Station To Madinah Hotel</option>
-                                      <option value="69" 
-                      data-routedata="{&quot;id&quot;:69,&quot;description&quot;:&quot;Makkah Hotel To Masjid Ayesha Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Ayesha Meeqat</option>
-                                      <option value="70" 
-                      data-routedata="{&quot;id&quot;:70,&quot;description&quot;:&quot;Makkah Hotel To Masjid Jurana Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Jurana Meeqat</option>
-                    
-
-                  </select>
-                                </div>
-              </div>
-              <div class="row form_row vehicle_show" style="justify-content: flex-start">
-                <div class="col s12 m6 wrap_spacing " style="margin-left:0;">
-                  <div class="input_Labels">
-                    <label class="wrap_Labels">Vehicle </label>
-                  </div>
-                  <select class="form-select active-state vehicle" name="vehicle">
-                    <option value="" disabled selected>Select Vehicle </option>
-                                      <option value="Car" 
-                      >Car</option>
-                                      <option value="HiAce" 
-                      >HiAce</option>
-                                      <option value="Coaster" 
-                      >Coaster</option>
-                                      <option value="Bus" 
-                      >Bus</option>
-                                      <option value="H1" 
-                      >H1</option>
-                                      <option value="GMC" 
-                      >GMC</option>
-                                      <option value="Staria" 
-                      >Staria</option>
-                    
-
-                  </select>
-                                </div>
-              </div>
-
-              <div class="row form_row flex_direction wrap_hotel_Type ">
-                <h6 class="selct_passengers hotel_show">Hotel Details</h6>
-              </div>
-
-
-
-
-              <div class="hotel_data hotel_show">
-
-              </div>
-
-              <div class="row form_row">
-                <div class="col s12 wrap_spacing">
-                  <div class="input_Labels">
-                    <label class="wrap_Labels"> Instruction / Other Details</label>
-                  </div>
-                  <textarea style="border-radius: 7px !important;
-          border: 1px solid var(--border-color) !important;
-          padding: 8px 15px 8px 15px !important;
-          background-color: white !important;
-          box-sizing: inherit !important;
-          " name="comment" rows="8" class="form-control active-state" placeholder="Instructions"></textarea>
-
-                                </div>
-              </div>
-              <div class="row form_row">
-                <!-- Verification -->
-                <div class="col wrap_spacing">
-                  <div data-sitekey="6LeNor8qAAAAAKC2M6psc0czcnbLlEhk-NHNb-Md" class="g-recaptcha"></div>
-                                </div>
-                <!-- Verification -->
-              </div>
-
-              <div class="row form_row form_Button">
-                <div class="next_btn">
-                  <a href="javascript:void(0)" class="p_btn PreviousBtn">Previous</a>
-                  <button class="n_btn SubmitButton" type="button">Submit</button>
+              <div class="progress_bar">
+                <h6>1 of 2 Completed</h6>
+                <div id="myProgress">
+                  <div id="myBar"></div>
                 </div>
               </div>
+              <div class="partner">
+                <div class="custom-card">
+                  <div class="">
+                    <img src="/umrahcompanions.com/assets/frontend/img/handshake.svg" alt="">
+                    <p >Nusuk Partner</p>
+                  </div>
+                  <!-- <span class="vr"></span> -->
+                  <div class="">
+                    <img src="/umrahcompanions.com/assets/frontend/img/light_glob.svg" alt="">
+                    <p>Global Offices</p>
+                  </div>
+                  <!-- <span class="vr"></span> -->
+                  <div class="">
+                    <img src="/umrahcompanions.com/assets/frontend/img/seal_check.svg" alt="">
+                    <p>Local Support</p>
+                  </div>
+                </div>
+              </div>            
             </div>
-          </form>
+            <div class="col-lg-box ">
+              <div class="box-shadow">
+                <form action="#" id="InquiryForm" class="needs-validation" method="POST" enctype="multipart/form-data"
+                  action="https://umrahcompanions.com/inquiry" id="InquiryForm">
+                  <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
+                  <div class="inquiry_form step1">
+
+                    <h5 class="sub-heading">Select Required Services</h5>
+                    <div class="row form_row" style="justify-content: start; gap: 10px;">
+                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                        <div class="switch">
+                          <div class="input_Labels">
+                            <input type="checkbox" id="question2" class="checkbox-main" name="question2">
+                            <label for="question2" class="wrap_Labels">Visa</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
+                        <div class="switch">
+                          <div class="input_Labels">
+                            <input type="checkbox" id="question3" class="checkbox-main" name="question3">
+                            <label for="question3" class="wrap_Labels">Flight</label>                    
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Start Date -->
+                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
+                        <div class="switch" >
+                          <div class="input_Labels">
+                            <input type="checkbox" id="question1" class="checkbox-main" name="question1">
+                            <label for="question1" class="wrap_Labels">Transport</label>       
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
+                        <div class="switch">
+                          <div class="input_Labels">                      
+                            <input type="checkbox" id="hotel_type" class="checkbox-main" name="hotel_type">
+                            <label for="hotel_type" class="wrap_Labels">Hotel</label>    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h5 class="sub-heading">Personal Information</h5>
+                    <div class="row form_row ">
+                      <!-- Name -->
+                      <div class="col s12 m6 l4 wrap_spacing" >
+                        <input type="text" class="form-control active-state" placeholder="Name" aria-label="Name"
+                          name="first_name" value="" />
+                      </div>
+                      <!-- Name -->
+                      <!-- Email -->
+                      <div class="col s12 m6 l4 wrap_spacing">
+                        <input type="email" class="form-control active-state" placeholder="Email Address"
+                        aria-label="Email Address" name="email" value="" />
+                      </div>
+                      <!-- Email -->  
+                      <!-- Phone No -->
+                      <div class="col s12 m6 l4 wrap_spacing">
+                        <input type="text" class="form-control active-state" placeholder="Phone Number"
+                        aria-label="Phone Number" name="phoneno" value=""
+                        onkeypress="return onlyNumberKey(event)" />
+                      </div>
+                      <!-- Phone No -->
+                    <!-- </div>
+
+                    <div class="row form_row"> -->
+                      <!-- Nationality -->
+                      <div class="col s12 m6 l4 wrap_spacing">
+                        <select class="form-select active-state" name="nationality" id="nationality">
+                          <option value=""  >Select Nationality <span class="text-danger">*</span></option>
+                        </select>
+                      </div>
+                      <!-- Nationality -->
+                      <!-- Departure City -->
+                      <div class="col s12 m6 l4 wrap_spacing">
+                        <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
+                      </div>
+                      <!-- Departure City -->
+                      <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
+                        <input type="text" class="form-control active-state package-datepicker"
+                          placeholder="Select Arrival Date *" aria-label="Arrival Date" name="start_date"
+                          value="" />
+                      </div>
+                      <!-- Private Transport -->
+
+                      <!-- Private Transport -->
+                    </div>
+                    
+                
+                    <h5 class="sub-heading">Select Pilgrims</h5>
+                    
+                    <div class="pilgrim-section">
+                      <div class="passenger-wrapper">
+                        <div class=" counter-container" data-type="Adults">
+                          <label class="counter-label">Adults</label>
+                          <div class="counter-controls">
+                            <button type="button" class="counter-btn minus">−</button>
+                            <span class="counter-value">01</span>
+                            <button type="button" class="counter-btn plus">+</button>
+                          </div>
+                        </div>
+
+                        <div class="counter-container" data-type="Child">
+                          <label class="counter-label">Child</label>
+                          <div class="counter-controls">
+                            <button type="button" class="counter-btn minus">−</button>
+                            <span class="counter-value">00</span>
+                            <button type="button" class="counter-btn plus">+</button>
+                          </div>
+                        </div>
+
+                        <div class="counter-container" data-type="Infants">
+                          <label class="counter-label">Infants</label>
+                          <div class="counter-controls">
+                            <button type="button" class="counter-btn minus">−</button>
+                            <span class="counter-value">00</span>
+                            <button type="button" class="counter-btn plus">+</button>
+                          </div>
+                        </div>
+
+                      <div class="next_btn">
+                        <a href="javascript:void(0)" class="n_btn Nextbtn">Next</a>
+                      </div>                </div>
+                    </div>
+
+                  
+                  </div>
+
+                  <div class="inquiry_form step2" style="display:none;">
+                      <h5 class="sub-heading">Additional Information</h5>
+
+                    <div class="row form_row flex_direction "></div>
+                    <div class="row form_row route_show">
+                      <div class="col s12  m8">
+                        <select class="form-select active-state route_id" name="route">
+                          <option value="" disabled selected>Select Route <span class="text-danger">*</span></option>
+                                            <option value="1" 
+                            data-routedata="{&quot;id&quot;:1,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Jeddah Airport</option>
+                                            <option value="2" 
+                            data-routedata="{&quot;id&quot;:2,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
+                                            <option value="3" 
+                            data-routedata="{&quot;id&quot;:3,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport &quot;,&quot;no_of_pickups&quot;:4,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;JED&quot;,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
+                                            <option value="4" 
+                            data-routedata="{&quot;id&quot;:4,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MDA&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
+                                            <option value="5" 
+                            data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
+                                            <option value="6" 
+                            data-routedata="{&quot;id&quot;:6,&quot;description&quot;:&quot;Jeddha Airport \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
+                                            <option value="7" 
+                            data-routedata="{&quot;id&quot;:7,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
+                                            <option value="8" 
+                            data-routedata="{&quot;id&quot;:8,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:6,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MAK&quot;,&quot;pickup6_code&quot;:&quot;MAK&quot;,&quot;dropof6_code&quot;:&quot;JED&quot;,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
+                                            <option value="9" 
+                            data-routedata="{&quot;id&quot;:9,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MDA&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
+                                            <option value="10" 
+                            data-routedata="{&quot;id&quot;:10,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAK&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
+                                            <option value="11" 
+                            data-routedata="{&quot;id&quot;:11,&quot;description&quot;:&quot;Jeddah Airport \/ Madinah \/ Makkah \/Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
+                                            <option value="39" 
+                            data-routedata="{&quot;id&quot;:39,&quot;description&quot;:&quot;Makkah to Taif to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:&quot;TAF&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Makkah to Taif to Makkah</option>
+                                            <option value="41" 
+                            data-routedata="{&quot;id&quot;:41,&quot;description&quot;:&quot;Makkah to Al baha to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;ALB&quot;}">Makkah to Al baha to Makkah</option>
+                                            <option value="42" 
+                            data-routedata="{&quot;id&quot;:42,&quot;description&quot;:&quot;Jeddah to Al baha to Jeddah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah to Al baha to Jeddah</option>
+                                            <option value="44" 
+                            data-routedata="{&quot;id&quot;:44,&quot;description&quot;:&quot;Jeddah Airport To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Jeddah Airport To Makkah Hotel</option>
+                                            <option value="45" 
+                            data-routedata="{&quot;id&quot;:45,&quot;description&quot;:&quot;Makkah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah Airport</option>
+                                            <option value="46" 
+                            data-routedata="{&quot;id&quot;:46,&quot;description&quot;:&quot;Jeddah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Jeddah Airport To Madinah Hotel</option>
+                                            <option value="47" 
+                            data-routedata="{&quot;id&quot;:47,&quot;description&quot;:&quot;Madinah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Hotel To Jeddah Airport</option>
+                                            <option value="54" 
+                            data-routedata="{&quot;id&quot;:54,&quot;description&quot;:&quot;Jeddah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Hotel To Jeddah City Tour</option>
+                                            <option value="55" 
+                            data-routedata="{&quot;id&quot;:55,&quot;description&quot;:&quot;Makkah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah City Tour</option>
+                                            <option value="56" 
+                            data-routedata="{&quot;id&quot;:56,&quot;description&quot;:&quot;Madinah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Airport To Madinah Hotel</option>
+                                            <option value="57" 
+                            data-routedata="{&quot;id&quot;:57,&quot;description&quot;:&quot;Madinah Hotel To Madinah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Madinah Hotel To Madinah Airport</option>
+                                            <option value="58" 
+                            data-routedata="{&quot;id&quot;:58,&quot;description&quot;:&quot;Makkah Hotel To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Madinah Hotel</option>
+                                            <option value="59" 
+                            data-routedata="{&quot;id&quot;:59,&quot;description&quot;:&quot;Madinah HotelTo Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah HotelTo Makkah Hotel</option>
+                                            <option value="60" 
+                            data-routedata="{&quot;id&quot;:60,&quot;description&quot;:&quot;Makkah Hotel To Makkah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Ziyarat</option>
+                                            <option value="61" 
+                            data-routedata="{&quot;id&quot;:61,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat</option>
+                                            <option value="62" 
+                            data-routedata="{&quot;id&quot;:62,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
+                                            <option value="63" 
+                            data-routedata="{&quot;id&quot;:63,&quot;description&quot;:&quot;Makkah Hotel To Taif Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Taif Ziarat</option>
+                                            <option value="64" 
+                            data-routedata="{&quot;id&quot;:64,&quot;description&quot;:&quot;Madinah Hotel To Badar Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Badar Ziarat</option>
+                                            <option value="65" 
+                            data-routedata="{&quot;id&quot;:65,&quot;description&quot;:&quot;Makkah Hotel To Makkah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Train Station</option>
+                                            <option value="66" 
+                            data-routedata="{&quot;id&quot;:66,&quot;description&quot;:&quot;Makkah Train Station To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Train Station To Makkah Hotel</option>
+                                            <option value="67" 
+                            data-routedata="{&quot;id&quot;:67,&quot;description&quot;:&quot;Madinah Hotel To Madinah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Train Station</option>
+                                            <option value="68" 
+                            data-routedata="{&quot;id&quot;:68,&quot;description&quot;:&quot;Madinah Train Station To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Train Station To Madinah Hotel</option>
+                                            <option value="69" 
+                            data-routedata="{&quot;id&quot;:69,&quot;description&quot;:&quot;Makkah Hotel To Masjid Ayesha Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Ayesha Meeqat</option>
+                                            <option value="70" 
+                            data-routedata="{&quot;id&quot;:70,&quot;description&quot;:&quot;Makkah Hotel To Masjid Jurana Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Jurana Meeqat</option>
+                          
+
+                        </select>
+                                      </div>
+                    <!-- </div>
+                    <div class="row form_row vehicle_show" style="justify-content: flex-start"> -->
+                      <div class="col s12 m3 wrap_spacing " style="margin-left:0;">
+                       
+                        <select class="form-select active-state vehicle" name="vehicle">
+                          <option value="" disabled selected>Select Vehicle </option>
+                                            <option value="Car" 
+                            >Car</option>
+                                            <option value="HiAce" 
+                            >HiAce</option>
+                                            <option value="Coaster" 
+                            >Coaster</option>
+                                            <option value="Bus" 
+                            >Bus</option>
+                                            <option value="H1" 
+                            >H1</option>
+                                            <option value="GMC" 
+                            >GMC</option>
+                                            <option value="Staria" 
+                            >Staria</option>
+                          
+
+                        </select>
+                                      </div>
+                    </div>
+
+                    <div class="row form_row flex_direction wrap_hotel_Type ">
+                      <h6 class="selct_passengers hotel_show">Hotel Details</h6>
+                    </div>
+
+
+
+
+                    <div class="hotel_data hotel_show">
+
+                    </div>
+
+                    <div class="row form_row">
+                      <div class="col s12 wrap_spacing">
+                        <div class="input_Labels">
+                          <label class="wrap_Labels"> Instruction / Other Details</label>
+                        </div>
+                        <textarea style="border-radius: 7px !important;
+                border: 1px solid var(--border-color) !important;
+                padding: 8px 15px 8px 15px !important;
+                background-color: white !important;
+                box-sizing: inherit !important;
+                " name="comment" rows="8" class="form-control active-state" placeholder="Instructions"></textarea>
+
+                                      </div>
+                    </div>
+                    <div class="row form_row">
+                      <!-- Verification -->
+                      <div class="col wrap_spacing">
+                        <div data-sitekey="6LeNor8qAAAAAKC2M6psc0czcnbLlEhk-NHNb-Md" class="g-recaptcha"></div>
+                                      </div>
+                      <!-- Verification -->
+                    </div>
+
+                    <div class="row form_row form_Button">
+                      <div class="next_btn">
+                        <a href="javascript:void(0)" class="p_btn PreviousBtn">Previous</a>
+                        <button class="n_btn SubmitButton" type="button">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
-  </div>
-  </div>
-</div>
       <!-- Section Content -->
 
       <!-- Footer -->
-         <footer class="footer" data-scroll-section data-scroll-repeat>
-    <div class="container">
-        <div class="topFooter">
-            <div class="row">
-                <div class="col s12 m12 l2 logo_Column">
-                    <div class="linkB" style="z-index: 9999;">
-                        <a href="index.html"><img src="approot/storage/app/public/images/frontend/new_UC_Logo.svg"></a>
-                    </div>
-                </div>
-                <div class="col s12 m4 l3 links_Column">
-                    <div class="colfooter">
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>Quick links</h6>
-                            <ul>
-                                <li><a href="packages.html">Packages</a></li>
-                                <li><a href="reservetransport.html">Transport</a></li>
-                                <li><a href="visaprices.html">Umrah Visa</a></li>
-                                
-                                <li><a href="who_we_are.html">Who We Are</a></li>
-                                <li><a href="umrah_packages_pakistan.html">Umrah packages Pakistan 2025</a></li>
-                                <li><a href="umrah_packages_canada.html">Umrah packages Canada</a></li>
-                                <li><a href="umrah_packages_uk.html">Umrah packages UK</a></li>
-                                <li><a href="umrah_packages_uae.html">Umrah packages UAE</a></li>
-                            </ul>
-                        </div>
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>support</h6>
-                            <ul>
-                                <li><a href="contact-us.html">Contact</a></li>
-                                <li><a href="faqs.html">FAQ's</a></li>
-                                <li><a href="affiliate.html">Affiliate Page</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col s12 m5 l4 newsletter_Column footer_Heading">
-                    <div class="wrapFooter">
-                        <h6>Newsletters</h6>
-                        <form>
-                            <div class="formFooter">
-                                <div class="input-field">
-                                    <input id="email" type="email" class="validate" placeholder="Enter Your Email">
-                                </div>
-                                <button
-                                    class="btn waves-effect waves-light h-btn-done subBtn"><span>Subscribe</span></button>
-                            </div>
-                        </form>
-                        <p>Subscribe to our mailing list to get the latest insights and updates about Umrah</p>
-                    </div>
-                </div>
-            </div>
-            <!-- top-footer-end -->
-            <div class="middleFooter">
-                <div class="row">
-                    <div class="col s12 m5 l5 colD colD_Align">
-                        <div class="wrapFooter cardWrap">
-                            <div class="colD-Left pricingImages">
-                                <ul>
-                                    <li><img src="approot/storage/app/public/images/frontend/visa.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/master.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/american.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/paypal.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/stripe.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/hyper.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/sadad.webp"></li>
-                                </ul>
-                            </div>
-
-                            <div class="wrapFooter socialIcon colD-Right column_Align">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/umrahcompanions/" target="_blank"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://instagram.com/umrahcompanion?utm_medium=copy_link"
-                                            target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://vm.tiktok.com/ZSewQQQtG/" target="_blank"><i
-                                                class="fab fa-tiktok"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/umrahcompanions" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- middle-footer-end -->
-            <div class="ftLink">
-                <div class="row">
-                    <div class="col s12 footer_links">
-                        <p class="center copy">Copyright 2025 © Umrah Companions and
-                            Powered by <a href="https://www.funadiq.com/">Funadiq.</a></p>
-                        <ul class="priv-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="col s12">
-                    <p>Copyright 2024 © <a href="#">Funadiq.</a> All rights reserved</p>
-                </div> -->
-            </div>
-            <!-- copy link end -->
-        </div>
+      <div id="footer"></div>
     </div>
-</footer>
-
-</div>
 <!-- data-scroll-container close -->
 <div class="overlay-search-2"></div>
 <!-- fixed button -->
@@ -873,7 +550,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
 <!-- Login Modal -->
 <!-- Modal Structure -->
-   <div id="modalLogin" class="modal modal-register" style="">
+   <div id="modalLogin" class="modal modal-register">
     <div class="modal-content">
     <section id="formHolder">
      <div class="row">
@@ -1268,7 +945,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       <!-- Footer -->
 
       <!-- Script -->
-         <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/countdown.js"></script>
 <script type="text/javascript" src="assets/frontend/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/select.js"></script>
@@ -1328,26 +1005,21 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                     <h6 class="selct_passengers">Hotel in `+city+`</h6>
                   </div>
                   <div class="row form_row">
-                      <div class="col s12 m2">
+                     <div class="col s12 m4">
+                    
+                        <select class="select-dropdown active-state" name="hotels[`+index+`][prefered_hotels]" multiple>
+                          
+                          `+hotel_options+`
+                        </select>
+
+                        
+                      </div>
+                       <div class="col s12 m2">
                         <div class="input_Labels">
                           <label class="wrap_Labels">Nights</label>
                         </div>
                         <input type="hidden" name="hotels[`+index+`][city]" value="`+city+`" />
                         <input type="number" class="form-select active-state" name="hotels[`+index+`][nights]" placeholder="Nights" min="1" required value="3">
-                        
-                      </div>
-
-                      
-                      <div class="col s12 m6">
-                        <div class="input_Labels">
-                          <label class="wrap_Labels">Prefered Hotels</label>
-                        </div>
-                        
-                        <select class="select2" name="hotels[`+index+`][prefered_hotels]" multiple>
-                          
-                          `+hotel_options+`
-                        </select>
-
                         
                       </div>
                       <div class="col s12 m2">
@@ -1385,7 +1057,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
         $('.hotel_data').html(html);
 
-        $('.select2').select2();
+        // $('.select2').select2()
 
          
       });
@@ -1432,7 +1104,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       $('.Nextbtn').on('click',function(e){
         e.preventDefault();
         var form = $("#InquiryForm");
-
+        console.log(form, "inquiry form")
         /* Nationality */
           if($('[name="nationality"]').val() === null || $('[name="nationality"]').val() === ''){
             $('[name="nationality"]').parents('.wrap_spacing').find('.text-danger').remove();
@@ -1493,7 +1165,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         /* question1 */
           if($('[name="start_date"]').val() === null || $('[name="start_date"]').val() === ''){
             $('[name="start_date"]').parents('.wrap_spacing').find('.text-danger').remove();
-            $('[name="start_date"]').parents('.wrap_spacing').append('<span class="text-danger">This field is required</span>');
+            $('[name="start_date"]').parents('.wrap_spacing').append('');
             if(form.valid()){
               return false;
             }
@@ -1508,11 +1180,13 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
           $('.progress_bar').find('h6').html('2 of 2 Completed');
           $('.additional-information').removeClass('opacity disabled');
         }
+
       });
 
       $('.SubmitButton').on('click',function(e){
         e.preventDefault();
         var form = $("#InquiryForm");
+        console.log(form)
 
         // /* makkah_days */
         //   if($('[name="makkah_days"]').val() === null || $('[name="makkah_days"]').val() === ''){
@@ -1584,12 +1258,14 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
           hideAfter: 5000, 
         });
 
+
         Swal.fire({
           icon: 'success',
           title: 'Success',
           text: 'Successfully Saved',
         }).then((result) => {
           if (result.isConfirmed) {
+            console.log(result)
             let timerInterval
             Swal.fire({
               title: 'Auto Page Refresh',
@@ -1725,1043 +1401,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- Section Content -->
 
 <!-- Common Js -->
-   <script>
-  $(document).ready(function(e){
-    var properties = {
-      "email": "bilal@webnet.com.pk",
-      "FIRSTNAME": "Bilal",
-      "LASTNAME": "Danny",
-    }
-    var track_event = {
-      "id": "cart:1234",
-      "data": {
-          "total": 280,
-          "currency": "USD",
-          "url": "www.example.com",
-          "items": [{
-              "name": "Black shoes",
-              "price": 90,
-              "quantity": 2,
-              "url": "www.example.com/black-shoes",
-              "image": "www.example.com/black-shoes.jpg"
-          }, {
-              "name": "White shirt",
-              "price": 100,
-              "quantity": 1,
-              "url": "www.example.com/shirt",
-              "image": "www.example.com/shirt.jpg"
-          }]
-      }
-    }
-    sendinblue.track("brower_close", properties, track_event);
-    // sendinblue.identify('Browser Close');
-  })
-  $(document).ready(function(){
-          if(window.location.hash === '#modalpassword') {
-            setTimeout(()=>{
-              $('#modalpassword').modal('open');
-            },1000);
-          }
-        });
-
-         $('.changecurrency').change(function(){
-           var currency = $(this).val();
-           var html = `<input type="hidden" name="currency" value="`+currency+`" />`;
-           $('#currency-form').append(html);
-           $('#currency-form').submit();
-         })
-
-    //select script
-
-     $(document).ready(function(){
-    $('select').formSelect();
-
-    $("#loginform").validate({
-      rules: {
-        email: {
-          required: true,
-          email:true,
-        },
-        password: {
-          required: true,
-        }
-      },
-      errorElement : 'span',
-    });
-
-    $("#Detailloginform").validate({
-      rules: {
-        email: {
-          required: true,
-          email:true,
-        },
-        password: {
-          required: true,
-        }
-      },
-      errorElement : 'span',
-    });
-
-    $("#resetform").validate({
-      rules: {
-        email: {
-          required: true,
-          email:true,
-        },
-        whatsapp_no: {
-          required: true,
-          number:true,
-        },
-      },
-      errorElement : 'span',
-    });
-
-    $("#UCRegisterForm").validate({
-        rules: {
-            name: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email:true,
-            },
-            password: {
-              required: true,
-              minlength: 8
-            },
-            password_confirm: {
-              required: true,
-              minlength: 8
-            },
-            contact_no: {
-              required: true,
-              number:true,
-            },
-        },
-        errorElement : 'span',
-    });
-
-    $("#FNRegisterForm").validate({
-        rules: {
-            name: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email:true,
-            },
-            password: {
-              required: true,
-              minlength: 8
-            },
-            password_confirm: {
-              required: true,
-              minlength: 8
-            },
-            contact_no: {
-              required: true,
-              number:true,
-            },
-        },
-        errorElement : 'span',
-    });
-
-    $("#DetailUCRegisterForm").validate({
-        rules: {
-            name: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email:true,
-            },
-            password: {
-              required: true,
-              minlength: 8
-            },
-            password_confirm: {
-              required: true,
-              minlength: 8
-            },
-            contact_no: {
-              required: true,
-              number:true,
-            },
-        },
-        errorElement : 'span',
-    });
-
-    $("#DetailFNRegisterForm").validate({
-        rules: {
-            name: {
-              required: true,
-            },
-            email: {
-              required: true,
-              email:true,
-            },
-            password: {
-              required: true,
-              minlength: 8
-            },
-            password_confirm: {
-              required: true,
-              minlength: 8
-            },
-            contact_no: {
-              required: true,
-              number:true,
-            },
-        },
-        errorElement : 'span',
-    });
-
-  });
-       // Sticky Inner pages header
-
-       $(window).scroll(function(){
-          var sticky = $('.sticky'),
-          scrolla = $(window).scrollTop();
-
-          if (scrolla >= 100) sticky.addClass('fixed');
-          else sticky.removeClass('fixed');
-      });
-
-
-
-         // Timer code
-       //   var endDate = "2021/12/30 17:13:40";
-       //   $('.countdown.simple').countdown(endDate)
-       //   .on('update.countdown', function(event) {
-       //     var format = '%Hh:%Mm:%Ss';
-       //     if(event.offset.totalDays > 0) {
-       //         format = '%-dday%!d ' + format;
-       //     }
-       //     if(event.offset.weeks > 0) {
-       //         format = '%-wweek%!w ' + format;
-       //     }
-       //     $(this).html(event.strftime(format));
-       // })
-       //   .on('finish.countdown', function(event) {
-       //     location.reload();
-       // });
-         
-         
-         
-         // sticky Latest Deal Button 
-         $(document).on('click','.view-btn',function(){
-           $('.view-sticky-button').toggleClass('activeS');
-         // var box=$(this).parent().find('.sticky-form');
-         $ ('.overlay-search-2').addClass('active-overlay-2');
-         // $ ('.sticky-form').css('transform','translate3d(0px, 0px, 0px)');
-         // if(!box.is(':visible')){box.fadeIn(300)}
-     });
-         
-         
-         $(document).on('click','.active-overlay-2',function(){
-           $('.view-sticky-button').removeClass('activeS');
-           $(this).removeClass('active-overlay-2');
-       });
-         
-         $(document).on('click','.closeIcon',function(){
-           $('.view-sticky-button').removeClass('activeS');
-           $(this).removeClass('active-overlay-2');
-       });
-         
-         
-         $(document).on('click', '.view-sticky-button.activeS', function() {
-           $('.active-overlay-2').removeClass('active-overlay-2');
-       });   
-
-
-
-// LOGIN MODALS
- 
-            //popup modals
-             document.addEventListener('DOMContentLoaded', function() {
-                var elems = document.querySelectorAll('.modal');
-               // var instances = M.Modal.init(elems, options);
-              });
-
-              // Or with jQuery
-
-              //login register modal
-              $(document).ready(function(){
-                    $('#prfInput').on('click',function() {
-                        $('.proflmg').slideToggle();
-                    });
-                    $('.modal').modal();
-                    $('#modalRegister').modal({
-                      dismissible: false, // Modal can be dismissed by clicking outside of the modal
-                    });
-                    $('.modal select').formSelect();
-                    
-                    /* Phone 3 */
-                        var input = document.querySelector("#phone3");
-                        var instance = window.intlTelInput(input, {
-                            separateDialCode: true,
-                            initialCountry: "auto",
-                            geoIpLookup: function(success, failure) {
-                                $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
-                                    var countryCode = (resp && resp.country) ? resp.country : "us";
-                                    success(countryCode);
-                                });
-                            },
-                        });
-                        var countryData = instance.getSelectedCountryData();
-                        $('.country_code').val(countryData.dialCode);
-                        input.addEventListener("countrychange",function() {
-                            var countryData = instance.getSelectedCountryData();
-                            $('.country_code').val(countryData.dialCode);
-                        });
-                    /* Phone 3 */
-
-                    var input = document.querySelector("#phone4");
-                    var instance = window.intlTelInput(input, {
-                        separateDialCode: true,
-                        initialCountry: "auto",
-                        geoIpLookup: function(success, failure) {
-                            $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
-                                var countryCode = (resp && resp.country) ? resp.country : "us";
-                                success(countryCode);
-                            });
-                        },
-                    });
-                    var countryData = instance.getSelectedCountryData();
-                    $('.country_code').val(countryData.dialCode);
-                    input.addEventListener("countrychange",function() {
-                        var countryData = instance.getSelectedCountryData();
-                        $('.country_code').val(countryData.dialCode);
-                    });
-                     
-                     
-
-                    //hide and show login and register modals on click
-                    $('#rg-btn').on('click',function(e) {
-                        event.preventDefault();
-                        $('#modalLogin').modal('close');
-                        $('#modalRegister').modal('open');
-                        $('.ProfileSelect').val('');
-                        $('.createForm').slideDown();
-                        $('.ProfileSelect').formSelect();
-                    });
-                    $('.loginMbtn').on('click',function(e) {
-                        event.preventDefault();
-                        $('#modalLogin').modal('open');
-                        $('#modalRegister').modal('close');   
-                        $('.profileInput').slideDown();
-                        $('.proflmg').slideUp();
-                        $('#fundaiqRegDv').slideUp();
-                        $('#travelAgentText').slideUp();
-                        $('#umrahRegDv').slideUp();
-                        $('#umrahIndiText').slideUp();
-                        $('.ProfileSelect').val('');
-                        $('.ProfileSelect').formSelect();
-                    });
-
-                    $('.registerBtn').on('click',function(e) {
-                        event.preventDefault();
-                        $('.ProfileSelect').val('');
-                        $('.createForm').slideDown();
-                        $('.ProfileSelect').formSelect();
-                    });
-                    $('#forgotModalbtn').on('click',function() {
-                        $('.formSuccess').slideUp();
-                        $('#modalpassword').modal('open');
-                        $('#modalLogin').modal('close');
-                        $('.resetDv').show();
-                    })
-
-                    //user register profile selection image map
-                   $('.proflmg map area').on('click',function(e) {
-                        event.preventDefault();
-                        areaDv = $(this).attr('data-map');
-                        $('.profileInput').slideUp();
-                        if(areaDv == 'umrah') {
-                           $('#fundaiqRegDv').slideUp();
-                           $('#travelAgentText').slideUp();
-                           $('#umrahRegDv').slideDown();
-                           $('#umrahIndiText').slideDown();
-                        }
-                        else {
-                           $('#fundaiqRegDv').slideDown();
-                           $('#travelAgentText').slideDown();
-                           $('#umrahRegDv').slideUp();
-                           $('#umrahIndiText').slideUp();
-                        }                        
-                   });
-
-                   $('.ProfileSelect').on('change',function(e){
-                    event.preventDefault();
-                    var areaDv = $(this).val();
-                    if(areaDv == 'umrah') {
-                      $('#fundaiqRegDv').slideUp();
-                      $('#travelAgentText').slideUp();
-                      $('#umrahRegDv').slideDown();
-                      $('#umrahIndiText').slideDown();
-                    }else {
-                      $('#fundaiqRegDv').slideDown();
-                      $('#travelAgentText').slideDown();
-                      $('#umrahRegDv').slideUp();
-                      $('#umrahIndiText').slideUp();
-                    }
-                    $('.createForm').slideUp();  
-                   })
-
-                //forgot password send btn on modal
-                // $('.sendmbtn').on('click',function(e) {
-                //         event.preventDefault();
-                //         $('.resetDv').slideUp();
-                //         $('.formSuccess').slideDown();
-                // });
-                // Check your email to activate your account
-               // $('.createbtn').on('click',function(e) {
-               //     event.preventDefault();
-               //  $('.signWRaps2').slideDown();
-               //  $('.signWRaps').slideUp();
-               //  $('#fundaiqRegDv').slideUp();
-               //  $('#travelAgentText').slideUp();
-               //  $('#umrahRegDv').slideUp();
-               //  $('#umrahIndiText').slideUp();
-
-               // });
-
-               // resgister slides up on the click of close button 
-                $('.modal-close').on('click',function(e) {
-
-                    if($(this).attr('data-refresh') === undefined || $(this).attr('data-refresh') === false){
-                        event.preventDefault();
-                        $('.signWRaps2').slideUp();
-                        $('.signWRaps').slideDown();
-                        $('.profileInput').slideDown();
-                        $('#fundaiqRegDv').slideUp();
-                        $('#travelAgentText').slideUp();
-                        $('#umrahRegDv').slideUp();
-                        $('#umrahIndiText').slideUp();
-                    }else{
-                        window.location.reload();
-                    }
-                    
-                });
-              });
-         //register modal
-
-
-/* Login Function */
-    function login(){
-
-        var form = $("#loginform");
-
-        if(form.valid()){
-            $(document).ready(function(){
-
-                $('.loginMbtnSubmit').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
-                setTimeout(()=>{
-                    var loginForm = $("#loginform");
-                    var formData = loginForm.serialize();
-                    var url = 'login.html';
-
-                    $.ajax({
-                        url:url,
-                        type:'POST',
-                        data:formData,
-                        success:function(data){
-                          if(data === 'message'){
-                            $.toast({
-                              heading: 'Success',
-                              text: 'Password Reset Email Has Been Send',
-                              icon: 'success',
-                              position: 'top-right',
-                              loaderBg:'#22bb33',
-                              class: 'jq-has-icon jq-toast-success',
-                              hideAfter: 3500, 
-                              stack: 6,
-                              showHideTransition: 'slide'
-                            });
-                            setTimeout(()=>{
-                              location.reload();
-                            },3500);
-
-                          }else if(data.errormessage){
-                            $.toast().reset('all');   
-                            $("body").removeAttr('class');
-                            $.toast({
-                              heading: 'Error',
-                              text: data.errormessage,
-                              icon: 'error',
-                              position: 'top-right',
-                              loaderBg:'#7a5449',
-                              class: 'jq-has-icon jq-toast-danger',
-                              hideAfter: 3500, 
-                              stack: 6,
-                              showHideTransition: 'slide'
-                            });
-                          }else{
-                            location.reload();
-                          }
-                          
-                          $('.loginMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        },
-                        error: function (data) {
-                            $.toast().reset('all');   
-                            $("body").removeAttr('class');
-                            $.toast({
-                              heading: 'Error',
-                              text: 'These credentials do not match our records.',
-                              icon: 'error',
-                              position: 'top-right',
-                              loaderBg:'#7a5449',
-                              class: 'jq-has-icon jq-toast-danger',
-                              hideAfter: 3500, 
-                              stack: 6,
-                              showHideTransition: 'slide'
-                            });
-                            $('.loginMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        }
-                    });
-
-                },2000);
-
-            })
-        }
-    }
-/* Login Function */
-
-
-/* Login Function */
-    function login1(){
-
-        var form = $("#Detailloginform");
-
-        if(form.valid()){
-            $(document).ready(function(){
-
-                $('.loginMbtnSubmit').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
-                setTimeout(()=>{
-                    var loginForm = $("#Detailloginform");
-                    var formData = loginForm.serialize();
-                    var url = 'login.html';
-
-                    $.ajax({
-                        url:url,
-                        type:'POST',
-                        data:formData,
-                        success:function(data){
-                            location.reload();
-                            $('.loginMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        },
-                        error: function (data) {
-                            $.toast().reset('all');   
-                            $("body").removeAttr('class');
-                            $.toast({
-                                heading: 'Error',
-                                text: 'These credentials do not match our records.',
-                                icon: 'error',
-                                position: 'top-right',
-                                loaderBg:'#7a5449',
-                                class: 'jq-has-icon jq-toast-danger',
-                                hideAfter: 3500, 
-                                stack: 6,
-                                showHideTransition: 'slide'
-                            });
-                            $('.loginMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        }
-                    });
-
-                },2000);
-
-            })
-        }
-    }
-/* Login Function */
-
-$(document).on('change','.ResetRadioBtn',function(e){
-  if($(e.target).val() == 'whatsapp'){
-    $('.InputEmail').fadeOut(200);
-    $('.InputWhatsapp').fadeIn(200);
-  }else{
-    $('.InputEmail').fadeIn(200);
-    $('.InputWhatsapp').fadeOut(200);
-  }
-})
-
-/* Password Reset Function */
-    function passreset(){
-
-        var form = $("#resetform");
-
-        // $('.resetDv').slideUp();
-        // $('.formSuccess').slideDown();
-
-        if(form.valid()){
-            $('.sendmbtn').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
-            var loginForm = $("#resetform");
-            var formData = loginForm.serialize();
-            var url = 'forget-password.html';
-
-            $.ajax({
-                url:url,
-                type:'POST',
-                data:formData,
-                success:function(data){
-                  if(data.errormessage){
-                    $('.sendmbtn').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                    $.toast().reset('all');   
-                    $("body").removeAttr('class');
-                    $.toast({
-                      heading: 'Error',
-                      text: data.errormessage,
-                      icon: 'error',
-                      position: 'top-right',
-                      loaderBg:'#7a5449',
-                      class: 'jq-has-icon jq-toast-danger',
-                      hideAfter: 3500, 
-                      stack: 6,
-                      showHideTransition: 'slide'
-                    });
-                  }else{
-                    if(data.data*1 == 1)
-                  {
-                    $('.sendmbtn').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                    $('.resetDv').slideUp();
-                    $('.formSuccess').slideDown();
-                  }
-                  else{
-                    $('.sendmbtn').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                    $.toast().reset('all');   
-                    $("body").removeAttr('class');
-                    $.toast({
-                      heading: 'Error',
-                      text: 'Something Went Wrong!',
-                      icon: 'error',
-                      position: 'top-right',
-                      loaderBg:'#7a5449',
-                      class: 'jq-has-icon jq-toast-danger',
-                      hideAfter: 3500, 
-                      stack: 6,
-                      showHideTransition: 'slide'
-                    });
-                  }
-                    
-                  }
-                  // location.reload();
-                  
-                },
-                error: function (data) {
-                    if(data.responseJSON.errors.email[0] !== undefined){
-                        $.toast().reset('all');   
-                        $("body").removeAttr('class');
-                        $.toast({
-                          heading: 'Error',
-                          text: data.responseJSON.errors.email[0],
-                          icon: 'error',
-                          position: 'top-right',
-                          loaderBg:'#7a5449',
-                          class: 'jq-has-icon jq-toast-danger',
-                          hideAfter: 3500, 
-                          stack: 6,
-                          showHideTransition: 'slide'
-                        });
-                    }else{
-                        $.toast().reset('all');   
-                        $("body").removeAttr('class');
-                        $.toast({
-                          heading: 'Error',
-                          text: 'Something Went Wrong',
-                          icon: 'error',
-                          position: 'top-right',
-                          loaderBg:'#7a5449',
-                          class: 'jq-has-icon jq-toast-danger',
-                          hideAfter: 3500, 
-                          stack: 6,
-                          showHideTransition: 'slide'
-                        });
-                    }
-
-                    $('.sendmbtn').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                }
-            });
-        }
-
-    }
-/* Password Reset Function */
-
-/* Register Function */
-    function register(type){
-
-        if(type == 'uc'){
-            var form = $("#UCRegisterForm");
-        }else{
-            var form = $("#FNRegisterForm");
-        }
-
-        
-
-        if(form.valid()){
-            $(document).ready(function(){
-
-                $('.RegisterMbtnSubmit').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
-                setTimeout(()=>{
-                    var registerForm = form;
-                    var formData = registerForm.serialize();
-                    var url = 'front/register.html';
-
-                    $.ajax({
-                        url:url,
-                        type:'POST',
-                        data:formData,
-                        success:function(data){
-                            $('.RegisterMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                            $('.signWRaps2').slideDown();
-                            $('.account-done').slideDown();
-                            $('.signWRaps').slideUp();
-                            $('#fundaiqRegDv').slideUp();
-                            $('#travelAgentText').slideUp();
-                            $('#umrahRegDv').slideUp();
-                            $('#umrahIndiText').slideUp();
-                            $('#ResgisterUmrah').slideUp();
-                            $('.form-button1Slide').slideUp();
-
-                            $('.signWRaps2 .main-heading').html('Hi '+data.name+'! <span class="lightHeading">Check your email to activate your account</span>');
-                            $('.signWRaps2 .textSuccess').html('<p>We just sent a link to <a href="#" class="emailAdd">'+data.email+'.</a> Didn’t receive the email?</p><a href="javascript:void(0)" class="btn waves-effect waves-light h-btn-done viewBtn ResendMail" data-user_id="'+data.id+'" onclick="resendmail('+data.id+')">Resend</a>');
-
-                            $('.account-done .main-heading').html('Hi '+data.name+'! <span class="lightHeading">Check your email to activate your account</span>');
-                            $('.account-done .textSuccess').html('<p>We just sent a link to <a href="#" class="emailAdd">'+data.email+'.</a> Didn’t receive the email?</p><a href="javascript:void(0)" class="btn waves-effect waves-light h-btn-done viewBtn ResendMail" data-user_id="'+data.id+'" onclick="resendmail('+data.id+')">Resend</a>');
-                            
-                            $('.modal-close').attr('data-refresh',true);
-                            $('.closeIcon2').attr('data-refresh',true);
-                        },
-                        error: function (data) {
-                            $.toast().reset('all');   
-                            $("body").removeAttr('class');
-                            var error = '';
-                            var i = 1;
-                            $('.invalid-feedback').html('');
-                            $.each(data.responseJSON.errors,function(index,value){
-                                $('#'+index+'-error').html('<strong>'+value[0]+'</strong>');
-                                error = error+' '+i+' : '+value[0]+'<br/>';
-                                i = i+1;
-                            });
-                            $.toast({
-                                heading: 'Error',
-                                text: error,
-                                icon: 'error',
-                                position: 'top-right',
-                                loaderBg:'#7a5449',
-                                class: 'jq-has-icon jq-toast-danger',
-                                hideAfter: 9900, 
-                                stack: 6,
-                                showHideTransition: 'slide'
-                            });
-                            $('.RegisterMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        }
-                    });
-
-                },2000);
-
-            })
-        }
-    }
-/* Register Function */
-
-/* Register Function */
-    function register1(type){
-
-        if(type == 'uc'){
-            var form = $("#DetailUCRegisterForm");
-        }else{
-            var form = $("#DetailFNRegisterForm");
-        }
-        if(form.valid()){
-            $(document).ready(function(){
-
-                $('.RegisterMbtnSubmit').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
-                setTimeout(()=>{
-                    var registerForm = form;
-                    var formData = registerForm.serialize();
-                    var url = 'front/register.html';
-
-                    $.ajax({
-                        url:url,
-                        type:'POST',
-                        data:formData,
-                        success:function(data){
-                            $('.RegisterMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                            $('.signWRaps2').slideDown();
-                            $('.account-done').slideDown();
-                            $('.signWRaps').slideUp();
-                            $('#fundaiqRegDv').slideUp();
-                            $('#travelAgentText').slideUp();
-                            $('#umrahRegDv').slideUp();
-                            $('#umrahIndiText').slideUp();
-                            $('#ResgisterUmrah').slideUp();
-                            $('.form-button1Slide').slideUp();
-
-                            $('.signWRaps2 .main-heading').html('Hi '+data.name+'! <span class="lightHeading">Check your email to activate your account</span>');
-                            $('.signWRaps2 .textSuccess').html('<p>We just sent a link to <a href="#" class="emailAdd">'+data.email+'.</a> Didn’t receive the email?</p><a href="javascript:void(0)" class="btn waves-effect waves-light h-btn-done viewBtn ResendMail" data-user_id="'+data.id+'" onclick="resendmail('+data.id+')">Resend</a>');
-
-                            $('.account-done .main-heading').html('Hi '+data.name+'! <span class="lightHeading">Check your email to activate your account</span>');
-                            $('.account-done .textSuccess').html('<p>We just sent a link to <a href="#" class="emailAdd">'+data.email+'.</a> Didn’t receive the email?</p><a href="javascript:void(0)" class="btn waves-effect waves-light h-btn-done viewBtn ResendMail" data-user_id="'+data.id+'" onclick="resendmail('+data.id+')">Resend</a>');
-                            
-                            $('.modal-close').attr('data-refresh',true);
-                            $('.closeIcon2').attr('data-refresh',true);
-                        },
-                        error: function (data) {
-                            $.toast().reset('all');   
-                            $("body").removeAttr('class');
-                            var error = '';
-                            var i = 1;
-                            $('.invalid-feedback').html('');
-                            $.each(data.responseJSON.errors,function(index,value){
-                                $('#'+index+'-error').html('<strong>'+value[0]+'</strong>');
-                                error = error+' '+i+' : '+value[0]+'<br/>';
-                                i = i+1;
-                            });
-                            $.toast({
-                                heading: 'Error',
-                                text: error,
-                                icon: 'error',
-                                position: 'top-right',
-                                loaderBg:'#7a5449',
-                                class: 'jq-has-icon jq-toast-danger',
-                                hideAfter: 9900, 
-                                stack: 6,
-                                showHideTransition: 'slide'
-                            });
-                            $('.RegisterMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-                        }
-                    });
-
-                },2000);
-
-            })
-        }
-    }
-/* Register Function */
-
-function resendmail(id){
-    $('.ResendMail').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-    var url = 'https://umrahcompanions.com/resend-email/'+id;
-
-    $.ajax({
-        url:url,
-        type:'GET',
-        success:function(data){
-            $('.ResendMail').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-            $.toast().reset('all');   
-            $("body").removeAttr('class');
-            $.toast({
-                heading: 'Success',
-                text: 'Email Has Been Send',
-                icon: 'success',
-                position: 'top-right',
-                loaderBg:'#1b3a6d',
-                class: 'jq-has-icon jq-toast-success',
-                hideAfter: 3500, 
-                stack: 6,
-                showHideTransition: 'slide'
-            });
-        },
-        error: function (data) {
-            $.toast().reset('all');   
-            $("body").removeAttr('class');
-            $.toast({
-                heading: 'Error',
-                text: 'Something went Wrong',
-                icon: 'error',
-                position: 'top-right',
-                loaderBg:'#7a5449',
-                class: 'jq-has-icon jq-toast-danger',
-                hideAfter: 3500, 
-                stack: 6,
-                showHideTransition: 'slide'
-            });
-            $('.RegisterMbtnSubmit').removeClass('m-loader m-loader--light m-loader--right').attr('disabled',false);
-        }
-    });
-}
-  
+   <script src="/common.js">
 </script>
 
-<script>
-  var input = document.querySelector("#phone4");
-
-        $(document).ready(function(){ 
-            $('.main-loader').fadeOut(2000);
-         })
-
-        $(document).on('click','.active-overlay-form',function(){
-          $('.view-sticky-form').removeClass('activeS');
-          $(this).removeClass('active-overlay-form');
-        });
-
-        $(document).on('click','.closeIcon2',function(){
-          if($(this).attr('data-refresh') === undefined || $(this).attr('data-refresh') === false){
-            $('.view-sticky-form').removeClass('activeS');
-            $(this).removeClass('active-overlay-form');
-            $('.overlay-search-form ').removeClass('active-overlay-form');
-          }else{
-            window.location.reload();
-          }
-        });
-
-        $(document).on('click', '.overlay-search-form', function() {
-          $('.view-sticky-form').removeClass('activeS');
-        });
-
-        // Close function
-        $(document).ready(function(){
-          $(".closeIcon2").click(function(){
-            if($(this).attr('data-refresh') === undefined || $(this).attr('data-refresh') === false){
-              $('.formTextBtns').slideDown();
-              $('.createForm').show();
-              $('.backB').show();
-              $('.proflmg').hide();
-              $('#ResgisterUmrah').hide();
-              $('#ResgisterFunadiq').hide();
-              $('.form-button1Slide').hide();
-              $('.form-button2Slide').hide();
-              $('.account-done').hide();
-            }else{
-              window.location.reload();
-            }
-          });
-        });
-
-        // Overlay setting function
-        $(document).on('click', '.overlay-search-form', function() {
-          $('.view-sticky-form').removeClass('activeS');
-          $('.formTextBtns').slideDown();
-          $('.createForm').show();
-          $('.backB').show();
-          $('.proflmg').hide();
-          $('#ResgisterUmrah').hide();
-          $('#ResgisterFunadiq').hide();
-          $('.form-button1Slide').hide();
-          $('.form-button2Slide').hide();
-          $('.account-done').hide();
-        });
-
-        //Request Button Function slideDown
-        $('.form-button1').on('click',function(e) {
-          event.preventDefault();
-          $('.formTextBtns').slideUp();
-          $('.backB').show();
-          $('.closeIcon2').hide();
-          $('.form-button1Slide').slideDown();
-        });
-
-        //Request Button Function slideUp
-        $('.backB').on('click',function(e){
-          event.preventDefault();
-          $('.form-button1Slide').slideUp();
-          $('.closeIcon2').show();
-          $('.formTextBtns').slideDown(); 
-        });
-
-        //Map Script
-        $('.proflmg map area').on('click',function(e) {
-          event.preventDefault();
-          areaDv = $(this).attr('data-map');
-        });
-
-        //Request Button Function slideDown
-        $('.form-button1').on('click',function(e) {
-          event.preventDefault();
-          $('.formTextBtns').slideUp();
-          $('.backB').show();
-          $('.closeIcon2').hide();
-          $('.form-button1Slide').slideDown();
-        });
-
-        //Request Button Function slideUp
-        $('.backB').on('click',function(e){
-          event.preventDefault();
-          $('.form-button1Slide').slideUp();
-          $('.closeIcon2').show();
-          $('.formTextBtns').slideDown(); 
-        });
-
-        //Map Script
-        $('.proflmg map area').on('click',function(e) {
-          event.preventDefault();
-          areaDv = $(this).attr('data-map');
-          console.log($(this).attr('data-map'));
-        });
-
-        $(document).ready(function(){
-          $(".profilemapDisplay").click(function(){
-            $(".proflmg").toggle();
-          });
-        });
-
-        //umrah Create Account 
-        $('.regUmrah').on('click',function(e){
-          event.preventDefault();
-          $('.createForm').slideUp();
-          $('.proflmg').slideUp();
-          $('.backB').hide();
-          $('.closeIcon2').show();
-          $('#ResgisterUmrah').slideDown(); 
-        });
-
-        //Funadiq Create Account 
-        $('.regFunadiq').on('click',function(e){
-          event.preventDefault();
-          $('.createForm').slideUp();
-          $('.proflmg').slideUp();
-          $('.backB').hide();
-          $('.closeIcon2').show();
-          $('#ResgisterFunadiq').slideDown(); 
-        });
-
-        /* Phone */
-          var input = document.querySelector("#phone");
-          var instance = window.intlTelInput(input, {
-            separateDialCode: true,
-            initialCountry: "auto",
-            geoIpLookup: function(success, failure) {
-                $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "us";
-                    success(countryCode);
-                });
-            },
-          });
-          var countryData = instance.getSelectedCountryData();
-          $('.country_code').val(countryData.dialCode);
-          input.addEventListener("countrychange",function() {
-              var countryData = instance.getSelectedCountryData();
-              $('.country_code').val(countryData.dialCode);
-          });
-        /* Phone */
-
-        //open login from create account
-        $('.open-login').on('click',function(e) {
-          $('.form-button2Slide').show();
-          $('.form-button1Slide').hide();
-        });
-
-        //open create account from login
-        $('.open-create').on('click',function(e) {
-          $('.form-button1Slide').show();
-          $('.createForm').show();
-          $('.backB').show();
-          $('.closeIcon2').hide();
-          $('.form-button2Slide').hide();
-          $('#ResgisterUmrah').hide();
-          $('#ResgisterFunadiq').hide();
-        });
-
-        $('.form-button2').on('click',function(e) {
-           event.preventDefault();
-           $('.formTextBtns').slideUp();
-           $('.form-button2Slide').slideDown();
-        });
+<script src="/modal.js">
 
 </script><!-- Common Js -->
 
@@ -2842,6 +1485,7 @@ function resendmail(id){
 <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm914bpv5002b3dsuse89q9zf'></zapier-interfaces-chatbot-embed>
    </div>
 </body>
+<script src="/main.js"></script>
 <script src="/umrahcompanions.com/assets/frontend/js/new-inquiry/inquiry.js"></script>
 <!-- Mirrored from umrahcompanions.com/inquiry by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Jul 2025 13:31:23 GMT -->
 </html>
