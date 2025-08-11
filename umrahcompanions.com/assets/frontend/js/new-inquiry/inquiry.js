@@ -277,6 +277,24 @@ checkboxes.forEach((checkbox) => {
     }
   });
 });
+
+const hotel_check= document.querySelectorAll('.hotel');
+hotel_check.forEach((checkbox) => {
+  checkbox.addEventListener('change',()=>{
+  console.log(checkbox.value)
+   if (checkbox.checked) {
+      parent.style.backgroundColor = '#1E3A6D';
+      label.style.color = 'white';
+      checkbox.style.backgroundColor = 'white';
+      console.log(checkbox.checked)
+    } else {
+      parent.style.backgroundColor = '#F1F5F9';
+      label.style.color = '#292d32';
+      checkbox.style.backgroundColor = '#F1F5F9';
+    }
+})
+})
+
 console.log(checkboxes[1])
 
 document.querySelectorAll('.pilgrim-section .counter-container').forEach(container => {
@@ -312,13 +330,20 @@ $('.Nextbtn').on('click',function(e){
         e.preventDefault();
         var form = $("#InquiryForm");
         console.log(form, "inquiry form");
-        if(checkboxes[0].checked){
-          console.log("visa is checked")
-        } if(checkboxes[1].checked){
-          console.log("flight is checked")
-        } if(checkboxes[2].checked){
-          console.log("transport is checked")
-        } if(checkboxes[3].checked){
-          console.log("hotel is checked")
-        }
+        
 })
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
+      const input = e.target.parentElement.querySelector('.counter-input');
+      let value = parseInt(input.value, 10);
+
+      if (e.target.classList.contains('increment')) {
+        value++;
+      } else {
+        value = value > 1 ? value - 1 : 1;
+      }
+
+      input.value = value.toString().padStart(2, '0');
+    }
+  });
+
