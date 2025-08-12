@@ -36,6 +36,23 @@
   .container{
     width: 100% !important;
   }
+  .checkboxes-section{
+    margin-top: 20px !important;
+  }
+  .textarea-row{
+    padding: 0px 15px;
+  }
+.hotel-item {
+    background-color: #F1F5F9;
+    padding: 2px 15px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 90% !important;
+}
     .box-background-color{
       margin: 1rem 1rem 2rem 1rem;
     }
@@ -212,6 +229,7 @@
     font-weight: 600;
     padding: 5px 40px 5px 40px;
     margin-right: 5px;
+    margin-bottom: 10px;
   }
 
   .next_btn a:hover {
@@ -350,7 +368,10 @@
   body {
     /* min-height: 100vh; */
     background-color: var(--background-color) !important;
+  } .textarea-row{
+    padding: 0px 30px;
   }
+
 
   .container {
     max-width: 1140px;

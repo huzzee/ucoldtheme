@@ -14,8 +14,7 @@ const bothCheckbox = document.querySelector('input[value="Both"]');
 
 hotelCheckboxes.forEach(cb => {
     cb.addEventListener('change', () => {
-        // 🌟 Apply style to current checkbox
-        const parent = cb.closest('.input_Labels'); // or adjust to match your HTML
+        const parent = cb.closest('.input_Labels'); 
         const label = parent.querySelector('label');
 
         if (cb.checked) {
@@ -30,7 +29,6 @@ hotelCheckboxes.forEach(cb => {
 
         console.log(cb.checked);
 
-        // 🔁 Sync logic for "Both"
         if (cb.value === 'Both') {
             makCheckbox.checked = cb.checked;
             madCheckbox.checked = cb.checked;
@@ -67,8 +65,6 @@ hotelCheckboxes.forEach(cb => {
             bothLabel.style.color = '';
             bothCheckbox.style.backgroundColor = '';
         }
-
-        // ✨ Now rebuild hotel sections
         hotelContainer.innerHTML = '';
 
         const checkedValues = Array.from(document.querySelectorAll('.hotel:checked'))
@@ -82,12 +78,12 @@ hotelCheckboxes.forEach(cb => {
                 <div class="hotel-section">
                     <h5 class=" sub-heading">Hotel in ${cityName}</h5>
                     <div class="hotel-row">
-                        <div class="hotel-item">
+                        <div class="hotel-item col s12 l4">
                             <select class="hotel-select" name="hotels[${index}][prefered_hotels]" multiple>
                                 ${hotelOptions[cityCode] || ''}
                             </select>
                         </div>
-                        <div class="hotel-item">
+                        <div class="hotel-item col s12 l4">
                             <label class="counter-label">Room Quantity</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
@@ -95,7 +91,7 @@ hotelCheckboxes.forEach(cb => {
                                 <button type="button" class="increment">+</button>
                             </div>
                         </div>
-                        <div class="hotel-item">
+                        <div class="hotel-item col s12 l4">
                             <label class="counter-label">Number Of Nights</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>

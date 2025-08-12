@@ -1,4 +1,3 @@
-// countries.js
 const countries = [
   "Afghanistan",
   "Albania",
@@ -247,7 +246,6 @@ const countries = [
   "Zambia",
   "Zimbabwe"
 ];
-// main.js
 window.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("nationality");
 
