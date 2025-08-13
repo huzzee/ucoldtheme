@@ -55,7 +55,7 @@
 .toggle-wrapper {
   position: relative;
   width: 40px !important;
-  height: 30px !important;
+  height: 20px !important;
 }
 
 .toggle-wrapper input[type="checkbox"] {
@@ -80,14 +80,14 @@
 .toggle-slider::before {
   position: absolute;
   content: "";
-  height: 20px !important;
-  width: 20px !important;
+  height: 16px !important;
+  width: 16px !important;
   left: 2px !important;
-  bottom: 0px !important;
+  bottom: 2px !important;
   background-color: white;
   transition: 0.4s !important;
   border-radius: 50% !important;
-  margin-top: 1.5px !important;
+  margin-top: 1px !important;
   border: none !important;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .toggle-wrapper input:checked + .toggle-slider::before {
-  transform: translateX(12px) translateY(5px) !important;
+  transform: translateX(15px) translateY(4px) !important;
 }
 input[type="checkbox"].agreement::after {
     content: "";
@@ -115,6 +115,20 @@ input[type="checkbox"].agreement::after {
     opacity: 0;
     transition: 0.2s;
 }
+[type="checkbox"]+span:not(.lever)
+ {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 18px !important;
+    line-height: 18px !important;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 
@@ -127,6 +141,7 @@ input[type="checkbox"].agreement::after {
   }
   .textarea-row{
     padding: 0px 15px;
+    justify-content: center !important;
   }
   .step2{
   padding: 5px 20px !important;
@@ -147,6 +162,19 @@ input[type="checkbox"].agreement::after {
     align-items: center;
     width: 90% !important;
 }
+
+.hotel-item:last-child,
+.hotel-item:first-child,
+.last {
+    height: 3rem !important;
+}
+
+.hotel-item.hotel-counter {
+    flex-direction: column !important;
+    width: 46% !important;
+    height: 5rem !important;
+}
+
 .switch2{
   width: 100%;
 }
@@ -157,8 +185,9 @@ input[type="checkbox"].agreement::after {
     gap:2px;
     justify-content: space-around !important;
     align-items: center;
-    padding:5px 0px;
+    padding:2px 0px;
     cursor: pointer;
+    margin-bottom: 0px;
 }
 .toggle-wrapper{
   width: 20% !important;
@@ -520,12 +549,18 @@ input[type="checkbox"].agreement::after {
     background-color: var(--background-color) !important;
   } .textarea-row{
     padding: 0px 30px;
+    justify-content: center !important;
   }
   .hotel-checkbox{
     gap: 20px;
     margin: 15px !important;
   }
 
+  
+.hotel-item.last{
+  height: 3.5rem !important;
+
+}
 
   .container {
     max-width: 1140px;
@@ -1227,7 +1262,7 @@ label.wrap_Labels {
 .passenger-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+gap:15px;
   padding: 0px 8px;
   background: #fff;
   border-radius: 10px;
@@ -1324,6 +1359,7 @@ label.wrap_Labels {
 .hotel-row {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   gap: 5px;
   padding: 0px 10px;
   flex-wrap: wrap;
@@ -1338,8 +1374,9 @@ label.wrap_Labels {
   justify-content: space-around;
   align-items: center;
   width: 30%  !important;
-  height: 5rem !important;
+  height: 3rem !important;
 }
+
 
 .hotel-select {
   width: 100%;

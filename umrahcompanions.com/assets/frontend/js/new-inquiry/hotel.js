@@ -86,7 +86,7 @@ hotelCheckboxes.forEach(cb => {
                                 ${hotelOptions[cityCode] || ''}
                             </select>
                         </div>
-                        <div class="hotel-item col s12 l2">
+                        <div class="hotel-item col s6 l2 hotel-counter">
                             <label class="counter-label"> Quantity</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
@@ -94,7 +94,7 @@ hotelCheckboxes.forEach(cb => {
                                 <button type="button" class="increment">+</button>
                             </div>
                         </div>
-                        <div class="hotel-item col s12 l4">
+                        <div class="hotel-item col s6 l4 hotel-counter ">
                             <label class="counter-label">Number Of Nights</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
@@ -102,7 +102,7 @@ hotelCheckboxes.forEach(cb => {
                                 <button type="button" class="increment">+</button>
                             </div>
                         </div>
-                        <div class="hotel-item col s12 l1">
+                        <div class="hotel-item col s12 l1 last">
                             <div class="switch2">
                                 <div class="input_Labels">
                                 <label for="similar[${index}]" class="counter-label similar">Similar hotel</label>
@@ -114,7 +114,7 @@ hotelCheckboxes.forEach(cb => {
                             </div>
                         </div>
 
-                        <input type="hidden" name="hotels[${index}][city]" value="${cityName}" />
+                         <input type="hidden" name="hotels[${index}][city]" value="${cityName}" />
                     </div>
                 </div>
             `;
