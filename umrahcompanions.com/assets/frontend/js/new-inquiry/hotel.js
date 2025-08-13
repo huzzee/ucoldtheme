@@ -90,7 +90,7 @@ hotelCheckboxes.forEach(cb => {
                             <label class="counter-label"> Quantity</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
-                                <input type="text" name="hotels[${index}][no_of_rooms]" value="01" class="counter-input" readonly />
+                                <input type="text" id="room-counter" name="hotels[${index}][no_of_rooms]" value="01" class="counter-input" readonly />
                                 <button type="button" class="increment">+</button>
                             </div>
                         </div>
@@ -98,19 +98,8 @@ hotelCheckboxes.forEach(cb => {
                             <label class="counter-label">Number Of Nights</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
-                                <input type="text" name="hotels[${index}][nights]" value="01" class="counter-input" readonly />
+                                <input type="text" id="night-counter" name="hotels[${index}][nights]" value="01" class="counter-input" readonly />
                                 <button type="button" class="increment">+</button>
-                            </div>
-                        </div>
-                        <div class="hotel-item col s12 l1 last">
-                            <div class="switch2">
-                                <div class="input_Labels">
-                                <label for="similar[${index}]" class="counter-label similar">Similar hotel</label>
-                                <div class="toggle-wrapper">
-                                    <input type="checkbox" id="similar[${index}]" value="similar" class="similar_hotel" name="similar[${index}]">
-                                    <span class="toggle-slider"></span>
-                                </div>
-                                </div>
                             </div>
                         </div>
 
@@ -125,12 +114,4 @@ hotelCheckboxes.forEach(cb => {
 });
 
 });
-document.querySelectorAll(".similar_hotel").forEach((cb)=>{
-   cb.addEventListener('change', function () {
-  if (this.checked) {
-    console.log("Similar hotel enabled");
-  } else {
-    console.log("Similar hotel disabled");
-  }
-}); 
-})
+

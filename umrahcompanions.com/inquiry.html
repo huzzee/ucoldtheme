@@ -353,7 +353,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           <label class="counter-label">Adults</label>
                           <div class="counter-controls">
                             <button type="button" class="counter-btn minus">−</button>
-                            <span class="counter-value">01</span>
+                            <input style="display:none;" class="counter-input" type="number"  name="input-field1" id="counter1">
+
+                            <span id="adults"  class="counter-value">01</span>
                             <button type="button" class="counter-btn plus">+</button>
                           </div>
                         </div>
@@ -362,7 +364,8 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           <label class="counter-label">Child</label>
                           <div class="counter-controls">
                             <button type="button" class="counter-btn minus">−</button>
-                            <span class="counter-value">00</span>
+                            <input style="display:none;" class="counter-input" type="number"  name="input-field2" id="counter2">
+                            <span id="child" class="counter-value">00</span>
                             <button type="button" class="counter-btn plus">+</button>
                           </div>
                         </div>
@@ -371,7 +374,8 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           <label class="counter-label">Infants</label>
                           <div class="counter-controls">
                             <button type="button" class="counter-btn minus">−</button>
-                            <span class="counter-value">00</span>
+                            <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                            <span id="infants" class="counter-value">00</span>
                             <button type="button" class="counter-btn plus">+</button>
                           </div>
                         </div>
@@ -1108,6 +1112,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         e.preventDefault();
         var form = $("#InquiryForm");
         console.log(form)
+         var formDataArray = $("#IquiryForm").serializeArray();
+         console.log(formDataArray)
+
 
         // /* makkah_days */
         //   if($('[name="makkah_days"]').val() === null || $('[name="makkah_days"]').val() === ''){

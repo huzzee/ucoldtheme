@@ -276,35 +276,36 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
-document.querySelectorAll('.pilgrim-section .counter-container').forEach(container => {
-  const minusBtn = container.querySelector('.minus');
-  const plusBtn = container.querySelector('.plus');
-  const valueSpan = container.querySelector('.counter-value');
+  document.querySelectorAll('.counter-controls').forEach(control => {
+    const plusBtn = control.querySelector('.plus');
+    const minusBtn = control.querySelector('.minus');
+    const counterSpan = control.querySelector('.counter-value');
+    const hiddenInput = control.querySelector('.counter-input');
 
-  let count = parseInt(valueSpan.textContent, 10);
-  const min = 0;
-  const max = 9;
+    // Convert string like "01" or "00" to number
+    const parseCounter = (value) => parseInt(value, 10) || 0;
 
-  const updateDisplay = () => {
-    valueSpan.textContent = count.toString().padStart(2, '0');
-  };
+    const updateDisplay = (value) => {
+      counterSpan.textContent = value.toString().padStart(2, '0'); // e.g. "01"
+      hiddenInput.value = value; // set the hidden input's value
+    };
 
-  minusBtn.addEventListener('click', () => {
-    if (count > min) {
-      count--;
-      updateDisplay();
-    }
+    plusBtn.addEventListener('click', () => {
+      let value = parseCounter(counterSpan.textContent);
+      value++;
+      updateDisplay(value);
+    });
+
+    minusBtn.addEventListener('click', () => {
+      let value = parseCounter(counterSpan.textContent);
+      if (value > 0) {
+        value--;
+        updateDisplay(value);
+      }
+    });
   });
 
-  plusBtn.addEventListener('click', () => {
-    if (count < max) {
-      count++;
-      updateDisplay();
-    }
-  });
 
-  updateDisplay();
-});
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
       const input = e.target.parentElement.querySelector('.counter-input');
