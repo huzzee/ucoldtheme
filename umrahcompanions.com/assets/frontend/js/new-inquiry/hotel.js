@@ -7,7 +7,6 @@
 
 const hotelCheckboxes = document.querySelectorAll('.hotel');
 const hotelContainer = document.getElementById('hotelContainer');
-
 const makCheckbox = document.querySelector('input[value="Mak"]');
 const madCheckbox = document.querySelector('input[value="Mad"]');
 const bothCheckbox = document.querySelector('input[value="Both"]');
@@ -16,7 +15,6 @@ hotelCheckboxes.forEach(cb => {
     cb.addEventListener('change', () => {
         const parent = cb.closest('.input_Labels'); 
         const label = parent.querySelector('label');
-
         if (cb.checked) {
             parent.style.backgroundColor = '#1E3A6D';
             label.style.color = 'white';
@@ -27,23 +25,28 @@ hotelCheckboxes.forEach(cb => {
             cb.style.backgroundColor = '';
         }
 
-        console.log(cb.checked);
-
         if (cb.value === 'Both') {
             makCheckbox.checked = cb.checked;
             madCheckbox.checked = cb.checked;
-
             [makCheckbox, madCheckbox].forEach(otherCb => {
                 const otherParent = otherCb.closest('.input_Labels');
                 const otherLabel = otherParent.querySelector('label');
                 if (cb.checked) {
-                    otherParent.style.backgroundColor = '#1E3A6D';
+                    otherParent.style.backgroundColor = '#474d5a70';
                     otherLabel.style.color = 'white';
                     otherCb.style.backgroundColor = 'white';
+                    otherCb.style.display='none';
+                    otherCb.disabled = true;
+
+
+                    
                 } else {
                     otherParent.style.backgroundColor = '';
                     otherLabel.style.color = '';
                     otherCb.style.backgroundColor = '';
+                     otherCb.style.display='block';
+                    otherCb.disabled = false;
+
                 }
             });
         }
@@ -83,8 +86,8 @@ hotelCheckboxes.forEach(cb => {
                                 ${hotelOptions[cityCode] || ''}
                             </select>
                         </div>
-                        <div class="hotel-item col s12 l4">
-                            <label class="counter-label">Room Quantity</label>
+                        <div class="hotel-item col s12 l2">
+                            <label class="counter-label"> Quantity</label>
                             <div class="counter">
                                 <button type="button" class="decrement">–</button>
                                 <input type="text" name="hotels[${index}][no_of_rooms]" value="01" class="counter-input" readonly />
@@ -99,6 +102,18 @@ hotelCheckboxes.forEach(cb => {
                                 <button type="button" class="increment">+</button>
                             </div>
                         </div>
+                        <div class="hotel-item col s12 l1">
+                            <div class="switch2">
+                                <div class="input_Labels">
+                                <label for="similar[${index}]" class="counter-label similar">Similar hotel</label>
+                                <div class="toggle-wrapper">
+                                    <input type="checkbox" id="similar[${index}]" value="similar" class="similar_hotel" name="similar[${index}]">
+                                    <span class="toggle-slider"></span>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <input type="hidden" name="hotels[${index}][city]" value="${cityName}" />
                     </div>
                 </div>
@@ -110,3 +125,12 @@ hotelCheckboxes.forEach(cb => {
 });
 
 });
+document.querySelectorAll(".similar_hotel").forEach((cb)=>{
+   cb.addEventListener('change', function () {
+  if (this.checked) {
+    console.log("Similar hotel enabled");
+  } else {
+    console.log("Similar hotel disabled");
+  }
+}); 
+})

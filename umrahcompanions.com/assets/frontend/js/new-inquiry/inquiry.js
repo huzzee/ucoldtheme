@@ -276,25 +276,6 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
-const hotel_check= document.querySelectorAll('.hotel');
-hotel_check.forEach((checkbox) => {
-  checkbox.addEventListener('change',()=>{
-  console.log(checkbox.value)
-   if (checkbox.checked) {
-      parent.style.backgroundColor = '#1E3A6D';
-      label.style.color = 'white';
-      checkbox.style.backgroundColor = 'white';
-      console.log(checkbox.checked)
-    } else {
-      parent.style.backgroundColor = '#F1F5F9';
-      label.style.color = '#292d32';
-      checkbox.style.backgroundColor = '#F1F5F9';
-    }
-})
-})
-
-console.log(checkboxes[1])
-
 document.querySelectorAll('.pilgrim-section .counter-container').forEach(container => {
   const minusBtn = container.querySelector('.minus');
   const plusBtn = container.querySelector('.plus');
@@ -324,12 +305,6 @@ document.querySelectorAll('.pilgrim-section .counter-container').forEach(contain
 
   updateDisplay();
 });
-$('.Nextbtn').on('click',function(e){
-        e.preventDefault();
-        var form = $("#InquiryForm");
-        console.log(form, "inquiry form");
-        
-})
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
       const input = e.target.parentElement.querySelector('.counter-input');
