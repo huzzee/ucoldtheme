@@ -549,7 +549,7 @@ input[type="checkbox"].agreement::after {
     background-color: var(--background-color) !important;
   } .textarea-row{
     padding: 0px 30px;
-    justify-content: center !important;
+    justify-content: start !important;
   }
   .hotel-checkbox{
     gap: 20px;
