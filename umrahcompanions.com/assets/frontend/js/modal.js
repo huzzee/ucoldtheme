@@ -130,7 +130,7 @@
         });
 
         /* Phone */
-          var input = document.querySelector("#phone");
+          var input = document.querySelector("#phone3");
           var instance = window.intlTelInput(input, {
             separateDialCode: true,
             initialCountry: "auto",

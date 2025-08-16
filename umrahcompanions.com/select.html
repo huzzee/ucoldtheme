@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Select2 Test</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Select2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Select2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+  <select class="hotel-select" multiple style="width:300px;">
+    <option value="1">Hotel A</option>
+    <option value="2">Hotel B</option>
+    <option value="3">Hotel C</option>
+  </select>
+
+  <script>
+    $(document).ready(function () {
+      $('.hotel-select').select2({
+        placeholder: 'Select hotel(s)'
+      });
+    });
+  </script>
+</body>
+</html>

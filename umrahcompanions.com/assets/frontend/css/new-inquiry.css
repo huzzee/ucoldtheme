@@ -51,6 +51,45 @@
   width:32% !important;
 
 }
+.multiple-select-dropdown li span label input[type=chrckbox]{
+  display: none !important;
+}
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  display: none !important;
+
+}
+[type="checkbox"]+span:not(.lever) {
+    position: relative;
+     padding-left: 2px !important; 
+    }
+.dropdown-content li>span>label {
+  padding: 0px 0px;
+    /* height: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.dropdown-content li {
+  padding: 0px 0px !important;
+  margin-bottom: 0px!important;
+  /* height: 3rem !important; */
+}
+.select2-container--default .select2-selection--multiple {
+  min-height: 38px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.select2-container--default .select2-selection--multiple, .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: none!important;
+    min-height: 25px !important;
+    border-radius: 0px !important;
+}
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent !important;
+    border: 0px !important;
+    border-radius: 4px;
+    cursor: text;
+} 
 
 .toggle-wrapper {
   position: relative;
@@ -1288,7 +1327,6 @@ gap:15px;
   font-family: sans-serif;
 }
 
-
 .counter-container {
     background-color: #f1f5f9;
     border-radius: 10px;
@@ -1375,31 +1413,57 @@ gap:15px;
 
 .hotel-row {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: start;
+  align-items: end !important;
   gap: 5px;
-  padding: 0px 10px;
+  padding: 0px 20px;
   flex-wrap: wrap;
 }
 
 .hotel-item {
   background-color: #F1F5F9;
-  padding: 10px 15px !important;
+  /* padding: 10px 15px !important; */
   border-radius: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 30%  !important;
-  height: 3rem !important;
+  /* height: 3rem !important; */
 }
+.hotel-select .dropdown-content.select-dropdown {
+    padding: 10px;
+    border-radius: 20px;
+    top: 100% !important;
+    width: 400px !important;
+}
+.select-wrapper{
+  width: 100%!important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    border: none;
+    color: rgb(255, 255, 255);
+    margin-top: 8px;
+    padding: 3px 10px;
+    background-color: var(--primary-color) !important;
+    border-radius: 10px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0 5px;
+    width: 100%;
+    overflow: auto !important;
+    display: flex !important;
+    align-items: center;
 
-
+}
 .hotel-select {
   width: 100%;
   padding: 0px;
   border: none;
-  border-radius: 8px;
+  border-radius: 0px;
   background: white;
   font-size: 12px;
 }
@@ -2116,9 +2180,10 @@ border-radius: 2px !important;
 }
 
 .select2-container--default .select2-selection--multiple, .select2-container--default.select2-container--focus .select2-selection--multiple {
-  border: solid #a6a6a8 1px !important;
-    min-height: 35px !important;
+  border: solid #a6a6a8 0px !important;
+    min-height: 45px !important;
     border-radius: 7px !important;
+    background-color: #f1f5f9;
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
@@ -2136,9 +2201,13 @@ border-radius: 2px !important;
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     border: none;
     color: #fff;
-    margin-top: 8px;
-    padding: 3px 10px;
+    margin-top: 0px;
+    padding: 0px 10px;
     background-color: #42A5F5
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    list-style: none;
+    height: fit-content !important;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
