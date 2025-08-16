@@ -1158,6 +1158,8 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
     
 
     $('#InquiryForm').on('submit',function(e){
+      let selectedValues = $('.hotel-select').val();  // returns an array of selected values
+console.log(selectedValues);
       e.preventDefault();
       var url = $(this).attr('action');
       $('.SubmitButton').addClass('h-btn-done12').attr('disabled',true).html('<div class="loader"></div> <span>Submiting...</span>');
