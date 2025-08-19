@@ -16,7 +16,7 @@
   --secondary-color:#EBEBEB;
   --heading-color: #1E3A6D;
   --border-color: #a6a6a8;
-  --placeholder-color: #656565;
+  --placeholder-color: #636161;
   --sub-heading-color: #292d32;
   --text-color: #2F2F2F;
   --text-color2: #ffffff;
@@ -27,6 +27,9 @@
   --tran-03: all 0.2s ease;
 }
 
+input::placeholder{
+  color: var(--placeholder-color)  !important;
+}
 
 .col.wrap_spacing input:not([type="checkbox"])  {
     width: 100%;
@@ -51,6 +54,9 @@
   width:32% !important;
 
 }
+    .row .col.l7 {
+        width: 54.333333%;
+      }
 .multiple-select-dropdown li span label input[type=chrckbox]{
   display: none !important;
 }
@@ -74,6 +80,88 @@
   margin-bottom: 0px!important;
   /* height: 3rem !important; */
 }
+select{
+  background-color: transparent!important;
+  border: 0px;
+  color: #161C24 !important;
+  height: 3rem !important;
+}
+select:focus {
+    outline: 0px !important;
+}
+label.toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.switch label{
+  display: flex;
+  
+}
+.country-code .select-wrapper input.select-dropdown{
+  border-radius: 0px !important;
+  padding: 10px !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  border-right: 1px solid #464d5731;
+  
+}
+label.toggle span{
+    color: #161C24;
+  }
+  .iti__country-list {
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0 0px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    height: 192px;
+    width: 200px !important;
+    overflow-x: hidden;
+
+  }
+  .iti {
+    position: relative;
+    display: inline-block;
+    width: 76% !important;
+}
+
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: white;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #a4a7aca9;
+}
+/* Hide lever on mobile */
+@media only screen and (max-width: 600px) {
+  .switch .lever {
+    display: none !important;
+  }
+}
+
+/* Toggle container base style */
+.toggle-container {
+  background-color: #F1F5F9;
+  padding:5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s;
+}
+
+/* Text color */
+.toggle-label {
+  color: #292d32;
+  font-weight: 400;
+}
+
 .select2-container--default .select2-selection--multiple {
   min-height: 38px;
   padding: 4px 8px;
@@ -91,54 +179,7 @@
     cursor: text;
 } 
 
-.toggle-wrapper {
-  position: relative;
-  width: 40px !important;
-  height: 20px !important;
-}
 
-.toggle-wrapper input[type="checkbox"] {
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.toggle-slider {
-  position: absolute !important;
-  cursor: pointer;
-  top: 0  !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 20px;
-  width: 18% !important;
-}
-
-.toggle-slider::before {
-  position: absolute;
-  content: "";
-  height: 16px !important;
-  width: 16px !important;
-  left: 2px !important;
-  bottom: 2px !important;
-  background-color: white;
-  transition: 0.4s !important;
-  border-radius: 50% !important;
-  margin-top: 1px !important;
-  border: none !important;
-}
-
-
-.toggle-wrapper input:checked + .toggle-slider {
-  background-color: #1E3A6D !important;
-
-}
-
-.toggle-wrapper input:checked + .toggle-slider::before {
-  transform: translateX(15px) translateY(4px) !important;
-}
 input[type="checkbox"].agreement::after {
     content: "";
     position: absolute;
@@ -187,6 +228,10 @@ input[type="checkbox"].agreement::after {
 }
  .route_show{
   justify-content: left !important;
+}
+.hotel-row {
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 
@@ -290,7 +335,7 @@ input[type="checkbox"].agreement::after {
     gap: 6px;
     justify-content: start;
     align-items: center;
-    width: min-content;
+    width: max-content;
     padding: 5px 9px;
 
   }
@@ -363,7 +408,7 @@ input[type="checkbox"].agreement::after {
     margin-bottom: 10px;
   }
 .row .col.s12 {
-  width: 95% !important;
+  width: 99% !important;
   margin-left: 0px  !important;
 }
   .form_row input:not([type="checkbox"]), .form_row select {
@@ -377,7 +422,6 @@ input[type="checkbox"].agreement::after {
         border-bottom: none !important;
         transition: none !important;
         line-height: 0rem !important;
-        width: 239.6666717529297;
     }
 
   h6.selct_passengers {
@@ -567,7 +611,7 @@ input[type="checkbox"].agreement::after {
     .inquiry_form .row.form_row {
         display: flex;
         flex-direction: row;
-        padding: 0rem 0rem 0.25rem 0rem;
+        padding: 0rem 1rem 0.25rem 0rem;
         margin-bottom: unset;
         flex-wrap: wrap;
         /* flex-direction: row; */
@@ -824,8 +868,7 @@ input[type="checkbox"].agreement::after {
     border-bottom: none !important;
     transition: none !important;
     line-height: 18px !important;
-    width: 239.6666717529297;
-
+    z-index: 0;
   }
 
   .form_Row {
@@ -834,7 +877,7 @@ input[type="checkbox"].agreement::after {
 
   .select-wrapper .caret {
     position: absolute;
-    right: 20px !important;
+    right: 10px !important;
     top: 0;
     bottom: 0;
     margin: auto 0;
@@ -869,6 +912,9 @@ input[type="checkbox"].agreement::after {
 
   input.selected {
     background-color: var(--primary-color);
+  }
+  .vehicle_show .select-wrapper .caret{
+    display: none;
   }
 
   input.selected::placeholder {
@@ -1114,6 +1160,9 @@ label.option.option-1 {
     .col.wrap_spacing input:not([type="checkbox"]), .col.wrap_spacing select  {
         width: 90%;
     }
+    .col.wrap_Spacing select{
+        width: 98% !important;
+    }
 
     h6.selct_passengers {
         font-size: 16px;
@@ -1305,7 +1354,7 @@ input[type="checkbox"]::after {
     gap:10px;
     justify-content: start;
     align-items: center;
-    width: min-content;
+    width: max-content;
     padding: 5px 15px;
 }
 
@@ -1415,7 +1464,7 @@ gap:15px;
   display: flex;
   justify-content: start;
   align-items: end !important;
-  gap: 5px;
+  gap: 10px;
   padding: 0px 20px;
   flex-wrap: wrap;
 }
@@ -1478,7 +1527,7 @@ gap:15px;
   display: flex;
   align-items: center;
   background: transparent;
-  padding: 0px 1px;
+  padding: 4px 1px;
 }
 
 .counter button {
@@ -1721,7 +1770,7 @@ border-radius: 2px !important;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #999
+    color: #646464
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {

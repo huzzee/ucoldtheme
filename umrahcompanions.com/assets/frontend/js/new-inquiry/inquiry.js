@@ -256,25 +256,65 @@ window.addEventListener("DOMContentLoaded", () => {
     select.appendChild(option);
   });
 });
-const checkboxes = document.querySelectorAll('.checkbox-main');
+const checkboxes = document.querySelectorAll('.service');
 
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', () => {
-    const parent = checkbox.closest('.input_Labels');
-    const label = parent.querySelector('.wrap_Labels');
+    const toggleContainer = checkbox.closest('.toggle-container');
+    const label = toggleContainer.querySelector('.toggle-label');
 
     if (checkbox.checked) {
-      parent.style.backgroundColor = '#1E3A6D';
+      toggleContainer.style.backgroundColor = '#1E3A6D';
       label.style.color = 'white';
-      checkbox.style.backgroundColor = 'white';
-      console.log(checkbox.checked)
     } else {
-      parent.style.backgroundColor = '#F1F5F9';
+      toggleContainer.style.backgroundColor = '#F1F5F9';
       label.style.color = '#292d32';
-      checkbox.style.backgroundColor = '#F1F5F9';
     }
   });
 });
+const flightcheckboxes = document.querySelectorAll('.flight');
+
+flightcheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    const toggleContainer = checkbox.closest('.input_Labels');
+    const label = toggleContainer.querySelector('label');
+
+    if (checkbox.checked) {
+      toggleContainer.style.backgroundColor = '#1E3A6D';
+      label.style.color = 'white';
+    } else {
+      toggleContainer.style.backgroundColor = '#F1F5F9';
+      label.style.color = '#292d32';
+    }
+  });
+});
+
+const routecheckboxes = document.querySelectorAll('.route');
+
+routecheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    // Uncheck all checkboxes and reset styles
+    routecheckboxes.forEach((cb) => {
+      const container = cb.closest('.input_Labels');
+      const label = container.querySelector('label');
+      
+      cb.checked = false;
+      container.style.backgroundColor = '#F1F5F9';
+      label.style.color = '#292d32';
+    });
+
+    // Check the clicked checkbox and apply styles
+    checkbox.checked = true;
+    const toggleContainer = checkbox.closest('.input_Labels');
+    const label = toggleContainer.querySelector('label');
+
+    toggleContainer.style.backgroundColor = '#1E3A6D';
+    label.style.color = 'white';
+  });
+});
+
+
+
 
   document.querySelectorAll('.counter-controls').forEach(control => {
     const plusBtn = control.querySelector('.plus');
@@ -320,4 +360,29 @@ checkboxes.forEach((checkbox) => {
       input.value = value.toString().padStart(2, '0');
     }
   });
+
+   function addFormRow() {
+    // Get the container and the first row to clone
+    const container = document.getElementById("form-container");
+    const originalRow = container.querySelector(".hotel_row");
+
+    // Clone the node deeply
+    const clonedRow = originalRow.cloneNode(true);
+
+    // Optional: reset input values in cloned row
+    const inputs = clonedRow.querySelectorAll("input");
+    inputs.forEach(input => {
+      if (input.type === "text") {
+        input.value = "01"; // reset to default
+      }
+    });
+
+    const selects = clonedRow.querySelectorAll("select");
+    selects.forEach(select => {
+      select.selectedIndex = 0; // reset to first option
+    });
+
+    // Append the cloned row
+    container.appendChild(clonedRow);
+  }
 

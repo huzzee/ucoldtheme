@@ -207,7 +207,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       <div class="container">
         
         <div class=" box-background-color">
-        <h2 class="main_heading">Inquiry Form</h2>
+        <h2 class="main_heading">Tell Us What You Need?</h2>
         <div class="row column_Flex">
             <div class="col-md-4 side-bar">
               <div class="steps">
@@ -256,42 +256,65 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                   <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
                   <div class="inquiry_form step1">
 
-                    <h5 class="sub-heading">Select Required Services</h5>
+                    <h5 class="sub-heading">Select Services</h5>
                     <div class="row form_row" style="justify-content: start; gap: 10px; margin-bottom: 2px;">
+
+                      <!-- Visa Toggle -->
                       <div class="col s6 m3 wrap_spacing" style="width: min-content;">
-                        <div class="switch">
-                          <div class="input_Labels">
-                            <input type="checkbox" id="question2" class="checkbox-main" name="question2">
-                            <label for="question2" class="wrap_Labels">Visa</label>
+                        <div class="toggle-container">
+                          <span class="toggle-label">Visa</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="question2" name="question2">
+                              <span class="lever"></span>
+                            </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                        <div class="switch">
-                          <div class="input_Labels">
-                            <input type="checkbox" id="question3" class="checkbox-main" name="question3">
-                            <label for="question3" class="wrap_Labels">Flight</label>                    
+
+                      <!-- Flight Toggle -->
+                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                        <div class="toggle-container">
+                          <span class="toggle-label">Flight</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="question3" name="question3">
+                              <span class="lever"></span>
+                            </label>
                           </div>
                         </div>
                       </div>
-                      <!-- Start Date -->
-                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                        <div class="switch" >
-                          <div class="input_Labels">
-                            <input type="checkbox" id="question1" class="checkbox-main" name="question1">
-                            <label for="question1" class="wrap_Labels transport_check">Transport</label>       
+
+                      <!-- Transport Toggle -->
+                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                        <div class="toggle-container">
+                          <span class="toggle-label">Transport</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="question1" name="question1">
+                              <span class="lever"></span>
+                            </label>
                           </div>
                         </div>
                       </div>
-                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                        <div class="switch">
-                          <div class="input_Labels">                      
-                            <input type="checkbox" id="hotel_type" class="checkbox-main hotel_check" name="hotel_type">
-                            <label for="hotel_type" class="wrap_Labels">Hotel</label>    
+
+                      <!-- Hotel Toggle -->
+                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                        <div class="toggle-container">
+                          <span class="toggle-label">Hotel</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="hotel_type" name="hotel_type">
+                              <span class="lever"></span>
+                            </label>
                           </div>
                         </div>
                       </div>
+
                     </div>
+                  
+
+
 
                     <h5 class="sub-heading">Personal Information</h5>
                     <div class="row form_row " style="margin-bottom: 2px;">
@@ -303,15 +326,22 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                       <!-- Name -->
                       <!-- Email -->
                       <div class="col s12 m6 l4 wrap_spacing">
-                        <input type="email" class="form-control active-state" placeholder="Email Address"
+                        <input type="email" class="form-control active-state" placeholder="Email"
                         aria-label="Email Address" name="email" value="" />
                       </div>
                       <!-- Email -->  
                       <!-- Phone No -->
                       <div class="col s12 m6 l4 wrap_spacing">
-                        <input type="text" class="form-control active-state" placeholder="Phone Number"
-                        aria-label="Phone Number" name="phoneno" value=""
-                        onkeypress="return onlyNumberKey(event)" />
+
+                        <input type="number"
+                              class="form-control active-state"
+                              placeholder=""
+                              style="padding-left: 50px !important;"
+                              id="phone"
+                              type="tel"
+                              name="phoneno"
+                              onkeypress="return onlyNumberKey(event)" />
+                    
                       </div>
                       <!-- Phone No -->
                     <!-- </div>
@@ -320,7 +350,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                       <!-- Nationality -->
                       <div class="col s12 m6 l4 wrap_spacing">
                         <select class="form-select active-state" name="nationality" id="nationality">
-                          <option value=""  >Select Nationality <span class="text-danger">*</span></option>
+                          <option value=""  >Pilgrim Nationality<span class="text-danger">*</span></option>
                         </select>
                       </div>
                       <!-- Nationality -->
@@ -331,7 +361,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                       <!-- Departure City -->
                       <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
                         <input type="text" class="form-control active-state package-datepicker"
-                          placeholder="Select Arrival Date *" aria-label="Arrival Date" name="start_date"
+                          placeholder="Arrival Date *" aria-label="Arrival Date" name="start_date"
                           value="" />
                       </div>
                       <!-- Private Transport -->
@@ -382,20 +412,98 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                   </div>
 
                   <div class="inquiry_form step2" style="display:none; ">
+                    <div class="row form_row flight_show" style="padding: 0px;">
+                       <h5 class="sub-heading col s12 l7" style="margin-left: 12px;">What Type of Flight Do You Prefer?</h5>
+
+                      <div class="col s6 l2 wrap_spacing" style="width: min-content; margin-left: 0px;">
+                        <div class="switch">
+                          <div class="input_Labels">
+                            <input type="checkbox" id="flight_direct" class="checkbox-main flight" name="flight_direct">
+                            <label for="flight_direct" class="wrap_Labels">Direct Flight</label>
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="col s6 l2 wrap_spacing"  style="width: min-content; margin-left: 0px;">
+                        <div class="switch">
+                          <div class="input_Labels">
+                            <input type="checkbox" id="flight_indirect" class="checkbox-main flight" name="flight_indirect">
+                            <label for="flight_indirect" class="wrap_Labels">In-Direct Flight</label>                    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     
                     <div class="row form_row route_show flex-row">
-                      <h5 class="sub-heading" style="padding-left: 0px; padding-bottom: 0px;">Your Route Information</h5>
-                      <div class="col s12  m8">
+                      <h5 class="sub-heading" style="padding-left: 0px; padding-bottom: 0px;">Your Transport Route</h5>
+                      <div class="col s12 l12 wrap_spacing vehicle_show" style="margin-left:0;">
+                       
+                        <select class="form-select active-state vehicle" style="width: 100% !important;" name="vehicle">
+                          <option value="" disabled selected>Select Vehicle </option>
+                                            <option value="Car" 
+                            >Car</option>
+                                            <option value="HiAce" 
+                            >HiAce</option>
+                                            <option value="Coaster" 
+                            >Coaster</option>
+                                            <option value="Bus" 
+                            >Bus</option>
+                                            <option value="H1" 
+                            >H1</option>
+                                            <option value="GMC" 
+                            >GMC</option>
+                                            <option value="Staria" 
+                            >Staria</option>
+                          
+
+                        </select>
+                      </div>
+                      <div class="row form_row" style="padding: 0 !important; justify-content: start;">
+                        <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                        <div class="switch" style="height: 100%;">
+                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <input type="checkbox" id="route1" class="checkbox-main route" name="route">
+                            <label for="route1" class="wrap_Labels">Jeddah to Makkah to Madina to Jeddah</label>
+                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                        <div class="switch"  style="height: 100%;">
+                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <input type="checkbox" id="route2" class="checkbox-main route" name="route">
+                            <label for="route2" class="wrap_Labels">Jeddah to Makkah to Madina to Makkah to Jeddah</label>
+                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
+                    
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Start Date -->
+                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                        <div class="switch"  style="height: 100%;">
+                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <input type="checkbox" id="route3" class="checkbox-main route" name="route">
+                            <label for="route3" class="wrap_Labels transport_check">Jeddah to Makkah to Madina to Madina airport</label>
+                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
+       
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                        <div class="switch"  style="height: 100%;">
+                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">                      
+                            <input type="checkbox" id="route4" class="checkbox-main hotel_check route" name="route">
+                            <label for="route4" class="wrap_Labels">Madina to Makkah to Madina</label>  
+                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
+  
+                          </div>
+                        </div>
+                      </div>
+
+                      </div>
+                      <h5 class="sub-heading col l12" style="margin-left: 0px;">Other Routes</h5>
+
+                      <div class="col s12  m11" style="margin-left: 0px;">
                         <select class="form-select active-state route_id" name="route">
-                          <option value="" disabled selected>Select Route <span class="text-danger">*</span></option>
-                                            <option value="1" 
-                            data-routedata="{&quot;id&quot;:1,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Jeddah Airport</option>
-                                            <option value="2" 
-                            data-routedata="{&quot;id&quot;:2,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
-                                            <option value="3" 
-                            data-routedata="{&quot;id&quot;:3,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport &quot;,&quot;no_of_pickups&quot;:4,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;JED&quot;,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
-                                            <option value="4" 
-                            data-routedata="{&quot;id&quot;:4,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport &quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAD&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MDA&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
                                             <option value="5" 
                             data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
                                             <option value="6" 
@@ -461,61 +569,75 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           
                         </select>
                       </div>
-                      <div class="col s12 m3 wrap_spacing vehicle_show" style="margin-left:0;">
-                       
-                        <select class="form-select active-state vehicle" name="vehicle">
-                          <option value="" disabled selected>Select Vehicle </option>
-                                            <option value="Car" 
-                            >Car</option>
-                                            <option value="HiAce" 
-                            >HiAce</option>
-                                            <option value="Coaster" 
-                            >Coaster</option>
-                                            <option value="Bus" 
-                            >Bus</option>
-                                            <option value="H1" 
-                            >H1</option>
-                                            <option value="GMC" 
-                            >GMC</option>
-                                            <option value="Staria" 
-                            >Staria</option>
-                          
-
-                        </select>
-                      </div>
+                      
                     </div>
-                    <div class="hotel_show" style="width: 100%;">
+                    <div class="hotel_show" style="width: 100%; margin-top:30px;">
                       <div class="row hotel-checkbox" style=" width: 100%;">
-                     <h5 class="sub-heading col l6">Where Do You Need a Hotel?</h5>
-                    <div class="row form_row col l6 checkboxes-section" style="justify-content: start; gap: 10px; margin-bottom: 2px !important;">
-                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
-                        <div class="switch">
-                          <div class="input_Labels">
-                            <label for="hotel_Mak" class="wrap_Labels makkah_hotel">Makkah</label>
-                            <input type="checkbox" value="Mak" id="hotel_Mak" class="checkbox-main hotel" name="hotel_Mak">
+                      <h5 class="sub-heading col l6" >Where Do You Need a Hotel?</h5>
+                      
+                    
+
+                     <div id="form-container">
+                      <div class="hotel_row">
+                        <h6>hotel details</h6>
+                        <div class="row form_row">
+                              
+                          <div class="col s12 m5" style="margin-left: 0px;">
+
+                            <select name="" id="">
+                              <option value="">Makkah</option>
+                              <option value="">Madinah</option>
+                            </select>
+
                           </div>
+                          <div class="col s12 m5" style="margin-left: 0px;">
+                            <div class="hotel-item " style="width:100% !important;">
+                                  <select name="" id="">
+                                    <option value="hotel Zuhair" >hotel Zuhair</option>
+                                    <option value="Nuzal IBRAHIM HOTEL" >Nuzal IBRAHIM HOTEL</option>
+                                  </select>
+                                </div>
+
+                          </div>
+                          <div class="col s12 m5" style="margin-left: 0px;">
+                            <!-- <label class="wrap_Labels">Room Type</label> -->
+                                <div class="hotel-item " style="width:100% !important;">
+                                    <select class="browser-default form-select active-state room_type" id="room_type" style="width:90%;">
+                                      <option value="">Double (2 people)</option>
+                                      <option value="">Triple (3 people)</option>
+                                    </select>
+                                </div>
+
+                          </div>
+
+                            <div class="hotel-item col s6 l5 hotel-counter" style="margin-left:0px">
+                                <label class="counter-label">Number Of Nights</label>
+                                <div class="counter">
+                                    <button type="button" class="decrement">–</button>
+                                    <input type="text" name="hotels[${index}][nights]" value="01"
+                                        class="counter-input" readonly />
+                                    <button type="button" class="increment">+</button>
+                                </div>
+                              </div>
+                              <div class="hotel-item col s6 l5 hotel-counter" style="margin-left:0px">
+                                <label class="counter-label">Quantity</label>
+                                <div class="counter">
+                                    <button type="button" class="decrement">–</button>
+                                    <input type="text" name="hotels[${index}][no_of_rooms]" value="01"
+                                        class="counter-input" readonly />
+                                    <button type="button" class="increment">+</button>
+                                </div>
+                            </div>
+                        
                         </div>
                       </div>
-                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                        <div class="switch">
-                          <div class="input_Labels">
-                            <label for="hotel_Mad" class="wrap_Labels madinah_hotel">Madinah</label>  
-                            <input type="checkbox" value="Mad" id="hotel_Mad" class="checkbox-main hotel" name="hotel_Mad">
-                                              
-                          </div>
-                        </div>
+                     
                       </div>
-                      <!-- Start Date -->
-                      <div class="col s6 m3 wrap_spacing"  style="width: min-content;">
-                        <div class="switch" >
-                          <div class="input_Labels">
-                            <label for="hotel_both" class="wrap_Labels both">Both</label> 
-                            <input type="checkbox" value="Both" id="hotel_both" class="checkbox-main hotel" name="hotel_both">
-                                  
-                          </div>
-                        </div>
+
+                      <div class="Nextbtn">
+                        <button class="n_btn " type="button" onclick="addFormRow()">Add More</button>
                       </div>
-                    </div>
+
                     </div>
 
                       <!-- <h6 class="selct_passengers hotel_show">Hotel Details</h6> -->
@@ -1001,13 +1123,32 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       console.log('jQuery version:', $.fn.jquery);
   console.log('Select2 available?', typeof $.fn.select2);
 
+  const phoneInput = document.querySelector("#phone");
+
+    window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    geoIpLookup: function (callback) {
+      fetch('https://ipinfo.io/json?token=your_token') // use a free IP service
+        .then(res => res.json())
+        .then(data => callback(data.country))
+        .catch(() => callback('us'));
+    },
+    nationalMode: false,
+    formatOnDisplay: true,
+    autoPlaceholder: "polite",
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+  });
+
+
       $('.Nextbtn').on('click',function(e){
         e.preventDefault();
         const checkboxes = document.querySelectorAll('.checkbox-main');
         if(checkboxes[0].checked){
           console.log("visa is checked")
         } if(checkboxes[1].checked){
-          console.log("flight is checked")
+            $('.flight_show').css('display','flex');
+        }else{
+            $('.flight_show').css('display','none');
         } if(checkboxes[2].checked)
           {
             $('.route_show').css('display','flex');
