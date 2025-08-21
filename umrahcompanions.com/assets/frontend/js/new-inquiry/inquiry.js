@@ -290,6 +290,7 @@ flightcheckboxes.forEach((checkbox) => {
 });
 
 const routecheckboxes = document.querySelectorAll('.route');
+const otherRoute = document.querySelector('.other-routes');
 
 routecheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', () => {
@@ -300,6 +301,8 @@ routecheckboxes.forEach((checkbox) => {
       
       cb.checked = false;
       container.style.backgroundColor = '#F1F5F9';
+      container.style.border='1px solid #F1F5F9'
+      otherRoute.style.display='block';
       label.style.color = '#292d32';
     });
 
@@ -307,9 +310,10 @@ routecheckboxes.forEach((checkbox) => {
     checkbox.checked = true;
     const toggleContainer = checkbox.closest('.input_Labels');
     const label = toggleContainer.querySelector('label');
-
-    toggleContainer.style.backgroundColor = '#1E3A6D';
-    label.style.color = 'white';
+    toggleContainer.style.backgroundColor = '#1e3a6d21';
+    toggleContainer.style.border='1px solid #1e3a6da4';
+    otherRoute.style.display='none';
+    label.style.color = 'black';
   });
 });
 
@@ -361,28 +365,5 @@ routecheckboxes.forEach((checkbox) => {
     }
   });
 
-   function addFormRow() {
-    // Get the container and the first row to clone
-    const container = document.getElementById("form-container");
-    const originalRow = container.querySelector(".hotel_row");
 
-    // Clone the node deeply
-    const clonedRow = originalRow.cloneNode(true);
-
-    // Optional: reset input values in cloned row
-    const inputs = clonedRow.querySelectorAll("input");
-    inputs.forEach(input => {
-      if (input.type === "text") {
-        input.value = "01"; // reset to default
-      }
-    });
-
-    const selects = clonedRow.querySelectorAll("select");
-    selects.forEach(select => {
-      select.selectedIndex = 0; // reset to first option
-    });
-
-    // Append the cloned row
-    container.appendChild(clonedRow);
-  }
 

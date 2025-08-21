@@ -207,7 +207,6 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       <div class="container">
         
         <div class=" box-background-color">
-        <h2 class="main_heading">Tell Us What You Need?</h2>
         <div class="row column_Flex">
             <div class="col-md-4 side-bar">
               <div class="steps">
@@ -219,7 +218,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
               </div>
               <div class="additional-information opacity disabled">
                 <img src="approot/storage/app/public/images/frontend/additional_information.svg" alt="info" />
-                <h6>Additional Information</h6>
+                <h6>Travel Details</h6>
               </div>
 
               </div>
@@ -233,23 +232,25 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
               <div class="partner">
                 <div class="custom-card">
                   <div class="">
-                    <img src="assets/frontend/img/handshake.svg" alt="">
+                    <img src="assets/frontend/img/handshakedark.png" alt="">
                     <p >Nusuk Partner</p>
                   </div>
                   <!-- <span class="vr"></span> -->
                   <div class="">
-                    <img src="assets/frontend/img/light_glob.svg" alt="">
+                    <img src="assets/frontend/img/GlobeSimple.png" alt="">
                     <p>Global Offices</p>
                   </div>
                   <!-- <span class="vr"></span> -->
                   <div class="">
-                    <img src="assets/frontend/img/seal_check.svg" alt="">
+                    <img src="assets/frontend/img/SealCheck.png" alt="">
                     <p>Local Support</p>
                   </div>
                 </div>
               </div>            
             </div>
             <div class="col-lg-box ">
+                      <h2 class="main_heading">Tell Us What You Need</h2>
+
               <div class="box-shadow">
                 <form action="#" id="InquiryForm" class="needs-validation" method="POST" enctype="multipart/form-data"
                   action="https://umrahcompanions.com/inquiry" id="InquiryForm">
@@ -257,23 +258,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                   <div class="inquiry_form step1">
 
                     <h5 class="sub-heading">Select Services</h5>
-                    <div class="row form_row" style="justify-content: start; gap: 10px; margin-bottom: 2px;">
-
-                      <!-- Visa Toggle -->
-                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
-                        <div class="toggle-container">
-                          <span class="toggle-label">Visa</span>
-                          <div class="switch">
-                            <label>
-                              <input type="checkbox" class="checkbox-main service" id="question2" name="question2">
-                              <span class="lever"></span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="row form_row" >
 
                       <!-- Flight Toggle -->
-                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                      <div class="col s6 l3 wrap_spacing" >
                         <div class="toggle-container">
                           <span class="toggle-label">Flight</span>
                           <div class="switch">
@@ -284,22 +272,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           </div>
                         </div>
                       </div>
-
-                      <!-- Transport Toggle -->
-                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
-                        <div class="toggle-container">
-                          <span class="toggle-label">Transport</span>
-                          <div class="switch">
-                            <label>
-                              <input type="checkbox" class="checkbox-main service" id="question1" name="question1">
-                              <span class="lever"></span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
+                      
                       <!-- Hotel Toggle -->
-                      <div class="col s6 m3 wrap_spacing" style="width: min-content;">
+                      <div class="col s6 l3 wrap_spacing">
                         <div class="toggle-container">
                           <span class="toggle-label">Hotel</span>
                           <div class="switch">
@@ -311,6 +286,31 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                         </div>
                       </div>
 
+                       <!-- Transport Toggle -->
+                      <div class="col s6 l3 wrap_spacing" >
+                        <div class="toggle-container">
+                          <span class="toggle-label">Transport</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="question1" name="question1">
+                              <span class="lever"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Visa Toggle -->
+                      <div class="col s6 l3 wrap_spacing" >
+                        <div class="toggle-container">
+                          <span class="toggle-label">Visa</span>
+                          <div class="switch">
+                            <label>
+                              <input type="checkbox" class="checkbox-main service" id="question2" name="question2">
+                              <span class="lever"></span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   
 
@@ -333,10 +333,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                       <!-- Phone No -->
                       <div class="col s12 m6 l4 wrap_spacing">
 
-                        <input type="number"
+                        <input
                               class="form-control active-state"
                               placeholder=""
-                              style="padding-left: 50px !important;"
+                              style=""
                               id="phone"
                               type="tel"
                               name="phoneno"
@@ -359,10 +359,14 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                         <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
                       </div>
                       <!-- Departure City -->
-                      <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
-                        <input type="text" class="form-control active-state package-datepicker"
+                      <div class="col s12 m6 l4 wrap_spacing ">
+                        <div class="wrap_datePicker">
+                          <input type="text" class="form-control active-state package-datepicker"
                           placeholder="Arrival Date *" aria-label="Arrival Date" name="start_date"
                           value="" />
+
+                        </div>
+                        
                       </div>
                       <!-- Private Transport -->
 
@@ -370,9 +374,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                     </div>
                     
                 
-                    <h5 class="sub-heading">Select Pilgrims</h5>
+                    <h5 class="sub-heading">Pilgrims</h5>
                     
-                    <div class="pilgrim-section">
+                    <div class="pilgrim-section row form_row">
                       <div class="passenger-wrapper">
                         <div class=" counter-container" data-type="Adults">
                           <label class="counter-label">Adults</label>
@@ -412,10 +416,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                   </div>
 
                   <div class="inquiry_form step2" style="display:none; ">
-                    <div class="row form_row flight_show" style="padding: 0px;">
-                       <h5 class="sub-heading col s12 l7" style="margin-left: 12px;">What Type of Flight Do You Prefer?</h5>
-
-                      <div class="col s6 l2 wrap_spacing" style="width: min-content; margin-left: 0px;">
+                    <div class=" flight_show" style="padding: 0px; flex-direction: column; justify-content: start; align-items: start;">
+                       <h5 class="sub-heading" style="margin-left: 11px;">Flight Preference</h5>
+                       <div class="row form_row">
+                        <div class="wrap_spacing" style="width: min-content; margin-left: 0px;">
                         <div class="switch">
                           <div class="input_Labels">
                             <input type="checkbox" id="flight_direct" class="checkbox-main flight" name="flight_direct">
@@ -423,7 +427,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           </div>
                         </div>
                       </div> 
-                      <div class="col s6 l2 wrap_spacing"  style="width: min-content; margin-left: 0px;">
+                      <div class=" wrap_spacing"  style="width: min-content; margin-left: 0px;">
                         <div class="switch">
                           <div class="input_Labels">
                             <input type="checkbox" id="flight_indirect" class="checkbox-main flight" name="flight_indirect">
@@ -431,220 +435,170 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                           </div>
                         </div>
                       </div>
+                       </div>
+                      
                     </div>
                     
-                    <div class="row form_row route_show flex-row">
+                    <div class=" route_show">
                       <h5 class="sub-heading" style="padding-left: 0px; padding-bottom: 0px;">Your Transport Route</h5>
-                      <div class="col s12 l12 wrap_spacing vehicle_show" style="margin-left:0;">
-                       
-                        <select class="form-select active-state vehicle" style="width: 100% !important;" name="vehicle">
-                          <option value="" disabled selected>Select Vehicle </option>
-                                            <option value="Car" 
-                            >Car</option>
-                                            <option value="HiAce" 
-                            >HiAce</option>
-                                            <option value="Coaster" 
-                            >Coaster</option>
-                                            <option value="Bus" 
-                            >Bus</option>
-                                            <option value="H1" 
-                            >H1</option>
-                                            <option value="GMC" 
-                            >GMC</option>
-                                            <option value="Staria" 
-                            >Staria</option>
-                          
-
-                        </select>
-                      </div>
+                      
                       <div class="row form_row" style="padding: 0 !important; justify-content: start;">
                         <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
                         <div class="switch" style="height: 100%;">
                           <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
-                            <input type="checkbox" id="route1" class="checkbox-main route" name="route">
-                            <label for="route1" class="wrap_Labels">Jeddah to Makkah to Madina to Jeddah</label>
-                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
+                            <input type="radio" style="accent-color: #1E3A6D;" id="route1" class="checkbox-main route" name="route">
+                            <label for="route1" class="wrap_Labels col l8">Jeddah to Makkah to Madina to Jeddah</label>
+                            <img src="assets/frontend/img/route.png" width="15%" alt="">
                           </div>
                         </div>
-                      </div>
-                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
-                        <div class="switch"  style="height: 100%;">
-                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
-                            <input type="checkbox" id="route2" class="checkbox-main route" name="route">
-                            <label for="route2" class="wrap_Labels">Jeddah to Makkah to Madina to Makkah to Jeddah</label>
-                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
-                    
-                          </div>
                         </div>
-                      </div>
-                      <!-- Start Date -->
-                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
-                        <div class="switch"  style="height: 100%;">
-                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
-                            <input type="checkbox" id="route3" class="checkbox-main route" name="route">
-                            <label for="route3" class="wrap_Labels transport_check">Jeddah to Makkah to Madina to Madina airport</label>
-                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
-       
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
-                        <div class="switch"  style="height: 100%;">
-                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">                      
-                            <input type="checkbox" id="route4" class="checkbox-main hotel_check route" name="route">
-                            <label for="route4" class="wrap_Labels">Madina to Makkah to Madina</label>  
-                            <img src="assets/frontend/img/flight.png" width="15%" alt="">
-  
-                          </div>
-                        </div>
-                      </div>
-
-                      </div>
-                      <h5 class="sub-heading col l12" style="margin-left: 0px;">Other Routes</h5>
-
-                      <div class="col s12  m11" style="margin-left: 0px;">
-                        <select class="form-select active-state route_id" name="route">
-                                            <option value="5" 
-                            data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
-                                            <option value="6" 
-                            data-routedata="{&quot;id&quot;:6,&quot;description&quot;:&quot;Jeddha Airport \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
-                                            <option value="7" 
-                            data-routedata="{&quot;id&quot;:7,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
-                                            <option value="8" 
-                            data-routedata="{&quot;id&quot;:8,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:6,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MAK&quot;,&quot;pickup6_code&quot;:&quot;MAK&quot;,&quot;dropof6_code&quot;:&quot;JED&quot;,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
-                                            <option value="9" 
-                            data-routedata="{&quot;id&quot;:9,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MDA&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
-                                            <option value="10" 
-                            data-routedata="{&quot;id&quot;:10,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAK&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
-                                            <option value="11" 
-                            data-routedata="{&quot;id&quot;:11,&quot;description&quot;:&quot;Jeddah Airport \/ Madinah \/ Makkah \/Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
-                                            <option value="39" 
-                            data-routedata="{&quot;id&quot;:39,&quot;description&quot;:&quot;Makkah to Taif to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:&quot;TAF&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Makkah to Taif to Makkah</option>
-                                            <option value="41" 
-                            data-routedata="{&quot;id&quot;:41,&quot;description&quot;:&quot;Makkah to Al baha to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;ALB&quot;}">Makkah to Al baha to Makkah</option>
-                                            <option value="42" 
-                            data-routedata="{&quot;id&quot;:42,&quot;description&quot;:&quot;Jeddah to Al baha to Jeddah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah to Al baha to Jeddah</option>
-                                            <option value="44" 
-                            data-routedata="{&quot;id&quot;:44,&quot;description&quot;:&quot;Jeddah Airport To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Jeddah Airport To Makkah Hotel</option>
-                                            <option value="45" 
-                            data-routedata="{&quot;id&quot;:45,&quot;description&quot;:&quot;Makkah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah Airport</option>
-                                            <option value="46" 
-                            data-routedata="{&quot;id&quot;:46,&quot;description&quot;:&quot;Jeddah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Jeddah Airport To Madinah Hotel</option>
-                                            <option value="47" 
-                            data-routedata="{&quot;id&quot;:47,&quot;description&quot;:&quot;Madinah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Hotel To Jeddah Airport</option>
-                                            <option value="54" 
-                            data-routedata="{&quot;id&quot;:54,&quot;description&quot;:&quot;Jeddah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Hotel To Jeddah City Tour</option>
-                                            <option value="55" 
-                            data-routedata="{&quot;id&quot;:55,&quot;description&quot;:&quot;Makkah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah City Tour</option>
-                                            <option value="56" 
-                            data-routedata="{&quot;id&quot;:56,&quot;description&quot;:&quot;Madinah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Airport To Madinah Hotel</option>
-                                            <option value="57" 
-                            data-routedata="{&quot;id&quot;:57,&quot;description&quot;:&quot;Madinah Hotel To Madinah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Madinah Hotel To Madinah Airport</option>
-                                            <option value="58" 
-                            data-routedata="{&quot;id&quot;:58,&quot;description&quot;:&quot;Makkah Hotel To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Madinah Hotel</option>
-                                            <option value="59" 
-                            data-routedata="{&quot;id&quot;:59,&quot;description&quot;:&quot;Madinah HotelTo Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah HotelTo Makkah Hotel</option>
-                                            <option value="60" 
-                            data-routedata="{&quot;id&quot;:60,&quot;description&quot;:&quot;Makkah Hotel To Makkah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Ziyarat</option>
-                                            <option value="61" 
-                            data-routedata="{&quot;id&quot;:61,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat</option>
-                                            <option value="62" 
-                            data-routedata="{&quot;id&quot;:62,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
-                                            <option value="63" 
-                            data-routedata="{&quot;id&quot;:63,&quot;description&quot;:&quot;Makkah Hotel To Taif Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Taif Ziarat</option>
-                                            <option value="64" 
-                            data-routedata="{&quot;id&quot;:64,&quot;description&quot;:&quot;Madinah Hotel To Badar Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Badar Ziarat</option>
-                                            <option value="65" 
-                            data-routedata="{&quot;id&quot;:65,&quot;description&quot;:&quot;Makkah Hotel To Makkah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Train Station</option>
-                                            <option value="66" 
-                            data-routedata="{&quot;id&quot;:66,&quot;description&quot;:&quot;Makkah Train Station To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Train Station To Makkah Hotel</option>
-                                            <option value="67" 
-                            data-routedata="{&quot;id&quot;:67,&quot;description&quot;:&quot;Madinah Hotel To Madinah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Train Station</option>
-                                            <option value="68" 
-                            data-routedata="{&quot;id&quot;:68,&quot;description&quot;:&quot;Madinah Train Station To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Train Station To Madinah Hotel</option>
-                                            <option value="69" 
-                            data-routedata="{&quot;id&quot;:69,&quot;description&quot;:&quot;Makkah Hotel To Masjid Ayesha Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Ayesha Meeqat</option>
-                                            <option value="70" 
-                            data-routedata="{&quot;id&quot;:70,&quot;description&quot;:&quot;Makkah Hotel To Masjid Jurana Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Jurana Meeqat</option>
-                          
-                        </select>
-                      </div>
+                        <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route2" class="checkbox-main route" name="route">
+                              <label for="route2" class="wrap_Labels col l8">Jeddah to Makkah to Madina to Makkah to Jeddah</label>
+                              <img src="assets/frontend/img/route.png" width="15%" alt="">
                       
-                    </div>
-                    <div class="hotel_show" style="width: 100%; margin-top:30px;">
-                      <div class="row hotel-checkbox" style=" width: 100%;">
-                      <h5 class="sub-heading col l6" >Where Do You Need a Hotel?</h5>
-                      
-                    
-
-                     <div id="form-container">
-                      <div class="hotel_row">
-                        <h6>hotel details</h6>
-                        <div class="row form_row">
-                              
-                          <div class="col s12 m5" style="margin-left: 0px;">
-
-                            <select name="" id="">
-                              <option value="">Makkah</option>
-                              <option value="">Madinah</option>
-                            </select>
-
-                          </div>
-                          <div class="col s12 m5" style="margin-left: 0px;">
-                            <div class="hotel-item " style="width:100% !important;">
-                                  <select name="" id="">
-                                    <option value="hotel Zuhair" >hotel Zuhair</option>
-                                    <option value="Nuzal IBRAHIM HOTEL" >Nuzal IBRAHIM HOTEL</option>
-                                  </select>
-                                </div>
-
-                          </div>
-                          <div class="col s12 m5" style="margin-left: 0px;">
-                            <!-- <label class="wrap_Labels">Room Type</label> -->
-                                <div class="hotel-item " style="width:100% !important;">
-                                    <select class="browser-default form-select active-state room_type" id="room_type" style="width:90%;">
-                                      <option value="">Double (2 people)</option>
-                                      <option value="">Triple (3 people)</option>
-                                    </select>
-                                </div>
-
-                          </div>
-
-                            <div class="hotel-item col s6 l5 hotel-counter" style="margin-left:0px">
-                                <label class="counter-label">Number Of Nights</label>
-                                <div class="counter">
-                                    <button type="button" class="decrement">–</button>
-                                    <input type="text" name="hotels[${index}][nights]" value="01"
-                                        class="counter-input" readonly />
-                                    <button type="button" class="increment">+</button>
-                                </div>
-                              </div>
-                              <div class="hotel-item col s6 l5 hotel-counter" style="margin-left:0px">
-                                <label class="counter-label">Quantity</label>
-                                <div class="counter">
-                                    <button type="button" class="decrement">–</button>
-                                    <input type="text" name="hotels[${index}][no_of_rooms]" value="01"
-                                        class="counter-input" readonly />
-                                    <button type="button" class="increment">+</button>
-                                </div>
                             </div>
-                        
+                          </div>
+                        </div>
+                        <!-- Start Date -->
+                        <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route3" class="checkbox-main route" name="route">
+                              <label for="route3" class="wrap_Labels col l8 transport_check">Jeddah to Makkah to Madina to Madina airport</label>
+                              <img src="assets/frontend/img/route.png" width="15%" alt="">
+        
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 l5 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">                      
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route4" class="checkbox-main hotel_check route" name="route">
+                              <label for="route4" class="wrap_Labels  col l8">Madina to Makkah to Madina</label>  
+                              <img src="assets/frontend/img/route.png" width="15%" alt="">
+    
+                            </div>
+                          </div>
                         </div>
                       </div>
-                     
+
+                      <h5 class="sub-heading other-routes" style="margin-left: 0px; ;">Other Routes</h5>
+
+                      <div class="row form_row other-routes">
+                        <div class="col s12  m11" style="margin-left: 0px;">
+                          <select class="form-select active-state route_id" name="route">
+                                              <option value="5" 
+                              data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
+                                              <option value="6" 
+                              data-routedata="{&quot;id&quot;:6,&quot;description&quot;:&quot;Jeddha Airport \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:1,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
+                                              <option value="7" 
+                              data-routedata="{&quot;id&quot;:7,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
+                                              <option value="8" 
+                              data-routedata="{&quot;id&quot;:8,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Makkah \/Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:6,&quot;image_id&quot;:4,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MAK&quot;,&quot;pickup6_code&quot;:&quot;MAK&quot;,&quot;dropof6_code&quot;:&quot;JED&quot;,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
+                                              <option value="9" 
+                              data-routedata="{&quot;id&quot;:9,&quot;description&quot;:&quot;Jeddah Airport \/ Makkah \/ Madinah \/ Madinah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:2,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:&quot;MAK&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;MAD&quot;,&quot;pickup4_code&quot;:&quot;MAD&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAD&quot;,&quot;dropof5_code&quot;:&quot;MDA&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;MDA&quot;}">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
+                                              <option value="10" 
+                              data-routedata="{&quot;id&quot;:10,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport Including Mazarat&quot;,&quot;no_of_pickups&quot;:5,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAZ&quot;,&quot;pickup3_code&quot;:&quot;MAD&quot;,&quot;dropof3_code&quot;:&quot;MAK&quot;,&quot;pickup4_code&quot;:&quot;MAK&quot;,&quot;dropof4_code&quot;:&quot;MAZ&quot;,&quot;pickup5_code&quot;:&quot;MAK&quot;,&quot;dropof5_code&quot;:&quot;JED&quot;,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:true,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
+                                              <option value="11" 
+                              data-routedata="{&quot;id&quot;:11,&quot;description&quot;:&quot;Jeddah Airport \/ Madinah \/ Makkah \/Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
+                                              <option value="39" 
+                              data-routedata="{&quot;id&quot;:39,&quot;description&quot;:&quot;Makkah to Taif to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:&quot;TAF&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Makkah to Taif to Makkah</option>
+                                              <option value="41" 
+                              data-routedata="{&quot;id&quot;:41,&quot;description&quot;:&quot;Makkah to Al baha to Makkah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;ALB&quot;}">Makkah to Al baha to Makkah</option>
+                                              <option value="42" 
+                              data-routedata="{&quot;id&quot;:42,&quot;description&quot;:&quot;Jeddah to Al baha to Jeddah&quot;,&quot;no_of_pickups&quot;:2,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;ALB&quot;,&quot;pickup2_code&quot;:&quot;ALB&quot;,&quot;dropof2_code&quot;:&quot;JED&quot;,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah to Al baha to Jeddah</option>
+                                              <option value="44" 
+                              data-routedata="{&quot;id&quot;:44,&quot;description&quot;:&quot;Jeddah Airport To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAK&quot;}">Jeddah Airport To Makkah Hotel</option>
+                                              <option value="45" 
+                              data-routedata="{&quot;id&quot;:45,&quot;description&quot;:&quot;Makkah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah Airport</option>
+                                              <option value="46" 
+                              data-routedata="{&quot;id&quot;:46,&quot;description&quot;:&quot;Jeddah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Jeddah Airport To Madinah Hotel</option>
+                                              <option value="47" 
+                              data-routedata="{&quot;id&quot;:47,&quot;description&quot;:&quot;Madinah Hotel To Jeddah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Hotel To Jeddah Airport</option>
+                                              <option value="54" 
+                              data-routedata="{&quot;id&quot;:54,&quot;description&quot;:&quot;Jeddah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;JED&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Jeddah Hotel To Jeddah City Tour</option>
+                                              <option value="55" 
+                              data-routedata="{&quot;id&quot;:55,&quot;description&quot;:&quot;Makkah Hotel To Jeddah City Tour&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;JED&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Makkah Hotel To Jeddah City Tour</option>
+                                              <option value="56" 
+                              data-routedata="{&quot;id&quot;:56,&quot;description&quot;:&quot;Madinah Airport To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Airport To Madinah Hotel</option>
+                                              <option value="57" 
+                              data-routedata="{&quot;id&quot;:57,&quot;description&quot;:&quot;Madinah Hotel To Madinah Airport&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MDA&quot;}">Madinah Hotel To Madinah Airport</option>
+                                              <option value="58" 
+                              data-routedata="{&quot;id&quot;:58,&quot;description&quot;:&quot;Makkah Hotel To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Madinah Hotel</option>
+                                              <option value="59" 
+                              data-routedata="{&quot;id&quot;:59,&quot;description&quot;:&quot;Madinah HotelTo Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah HotelTo Makkah Hotel</option>
+                                              <option value="60" 
+                              data-routedata="{&quot;id&quot;:60,&quot;description&quot;:&quot;Makkah Hotel To Makkah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Ziyarat</option>
+                                              <option value="61" 
+                              data-routedata="{&quot;id&quot;:61,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat</option>
+                                              <option value="62" 
+                              data-routedata="{&quot;id&quot;:62,&quot;description&quot;:&quot;Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
+                                              <option value="63" 
+                              data-routedata="{&quot;id&quot;:63,&quot;description&quot;:&quot;Makkah Hotel To Taif Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;TAF&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Taif Ziarat</option>
+                                              <option value="64" 
+                              data-routedata="{&quot;id&quot;:64,&quot;description&quot;:&quot;Madinah Hotel To Badar Ziarat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Badar Ziarat</option>
+                                              <option value="65" 
+                              data-routedata="{&quot;id&quot;:65,&quot;description&quot;:&quot;Makkah Hotel To Makkah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Makkah Train Station</option>
+                                              <option value="66" 
+                              data-routedata="{&quot;id&quot;:66,&quot;description&quot;:&quot;Makkah Train Station To Makkah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAK&quot;,&quot;dropof1_code&quot;:&quot;MAK&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Train Station To Makkah Hotel</option>
+                                              <option value="67" 
+                              data-routedata="{&quot;id&quot;:67,&quot;description&quot;:&quot;Madinah Hotel To Madinah Train Station&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Hotel To Madinah Train Station</option>
+                                              <option value="68" 
+                              data-routedata="{&quot;id&quot;:68,&quot;description&quot;:&quot;Madinah Train Station To Madinah Hotel&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Madinah Train Station To Madinah Hotel</option>
+                                              <option value="69" 
+                              data-routedata="{&quot;id&quot;:69,&quot;description&quot;:&quot;Makkah Hotel To Masjid Ayesha Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Ayesha Meeqat</option>
+                                              <option value="70" 
+                              data-routedata="{&quot;id&quot;:70,&quot;description&quot;:&quot;Makkah Hotel To Masjid Jurana Meeqat&quot;,&quot;no_of_pickups&quot;:1,&quot;image_id&quot;:null,&quot;pickup1_code&quot;:&quot;MAD&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:null,&quot;dropof2_code&quot;:null,&quot;pickup3_code&quot;:null,&quot;dropof3_code&quot;:null,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;MAD&quot;}">Makkah Hotel To Masjid Jurana Meeqat</option>
+                            
+                          </select>
+                        </div>
                       </div>
 
-                      <div class="Nextbtn">
-                        <button class="n_btn " type="button" onclick="addFormRow()">Add More</button>
+                      
+                      <h5 class="sub-heading" style="margin-left: 0px; margin-top: 10px; margin-bottom: 10px;">Select Vehicle</h5>
+                      <div class="row form_row">
+                        <div class="col s12 l5 wrap_spacing vehicle_show" style="margin-left:0;">
+                                                
+                          <select class="form-select active-state vehicle" style="width: 100% !important; " name="vehicle">
+                            <option value="" disabled selected>Select Vehicle </option>
+                                              <option value="Car" 
+                              >Car</option>
+                                              <option value="HiAce" 
+                              >HiAce</option>
+                                              <option value="Coaster" 
+                              >Coaster</option>
+                                              <option value="Bus" 
+                              >Bus</option>
+                                              <option value="H1" 
+                              >H1</option>
+                                              <option value="GMC" 
+                              >GMC</option>
+                                              <option value="Staria" 
+                              >Staria</option>
+                            
+
+                          </select>
+                        </div>
                       </div>
 
+                        
+                      
+                      
+                    </div>
+                    <div class="hotel_show" style="width: 100%;">
+                      <div class="row hotel-checkbox" style="width: 100%; margin: 15px 5px;">
+                          <h5 class="sub-heading">Tell Us About Your Hotel(s)</h5>
+                        <div id="form-container" class="row form_row" style="display:flex; justify-content: start; flex-direction: column; gap: 5px; align-items: start;"></div>
+
+                        <div class="Nextbtn" style="width: 100%; display: flex; justify-content: end; padding-right: 45px; margin-top: 10px;">
+                          <a class="" type="button" onclick="addFormRow()">Add More  <i class="fas fa-plus"></i></a>
+                        </div>
+                      </div>
                     </div>
 
-                      <!-- <h6 class="selct_passengers hotel_show">Hotel Details</h6> -->
-                    </div>
-                    <div class="hotel_data hotel_show" id="hotelContainer">
-
-                    </div>
                     <div class="row form_row hotel_show" style="justify-content: start; gap: 10px; padding:10px 20px;">
                       <input type="checkbox" class="agreement" name="agreement" id="agreement">
                      <label for="agreement">
@@ -1120,6 +1074,21 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
 
 <script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function () {
+  const elems = document.querySelectorAll('.package-datepicker');
+  M.Datepicker.init(elems, {
+    autoClose: true,
+    format: 'yyyy-mm-dd', // So JS Date can parse it
+    minDate: new Date(),
+    onSelect: function () {
+      // Trigger change event so your logic runs
+      $(this.el).trigger('change');
+    }
+  });
+});
+
+
       console.log('jQuery version:', $.fn.jquery);
   console.log('Select2 available?', typeof $.fn.select2);
 
@@ -1143,18 +1112,18 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       $('.Nextbtn').on('click',function(e){
         e.preventDefault();
         const checkboxes = document.querySelectorAll('.checkbox-main');
-        if(checkboxes[0].checked){
+        if(checkboxes[3].checked){
           console.log("visa is checked")
-        } if(checkboxes[1].checked){
+        } if(checkboxes[0].checked){
             $('.flight_show').css('display','flex');
         }else{
             $('.flight_show').css('display','none');
         } if(checkboxes[2].checked)
           {
-            $('.route_show').css('display','flex');
+            $('.route_show').css('display','block');
         }else{
             $('.route_show').css('display','none');
-        }if(checkboxes[3].checked) {
+        }if(checkboxes[1].checked) {
             $('.hotel_show').css('display','block');
         }else{
             $('.hotel_show').css('display','none');
@@ -1400,41 +1369,30 @@ console.log(selectedValues);
       minDate: new Date()
     });
 
-    $('select[name="makkah_days"]').on('change',function(){
-      var start_date = $('.package-datepicker').val();
-      var date = new Date(start_date);
-      var makkah_days = $('select[name="makkah_days"]').val();
-      var madinah_days = $('select[name="madinah_days"]').val();
-      var total_days = (makkah_days*1) + (madinah_days*1);
-      var end_date = new Date(date.setDate(date.getDate() + total_days));
-      var datestring = moment(end_date).format('MMM DD, YYYY');
-      $('.endpackage-datepicker').val(datestring);
-    });
+$(document).on('change', '.package-datepicker, input[name^="hotels"][name$="[nights]"]', function () {
+  const $hotelRow = $(this).closest('.hotel_row');
 
-    $('select[name="madinah_days"]').on('change',function(){
-      var start_date = $('.package-datepicker').val();
-      var date = new Date(start_date);
-      var makkah_days = $('select[name="makkah_days"]').val();
-      var madinah_days = $('select[name="madinah_days"]').val();
-      var total_days = (makkah_days*1) + (madinah_days*1);
-      var end_date = new Date(date.setDate(date.getDate() + total_days));
-      var datestring = moment(end_date).format('MMM DD, YYYY');
-      $('.endpackage-datepicker').val(datestring);
-    });
+  const $checkInInput = $hotelRow.find('input[name^="hotels"][name$="[checkIn]"]');
+  const $nightsInput = $hotelRow.find('input[name^="hotels"][name$="[nights]"]');
+  const $checkOutInput = $hotelRow.find('input[name^="hotels"][name$="[checkOut]"]');
 
-    $('.package-datepicker').on('change',function(e){
-      var start_date = $('.package-datepicker').val();
-      var date = new Date(start_date);
-      var makkah_days = $('select[name="makkah_days"]').val();
-      var madinah_days = $('select[name="madinah_days"]').val();
-      var total_days = (makkah_days*1) + (madinah_days*1);
-      var end_date = new Date(date.setDate(date.getDate() + total_days));
-      var datestring = moment(end_date).format('MMM DD, YYYY');
-      $('.endpackage-datepicker').val(datestring);
-      $('#start_date-error').remove();
-    });
+  const checkInVal = $checkInInput.val();
+  const nights = parseInt($nightsInput.val()) || 0;
 
-    $('[name="nationality"]').on('change',function(e){
+  if (checkInVal && nights) {
+    const checkInDate = new Date(checkInVal);
+    if (!isNaN(checkInDate.getTime())) {
+      const checkOutDate = new Date(checkInDate.setDate(checkInDate.getDate() + nights));
+      const formattedDate = moment(checkOutDate).format('YYYY-MM-DD');
+
+      $checkOutInput.val(formattedDate);
+    }
+  }
+});
+
+
+
+$('[name="nationality"]').on('change',function(e){
       $(e.target).parent().parent().find('.text-danger').remove();
     })
 
