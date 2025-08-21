@@ -28,15 +28,13 @@ function addFormRow() {
   }
 
   const rowHTML = `
-    <div class="hotel_row " data-index="${hotelIndex}" style="">
+    <div class="hotel_row" data-index="${hotelIndex}" style="">
       <div style="width:100%; padding-right:10px; display:flex; justify-content:space-between; align-items:center">
         <h6 style="margin:0px; margin-bottom:10px; font-size:14px">Hotel Details</h6>
         <img src="assets/frontend/img/close.png" width="10px" class="remove-row" style="cursor:pointer; float:right; margin-bottom:1px;" />
       </div>
-      
-      
-      <div class="row form_row_hotel" style="padding:5px 5px; justify-content:start;">
 
+      <div class="row form_row_hotel" style="padding:5px 5px; justify-content:start;">
         <div class="col s12 l4" style="margin-left:0px !important">
           <div class="hotel-item">
             <select class="form-select city-select browser-default" name="hotels[${hotelIndex}][city]" data-index="${hotelIndex}" style="width:85%; height:3rem !important">
@@ -55,6 +53,22 @@ function addFormRow() {
           </div>
         </div>
 
+        <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
+          <div class="hotel-item" style="height:100%">
+            <input type="text" class="form-control active-state package-datepicker"
+              placeholder="CheckIn Date*" aria-label="CheckIn Date" name="hotels[${hotelIndex}][checkIn]"
+              value="" />
+          </div>
+        </div>
+
+        <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
+          <div class="hotel-item" style="height:100%">
+            <input type="text" class="form-control active-state package-datepicker"
+              placeholder="CheckOut Date*" aria-label="CheckOut Date" name="hotels[${hotelIndex}][checkOut]"
+              value="" />
+          </div>
+        </div>
+
         <div class="col s12 l4" style="margin-left:0px !important">
           <div class="hotel-item">
             <select class="browser-default form-select room_type city-select" name="hotels[${hotelIndex}][room_type]" style="width:85%; height :3rem !important;">
@@ -64,41 +78,18 @@ function addFormRow() {
           </div>
         </div>
 
-        <div class="col s6 l4 hotel-counter" style="margin-left:0px;">
+        <div class="col s12 l4 hotel-counter" style="margin-left:0px;">
           <div class="hotel-item">
-            <label class="counter-label">Nights</label>
+            <label class="counter-label">Quantity</label>
             <div class="counter">
               <button type="button" class="decrement">–</button>
-              <input type="text" name="hotels[${hotelIndex}][nights]" value="01" class="counter-input" readonly />
+              <input style="display:none;" type="text" name="hotels[${hotelIndex}][no_of_rooms]" value="01" class="counter-input" readonly />
+                <span id="hotels[${hotelIndex}][no_of_rooms]" style="padding:8px 3px" class="counter-value">01</span>
               <button type="button" class="increment">+</button>
             </div>
           </div>
         </div>
 
-        <div class="col s6 l4 hotel-counter" style="margin-left:0px;">
-          <div class="hotel-item">
-            <label class="counter-label">Quantity</label>
-            <div class="counter">
-              <button type="button" class="decrement">–</button>
-              <input type="text" name="hotels[${hotelIndex}][no_of_rooms]" value="01" class="counter-input" readonly />
-              <button type="button" class="increment">+</button>
-            </div>
-          </div>
-        </div>
-         <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
-            <input type="text" class="form-control active-state package-datepicker"
-              placeholder="CheckIn Date*" aria-label="CheckIn Date" name="hotels[${hotelIndex}][checkIn]"
-              value="" />
-          </div>
-        </div>
-        <div class="col s12 m6 l4 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
-            <input type="text" class="form-control active-state package-datepicker"
-              placeholder="CheckOut Date*" aria-label="CheckOut Date" name="hotels[${hotelIndex}][checkOut]"
-              value="" />
-          </div>
-        </div>
       </div>
     </div>
   `;
@@ -115,57 +106,72 @@ function addFormRow() {
   });
 
   const newDatePickers = document.querySelectorAll('.package-datepicker');
-    M.Datepicker.init(newDatePickers, {
-      autoClose: true,
-      format: 'yyyy-mm-dd',
-      minDate: new Date(),
-      onSelect: function () {
-        $(this.el).trigger('change');
-      }
-    });
-
+  M.Datepicker.init(newDatePickers, {
+    autoClose: true,
+    format: 'yyyy-mm-dd',
+    minDate: new Date(),
+    onSelect: function () {
+      $(this.el).trigger('change');
+    }
+  });
 
   hotelIndex++;
 }
 
-
-  // Initialize first row on page load
-  document.addEventListener('DOMContentLoaded', function () {
-    addFormRow();
+document.addEventListener('DOMContentLoaded', function () {
+  addFormRow();
 
   document.getElementById('form-container').addEventListener('click', function (e) {
-  // Handle remove image click
-  if (e.target.classList.contains('remove-row')) {
-    const allRows = this.querySelectorAll('.hotel_row');
-    if (allRows.length > 1) {
-      e.target.closest('.hotel_row').remove();
-    } else {
-      alert('At least one hotel detail is required.');
+    // Handle remove image click
+    if (e.target.classList.contains('remove-row')) {
+      const allRows = this.querySelectorAll('.hotel_row');
+      if (allRows.length > 1) {
+        e.target.closest('.hotel_row').remove();
+      } else {
+        alert('At least one hotel detail is required.');
+      }
+      return;
     }
-    return;
-  }
-  
-    if (e.target.classList.contains('city-select')) {
-    const row = e.target.closest('.hotel_row');
-    const selectedCity = e.target.value;
-    const hotelSelect = row.querySelector('.hotel-select');
-    hotelSelect.innerHTML = `<option value="">Select Hotel</option>` + (hotelOptions[selectedCity] || '');
-    }
-    
 
-  // Handle counter buttons
-  if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
-    const input = e.target.closest('.counter').querySelector('input');
-    let value = parseInt(input.value, 10);
+    if (e.target.classList.contains('city-select')) {
+      const row = e.target.closest('.hotel_row');
+      const selectedCity = e.target.value;
+      const hotelSelect = row.querySelector('.hotel-select');
+      hotelSelect.innerHTML = `<option value="">Select Hotel</option>` + (hotelOptions[selectedCity] || '');
+    }
+
+    // Handle counter buttons
+    // if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
+    //   const input = e.target.closest('.counter').querySelector('input');
+    //   console.log(input, hotelIndex)
+    //   let value = parseInt(input.value, 10);
+      
+    //   if (e.target.classList.contains('increment')) {
+    //     console.log(value)
+    //     value++; // Increment by 1
+    //   } else if (e.target.classList.contains('decrement') && value > 1) {
+    //     value--; // Decrement by 1 (minimum value is 1)
+    //   }
+
+    //   input.value = value.toString().padStart(1, '0');
+    // }
+    if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
+    const counter = e.target.closest('.counter');
+    const counterSpan = counter.querySelector('.counter-value');
+    const hiddenInput = counter.querySelector('input');
+
+    let value = parseInt(counterSpan.textContent, 10) || 0;
 
     if (e.target.classList.contains('increment')) {
       value++;
-    } else if (e.target.classList.contains('decrement') && value > 1) {
+    } else if (e.target.classList.contains('decrement') && value > 0) {
       value--;
     }
 
-    input.value = value.toString().padStart(2, '0');
+    const displayValue = value.toString().padStart(2, '0');
+    counterSpan.textContent = displayValue;
+    hiddenInput.value = displayValue;
   }
-});
-
+  
   });
+});

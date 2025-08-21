@@ -291,10 +291,11 @@ flightcheckboxes.forEach((checkbox) => {
 
 const routecheckboxes = document.querySelectorAll('.route');
 const otherRoute = document.querySelector('.other-routes');
+const otherRouteHeading = document.querySelector('.other-routes-heading');
+
 
 routecheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', () => {
-    // Uncheck all checkboxes and reset styles
     routecheckboxes.forEach((cb) => {
       const container = cb.closest('.input_Labels');
       const label = container.querySelector('label');
@@ -303,16 +304,18 @@ routecheckboxes.forEach((checkbox) => {
       container.style.backgroundColor = '#F1F5F9';
       container.style.border='1px solid #F1F5F9'
       otherRoute.style.display='block';
+      otherRouteHeading.style.display='block';
+
       label.style.color = '#292d32';
     });
 
-    // Check the clicked checkbox and apply styles
     checkbox.checked = true;
     const toggleContainer = checkbox.closest('.input_Labels');
     const label = toggleContainer.querySelector('label');
     toggleContainer.style.backgroundColor = '#1e3a6d21';
     toggleContainer.style.border='1px solid #1e3a6da4';
     otherRoute.style.display='none';
+    otherRouteHeading.style.display='none';
     label.style.color = 'black';
   });
 });
@@ -325,13 +328,11 @@ routecheckboxes.forEach((checkbox) => {
     const minusBtn = control.querySelector('.minus');
     const counterSpan = control.querySelector('.counter-value');
     const hiddenInput = control.querySelector('.counter-input');
-
-    // Convert string like "01" or "00" to number
     const parseCounter = (value) => parseInt(value, 10) || 0;
 
     const updateDisplay = (value) => {
-      counterSpan.textContent = value.toString().padStart(2, '0'); // e.g. "01"
-      hiddenInput.value = value; // set the hidden input's value
+      counterSpan.textContent = value.toString().padStart(2, '0'); 
+      hiddenInput.value = value; 
     };
 
     plusBtn.addEventListener('click', () => {
@@ -360,7 +361,6 @@ routecheckboxes.forEach((checkbox) => {
       } else {
         value = value > 1 ? value - 1 : 1;
       }
-
       input.value = value.toString().padStart(2, '0');
     }
   });

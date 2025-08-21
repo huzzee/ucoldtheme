@@ -19,7 +19,7 @@
 }
 
 .col.s12.m4.l3.links_Column {
-  width: 40%;
+  width: 40% !important;
 }
 
 .col.s12.m5.l4.newsletter_Column.footer_Heading {
