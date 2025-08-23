@@ -1,42 +1,42 @@
 const vehicles = [
   {
     name: "Sedan",
-    image: "assets/frontend/img/car.png",
+    image: "assets/frontend/img/camry.png",
     travelers: "4 Travelers",
     model: "Hyundai Sonata",
     luggage: "2 Luggage"
   },  
   {
     name: "GMC",
-    image: "assets/frontend/img/car.png",
+    image: "assets/frontend/img/GMC.png",
     travelers: "22 Travelers",
     model: "Toyota Coaster",
     luggage: "8 Luggage"
   },
    {
-    name: "Sataria",
-    image: "assets/frontend/img/car.png",
+    name: "Staria",
+    image: "assets/frontend/img/staria.png",
     travelers: "22 Travelers",
     model: "Toyota Coaster",
     luggage: "8 Luggage"
   },
   {
     name: "HiAce",
-    image: "assets/frontend/img/car.png",
+    image: "assets/frontend/img/hiace.png",
     travelers: "10 Travelers",
     model: "Toyota HiAce",
     luggage: "5 Luggage"
   },
   {
     name: "Coaster",
-    image: "assets/frontend/img/car.png",
+    image: "assets/frontend/img/coaster.png",
     travelers: "22 Travelers",
     model: "Toyota Coaster",
     luggage: "8 Luggage"
   },
    {
     name: "Bus",
-    image: "assets/frontend/img/car.png",
+    image: "assets/frontend/img/bus.png",
     travelers: "22 Travelers",
     model: "Toyota Coaster",
     luggage: "8 Luggage"

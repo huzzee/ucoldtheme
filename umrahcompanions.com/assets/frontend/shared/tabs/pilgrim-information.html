@@ -1,0 +1,55 @@
+<!-- pilgrim tab -->
+<div class="box bg-white rounded-lg">
+    <h5 class="sub-heading">Who is traveling?</h5>
+
+    <div class="row form_row">
+
+        <div class="col l3 m6 s12">
+             <select class="form-select browser-default active-state" name="nationality" id="nationality">
+                <option value="">Pilgrim Nationality<span class="text-danger">*</span></option>
+            </select>
+        </div>
+        <div class="col l3 m6 s12">
+            <div class=" counter-container" data-type="Adults">
+                <label class="counter-label">Adults</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field1" id="counter1">
+                <span id="adults"  class="counter-value">01</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="col l3 m6 s12">
+            <div class="counter-container" data-type="Child">
+                <label class="counter-label">Child</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field2" id="counter2">
+                <span id="child" class="counter-value">00</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="col l3 m6 s12">
+            <div class="counter-container" data-type="Infants">
+                <label class="counter-label">Infants</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                <span id="infants" class="counter-value">00</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<div class="box">
+        <h5 class="sub-heading">Select Visa Type</h5>
+        <div class="row form-row" id="visaCardsContainer"></div>
+
+
+</div>

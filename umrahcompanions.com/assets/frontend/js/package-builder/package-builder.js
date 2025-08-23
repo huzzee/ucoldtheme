@@ -1,9 +1,310 @@
 $(document).ready(function () {
     var firstTabPath = $('.tab.active').data('tab');
-    $('#tab-content').load(firstTabPath);
+    $('#tab-content').load(firstTabPath, function () {
+        populateCountries(); // call after content is inserted
+        renderVisaCards();
+    });
 });
 
 $('.tab').click(function() {
     var tabPath = $(this).data('tab');
-    $('#tab-content').load(tabPath);
+    $('#tab-content').load(tabPath, function () {
+        populateCountries(); // call again when new tab loads
+       if (document.getElementById("visaCardsContainer")) {
+        renderVisaCards();
+    }
+    });
 });
+
+const countries = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "American Samoa",
+  "Andorra",
+  "Angola",
+  "Anguilla",
+  "Antarctica",
+  "Antigua And Barbuda",
+  "Argentina",
+  "Armenia",
+  "Aruba",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas The",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bermuda",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Bouvet Island",
+  "Brazil",
+  "British Indian Ocean Territory",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Cayman Islands",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Christmas Island",
+  "Cocos (Keeling) Islands",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Congo The Democratic Republic Of The",
+  "Cook Islands",
+  "Costa Rica",
+  "Cote D'Ivoire (Ivory Coast)",
+  "Croatia (Hrvatska)",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "East Timor",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "External Territories of Australia",
+  "Falkland Islands",
+  "Faroe Islands",
+  "Fiji Islands",
+  "Finland",
+  "France",
+  "French Guiana",
+  "French Polynesia",
+  "French Southern Territories",
+  "Gabon",
+  "Gambia The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Gibraltar",
+  "Greece",
+  "Greenland",
+  "Grenada",
+  "Guadeloupe",
+  "Guam",
+  "Guatemala",
+  "Guernsey and Alderney",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Heard and McDonald Islands",
+  "Honduras",
+  "Hong Kong S.A.R.",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jersey",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Korea North",
+  "Korea South",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macau S.A.R.",
+  "Macedonia",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Man (Isle of)",
+  "Marshall Islands",
+  "Martinique",
+  "Mauritania",
+  "Mauritius",
+  "Mayotte",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montserrat",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands Antilles",
+  "Netherlands The",
+  "New Caledonia",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "Niue",
+  "Norfolk Island",
+  "Northern Mariana Islands",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Palestinian Territory Occupied",
+  "Panama",
+  "Papua new Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Pitcairn Island",
+  "Poland",
+  "Portugal",
+  "Puerto Rico",
+  "Qatar",
+  "Reunion",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Helena",
+  "Saint Kitts And Nevis",
+  "Saint Lucia",
+  "Saint Pierre and Miquelon",
+  "Saint Vincent And The Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Smaller Territories of the UK",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Georgia",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Svalbard And Jan Mayen Islands",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Togo",
+  "Tokelau",
+  "Tonga",
+  "Trinidad And Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Turks And Caicos Islands",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "United States Minor Outlying Islands",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City State (Holy See)",
+  "Venezuela",
+  "Vietnam",
+  "Virgin Islands (British)",
+  "Virgin Islands (US)",
+  "Wallis And Futuna Islands",
+  "Western Sahara",
+  "Yemen",
+  "Yugoslavia",
+  "Zambia",
+  "Zimbabwe"
+];
+function populateCountries() {
+    const select = document.getElementById("nationality");
+    if (!select) return; // exit if no select exists
+
+    // clear old options
+    select.innerHTML = '<option value="">Pilgrim Nationality*</option>';
+
+    countries.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country;
+        option.textContent = country;
+        select.appendChild(option);
+    });
+}
+
+
+
+document.querySelectorAll('.counter-controls').forEach(control => {
+    const plusBtn = control.querySelector('.plus');
+    const minusBtn = control.querySelector('.minus');
+    const counterSpan = control.querySelector('.counter-value');
+    const hiddenInput = control.querySelector('.counter-input');
+    const parseCounter = (value) => parseInt(value, 10) || 0;
+
+    const updateDisplay = (value) => {
+      counterSpan.textContent = value.toString().padStart(2, '0'); 
+      hiddenInput.value = value; 
+    };
+
+    plusBtn.addEventListener('click', () => {
+      let value = parseCounter(counterSpan.textContent);
+      value++;
+      updateDisplay(value);
+    });
+
+    minusBtn.addEventListener('click', () => {
+      let value = parseCounter(counterSpan.textContent);
+      if (value > 0) {
+        value--;
+        updateDisplay(value);
+      }
+    });
+  });
+
