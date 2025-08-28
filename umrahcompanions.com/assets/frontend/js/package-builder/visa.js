@@ -1,8 +1,4 @@
 
-function showStep(stepId) {
-  $("#customize-page .box").hide();  // hide all step boxes inside customize page wrapper
-  $("#" + stepId).show();            // show the selected one
-}
 
 const visaCards = [
   {
@@ -83,10 +79,11 @@ $(document).on("click", ".visa-card", function () {
   const nextTabPath = "assets/frontend/shared/tabs/customize-tab.html";
   $("#tab-content").load(nextTabPath, function () {
     console.log("Customize tab loaded, data available:", bookingData);
+    showStep("package-type");
 
     // Render package cards inside customize tab
-    renderpackages();
-    showStep("package-type");
+    // renderpackages();
+
 
   });
 
@@ -98,31 +95,85 @@ $(document).on("click", ".visa-card", function () {
 // ---- Handle Package Card Click ----
 $(document).on("click", ".package-card", function () {
   // Save package selection
+  $(".package-card").removeClass("active");
+
+  // Add active class to clicked one
+  $(this).addClass("active");
+
   bookingData.packageType = $(this).data("package");
 
   console.log("Package selected:", bookingData.packageType);
-  console.log("Updated bookingData:", bookingData);
-    showStep("package-type");
-
-  // 👉 Here you can load the next step/tab (e.g. hotel selection)
-  // const nextStepPath = "assets/frontend/shared/tabs/hotel-tab.html";
-  // $("#tab-content").load(nextStepPath, function () {
-  //   console.log("Hotel tab loaded with bookingData:", bookingData);
-  // });
 });
 
-function showNext() {
-  let currentStep = $("#customize-page .box:visible").attr("id");
+const steps = ["package-type", "flight-type", "Days", "flight-details", "transport-details", "hotel-details"];
+let currentIndex = 0; // start with first step
 
-  if (currentStep === "package-type") {
-    showStep("flight-type");
-  } else if (currentStep === "flight-type") {
-    showStep("Days");
-  } else if (currentStep === "Days") {
-    alert("All steps completed! " + JSON.stringify(bookingData));
+function showStep(stepId) {
+  document.querySelectorAll("#customize-page .custom-card").forEach(box => {
+    box.style.display = "none";
+  });
+
+  const target = document.getElementById(stepId);
+  if (target) {
+    target.style.display = "flex";
+    renderCards(stepId);
+    populateFilters();
+    renderFlights(flights);
+    renderVehicles();
+
+    console.log("Showing step:", stepId);
+  }
+  // if(target=="flight-details"){
+  //     document.getElementById('next').innerHTML="Continue without Flights";
+
+  // }
+   document.querySelector(".skip-flight-btn").style.display = "none";
+
+    // If flight-details step, show it
+    if (stepId === "flight-details") {
+        document.querySelector(".skip-flight-btn").style.display = "inline-block";
+    }
+    if(stepId === "transport-details"){
+      document.querySelector(".skip-flight-btn").style.display = "inline-block";
+      document.querySelector(".skip-flight-btn").innerHTML="Skip Transport"
+
+    }
+    if(stepId==="hotel-details"){
+       const newDatePickers = document.querySelectorAll('.package-datepicker');
+        M.Datepicker.init(newDatePickers, {
+          autoClose: true,
+          format: 'yyyy-mm-dd',
+          minDate: new Date(),
+          onSelect: function () {
+            $(this.el).trigger('change');
+          }
+  });
+
+    }
+}
+
+// ---- Next ----
+function showNext() {
+  if (currentIndex < steps.length - 1) {
+    currentIndex++;
+    showStep(steps[currentIndex]);
+  } else {
+    alert("All steps completed!");
   }
 }
 
+// ---- Back ----
+function showPrev() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    showStep(steps[currentIndex]);
+  }
+}
+
+// ---- Initialize first step ----
+document.addEventListener("DOMContentLoaded", () => {
+  showStep(steps[currentIndex]);
+});
 // ---- Initialize on Pilgrim Info Page ----
 $(document).ready(function () {
   renderVisaCards(); // Only visa cards first

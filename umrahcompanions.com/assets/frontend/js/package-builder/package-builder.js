@@ -2,7 +2,9 @@ $(document).ready(function () {
     var firstTabPath = $('.tab.active').data('tab');
     $('#tab-content').load(firstTabPath, function () {
         populateCountries(); // call after content is inserted
+        initCounters();
         renderVisaCards();
+        // renderFlights(flights)
     });
 });
 
@@ -10,9 +12,15 @@ $('.tab').click(function() {
     var tabPath = $(this).data('tab');
     $('#tab-content').load(tabPath, function () {
         populateCountries(); // call again when new tab loads
+        initCounters();
        if (document.getElementById("visaCardsContainer")) {
         renderVisaCards();
-    }
+      }
+      
+  // if (document.getElementById("flightContainer")) {
+  //   renderFlights(flights);
+  // }
+
     });
 });
 
@@ -264,6 +272,22 @@ const countries = [
   "Zambia",
   "Zimbabwe"
 ];
+
+const months =[
+  'January',
+  'Feburary',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'Octuber',
+  'November',
+  'December'
+]
+
 function populateCountries() {
     const select = document.getElementById("nationality");
     if (!select) return; // exit if no select exists
@@ -278,10 +302,27 @@ function populateCountries() {
         select.appendChild(option);
     });
 }
+function populateFilters(){
+   const select = document.getElementById("months");
+   console.log("select working")
+    if (!select) return; // exit if no select exists
+
+    // clear old options
+    select.innerHTML = '<option value="">All Months*</option>';
+
+    months.forEach(months => {
+        const option = document.createElement("option");
+        option.value = months;
+        option.textContent = months;
+        select.appendChild(option);
+    });
+
+}
 
 
 
-document.querySelectorAll('.counter-controls').forEach(control => {
+function initCounters() {
+  document.querySelectorAll('.counter-controls').forEach(control => {
     const plusBtn = control.querySelector('.plus');
     const minusBtn = control.querySelector('.minus');
     const counterSpan = control.querySelector('.counter-value');
@@ -307,4 +348,5 @@ document.querySelectorAll('.counter-controls').forEach(control => {
       }
     });
   });
+}
 

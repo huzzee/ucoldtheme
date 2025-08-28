@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&amp;display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --box-background-color: #ffffff;
+  --background-color: #f1f5f9;
+  --primary-color: #1d3a6d;
+  --secondary-color:#EBEBEB;
+  --heading-color: #1E3A6D;
+  --border-color: #a6a6a8;
+  --placeholder-color: #636161;
+  --sub-heading-color: #292d32;
+  --text-color: #2F2F2F;
+  --text-color2: #ffffff;
+
+  /* ====== Transition ====== */
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-03: all 0.2s ease;
+}
+
+.package-builder-hotel-details{
+ font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #f3f9ff;
+  padding: 2rem;
+  color: #1d2b53;
+}
+.box{
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 115;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 15px;
+  opacity: 1;
+}
+h3.heading{
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px !important;
+}
+.row{
+    margin: 0px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+
+}
+.l8, .l4,.s2, .s1, .l6{
+    margin-left: 0px !important;
+    padding: 0px !important;
+}
+.thumb {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+.thumb:hover {
+  border: 2px solid #2196f3;
+}
+.s2{
+    padding: 0px !important;
+}
+img.responsive-img{
+    border-radius: 15px;
+}
+
+
+li , .collapsible-header{
+    border-radius: 13px !important;
+    margin: 10px 0px;
+}
+li{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    box-shadow: none !important;
+    border-bottom: 0px !important;
+}
+.collapsible-body {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 2rem;
+    position: relative;
+    bottom: 20px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+.collapsible-header{
+font-weight: 600;
+font-size: 15px;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+}
+.accordion{
+    margin-top: 20px;
+}
+.box-border{
+opacity: 1;
+gap: 20px;
+border-radius: 20px;
+padding-top: 20px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 15px;
+border-width: 1px;
+border: 1px solid var(--lighter-stroke, #EBEBEB)
+
+}
+h6.sub-heading{
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+.hotel-details span{
+font-weight: 400;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+.hotel-details{
+    margin: 10px 0px !important;
+}
