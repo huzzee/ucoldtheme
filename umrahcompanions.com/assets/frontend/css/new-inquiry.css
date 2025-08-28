@@ -33,7 +33,11 @@
   padding: 5px; 
   width: 95%;
 }
-
+.form_row_inquiry .col{
+  margin-left: 0px !important;
+}
+.form_row_inquiry .col.l4 {
+        width: 31.333333% !important; }
 input::placeholder{
   color: var(--placeholder-color)  !important;
 }
@@ -63,32 +67,32 @@ input:not([type="radio"])  {
     margin-left: 0px !important;
   width: 30% !important;
 }
-.l4{
+.form_row_inquiry .l4{
   margin-left: 0px !important;
   width:32% !important;
 
 }
-.l3{
+.form_row_inquiry .l3{
   margin-left: 0px !important;
   width: 23% !important;
 }
-    .row .col.l7 {
+  .form_row_inquiry .col.l7 {
         width: 54.333333%;
       }
-          .row .col.l5 {
+  .form_row_inquiry .col.l5 {
         width: 46.6666666667%;
         margin-left: auto;
         left: auto;
         right: auto;
     }
-    .row .col.l2 {
+  .form_row_inquiry .col.l2 {
         width: 22.666667%;
 
     }
     .city-select{
       height: 3rem !important;
     }
-        .row .col.l9 {
+    .form_row_inquiry .col.l9 {
         width: 73%;
     }
 
@@ -229,7 +233,7 @@ label.toggle span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100% !important;
+    width: 94% !important;
 }
 .iti__selected-flag {
     z-index: 1;
@@ -517,7 +521,7 @@ input[type="checkbox"].agreement::after {
     margin: 2rem 0rem 2rem 0rem;
   }
 
-  .step2 .row.form_row {
+  .step2 .row.form_row_inquiry {
     display: flex;
     flex-direction: column;
     /* padding: 0.25rem 0rem 0.25rem 0rem; */
@@ -525,7 +529,7 @@ input[type="checkbox"].agreement::after {
         gap:20px;
         justify-content: center;
   }
-  .inquiry_form .row.form_row {
+  .inquiry_form .row.form_row_inquiry {
     display: flex;
     flex-direction: column;
     /* padding: 0.25rem 0rem 0.25rem 0rem; */
@@ -558,11 +562,11 @@ input[type="checkbox"].agreement::after {
   .col.wrap_Spacing {
     margin-bottom: 10px;
   }
-.row .col.s12 {
+#inquiry-form .row .col.s12 {
   width: 99% !important;
   margin-left: 0px  !important;
 }
-  .form_row input:not([type="checkbox"]), .form_row select {
+#inquiry-form .form_row input:not([type="checkbox"]), .form_row select {
         border-radius: 10px !important;
         padding:9px 10px 9px 10px !important;
         color: var(--placeholder-color) !important;
@@ -589,7 +593,7 @@ input[type="checkbox"].agreement::after {
     color: var(--text-color2);
   }
 
-  .inquiry_form .row.form_row.flex_direction {
+  .inquiry_form .row.form_row_inquiry.flex_direction {
     flex-direction: row;
   }
 
@@ -759,7 +763,7 @@ input[type="checkbox"].agreement::after {
     color: #fff;
   }
   
-    .inquiry_form .row.form_row {
+    .inquiry_form .row.form_row_inquiry {
         display: flex;
         flex-direction: row;
         /* padding: 0rem 1rem 0.25rem 0rem; */
@@ -803,7 +807,11 @@ input[type="checkbox"].agreement::after {
 
   .container {
     max-width: 1140px;
-    margin: 45px auto;
+    /* margin: 45px auto; */
+  }
+  .inquiry-conatiner{
+        margin: 45px auto;
+
   }
 
   .top-padding {
@@ -1011,7 +1019,7 @@ input[type="checkbox"].agreement::after {
         margin: 0px !important;
   }
 
-  .form_row {
+  .form_row_inquiry {
     display: flex;
     justify-content: space-between;
     /* padding: 0px 10px; */
@@ -1022,8 +1030,8 @@ input[type="checkbox"].agreement::after {
     margin-bottom: 5px;
   }
 
-  .form_row input:not([type="checkbox"]),
-  .form_row select {
+  .form_row_inquiry input:not([type="checkbox"]),
+  .form_row_inquiry select {
     border-radius: 10px !important;
     padding: 10px 10px 10px 10px !important;
     color: var(--placeholder-color) !important;
@@ -1047,7 +1055,7 @@ input[type="checkbox"].agreement::after {
 }
 
 
-  .form_row h6.selct_passengers {
+  .form_row_inquiry h6.selct_passengers {
     color: var(--sub-heading-color);
   }
 
@@ -1059,7 +1067,6 @@ input[type="checkbox"].agreement::after {
 
   .col.wrap_Spacing {
     width: 100%;
-    display: inline-grid;
   }
 
   .col.wrap_Spacing select {
@@ -1085,7 +1092,7 @@ input[type="checkbox"].agreement::after {
     color: var(--text-color2);
   }
 
-  .row.form_row.form_Btn {
+  .row.form_row_inquiry.form_Btn {
     justify-content: end;
   }
 
@@ -1280,7 +1287,7 @@ input[type="checkbox"].agreement::after {
 }
 }
 
-.form_row .col{
+.form_row_inquiry .col{
       float: none;
     box-sizing: inherit;
     min-height: auto;
@@ -1310,7 +1317,7 @@ label.option.option-1 {
     margin-left: 0.75rem !important;
 }
 
-    .form_row {
+    .form_row_inquiry {
         display: flex;
         justify-content: space-between;
         /* padding: 0rem 2rem 0rem 1.25rem; */
@@ -1489,14 +1496,14 @@ input[type="checkbox"]::after {
   opacity: 0;
   transition: all 0.2s ease;
 }
-.row .col{
+.form_row_inquiry .col{
   padding: 0;
   margin: 0;
 }
-.row .col.m3{
+.form_row_inquiry .col.m3{
   margin-left: 0;
 }
-.row .col.m4{
+.form_row_inquiry .col.m4{
   display: inline-grid;
 }
 /* Checked state */
