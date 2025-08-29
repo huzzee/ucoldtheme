@@ -48,7 +48,7 @@ h3.heading{
     font-weight: 600;
     margin: 0px !important;
 }
-.row{
+.row_hotel_detail{
     margin: 0px !important;
     display: flex;
     justify-content: space-between;
@@ -115,6 +115,7 @@ padding-right: 15px;
 padding-bottom: 20px;
 padding-left: 15px;
 border-width: 1px;
+width: 100%;
 border: 1px solid var(--lighter-stroke, #EBEBEB)
 
 }
@@ -137,3 +138,129 @@ vertical-align: middle;
 .hotel-details{
     margin: 10px 0px !important;
 }
+h6.sub-heading{
+font-weight: 700;
+font-style: Bold;
+font-size: 15px;
+line-height: 150%;
+letter-spacing: 0%;
+vertical-align: middle;
+color:#1E3A6D;
+}
+h6.sub-heading sub{
+font-weight: 400;
+font-size: 11px;
+line-height: 150%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #454F5B;
+}
+h6.sub-heading sup{
+font-weight: 500;
+font-style: Medium;
+font-size: 11px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: bottom;
+color: #161C28;
+
+}
+.counter-container {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+    width: 100%;
+}
+
+.counter-label {
+  color: #454F5B;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-btn {
+  background-color: #F1F1F1;
+  border: none;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  color: #161C28;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+.counter-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.counter-value {
+  font-size: 15px;
+  font-weight: normal;
+  color: #161C28;
+  min-width: 20px;
+  text-align: center;
+}
+a.room-policy{
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
+color: #454F5B;
+
+}
+/* Change background and text color */
+.material-tooltip {
+  background-color: #DAE8F6 !important; /* primary blue */
+  color: #161C24 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important; /* increase padding */
+  font-size: 14px !important;
+  box-shadow: 0px 4px 10px 0px #0000000D;
+
+  font-weight: 500;
+}
+
+/* Customize tooltip arrow */
+.backdrop {
+  background-color: #DAE8F6 !important;
+}
+.rooms-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+.primary-btn{
+  background: var(--primary-color);
+gap: 9px;
+opacity: 1;
+border-radius: 7px;
+height: fit-content;
+line-height: 20px;
+padding-top: 8px;
+padding-right: 25px;
+padding-bottom: 8px;
+padding-left: 25px;
+}
+

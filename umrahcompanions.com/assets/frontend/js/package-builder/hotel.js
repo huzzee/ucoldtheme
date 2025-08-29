@@ -136,8 +136,7 @@ function createCards(hotels){
         openHotelDetails(hotel);
     });
 });
-
-    })
+})
 }
 
 function openHotelDetails(hotelName){

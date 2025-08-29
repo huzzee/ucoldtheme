@@ -79,7 +79,8 @@ h5{
 .page-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   color: #1d2b53;
 }
 
@@ -446,7 +447,7 @@ color: var(--primary-color) !important;
 .return .row,.depart .row{
   margin-bottom: 0px;
 }
-.skip-flight-btn{
+.skip-flight-btn, .outline-btn{
 gap: 9px;
 opacity: 1;
 width: max-content;
@@ -668,4 +669,91 @@ color: #75758F;
     margin-bottom: 10px;
     opacity: 0.6;
     border-top: none;
+}
+
+li , .collapsible-header{
+    border-radius: 13px !important;
+    margin: 10px 0px;
+
+}
+li{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    box-shadow: none !important;
+    border-bottom: 0px !important;
+}
+.collapsible-body {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    padding: 0rem 1rem 2.5rem 1rem;
+    
+    position: relative;
+    bottom: 20px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+.collapsible-header{
+font-weight: 600;
+font-size: 15px;
+letter-spacing: 0%;
+text-transform: capitalize;
+  border: 1px solid rgb(221, 221, 221);
+
+
+}
+.accordion{
+    margin-top: 20px;
+}
+.secondary-badge{
+font-weight: 400;
+font-size: 12px !important;
+line-height: 100%;
+letter-spacing: 2%;
+color: var(--primary-color) !important;
+opacity: 1;
+gap: 15px;
+border-radius: 3px !important;
+padding-top: 0px !important;
+padding-right: 5px !important;
+padding-bottom: 3px !important;
+padding-left: 5px !important;
+background-color: #F1F5F9 !important;
+margin: 0px 10px;
+}
+.primary-box{
+opacity: 1;
+gap: 15px;
+border-radius: 12px;
+border-width: 1px;
+padding-top: 30px;
+padding-right: 20px;
+padding-bottom: 30px;
+padding-left: 20px;
+border: 1px solid  #24B3BA;
+background: #ECFBFB;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.primary-box p{
+  text-align: center;
+}
+.checkout-box{
+display: flex;
+justify-content: space-between;
+align-items: center;
+opacity: 1;
+border-radius: 7px;
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px;
+background: #24B3BA;
+
+
 }

@@ -66,7 +66,6 @@ function renderVisaCards() {
 $(document).on("click", ".visa-card", function () {
   // Save visa selection
   bookingData.visaType = $(this).data("visa");
-
   // Save traveler info
   bookingData.nationality = $("#nationality").val();
   bookingData.adults  = parseInt($("#adults").text(), 10) || 0;
@@ -80,14 +79,7 @@ $(document).on("click", ".visa-card", function () {
   $("#tab-content").load(nextTabPath, function () {
     console.log("Customize tab loaded, data available:", bookingData);
     showStep("package-type");
-
-    // Render package cards inside customize tab
-    // renderpackages();
-
-
   });
-
-  // Update tab styling
   $(".tab").removeClass("active");
   $('div.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]').addClass("active");
 });
@@ -105,7 +97,7 @@ $(document).on("click", ".package-card", function () {
   console.log("Package selected:", bookingData.packageType);
 });
 
-const steps = ["package-type", "flight-type", "Days", "flight-details", "transport-details", "hotel-details"];
+const steps = ["package-type", "flight-type", "Days", "flight-details", "transport-details", "hotel-details", "another-hotel"];
 let currentIndex = 0; // start with first step
 
 function showStep(stepId) {
@@ -149,7 +141,10 @@ function showStep(stepId) {
           }
   });
 
-    }
+  }
+  if(stepId=="another-hotel"){
+    document.getElementById("custom-footer").style.display="none";
+  }
 }
 
 // ---- Next ----

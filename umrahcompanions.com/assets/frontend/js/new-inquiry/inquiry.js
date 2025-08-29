@@ -264,6 +264,7 @@ checkboxes.forEach((checkbox) => {
     const label = toggleContainer.querySelector('.toggle-label');
 
     if (checkbox.checked) {
+      console.log(checkbox.id)
       toggleContainer.style.backgroundColor = '#1E3A6D';
       label.style.color = 'white';
     } else {

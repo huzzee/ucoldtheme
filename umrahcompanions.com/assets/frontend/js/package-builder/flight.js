@@ -111,7 +111,6 @@ function renderCards(type) {
     const col = document.createElement("div");
     col.className = "col l6 m6 s12";
     console.log(data)
-
     col.innerHTML = `
       <div class="card package-card" data-package="${card.title}">
         <div class="flex">

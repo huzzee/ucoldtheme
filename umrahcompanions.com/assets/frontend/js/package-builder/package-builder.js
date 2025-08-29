@@ -1,28 +1,67 @@
 $(document).ready(function () {
+  const params = new URLSearchParams(window.location.search);
+  const step = params.get("step");
+  const tab = params.get("tab");
+
+  // first remove all active
+  $('.tab').removeClass('active');
+
+  if (tab === '2') {
+    // add active class to tab 2
+    const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]');
+    tab2.addClass('active');
+
+    var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
+    $('#tab-content').load(tabPath, function () {
+      if (step && steps.includes(step)) {
+        currentIndex = steps.indexOf(step);
+      }
+      showStep(steps[currentIndex]);
+    });
+  } else {
+    // default tab (first one)
+    $('.tab').first().addClass('active');
     var firstTabPath = $('.tab.active').data('tab');
     $('#tab-content').load(firstTabPath, function () {
-        populateCountries(); // call after content is inserted
-        initCounters();
-        renderVisaCards();
-        // renderFlights(flights)
+      populateCountries();
+      initCounters();
+      renderVisaCards();
     });
+  }
+
+  console.log(params, step, tab);
 });
+
 
 $('.tab').click(function() {
     var tabPath = $(this).data('tab');
     $('#tab-content').load(tabPath, function () {
         populateCountries(); // call again when new tab loads
         initCounters();
+        var elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems, {
+          accordion: true 
+        });
        if (document.getElementById("visaCardsContainer")) {
         renderVisaCards();
       }
-      
-  // if (document.getElementById("flightContainer")) {
-  //   renderFlights(flights);
-  // }
 
     });
 });
+function checkout(){
+    $('.tab').removeClass('active');
+
+    const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/confirmation.html"]');
+    tab2.addClass('active');
+    var tabPath= "assets/frontend/shared/tabs/confirmation.html"
+    $('#tab-content').load(tabPath, function () {
+      var elems = document.querySelectorAll('.collapsible');
+      M.Collapsible.init(elems, {
+        accordion: true 
+    });
+    });
+
+}
 
 const countries = [
   "Afghanistan",

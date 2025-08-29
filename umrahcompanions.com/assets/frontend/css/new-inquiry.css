@@ -352,6 +352,29 @@ input[type="checkbox"].agreement::after {
 
 
 @media (max-width: 1023px) {
+  .form_row_inquiry .col.s12 {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+  .form_row_inquiry .col.s12 .iti input{
+    width: 328px !important;
+  }
+  .form_row_inquiry input:not([type="checkbox"]),
+  .form_row_inquiry select {
+    border-radius: 10px !important;
+    padding: 10px 10px 10px 10px !important;
+    color: var(--placeholder-color) !important;
+    height: auto !important;
+    background-color: #F1F5F9 !important;
+    font-size: 12px !important;
+    margin: 0 !important;
+    border-bottom: none !important;
+    transition: none !important;
+    line-height: 18px !important;
+    z-index: 0;
+  }
+
+
   .container{
     width: 100% !important;
   }

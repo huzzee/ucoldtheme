@@ -5,6 +5,17 @@ function changeImage(el) {
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     M.Collapsible.init(elems, {
-      accordion: true // true = only one open at a time, false = multiple can stay open
+      accordion: true 
     });
   });
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, {
+    enterDelay: 200,   
+    exitDelay: 200,    
+    margin: 5,        
+  });
+});
+function backtoPackage(){
+  window.location.href = "/umrahcompanions.com/BuildUmrahPackage.html?tab=2&step=another-hotel";
+}
