@@ -31,6 +31,9 @@
   background: #f3f9ff;
   padding: 2rem;
   color: #1d2b53;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .tab-content{
   display: flex;
@@ -91,7 +94,7 @@ background: #F7FFFF;
     cursor: pointer;
 }
 
-.card.active {
+.flight-card.active, .card.active {
 background: #F7FFFF;
   border: 1px solid  #24B3BA;
 }
@@ -296,7 +299,6 @@ color: #24B3BA !important;
 width: 100%;
 justify-content: space-between;
 opacity: 1;
-top: 871px;
 border-width: 1px;
 padding-top: 25px;
 padding-right: 256px;
@@ -376,8 +378,8 @@ padding-top: 30px;
 padding-right: 20px;
 padding-bottom: 30px;
 padding-left: 20px;
-background: #F7FFFF;
-border: 1px solid #24B3BA;
+background: #FFFFFF;
+border: 1px solid #8c9b9c88;
 box-shadow: 0px 4px 20px 0px #00000008;
 }
 .depart{
@@ -756,4 +758,167 @@ padding-left: 15px;
 background: #24B3BA;
 
 
+}
+.cost h6{
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 2%;
+vertical-align: middle;
+text-transform: capitalize;
+color: #FFFFFF;
+
+}
+.cost span{
+font-weight: 400;
+font-size: 11px;
+line-height: 100%;
+letter-spacing: 2%;
+text-align: justify;
+vertical-align: middle;
+color: #FFFFFF !important;
+}
+#flight-wrapper{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:space-between;
+  gap : 20px;
+}
+.box.package-type{
+  width: 60%;
+}
+.box.flight-type{
+  width: 60%;
+}
+.box.days{
+  width: 80%;
+}
+.box.flight-details{
+  width: 80%;
+}
+.box.transport-details{
+  width: 80%;
+}
+.box.hotel-details{
+  width: 80%;
+}
+.box.another-hotel{
+  width: 30%;
+}
+.checkout{
+  width: 80%;
+}
+.collapsible-body.checkout{
+  width: 100% !important;
+}
+.breakdown-card {
+  display: none;
+  background: #f9fafb;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.breakdown-card.open {
+  transform: translateY(0);
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.breakdown-item.total {
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+@media (max-width:1023px) {
+  .tabs-header{
+    width: 300px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tab{
+    width: 100%;
+  }
+  .box{
+    width: 100%;
+  }
+  .form-row-package{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .box.package-type{
+  width: 100%;
+}
+.card .tags{
+  flex-wrap: wrap;
+}
+.builder-footer{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.box.flight-type{
+  width: 100%;
+}
+.box.days{
+  width: 100%;
+}
+.box.flight-details{
+  width: 100%;
+}
+.box.hotel-details{
+  width: 100%;
+}
+.box.another-hotel{
+  width: 100%;
+}
+.form-row-package .col input{
+  width: 93%;
+}
+.form-row-package .col.s12{
+  padding:0px;
+}
+.footer-col{
+  flex-wrap: wrap;
+}
+.box.transport-details{
+  width: 100%;
+}
+#packageTransport .col {
+    width: 48% !important; 
+  
+}
+#packageTransport{
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+}
+.checkout{
+  width: 100%;
+}
+.collapsible-body.checkout div{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.flight-flex .flex{
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: 200px;
+}
+
+}
+@media (max-width:1024px) {
+  
+  
 }

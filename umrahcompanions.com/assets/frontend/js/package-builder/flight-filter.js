@@ -1,6 +1,7 @@
 // Example flights data (can come from API later)
 const flights = [
   {
+    index:1,
     airline: "PIA",
     price: 120000,
     departureCity: "Islamabad",
@@ -14,6 +15,7 @@ const flights = [
     duration: "7"
   },
   {
+    index:2,
     airline: "Saudi Airlines",
     price: 140000,
     departureCity: "Lahore",
@@ -37,7 +39,17 @@ function renderFlights(data) {
     return;
   }
  container.innerHTML = "";
+  document.querySelector(".primary-btn").disabled = false;
+  $(document).off("click", "#flight-details .flight-card").on("click", "#flight-details .flight-card", function () {
+    $("#flight-details .flight-card").removeClass("active");
+    $(this).addClass("active");
 
+     const index = $(this).data("index");    // get index
+    bookingData.flight = data[index];   
+    console.log("Package selected:", bookingData.flight, bookingData);
+      $(".primary-btn").prop("disabled", false);
+
+  });
   if (data.length === 0) {
     container.innerHTML = `
       <div class="no-flights">
@@ -60,16 +72,17 @@ function renderFlights(data) {
   }
 
   data.forEach(flight => {
+    console.log(flight)
     container.innerHTML += `
-      <div class="flight-card">
-        <div class="row form-row flex-row" style="width:100%;">
-          <div class="col l7 d-flex">
+      <div class="flight-card" data-index="${flight.index}">
+        <div class="row form-row form-row-package flex-row" style="width:100%;">
+          <div class="col l7 s12 d-flex">
             <div class="rounded-circle">
               <img src="assets/frontend/img/flight.svg" alt="">
             </div>
             <h3 style="margin:0px;">${flight.airline}</h3>
           </div>
-          <div class="col l4" style="display: flex; justify-content: end;">
+          <div class="col l4 s12" style="display: flex; justify-content: end;">
             <div style="text-align: end;">
               <h5 class="sub-heading" style="margin:0px">PKR ${flight.price.toLocaleString()}</h5>
               <span>Per person</span>
@@ -80,13 +93,13 @@ function renderFlights(data) {
         <!-- Depart -->
         <div class="row form-row depart">
           <div><span class="badge depart-badge">Depart</span></div>
-          <div class="row form-row col l12">
-            <div class="col l3 s6">
+          <div class="row form-row form-row-package col l12">
+            <div class="col l3 s12">
               <p>${flight.departureCity}</p>
               <p>${flight.departTime}</p>
               <p>${flight.departDate}</p>
             </div>
-            <div class="col l6">
+            <div class="col l6 s12">
               <div class="flight-flex">
                 <img src="assets/frontend/img/depart.svg" alt="">
                 <div class="flex">
@@ -97,7 +110,7 @@ function renderFlights(data) {
                 <img src="assets/frontend/img/return-flight.svg" alt="">
               </div>
             </div>
-            <div class="col l3 s6 right-align">
+            <div class="col l3 s12 right-align">
               <p>${flight.arrivalCity}</p>
               <p>${flight.departTime}</p>
               <p>${flight.departDate}</p>
@@ -108,13 +121,13 @@ function renderFlights(data) {
         <!-- Return -->
         <div class="row form-row return" style="width:100%;">
           <div><span class="badge return-badge">Return</span></div>
-          <div class="row form-row col l12">
-            <div class="col l3 s6">
+          <div class="row form-row form-row-package col l12">
+            <div class="col l3 s12">
               <p>${flight.returnCity}</p>
               <p>${flight.returnTime}</p>
               <p>${flight.returnDate}</p>
             </div>
-            <div class="col l6">
+            <div class="col l6 s12">
               <div class="flight-flex">
                 <img src="assets/frontend/img/depart.svg" alt="">
                 <div class="flex">
@@ -125,7 +138,7 @@ function renderFlights(data) {
                 <img src="assets/frontend/img/return-flight.svg" alt="">
               </div>
             </div>
-            <div class="col l3 s6 right-align">
+            <div class="col l3 s12 right-align">
               <p>${flight.departureCity}</p>
               <p>${flight.returnTime}</p>
               <p>${flight.returnDate}</p>
@@ -134,6 +147,9 @@ function renderFlights(data) {
         </div>
       </div>`;
   });
+  // ✅ Inside renderFlights(), after data.forEach()
+ 
+
 }
 
 

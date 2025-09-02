@@ -75,71 +75,67 @@ function searchHotel(){
 //   let hotels=[];
 
   if(city=='Mak'){
-    // hotels=makHotels
     createCards(makHotels);
 
   }if(city=='Mad'){
-    // hotels=madHotels
     createCards(madHotels);
   }
 
 
 
 }
-function createCards(hotels){
-    console.log(hotels)
-  const container= document.getElementById("hotelContainer");
-  
-    if (!container) {
-        console.warn("vehicleContainer not found");
-        return;
-    }
-    container.innerHTML = ""; // clear
-    console.log(container)
-    hotels.forEach(hotel=>{
-        console.log(hotel)
-        const card = `
-                <div class="hotel-card" style="display: flex; flex-direction: column; gap:13px">
-                    <!-- <input type="checkbox" class="checkbox-main vehicle-checkbox" id="vehicle"> -->
-                    <div>
-                        <img src="assets/frontend/img/hotel1.png" width="100%" alt="">
-                    </div>
-                    <div class="hotel-desc">
-                        <div class="row " style="display:flex; justify-content: space-between; margin: 0px 10px;">
-                            <h5 class="sub-heading" style="width: 100%;">${hotel.name}</h5>
-                        </div>
-                        <hr>
-                        <div class="features-div">
-                            <span class="features"><img src="assets/frontend/img/Kabah.svg" alt="">${hotel.city} | ${hotel.distance} km</span>
-                            <span class="features"><img src="assets/frontend/img/night.svg" alt=""> ${hotel.nights} Nights</span>
-                            <span class="features"><img src="assets/frontend/img/rating.svg" alt=""> ${hotel.rating} Star</span>
+function createCards(hotels) {
+  const container = document.getElementById("hotelContainer");
 
-                        </div>
-                        <div class="row form-row" style="display:flex; align-items: center; margin-top:20px;">
-                            <div class="col l8">
-                                <h5 class="sub-heading"><span>From </span> PKR ${hotel.price} <span>/Night</span></h5>
-                                <span>${hotel.pk_price}</span>
-                            </div>
-                            <div class="col l4" style="">
-                                <button class="hotel-button" type="button" data-hotel='${JSON.stringify(hotel)}'>Select</button>
-                            </div>
-                        </div>
-                    </div>
+  if (!container) {
+    console.warn("hotelContainer not found");
+    return;
+  }
+  container.innerHTML = ""; 
 
-                </div>
-            `;
+  hotels.forEach(hotel => {
+    const card = `
+      <div class="hotel-card" style="display: flex; flex-direction: column; gap:13px">
+        <div>
+          <img src="${hotel.img}" width="100%" alt="">
+        </div>
+        <div class="hotel-desc">
+          <div class="row " style="display:flex; justify-content: space-between; margin: 0px 10px;">
+            <h5 class="sub-heading" style="width: 100%;">${hotel.name}</h5>
+          </div>
+          <hr>
+          <div class="features-div">
+            <span class="features"><img src="assets/frontend/img/Kabah.svg" alt="">${hotel.city} | ${hotel.distance} km</span>
+            <span class="features"><img src="assets/frontend/img/night.svg" alt=""> ${hotel.nights} Nights</span>
+            <span class="features"><img src="assets/frontend/img/rating.svg" alt=""> ${hotel.rating} Star</span>
+          </div>
+          <div class="row form-row" style="display:flex; align-items: center; margin-top:20px;">
+            <div class="col l8">
+              <h5 class="sub-heading"><span>From </span> PKR ${hotel.price} <span>/Night</span></h5>
+              <span>${hotel.pk_price}</span>
+            </div>
+            <div class="col l4">
+              <button class="hotel-button" type="button" data-hotel='${JSON.stringify(hotel)}'>Select</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
     container.insertAdjacentHTML("beforeend", card);
+  });
 
-    document.querySelectorAll(".hotel-button").forEach(btn=>{
-    btn.addEventListener("click", function(){
-        const hotel = JSON.parse(this.dataset.hotel);
-        openHotelDetails(hotel);
+  document.querySelectorAll(".hotel-button").forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault(); 
+      localStorage.setItem("bookingData", JSON.stringify(bookingData));
+      const hotel = JSON.parse(this.dataset.hotel);
+      openHotelDetails(hotel);
     });
-});
-})
+  });
 }
 
-function openHotelDetails(hotelName){
-    console.log("Selected Hotel:", hotelName);
-    window.location.href='/umrahcompanions.com/hoteldetails.html';
+function openHotelDetails(hotel) {
+  console.log("Selected Hotel:", hotel.name);
+  const hotelParam = encodeURIComponent(hotel.name);
+  window.location.href = `hoteldetails.html?hotel=${hotelParam}`; 
 }

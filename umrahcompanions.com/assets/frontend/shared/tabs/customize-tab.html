@@ -3,27 +3,103 @@
 
 <div class="" style="width: 100%; display:flex; justify-content:center;" id="customize-page">
     <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="package-type">
-        <div class="box" style="width: 60%;">
+        <div class="box package-type">
                 <h5 class="sub-heading">Select Package Preference</h5>
                 <div class="row form-row" id="packageContainer"></div>
         </div>
     </div>
 <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="flight-type">
-    <div class="box"  style="width: 60%;" >
+    <div class="box flight-type">
             <h5 class="sub-heading">Select Package Duration</h5>
             <div class="row form-row" id="packageDuration"></div>
     </div>
 </div>
 <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="Days">
-    <div class="box"  style="width: 60%;" >
+    <div class="box days" >
             <h5 class="sub-heading">Select Number of Days</h5>
             <div class="row form-row" id="packageDays"></div>
     </div>
 </div>
 <div class="custom-card"  style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="flight-details">
-    <div class="box"  style="width: 80%;" >
+    <div class="box  flight-details" id="flexible-flight">
+            <h5 class="sub-heading">Search your flight</h5>
+            <div id="flight-wrapper" style="margin-bottom:10px;">
+                <div class="row form-row form-row-package" style="width: 100%;display:flex; align-items:center; gap:10px; flex-wrap:wrap;" id="Flight-detail">
+                    <div class="col l4 m6 s12 wrap_spacing">
+                        <input type="text" class="form-control active-state" placeholder="Departure City" name="departure-city" id="departure-city">
+                    </div>
+                    <div class="col l4 m6 s12 wrap_spacing">
+                        <input type="text" class="form-control active-state" onchange="applyFilters()" placeholder="Arrival City" name="arrival-city" id="arrival-city">
+                    </div>
+                    <div class="col l2 m6 s12 wrap_spacing">
+                        <div class="hotel-item" style="height:100%">
+                            <input type="text" class="form-control active-state package-datepicker"
+                            placeholder="Departure Date*" aria-label="Departure Date" name="departure-date" />
+                        </div>
+                    </div>
+                    <div class="col l1">
+                        <img src="assets/frontend/img/delete.svg" class="delete-flight" style="cursor:pointer;" alt="delete">
+                    </div>
+                </div>
+            </div>
+
+        <a href="javascript:void(0)" style="margin:15px !important;" id="new-row">+ Add Another Flight</a>
+
+            <div class="row form_row form-row-package">
+                <div class="col l2 m6 s12">
+                    <div class=" counter-container" style="flex-wrap:nowrap;" data-type="Adults">
+                        <label class="counter-label">Adults</label>
+                        <div class="counter-controls">
+                        <button type="button" class="counter-btn minus">−</button>
+                        <input style="display:none;" class="counter-input" type="number"  name="input-field1" id="counter1">
+                        <span id="adults"  class="counter-value">01</span>
+                        <button type="button" class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l2 m6 s12">
+                    <div class="counter-container" style="flex-wrap:nowrap;" data-type="Child">
+                        <label class="counter-label">Child</label>
+                        <div class="counter-controls">
+                        <button type="button" class="counter-btn minus">−</button>
+                        <input style="display:none;" class="counter-input" type="number"  name="input-field2" id="counter2">
+                        <span id="child" class="counter-value">00</span>
+                        <button type="button" class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l2 m6 s12">
+                    <div class="counter-container" style="flex-wrap:nowrap;" data-type="Infants">
+                        <label class="counter-label">Infants</label>
+                        <div class="counter-controls">
+                        <button type="button" class="counter-btn minus">−</button>
+                        <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                        <span id="infants" class="counter-value">00</span>
+                        <button type="button" class="counter-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col l2 m6 s12">
+                    <select class="form-select browser-default active-state" name="category" id="category">
+                        <option value="">Category<span class="text-danger">*</span></option>
+                    </select>
+                </div>
+                <div class="col l2 m6 s12">
+                    <select class="form-select browser-default active-state" name="currency" id="currency">
+                        <option value="">Currency<span class="text-danger">*</span></option>
+                    </select>
+                </div>
+                <div class="col l1 m6 s12">
+                    <button class="btn primary-btn"><img src="assets/frontend/img/search.svg" alt=""></button>
+                </div>
+                
+
+            </div>
+    </div>
+
+    <div class="box"  id="fixed-flight">
             <h5 class="sub-heading">filter your Flight</h5>
-            <div class="row form-row" id="packageFlights">
+            <div class="row form-row form-row-package" id="packageFlights">
                 <div class="col l2 m6 s12" style="padding: 0px;">
                     <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
                         <option value="">All Months<span class="text-danger">*</span></option>
@@ -61,17 +137,14 @@
                 </div>
             </div>
     </div>
-    <div id="flightContainer"class="box" style="width: 80%;height: 50vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
+    <div id="flightContainer"class="box" style="height: 50vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
     </div>
 </div>
 <div class="custom-card"  style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
-    <div class="box"  style="width: 80%;" >
+    <div class="box transport-details"  >
             <h5 class="sub-heading">Search Transport</h5>
-            <div class="row form-row" id="packageFlights">
+            <div class="row form-row form-row-package" id="packageFlights">
                 <div class="col l10 m6 s12" style="padding: 0px;">
-                    <!-- <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
-                        <option value="">All Months<span class="text-danger">*</span></option>
-                    </select> -->
                      <select class="form-select browser-default active-state route_id" name="route">
                                               <option value="5" 
                               data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
@@ -143,8 +216,8 @@
                 </div>
             </div>
             <h5 class="sub-heading" >Select Vehicle</h5>
-            <div class="row form-row" id="packageTransport">
-                <div class="col l1">
+            <div class="row form-row form-row-package" id="packageTransport">
+                <div class="col l1 s6">
                     <div class="vehicle-boxes ">
                         <input type="checkbox" class="main-checkboxes" name="sedan" id="sedan">
                         <label for="sedan">Sedan</label>
@@ -152,31 +225,31 @@
                     
                 </div>
 
-                <div class="col  l1">
+                <div class="col  l1 s6">
                     <div class="vehicle-boxes ">
                         <input class="form-control main-checkboxes" type="checkbox" name="GMC" id="GMC">
                         <label class="input_labels" for="GMC">GMC</label>
                     </div>
                 </div>
-                <div class="col l1">
+                <div class="col l1 s6">
                     <div class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="staria" id="staria">
                         <label for="staria">Staria</label>
                     </div>
                 </div>
-                <div class="col l1">
+                <div class="col l1 s6">
                     <div class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="hiace" id="hiace">
                         <label for="hiace">HiAce</label>
                     </div>
                 </div>
-                <div class="col l1 ">
+                <div class="col l1 s6">
                     <div class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="coaster" id="coaster">
                         <label for="coaster">Coaster</label>
                     </div>
                 </div>
-                <div class="col l1">
+                <div class="col l1 s6">
                     <div class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="bus" id="bus">
                         <label for="bus">Bus</label>
@@ -186,7 +259,7 @@
             </div>
     </div>
 
-    <div class="box" style="width: 80%;height: 70vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
+    <div class="box" style="height: 70vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
         <div>
             <h5 class="sub-heading">Select Your Transport</h5>
         </div>
@@ -197,9 +270,9 @@
     </div>
 </div>
 <div class="custom-card" style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="hotel-details">
-    <div class="box"  style="width: 80%;" id="search-hotel">
+    <div class="box hotel-details"   id="search-hotel">
         <h5 class="sub-heading">Search Hotels</h5>
-       <div class=" row form-row">
+       <div class=" row form-row form-row-package">
         <div class="col l3 s12">
             <div class="hotel-item">
                 <select class="form-select city-select browser-default" name="hotel-city" id="hotel-city" style="width:85%; height:3rem !important">
@@ -224,7 +297,7 @@
               value="" />
           </div>
         </div>
-        <div class="col l2">
+        <div class="col l2 s12">
             <button type="button" class="btn primary-btn" onclick="searchHotel()">Search</button>
 
         </div>
@@ -232,9 +305,9 @@
 
        </div>
     </div>
-    <div class="box"  style="width: 80%; display: none;" id="filter-hotel">
+    <div class="box hotel-details"  style="display: none;" id="filter-hotel">
         <h5 class="sub-heading">Filter Hotel</h5>
-       <div class=" row form-row">
+       <div class=" row form-row form-row-package">
         <div class="col l2 s12">
             <div class="hotel-item">
                 <select class="form-select browser-default" name="price-range" id="price-range" style="width:85%;  ">
@@ -281,7 +354,7 @@
 
        </div>
     </div>
-     <div class="box" id="show-hotels" style="width: 80%;height: 70vh; overflow-y: scroll; display: none; flex-direction: column; gap: 10px;">
+     <div class="box hotel-details" id="show-hotels" style="height: 70vh; overflow-y: scroll; display: none; flex-direction: column; gap: 10px;">
         <div>
             <h5 class="sub-heading">Filter Hotel</h5>
         </div>
@@ -295,7 +368,7 @@
 </div>
 
 <div class="custom-card" style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="another-hotel">
-    <div class="box"  style="width: 30%; display: flex; flex-direction: column; align-items: center;" id="search-hotel">
+    <div class="box another-hotel"  style=" display: flex; flex-direction: column; align-items: center;" id="search-hotel">
         <img src="assets/frontend/img/another-hotel.png" alt="">
         <h5 class="sub-heading">Add another Hotel</h5>
         <span style="text-align: center;">Easily book an extra hotel to cover your full journey or stay closer to different holy sites.</span>
@@ -314,30 +387,3 @@
 </div>
 
 
-<div id="custom-footer" class="builder-footer">
-    <div class="" >
-        <div class="row form-row" style="display:flex; justify-content: space-between; align-items: center;">
-            <div class="col l3" style="display: flex; justify-content: start;">
-            <button type="button" class=" secondary-btn" onclick="showPrev()">Back</button>
-
-            </div>
-            <div class="col l5" style="display: flex; justify-content: center;">
-                <div style="text-align: center;">
-                <span class="footer-span">Total Package Cost</span>
-                <h5 class="sub-heading" style="margin: 5px 0px;">PKR 120,000</h5>
-                <span class="footer-span">Show Breakdown</span>
-                </div>
-                
-            </div>
-            <div class="col l4" style="display: flex; justify-content: end; gap:10px">
-               <button class="btn btn-outline skip-flight-btn">Skip Flight</button>
-
-            <button type="button" id="next" class="btn  primary-btn" onclick="showNext()">Next</button>
-
-            </div>
-        </div>
- 
-
-    </div>
-
-</div> 

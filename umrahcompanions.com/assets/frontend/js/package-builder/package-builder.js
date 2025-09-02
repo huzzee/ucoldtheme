@@ -13,6 +13,42 @@ $(document).ready(function () {
 
     var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
     $('#tab-content').load(tabPath, function () {
+        
+
+        const savedData = localStorage.getItem("bookingData");
+        if (savedData) {
+          bookingData = JSON.parse(savedData);
+          console.log("Restored bookingData:", bookingData);
+        }
+       document.getElementById("custom-footer").style.display="block";
+       const urlParams = new URLSearchParams(window.location.search);
+        if (!bookingData.hotel) bookingData.hotel = {};
+
+        const hotelName = urlParams.get("hotel");
+        const hotelCity = urlParams.get("city");
+
+        // Collect selected rooms
+        const rooms = [];
+        urlParams.forEach((qty, type) => {
+          if (type !== "tab" && type !== "step" && type !== "hotel" && type !== "city") {
+            rooms.push(`${type}: ${qty}`);
+          }
+        });
+
+        if (hotelName && hotelCity) {
+          bookingData.hotel[hotelCity] = {
+            name: hotelName,
+            room: rooms.join(", "),   // e.g. "Double Room: 2, Triple Room: 1"
+            nights: null,             // you can fill nights if available
+            meals: false              // or true if you pass in meals info
+          };
+        }
+
+        localStorage.setItem("bookingData", JSON.stringify(bookingData));
+        console.log(bookingData)
+
+
+
       if (step && steps.includes(step)) {
         currentIndex = steps.indexOf(step);
       }
@@ -22,7 +58,11 @@ $(document).ready(function () {
     // default tab (first one)
     $('.tab').first().addClass('active');
     var firstTabPath = $('.tab.active').data('tab');
-    $('#tab-content').load(firstTabPath, function () {
+    $('#tab-content').load(firstTabPath, function () {      
+      document.getElementById("custom-footer").style.display="none";
+
+
+      console.log(firstTabPath)
       populateCountries();
       initCounters();
       renderVisaCards();
@@ -31,11 +71,16 @@ $(document).ready(function () {
 
   console.log(params, step, tab);
 });
-
-
 $('.tab').click(function() {
     var tabPath = $(this).data('tab');
     $('#tab-content').load(tabPath, function () {
+       if(tabPath=='assets/frontend/shared/tabs/customize-tab.html'){
+       document.getElementById("custom-footer").style.display="block";
+       
+      }
+      else{
+       document.getElementById("custom-footer").style.display="none";
+      }
         populateCountries(); // call again when new tab loads
         initCounters();
         var elems = document.querySelectorAll('.collapsible');
@@ -49,20 +94,23 @@ $('.tab').click(function() {
     });
 });
 function checkout(){
+  
     $('.tab').removeClass('active');
 
     const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/confirmation.html"]');
     tab2.addClass('active');
     var tabPath= "assets/frontend/shared/tabs/confirmation.html"
+    console.log(bookingData)
     $('#tab-content').load(tabPath, function () {
+      LoadData()
       var elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems, {
         accordion: true 
     });
+    
     });
 
 }
-
 const countries = [
   "Afghanistan",
   "Albania",
@@ -311,7 +359,6 @@ const countries = [
   "Zambia",
   "Zimbabwe"
 ];
-
 const months =[
   'January',
   'Feburary',
@@ -326,7 +373,6 @@ const months =[
   'November',
   'December'
 ]
-
 function populateCountries() {
     const select = document.getElementById("nationality");
     if (!select) return; // exit if no select exists
@@ -357,9 +403,6 @@ function populateFilters(){
     });
 
 }
-
-
-
 function initCounters() {
   document.querySelectorAll('.counter-controls').forEach(control => {
     const plusBtn = control.querySelector('.plus');
@@ -388,4 +431,25 @@ function initCounters() {
     });
   });
 }
+
+const toggleBtn = document.getElementById("toggleBreakdown");
+        const breakdownCard = document.getElementById("breakdownCard");
+
+        toggleBtn.addEventListener("click", function () {
+          if(bookingData.flight!==null){
+            breakdownCard.classList.toggle("open");
+            document.getElementsByClassName("breakdown-card")[0].style.display = "block";
+
+            if (breakdownCard.classList.contains("open")) {
+              toggleBtn.textContent = "Hide Breakdown ";
+              document.getElementsByClassName("breakdown-card")[0].style.display = "block";
+
+            } else {
+              toggleBtn.textContent = "Show Breakdown ";
+              document.getElementsByClassName("breakdown-card")[0].style.display = "none";
+
+            }
+          }
+          
+        });
 

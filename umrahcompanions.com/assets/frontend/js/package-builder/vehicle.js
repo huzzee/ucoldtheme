@@ -67,45 +67,81 @@
         container.innerHTML = ""; // clear
         document.querySelectorAll(".main-checkboxes:checked").forEach(cb => {
             const v = vehicles[cb.id];
-            toggleParentColor(cb)
+            toggleParentColor(cb);
             if (!v) return;
 
-            const card = `
-                <div class="vehicle-card-wrapper">
-                    <div class="vehicle-card" style="display:flex;flex-direction:column;gap:13px">
-                        <img src="${v.img}" width="100%" alt="${v.name}">
-                        <div class="row" style="width:100%;display:flex;justify-content:space-between;gap:20px;margin:0px 10px;">
-                            <div class="col l3">
-                                <h5 class="sub-heading" style="width:fit-content;">${v.name}</h5>
-                            </div>
-                            <div class="col l8">
-                                <h5 class="sub-heading text-right">${v.price}/ <sub>Total</sub></h5>
-                            </div>
+            const card = document.createElement("div");
+            card.classList.add("vehicle-card-wrapper");
+            card.innerHTML = `
+                <div class="vehicle-card" style="display:flex;flex-direction:column;gap:13px">
+                    <img src="${v.img}" width="100%" alt="${v.name}">
+                    <div class="row" style="width:100%;display:flex;justify-content:space-between;gap:20px;margin:0px 10px;">
+                        <div class="col l3">
+                            <h5 class="sub-heading" style="width:fit-content;">${v.name}</h5>
                         </div>
-                        <hr>
-                        <div class="features-div">
-                            <span class="features"><img src="assets/frontend/img/users.svg" alt="">${v.capacity}</span>
-                            <span class="features"><img src="assets/frontend/img/car.svg" alt="">${v.model}</span>
-                            <span class="features"><img src="assets/frontend/img/suitcase.svg" alt="">${v.luggage}</span>
+                        <div class="col l8">
+                            <h5 class="sub-heading text-right">${v.price}/ <sub>Total</sub></h5>
                         </div>
-                        <div class="hotel-item quantity-wrapper" >
-                            <label class="counter-label">Quantity</label>
-                            <div class="counter">
-                                <button type="button" class="decrement">–</button>
-                                <input style="display:none;" type="text" name="quantity_${cb.id}" value="1" class="counter-input" readonly />
-                                <span id="quantity_${cb.id}" style="padding:5px 2px" class="counter-value">01</span>
-                                <button type="button" class="increment">+</button>
-                            </div>
-                        </div>
-                        <div style="">
-                              <button class="vehicle-button"> Select</button>
-                        </div>
-                        <input type="radio" name="selected_vehicle" value="${cb.id}" style="display:none;" />
                     </div>
+                    <hr>
+                    <div class="features-div">
+                        <span class="features"><img src="assets/frontend/img/users.svg" alt="">${v.capacity}</span>
+                        <span class="features"><img src="assets/frontend/img/car.svg" alt="">${v.model}</span>
+                        <span class="features"><img src="assets/frontend/img/suitcase.svg" alt="">${v.luggage}</span>
+                    </div>
+                    <div class="hotel-item quantity-wrapper">
+                        <label class="counter-label">Quantity</label>
+                        <div class="counter">
+                            <button type="button" class="decrement">–</button>
+                            <input style="display:none;" type="text" value="1" class="counter-input" readonly />
+                            <span class="counter-value">01</span>
+                            <button type="button" class="increment">+</button>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="vehicle-button">Select</button>
+                    </div>
+                    <input type="radio" name="selected_vehicle" value="${cb.id}" style="display:none;" />
                 </div>
             `;
-            container.insertAdjacentHTML("beforeend", card);
+
+            // Attach counter handlers only for THIS card
+            const input = card.querySelector(".counter-input");
+            const span = card.querySelector(".counter-value");
+
+            card.querySelector(".increment").addEventListener("click", () => {
+                let val = parseInt(input.value, 10) + 1;
+                input.value = val;
+                span.textContent = val.toString().padStart(2, "0");
+            });
+
+            card.querySelector(".decrement").addEventListener("click", () => {
+                let val = Math.max(1, parseInt(input.value, 10) - 1);
+                input.value = val;
+                span.textContent = val.toString().padStart(2, "0");
+            });
+
+            // Handle select button
+            card.querySelector(".vehicle-button").addEventListener("click", () => {
+                const quantity = parseInt(input.value, 10);
+                const existingIndex = bookingData.vehicles.findIndex(item => item.id === cb.id);
+
+                if (existingIndex > -1) {
+                    bookingData.vehicles[existingIndex].quantity = quantity;
+                } else {
+                    bookingData.vehicles.push({
+                        id: cb.id,
+                        ...v,
+                        quantity
+                    }); 
+                }
+                console.log("Booking vehicles:", bookingData);
+            });
+
+            container.appendChild(card);
         });
+
+
     }
 
     document.addEventListener("DOMContentLoaded", function () {

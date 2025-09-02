@@ -87,23 +87,68 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- tabs -->
 <body>
     <div id="header"></div>
-    <section class="package-builder">
+    <section class="package-builder wrapper">
     <!-- Tabs Header -->
-    <div class="tabs-header">
-        <div class="tab active"  data-tab="assets/frontend/shared/tabs/pilgrim-information.html">1. Customization</div>
-        <hr>
-        <div class="tab" data-tab="assets/frontend/shared/tabs/customize-tab.html">2. Pilgrim Information</div>
-        <hr>
-        <div class="tab" data-tab="assets/frontend/shared/tabs/confirmation.html">3. Confirmation</div>
-    </div>
+     <main class="wrapper">
+        <div class="tabs-header">
+            <div class="tab active"  data-tab="assets/frontend/shared/tabs/pilgrim-information.html">1. Pilgrim Information </div>
+            <hr>
+            <div class="tab" data-tab="assets/frontend/shared/tabs/customize-tab.html">2. Customization</div>
+            <hr>
+            <div class="tab" data-tab="assets/frontend/shared/tabs/confirmation.html">3. Confirmation</div>
+        </div>
 
 
-    <!-- Dynamic content container -->
-    <div id="tab-content" class="tab-content">
-        <!-- Content from other files will load here -->
-    </div>
+            <!-- Dynamic content container -->
+            <div id="tab-content" class="tab-content">
+                <!-- Content from other files will load here -->
+            </div>
+     </main> 
+       
     
     </section>
+   <div id="custom-footer" class="builder-footer" style="display: none;">
+        <div class="">
+            <div class="row form-row" style="display:flex; justify-content: space-between; align-items: center;">
+            <div class="col l2" style="display: flex; justify-content: start;">
+                <button type="button" class="secondary-btn" onclick="showPrev()">Back</button>
+            </div>
+
+            <div class="col l5" style="display: flex; justify-content: center;">
+                <div style="text-align: center;">
+                <span class="footer-span">Total Package Cost</span>
+                <h5 class="sub-heading" style="margin: 5px 0px;">PKR 120,000</h5>
+                <span id="toggleBreakdown" class="footer-span" style="cursor:pointer;">Show Breakdown ⌃</span>
+                </div>
+            </div>
+
+            <div class="col l5 footer-col" style="display: flex; justify-content: end; gap:10px">
+                <button class="btn btn-outline skip-flight-btn" onclick="skip()">Skip Flight</button>
+                <button type="button" id="next" class="btn primary-btn" disabled onclick="showNext()">Next</button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Collapsible Breakdown -->
+        <div id="breakdownCard" class="breakdown-card">
+            <h6>Cost Breakdown</h6>
+            <div class="row breakdown-item">
+            <span>Visa</span>
+            <span id="visaCost">PKR 90,000</span>
+            </div>
+            <div class="row breakdown-item">
+            <span>Flight</span>
+            <span id="flightCost">PKR 120,000</span>
+            </div>
+            <div class="row breakdown-item total">
+            <span>Total</span>
+            <span id="totalBreakdown">PKR 155,000</span>
+            </div>
+        </div>
+    </div>
+
+
+</div> 
 
 
 

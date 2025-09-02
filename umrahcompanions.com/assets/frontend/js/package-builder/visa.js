@@ -24,6 +24,12 @@ let bookingData = {
   visaType: null,
   packageType: null,
   nationality: null,
+  duration:null,
+  NoOfDays:null,
+  vehicles:[],
+  flight_type:null,
+  flight:null,
+  hotels:null,
   adults: 0,
   child: 0,
   infants: 0
@@ -77,29 +83,34 @@ $(document).on("click", ".visa-card", function () {
   // Load Customize page
   const nextTabPath = "assets/frontend/shared/tabs/customize-tab.html";
   $("#tab-content").load(nextTabPath, function () {
+    document.getElementById("custom-footer").style.display="block";
+
     console.log("Customize tab loaded, data available:", bookingData);
+
     showStep("package-type");
+    const urlParams = new URLSearchParams(window.location.search);
+
+
   });
   $(".tab").removeClass("active");
   $('div.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]').addClass("active");
 });
 
 // ---- Handle Package Card Click ----
-$(document).on("click", ".package-card", function () {
-  // Save package selection
-  $(".package-card").removeClass("active");
 
-  // Add active class to clicked one
-  $(this).addClass("active");
 
-  bookingData.packageType = $(this).data("package");
+const steps = [
+  "package-type",
+  "flight-type",
+  "Days",
+  "flight-details",
+  "transport-details",
+  "hotel-details",
+  "another-hotel"
+];
+let currentIndex = 0;
 
-  console.log("Package selected:", bookingData.packageType);
-});
-
-const steps = ["package-type", "flight-type", "Days", "flight-details", "transport-details", "hotel-details", "another-hotel"];
-let currentIndex = 0; // start with first step
-
+// Show a given step
 function showStep(stepId) {
   document.querySelectorAll("#customize-page .custom-card").forEach(box => {
     box.style.display = "none";
@@ -108,68 +119,123 @@ function showStep(stepId) {
   const target = document.getElementById(stepId);
   if (target) {
     target.style.display = "flex";
-    renderCards(stepId);
-    populateFilters();
-    renderFlights(flights);
-    renderVehicles();
+
+    // render functions that should only run if exist
+    if (typeof renderCards === "function") renderCards(stepId);
+    if (typeof populateFilters === "function") populateFilters();
+    if (typeof renderFlights === "function" && typeof flights !== "undefined")
+      renderFlights(flights);
+    if (typeof renderVehicles === "function") renderVehicles();
 
     console.log("Showing step:", stepId);
   }
-  // if(target=="flight-details"){
-  //     document.getElementById('next').innerHTML="Continue without Flights";
 
-  // }
-   document.querySelector(".skip-flight-btn").style.display = "none";
+  // reset skip button
+  document.querySelector(".skip-flight-btn").style.display = "none";
 
-    // If flight-details step, show it
-    if (stepId === "flight-details") {
-        document.querySelector(".skip-flight-btn").style.display = "inline-block";
+  // special cases
+  if (stepId === "flight-details") {
+    if (bookingData.flight_type === "Flexible") {
+      $("#flexible-flight").show();
+      $("#fixed-flight").hide();
+    } else {
+      $("#flexible-flight").hide();
+      $("#fixed-flight").show();
     }
-    if(stepId === "transport-details"){
-      document.querySelector(".skip-flight-btn").style.display = "inline-block";
-      document.querySelector(".skip-flight-btn").innerHTML="Skip Transport"
-
-    }
-    if(stepId==="hotel-details"){
-       const newDatePickers = document.querySelectorAll('.package-datepicker');
-        M.Datepicker.init(newDatePickers, {
-          autoClose: true,
-          format: 'yyyy-mm-dd',
-          minDate: new Date(),
-          onSelect: function () {
-            $(this.el).trigger('change');
-          }
-  });
-
+    initDatePickers();
+    document.querySelector(".skip-flight-btn").style.display = "inline-block";
+    document.querySelector(".skip-flight-btn").innerHTML = "Skip Flights";
   }
-  if(stepId=="another-hotel"){
-    document.getElementById("custom-footer").style.display="none";
+
+  if (stepId === "transport-details") {
+    document.querySelector(".skip-flight-btn").style.display = "inline-block";
+    document.querySelector(".skip-flight-btn").innerHTML = "Skip Transport";
+  }
+
+  if (stepId === "hotel-details") {
+    initDatePickers();
+  }
+
+  if (stepId === "another-hotel") {
+    document.getElementById("custom-footer").style.display = "none";
+  } else {
+    document.getElementById("custom-footer").style.display = "block";
   }
 }
 
-// ---- Next ----
+// Go forward
 function showNext() {
   if (currentIndex < steps.length - 1) {
     currentIndex++;
+
+    // skip logic inline
+    if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
+      currentIndex++; // skip flight-type for Land Package
+    }
+
+    if (
+      bookingData.packageType === "Flight Package" &&
+      bookingData.flight_type === "Flexible" &&
+      steps[currentIndex] === "Days"
+    ) {
+      currentIndex++; // skip Days when flexible flights chosen
+    }
+
     showStep(steps[currentIndex]);
   } else {
     alert("All steps completed!");
   }
 }
 
-// ---- Back ----
+// Go back
 function showPrev() {
   if (currentIndex > 0) {
     currentIndex--;
+
+    // reverse skip logic
+    if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
+      currentIndex--;
+    }
+
+    if (
+      bookingData.packageType === "Flight Package" &&
+      bookingData.flight_type === "Flexible" &&
+      steps[currentIndex] === "Days"
+    ) {
+      currentIndex--;
+    }
+
     showStep(steps[currentIndex]);
   }
 }
 
-// ---- Initialize first step ----
+// Skip current step
+function skip() {
+  if (currentIndex < steps.length - 1) {
+    currentIndex++;
+    showStep(steps[currentIndex]);
+  }
+}
+
+// Initialize
 document.addEventListener("DOMContentLoaded", () => {
   showStep(steps[currentIndex]);
 });
+
 // ---- Initialize on Pilgrim Info Page ----
 $(document).ready(function () {
   renderVisaCards(); // Only visa cards first
 });
+function initDatePickers() {
+    const newDatePickers = document.querySelectorAll('.package-datepicker');
+    M.Datepicker.init(newDatePickers, {
+        autoClose: true,
+        format: 'yyyy-mm-dd',
+        minDate: new Date(),
+        onSelect: function () {
+            $(this.el).trigger('change');
+        }
+    });
+}
+    // Add new row
+   

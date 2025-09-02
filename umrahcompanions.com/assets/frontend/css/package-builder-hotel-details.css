@@ -53,6 +53,7 @@ h3.heading{
     display: flex;
     justify-content: space-between;
     align-items: start;
+    /* flex-wrap: wrap; */
     gap: 20px;
 
 }
@@ -262,5 +263,23 @@ padding-top: 8px;
 padding-right: 25px;
 padding-bottom: 8px;
 padding-left: 25px;
+}
+.box-border.active {
+  border: 2px solid #1976d2;
+  background: #f0f8ff;
+}
+
+@media (max-width:1023px) {
+   .form-row-package{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .package-builder-hotel-details{
+    padding: 1rem;
+  }
+  
 }
 
