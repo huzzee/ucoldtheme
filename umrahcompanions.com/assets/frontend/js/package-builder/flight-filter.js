@@ -147,7 +147,6 @@ function renderFlights(data) {
         </div>
       </div>`;
   });
-  // ✅ Inside renderFlights(), after data.forEach()
  
 
 }
@@ -183,6 +182,7 @@ function applyFilters() {
 
 // Wait until DOM ready
 document.addEventListener("DOMContentLoaded", () => {
+
   // Initial render
   renderFlights(flights);
   console.log("flight working")
@@ -200,4 +200,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("#months, #departure-city, #arrival-city, #duration, #airlines")
     .forEach(el => el.addEventListener("change", applyFilters));
 });
-// renderFlights()
+
+

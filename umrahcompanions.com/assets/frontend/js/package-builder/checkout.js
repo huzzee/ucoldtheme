@@ -1,22 +1,18 @@
 function LoadData() {
   const data = JSON.parse(localStorage.getItem("bookingData")) || bookingData;
-
   // Guests
   document.getElementById("guests-section").innerHTML = `
     <span class="badge secondary-badge">Adults: ${data.adults}</span>
     <span class="badge secondary-badge">Kids: ${data.child}</span>
     <span class="badge secondary-badge">Infants: ${data.infants}</span>
   `;
-
   // Visa
   document.getElementById("visa-section").innerHTML = `
     <span class="badge secondary-badge">${data.visaType || "No Visa Selected"}</span>
   `;
-
   // Transport
   document.getElementById("transport-section").innerHTML =
     data.vehicles.map(v => `<span class="badge secondary-badge">${v.name}</span>`).join("");
-
   // Makkah Hotel
   if (data.hotel?.Makkah) {
     document.getElementById("makkah-hotel").innerHTML = `
@@ -26,7 +22,6 @@ function LoadData() {
       ${data.hotel.Makkah.meals ? `<span class="badge secondary-badge">Meals Included</span>` : ""}
     `;
   }
-
   // Madinah Hotel
   if (data.hotel?.Madinah) {
     document.getElementById("madinah-hotel").innerHTML = `
@@ -36,7 +31,6 @@ function LoadData() {
       ${data.hotel.Madinah.meals ? `<span class="badge secondary-badge">Meals Included</span>` : ""}
     `;
   }
-
   // Flight
   if (data.flight) {
     document.getElementById("flight-section").innerHTML = `

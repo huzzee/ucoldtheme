@@ -2,7 +2,6 @@ $(document).ready(function () {
   const params = new URLSearchParams(window.location.search);
   const step = params.get("step");
   const tab = params.get("tab");
-
   // first remove all active
   $('.tab').removeClass('active');
 
@@ -13,8 +12,6 @@ $(document).ready(function () {
 
     var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
     $('#tab-content').load(tabPath, function () {
-        
-
         const savedData = localStorage.getItem("bookingData");
         if (savedData) {
           bookingData = JSON.parse(savedData);
@@ -23,10 +20,8 @@ $(document).ready(function () {
        document.getElementById("custom-footer").style.display="block";
        const urlParams = new URLSearchParams(window.location.search);
         if (!bookingData.hotel) bookingData.hotel = {};
-
         const hotelName = urlParams.get("hotel");
         const hotelCity = urlParams.get("city");
-
         // Collect selected rooms
         const rooms = [];
         urlParams.forEach((qty, type) => {
@@ -34,7 +29,6 @@ $(document).ready(function () {
             rooms.push(`${type}: ${qty}`);
           }
         });
-
         if (hotelName && hotelCity) {
           bookingData.hotel[hotelCity] = {
             name: hotelName,
@@ -43,12 +37,7 @@ $(document).ready(function () {
             meals: false              // or true if you pass in meals info
           };
         }
-
         localStorage.setItem("bookingData", JSON.stringify(bookingData));
-        console.log(bookingData)
-
-
-
       if (step && steps.includes(step)) {
         currentIndex = steps.indexOf(step);
       }
@@ -60,23 +49,18 @@ $(document).ready(function () {
     var firstTabPath = $('.tab.active').data('tab');
     $('#tab-content').load(firstTabPath, function () {      
       document.getElementById("custom-footer").style.display="none";
-
-
-      console.log(firstTabPath)
       populateCountries();
       initCounters();
       renderVisaCards();
     });
   }
 
-  console.log(params, step, tab);
 });
 $('.tab').click(function() {
     var tabPath = $(this).data('tab');
     $('#tab-content').load(tabPath, function () {
        if(tabPath=='assets/frontend/shared/tabs/customize-tab.html'){
        document.getElementById("custom-footer").style.display="block";
-       
       }
       else{
        document.getElementById("custom-footer").style.display="none";
@@ -94,20 +78,16 @@ $('.tab').click(function() {
     });
 });
 function checkout(){
-  
     $('.tab').removeClass('active');
-
     const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/confirmation.html"]');
     tab2.addClass('active');
     var tabPath= "assets/frontend/shared/tabs/confirmation.html"
-    console.log(bookingData)
     $('#tab-content').load(tabPath, function () {
       LoadData()
       var elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems, {
         accordion: true 
     });
-    
     });
 
 }
@@ -376,10 +356,8 @@ const months =[
 function populateCountries() {
     const select = document.getElementById("nationality");
     if (!select) return; // exit if no select exists
-
     // clear old options
     select.innerHTML = '<option value="">Pilgrim Nationality*</option>';
-
     countries.forEach(country => {
         const option = document.createElement("option");
         option.value = country;
@@ -410,18 +388,15 @@ function initCounters() {
     const counterSpan = control.querySelector('.counter-value');
     const hiddenInput = control.querySelector('.counter-input');
     const parseCounter = (value) => parseInt(value, 10) || 0;
-
     const updateDisplay = (value) => {
       counterSpan.textContent = value.toString().padStart(2, '0'); 
       hiddenInput.value = value; 
     };
-
     plusBtn.addEventListener('click', () => {
       let value = parseCounter(counterSpan.textContent);
       value++;
       updateDisplay(value);
     });
-
     minusBtn.addEventListener('click', () => {
       let value = parseCounter(counterSpan.textContent);
       if (value > 0) {
@@ -433,23 +408,20 @@ function initCounters() {
 }
 
 const toggleBtn = document.getElementById("toggleBreakdown");
-        const breakdownCard = document.getElementById("breakdownCard");
+const breakdownCard = document.getElementById("breakdownCard");
+toggleBtn.addEventListener("click", function () {
+  if(bookingData.flight!==null){
+    breakdownCard.classList.toggle("open");
+    document.getElementsByClassName("breakdown-card")[0].style.display = "block";
 
-        toggleBtn.addEventListener("click", function () {
-          if(bookingData.flight!==null){
-            breakdownCard.classList.toggle("open");
-            document.getElementsByClassName("breakdown-card")[0].style.display = "block";
+    if (breakdownCard.classList.contains("open")) {
+      toggleBtn.textContent = "Hide Breakdown ";
+      document.getElementsByClassName("breakdown-card")[0].style.display = "block"
+    } else {
+      toggleBtn.textContent = "Show Breakdown ";
+      document.getElementsByClassName("breakdown-card")[0].style.display = "none";
 
-            if (breakdownCard.classList.contains("open")) {
-              toggleBtn.textContent = "Hide Breakdown ";
-              document.getElementsByClassName("breakdown-card")[0].style.display = "block";
-
-            } else {
-              toggleBtn.textContent = "Show Breakdown ";
-              document.getElementsByClassName("breakdown-card")[0].style.display = "none";
-
-            }
-          }
-          
-        });
+    }
+  }
+});
 

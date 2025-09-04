@@ -70,21 +70,18 @@ const daysCards=[
 function renderCards(type) {
   let data = [];
   let containers='';
-
  if (type === "package-type") {
   data = packageCards;
   const container = document.getElementById("packageContainer");
   if (!container) return;
   containers = container;
-      $(".primary-btn").prop("disabled", true);
-
+  $(".primary-btn").prop("disabled", true);
   $(document).off("click", "#packageContainer .package-card").on("click", "#packageContainer .package-card", function () {
     // Only reset cards inside this container
     $("#packageContainer .package-card").removeClass("active");
     $(this).addClass("active");
 
     bookingData.packageType = $(this).data("package");
-    console.log("Package selected:", bookingData);
       $(".primary-btn").prop("disabled", false);
 
   });
@@ -101,7 +98,6 @@ function renderCards(type) {
     $(this).addClass("active");
 
     bookingData.flight_type = $(this).data("package");
-    console.log("Package selected:", bookingData);
       $(".primary-btn").prop("disabled", false);
 
   });
@@ -140,40 +136,31 @@ function renderCards(type) {
 ];
   }else{
   data = daysCards;
- 
   }
   const container = document.getElementById("packageDays");
   if (!container) return;
   containers = container;
-      $(".primary-btn").prop("disabled", true);
+    $(".primary-btn").prop("disabled", true);
 
   $(document).off("click", "#Days .package-card").on("click", "#Days .package-card", function () {
     $("#packageDays .package-card").removeClass("active");
     $(this).addClass("active");
 
     bookingData.duration = $(this).data("package");
-    console.log("Package selected:", bookingData);
       $(".primary-btn").prop("disabled", false);
 
   });
 }
-
-
-
   containers.innerHTML = ""; // clear old content
-
   data.forEach(card => {
     const col = document.createElement("div");
     if(bookingData.packageType=="Land Package"){
-          col.className = "col l4 m6 s12";
-
+      col.className = "col l4 m6 s12";
     }else{
-          col.className = "col l6 m6 s12";
-
+      col.className = "col l6 m6 s12";
     }
-    console.log(data)
     col.innerHTML = `
-      <div class="card package-card" data-package="${card.title}">
+      <div class="card package-card" data-aos="fade-left" data-aos-duration="1000" data-package="${card.title}">
         <div class="flex">
           <div class="rounded-circle">
             <img src="${card.img}" alt="">
@@ -190,7 +177,6 @@ function renderCards(type) {
         </ul>
       </div>
     `;
-    console.log(col)
     containers.appendChild(col);
   });
 }

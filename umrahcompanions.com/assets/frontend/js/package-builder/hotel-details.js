@@ -71,8 +71,6 @@ function changeImage(el) {
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
 hotelName = urlParams.get("hotel");
-
-console.log("Hotel from URL:", hotelName);
  // Merge both hotel lists
   const allHotels = [...makHotels, ...madHotels];
   const selectedHotel = allHotels.find(h => h.name === hotelName);
@@ -90,9 +88,7 @@ document.querySelectorAll(".box-border").forEach((box) => {
   const valueSpan = box.querySelector(".counter-value");
   const roomTypeEl = box.querySelector("h6"); 
   const roomType = roomTypeEl ? roomTypeEl.innerText.trim() : "Unknown";
-
   let quantity = 0;
-
   if (plusBtn && valueSpan) {
     plusBtn.addEventListener("click", () => {
       quantity++;
@@ -100,7 +96,6 @@ document.querySelectorAll(".box-border").forEach((box) => {
       updateSelection(roomType, quantity, box);
     });
   }
-
   if (minusBtn && valueSpan) {
     minusBtn.addEventListener("click", () => {
       if (quantity > 0) {
@@ -111,12 +106,9 @@ document.querySelectorAll(".box-border").forEach((box) => {
     });
   }
 });
-
-
 function updateSelection(roomType, quantity, box) {
   // Remove if quantity = 0
   selectedRooms = selectedRooms.filter(r => r.type !== roomType);
-
   if (quantity > 0) {
     selectedRooms.push({ type: roomType, qty: quantity });
     box.classList.add("active"); // highlight selected
@@ -124,14 +116,12 @@ function updateSelection(roomType, quantity, box) {
     box.classList.remove("active");
   }
 
-  console.log("Selected Rooms:", selectedRooms);
 }
 
 function selectRoomsAndBack() {
   // Merge both hotel lists
   const allHotels = [...makHotels, ...madHotels];
   const selectedHotel = allHotels.find(h => h.name === hotelName);
-  console.log(selectedHotel)
   // Build query string from selectedRooms
   const query = selectedRooms
     .map(r => `${encodeURIComponent(r.type)}=${encodeURIComponent(r.qty)}`)

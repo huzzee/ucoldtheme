@@ -1,5 +1,3 @@
-
-
 const visaCards = [
   {
     title: "Umrah Visa",
@@ -18,8 +16,6 @@ const visaCards = [
   }
 ];
 
-// ---- Store booking data ----
-// ---- Store booking data ----
 let bookingData = {
   visaType: null,
   packageType: null,
@@ -39,17 +35,14 @@ let bookingData = {
 function renderVisaCards() {
   const container = document.getElementById("visaCardsContainer");
   if (!container) {
-    console.warn("visaCardsContainer not found yet");
     return;
   }
   container.innerHTML = "";
-
   visaCards.forEach(card => {
     const col = document.createElement("div");
     col.classList.add("col", "l4", "m6", "s12"); // safer than className
-
     col.innerHTML = `
-      <div class="card visa-card" data-visa="${card.title}">
+      <div class="card visa-card" data-aos="fade-right" data-aos-duration="1000"  data-visa="${card.title}">
         <div class="flex">
           <div class="rounded-circle">
             <img src="assets/frontend/img/CreditCard.svg" alt="">
@@ -77,28 +70,17 @@ $(document).on("click", ".visa-card", function () {
   bookingData.adults  = parseInt($("#adults").text(), 10) || 0;
   bookingData.child   = parseInt($("#child").text(), 10) || 0;
   bookingData.infants = parseInt($("#infants").text(), 10) || 0;
-
-  console.log("Saved bookingData:", bookingData);
-
   // Load Customize page
   const nextTabPath = "assets/frontend/shared/tabs/customize-tab.html";
   $("#tab-content").load(nextTabPath, function () {
     document.getElementById("custom-footer").style.display="block";
-
-    console.log("Customize tab loaded, data available:", bookingData);
-
     showStep("package-type");
     const urlParams = new URLSearchParams(window.location.search);
-
-
   });
   $(".tab").removeClass("active");
   $('div.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]').addClass("active");
 });
-
 // ---- Handle Package Card Click ----
-
-
 const steps = [
   "package-type",
   "flight-type",
@@ -109,7 +91,6 @@ const steps = [
   "another-hotel"
 ];
 let currentIndex = 0;
-
 // Show a given step
 function showStep(stepId) {
   document.querySelectorAll("#customize-page .custom-card").forEach(box => {
@@ -119,15 +100,12 @@ function showStep(stepId) {
   const target = document.getElementById(stepId);
   if (target) {
     target.style.display = "flex";
-
     // render functions that should only run if exist
     if (typeof renderCards === "function") renderCards(stepId);
     if (typeof populateFilters === "function") populateFilters();
     if (typeof renderFlights === "function" && typeof flights !== "undefined")
       renderFlights(flights);
     if (typeof renderVehicles === "function") renderVehicles();
-
-    console.log("Showing step:", stepId);
   }
 
   // reset skip button
@@ -137,6 +115,33 @@ function showStep(stepId) {
   if (stepId === "flight-details") {
     if (bookingData.flight_type === "Flexible") {
       $("#flexible-flight").show();
+        document.querySelectorAll('.flight').forEach(container => {
+        const minus = container.querySelector('.minus');
+        const plus = container.querySelector('.plus');
+        const valueSpan = container.querySelector('.counter-value');
+        const hiddenInput = container.querySelector('.counter-input');
+
+        let count = parseInt(valueSpan.textContent, 10);
+
+        function updateDisplay() {
+            valueSpan.textContent = count.toString().padStart(2, '0'); // show 01, 02...
+            hiddenInput.value = count; // sync hidden input
+        }
+
+        minus.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                updateDisplay();
+            }
+        });
+
+        plus.addEventListener('click', () => {
+            count++;
+            updateDisplay();
+        });
+
+        updateDisplay(); // initialize on page load
+    });
       $("#fixed-flight").hide();
     } else {
       $("#flexible-flight").hide();
@@ -172,6 +177,9 @@ function showNext() {
     if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
       currentIndex++; // skip flight-type for Land Package
     }
+    if(bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
+      currentIndex++; // skip flight-type for Land Package
+    }
 
     if (
       bookingData.packageType === "Flight Package" &&
@@ -191,20 +199,21 @@ function showNext() {
 function showPrev() {
   if (currentIndex > 0) {
     currentIndex--;
-
     // reverse skip logic
     if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
       currentIndex--;
     }
-
+    if(bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
+      currentIndex--; // skip flight-type for Land Package      
+    }
     if (
       bookingData.packageType === "Flight Package" &&
       bookingData.flight_type === "Flexible" &&
       steps[currentIndex] === "Days"
     ) {
+      bookingData.flight_type=null;
       currentIndex--;
     }
-
     showStep(steps[currentIndex]);
   }
 }

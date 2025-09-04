@@ -95,7 +95,7 @@ function createCards(hotels) {
 
   hotels.forEach(hotel => {
     const card = `
-      <div class="hotel-card" style="display: flex; flex-direction: column; gap:13px">
+      <div class="hotel-card" data-aos="fade-left" data-aos-duration="1000"  style="display: flex; flex-direction: column; gap:13px">
         <div>
           <img src="${hotel.img}" width="100%" alt="">
         </div>
