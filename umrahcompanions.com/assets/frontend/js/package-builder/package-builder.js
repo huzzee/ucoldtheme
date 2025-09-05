@@ -58,6 +58,8 @@ $(document).ready(function () {
 });
 $('.tab').click(function() {
     var tabPath = $(this).data('tab');
+    tabPath.addClass('active');
+
     $('#tab-content').load(tabPath, function () {
        if(tabPath=='assets/frontend/shared/tabs/customize-tab.html'){
        document.getElementById("custom-footer").style.display="block";

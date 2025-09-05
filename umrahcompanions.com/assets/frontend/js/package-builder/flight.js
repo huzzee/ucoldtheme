@@ -154,7 +154,8 @@ function renderCards(type) {
   containers.innerHTML = ""; // clear old content
   data.forEach(card => {
     const col = document.createElement("div");
-    if(bookingData.packageType=="Land Package"){
+    console.log(currentIndex)
+    if(bookingData.packageType=="Land Package" && currentIndex===2){
       col.className = "col l4 m6 s12";
     }else{
       col.className = "col l6 m6 s12";

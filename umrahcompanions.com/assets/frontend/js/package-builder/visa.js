@@ -20,6 +20,7 @@ let bookingData = {
   visaType: null,
   packageType: null,
   nationality: null,
+  routeId:null,
   duration:null,
   NoOfDays:null,
   vehicles:[],
@@ -197,8 +198,22 @@ function showNext() {
 
 // Go back
 function showPrev() {
-  if (currentIndex > 0) {
+  if(currentIndex==0){
+    $(".tab").removeClass('active')
+       const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/pilgrim-information.html"]');
+    tab2.addClass('active');
+
+    var tabPath = "assets/frontend/shared/tabs/pilgrim-information.html";
+    $('#tab-content').load(tabPath, function () {
+        $("#custom-footer").hide();
+        renderVisaCards()
+      })
+
+    } 
+    if (currentIndex > 0) {
     currentIndex--;
+    
+   
     // reverse skip logic
     if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
       currentIndex--;

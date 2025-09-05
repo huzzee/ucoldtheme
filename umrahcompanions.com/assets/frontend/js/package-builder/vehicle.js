@@ -94,7 +94,7 @@ function renderVehicles() {
                 <div>
                     <button class="vehicle-button">Select</button>
                 </div>
-                <input type="radio" name="selected_vehicle" value="${cb.id}" style="display:none;" />
+                <input type="checkbox" name="selected_vehicle" value="${cb.id}" style="display:none;" />
             </div>
         `;
 
@@ -118,6 +118,7 @@ function renderVehicles() {
         card.querySelector(".vehicle-button").addEventListener("click", () => {
             const quantity = parseInt(input.value, 10);
             const existingIndex = bookingData.vehicles.findIndex(item => item.id === cb.id);
+            
 
             if (existingIndex > -1) {
                 bookingData.vehicles[existingIndex].quantity = quantity;
@@ -151,5 +152,12 @@ function toggleParentColor(cb) {
         parent.style.backgroundColor = "#f8f8f8"; // reset
         parent.style.color = "#000";
     }
+}
+
+function selectRoute(){
+    let route=document.getElementById("route").value;
+    console.log(route, document.getElementById("route"))
+    bookingData.routeId=route;
+
 }
 

@@ -840,6 +840,11 @@ color: #FFFFFF !important;
   margin-top: 10px;
   padding-top: 10px;
 }
+.vehicle-button.selected {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
 @media (max-width:1023px) {
   .tabs-header{
     width: 300px;
