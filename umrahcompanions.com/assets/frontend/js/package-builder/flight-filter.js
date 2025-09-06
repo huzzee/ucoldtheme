@@ -151,7 +151,6 @@ function renderFlights(data) {
 
 }
 
-
 // Apply filters
 function applyFilters() {
   console.log("filter Working")
@@ -179,7 +178,6 @@ function applyFilters() {
 
   renderFlights(filtered);
 }
-
 // Wait until DOM ready
 document.addEventListener("DOMContentLoaded", () => {
 

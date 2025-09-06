@@ -1,3 +1,4 @@
+
     const vehicles = {
         sedan: {
             name: "Sedan",
@@ -66,7 +67,7 @@ function renderVehicles() {
         const card = document.createElement("div");
         card.classList.add("vehicle-card-wrapper");
         card.innerHTML = `
-            <div class="vehicle-card" data-aos="fade-left" data-aos-duration="1000" style="display:flex;flex-direction:column;gap:13px">
+            <div class="vehicle-card" data-vehicle="${v}" data-aos="fade-left" data-aos-duration="1000" style="display:flex;flex-direction:column;gap:13px">
                 <img src="${v.img}" width="100%" alt="${v.name}">
                 <div class="row" style="width:100%;display:flex;justify-content:space-between;gap:20px;margin:0px 10px;">
                     <div class="col l3">
@@ -97,7 +98,6 @@ function renderVehicles() {
                 <input type="checkbox" name="selected_vehicle" value="${cb.id}" style="display:none;" />
             </div>
         `;
-
         // Attach counter handlers only for THIS card
         const input = card.querySelector(".counter-input");
         const span = card.querySelector(".counter-value");
@@ -107,19 +107,16 @@ function renderVehicles() {
             input.value = val;
             span.textContent = val.toString().padStart(2, "0");
         });
-
         card.querySelector(".decrement").addEventListener("click", () => {
             let val = Math.max(1, parseInt(input.value, 10) - 1);
             input.value = val;
             span.textContent = val.toString().padStart(2, "0");
         });
-
         // Handle select button
         card.querySelector(".vehicle-button").addEventListener("click", () => {
             const quantity = parseInt(input.value, 10);
             const existingIndex = bookingData.vehicles.findIndex(item => item.id === cb.id);
             
-
             if (existingIndex > -1) {
                 bookingData.vehicles[existingIndex].quantity = quantity;
             } else {
@@ -128,11 +125,11 @@ function renderVehicles() {
                     ...v,
                     quantity
                 }); 
-            }
+            }                
+            card.querySelector(".vehicle-card").classList.add("active");
         });
         container.appendChild(card);
     });
-
 
 }
 document.addEventListener("DOMContentLoaded", function () {

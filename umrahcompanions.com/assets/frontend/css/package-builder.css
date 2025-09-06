@@ -94,10 +94,36 @@ background: #F7FFFF;
   border: 1px solid  #24B3BA;
     cursor: pointer;
 }
+.card.active{
+  background: #F7FFFF;
+  border: 2px solid  #24B3BA;
+}
+.active{
+  background: #F7FFFF;
+  border: 2px solid  #24B3BA;
+}
 
-.flight-card.active, .card.active {
+.flight-card.active {
+  position: relative;
 background: #F7FFFF;
-  border: 1px solid  #24B3BA;
+  border: 2px solid  #24B3BA;
+}
+.flight-card.active::after{
+   content: "Selected ✈"; /* you can replace with an icon */
+  position: absolute;
+  top: 5px;
+  left: -35px;
+  background: #24b2ba;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 30px;
+  transform: rotate(-45deg) translate(10px) scale(4px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 10;
+  text-align: center;
 }
 
 .card h3 {
@@ -331,12 +357,15 @@ opacity: 1;
 border-radius: 7px;
 height: fit-content;
 line-height: 20px;
-padding-top: 12px;
+padding-top: 8px;
 padding-right: 25px;
-padding-bottom: 12px;
+padding-bottom: 8px;
 border: 1px solid #EBEBEB;
 background-color: transparent;
 padding-left: 25px;
+}
+.secondary-btn:focus, .secondary-btn:active{
+  color: white !important;
 }
 .btn:focus{
   background-color: var(--primary-color);
@@ -463,8 +492,14 @@ background: #F1F5F9;
 color: var(--primary-color);
 
 }
+.skip-flight-btn:hover, 
+.outline-btn:hover, 
+.skip-flight-btn:active, 
+.skip-flight-btn:focus{
+color: white !important;
+}
 .no-flights .rounded-circle{
-background-color: #F7F7F7;
+background-color: #F7F7F7 ;
 }
 
 .no-flight-text{
@@ -493,6 +528,17 @@ width: 100% !important;
  justify-content: space-between !important;
  gap:15px !important;
 }
+.vehicle-card.active {
+    border: 2px solid #17a2b8;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background-color: #f0fcff;
+}
+
+.vehicle-card.active .vehicle-button {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
 #packageTransport{
   gap: 10px !important;
 }
