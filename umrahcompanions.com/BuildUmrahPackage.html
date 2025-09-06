@@ -153,15 +153,427 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 </div> 
 
 
+<div class="overlay-search-2"></div>
+<!-- fixed button -->
+
+
+<!-- Login Modal -->
+<!-- Modal Structure -->
+   <div id="modalLogin" class="modal modal-register">
+    <div class="modal-content">
+    <section id="formHolder">
+     <div class="row">
+        <!-- Brand Box -->
+        <div class="col s5 brand">
+          
+           <div class="brand-text">
+              <h2>Nice To See You Again!</h2>
+              <p>Login to your Umrah Companions account and start browsing our Umrah packages today. Customize your own package or select one of our curated itineraries, all for unbeatable prices. Experience everything Umrah Companions has to offer all at your fingertips!</p>
+              <ul>
+                  <li>Comprehensive platform allows you to book flights, hotels, excursions, ground transportation and apply for e-visas delivered right to your inbox all in one place.</li>
+                  <li>DIY Umrah Packages that suit everyone’s needs</li>
+                  <li>Personal dashboard to organize your bookings</li>
+                  <li>And much more!</li>
+              </ul>
+           </div>
+           
+        </div>
+        <!-- Form Box -->
+        <div class="col s12 l7 form">
+           <!-- Login Form -->
+           <div class="login form-peice">
+              <form class="login-form" method="post" action="https://umrahcompanions.com/login" id="loginform">
+                  <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
+                 <h2>Login</h2>
+                 <div class="input-field input-field1">
+                     <input type="email" class="" name="email" value="" autocomplete="email" autofocus placeholder="Enter Email">
+                                      </div>
+                 <div class="input-field input-field1">
+                     <input id="password" type="password" class=""
+                       name="password" autocomplete="current-password" placeholder="Enter Password">
+                                      </div>
+                 <div class="input-field input-field1 loginfields">
+                    <button type="button" class="waves-effect loginMbtnSubmit" onclick="login()">Login</button>
+                 </div>
+                 <div class="CTA">
+                    <a href="#" class="waves-effect switch registerMbtn" id="rg-btn">Register</a>
+                 </div>
+                 <div class="CTA">
+                    <a href="#" class="switch" id="forgotModalbtn">Forgot Password</a>
+                 </div>
+              </form>
+           </div>
+           <!-- End Login Form -->
+          </div>
+     </div>
+    </section>
+    </div>
+    <a href="#" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
+   </div>
+<!-- modal1-end --><!-- Login Modal -->
+
+<!-- Register Modal -->
+<style type="text/css">
+   .createForm .select-wrapper .select-dropdown{
+      width:100%;
+      padding:0 !important;
+   }
+   .createForm .select-wrapper .dropdown-content{
+      padding:10px !important;
+   }
+   .form .form-peice {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+   }
+</style>
+
+<div id="modalRegister" class="modal modal-register modalreg" style="">
+    <div class="modal-content">
+    <section id="formHolder">
+     <div class="row">
+        <!-- Brand Box -->
+        <div class="col s5 brand pinkbrans">
+          
+           <div class="brand-text">
+              <h2>New To Umrah Companions? Welcome Aboard!</h2>
+              <p>Creating an account will give you access to all the features and benefits our site has to offer including your own personal dashboard, the best deals on Umrah travel and much more!</p>
+              
+              <div id="travelAgentText" class="travelAgentText" style="display:none;">
+                  <h2>Sub-Travel Agents</h2>
+                  <p>
+                     We are happy to have you onboard and a part of the Umrah Companions family. Choose only the best for your clients, choose Umrah Companions. Our customizable and curated packages will check all your clients boxes and then some!
+                  </p>
+              </div>
+              <div id="umrahIndiText" class="travelAgentText umrahIndiText" style="display:none;">
+                  <h2>Individual</h2>
+                  <p>
+                     We are happy to have you onboard and a part of the Umrah Companions family. Create your account and start browsing the best deals on Umrah packages.
+                  </p>
+              </div>
+           </div>
+           
+        </div>
+        <!-- Form Box -->
+        <div class="col s12 l7 form">
+          
+           <!-- Signup Form -->
+           <div class="signup form-peice">
+              <div class="signWRaps">
+                 <h2>Create Account</h2>
+
+                  <div class="createForm">
+                     <select class="ProfileSelect">
+                        <option  value="" selected disabled>Please select user profile</optio>
+                        <option value="umrah">Individual</option>
+                        <option value="funadiq">Travel / SubTravel Agent</option>
+                     </select>
+                  </div>
+
+                 
+                  
+                  <div id="fundaiqRegDv" class="fundaiqRegDv" style="display: none;">
+                     <form method="POST" action="https://umrahcompanions.com/front/register" id="FNRegisterForm">
+                        <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">                        <div class="input-field">
+                           <input type="text" name="name" placeholder="Full Name" class="name">
+                           <span class="invalid-feedback" role="alert" id="name-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <input type="text" name="business_name" placeholder="Busniess Name" class="business_name">
+                           <span class="invalid-feedback" role="alert" id="name-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <input type="email" name="email" placeholder="Email Address" class="name">
+                           <span class="invalid-feedback" role="alert" id="email-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <input type="password" name="password" placeholder="Password" class="name">
+                           <span class="invalid-feedback" role="alert" id="password-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <input type="password" name="password_confirmation" placeholder="Confirm Password" class="name">
+                           <span class="invalid-feedback" role="alert" id="password_confirmation-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <input type="tel" placeholder="Phone Number" id="phone3" name="contact_no" style="margin-left: 2px;">
+                           <span class="invalid-feedback" role="alert" id="contact_no-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <div data-sitekey="6LeNor8qAAAAAKC2M6psc0czcnbLlEhk-NHNb-Md" class="g-recaptcha"></div>
+                           <span class="invalid-feedback" role="alert" id="captcha-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field">
+                           <label>
+                             <input type="checkbox" name="newletter" />
+                             <span>Sign up for newsletters to stay up to date with our latest deals and offers.</span>
+                             <span class="invalid-feedback" role="alert" id="newletter-error">
+                                 <strong></strong>
+                             </span>
+                           </label>
+                        </div>
+                        <div class="input-field">
+                           <label>
+                             <input type="checkbox" name="privacy" />
+                             <span>I accept the <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms of Conditions</a></span>
+                             <span class="invalid-feedback" role="alert" id="privacy-error">
+                                 <strong></strong>
+                             </span>
+                           </label>
+                        </div>
+                        <input type="hidden" name="u_code" value="fn">
+                        <input type="hidden" name="code" class="country_code">
+                        <input type="hidden" name="role_id" value="4"/>
+                        <input type="hidden" name="partner_id" value="1"/>
+                        <div class="input-field crtdv">
+                           <button type="button" class="waves-effect createbtn RegisterMbtnSubmit" onclick="register('fn')">Create Account</button>
+                        </div>
+                        <div class="input-field">
+                           <a href="javascript:void(0)" class="waves-effect bdrbtn loginMbtn" id="loginMbtn">Login</a>
+                        </div>
+                     </form>                      
+                  </div><!-- fundaiqDv --> 
+                  <div id="umrahRegDv" class="fundaiqRegDv umrahRegDv" style="display: none;">
+                     <form method="POST" action="https://umrahcompanions.com/front/register" id="UCRegisterForm">
+                        <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">                        <input type="hidden" name="u_code" value="uc">
+                        <div class="input-field col s12 m6 l12">
+                           <input type="text" name="name" placeholder="Full Name" class="name">
+                           <span class="invalid-feedback" role="alert" id="name-error">
+                                 <strong></strong>
+                             </span>
+                        </div>
+                        <div class="input-field col s12 m6 l12">
+                           <input type="email" name="email" placeholder="Email Address" class="name">
+                           <span class="invalid-feedback" role="alert" id="email-error">
+                                 <strong></strong>
+                             </span>
+                        </div>
+                        <div class="input-field col s12 m6 l12">
+                           <input type="password" name="password" placeholder="Password" class="name">
+                           <span class="invalid-feedback" role="alert" id="password-error">
+                                 <strong></strong>
+                             </span>
+                        </div>
+                        <div class="input-field col s12 m6 l12">
+                           <input type="password" name="password_confirmation" placeholder="Confirm Password" class="name">
+                           <span class="invalid-feedback" role="alert" id="password_confirmation-error">
+                                 <strong></strong>
+                             </span>
+                        </div>
+                        <input type="hidden" name="code" class="country_code">
+                        <div class="input-field col s12 m12 l12">
+                           <input type="tel" placeholder="Phone Number" id="phone4" name="contact_no" style="margin-left: 2px;">
+                           <span class="invalid-feedback" role="alert" id="contact_no-error">
+                                 <strong></strong>
+                             </span>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                           <div data-sitekey="6LeNor8qAAAAAKC2M6psc0czcnbLlEhk-NHNb-Md" class="g-recaptcha"></div>
+                           <span class="invalid-feedback" role="alert" id="captcha-error">
+                              <strong></strong>
+                           </span>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                           <label>
+                             <input type="checkbox" name="newletter" />
+                             <span>Sign up for newsletters to stay up to date with our latest deals and offers.</span>
+                             <span class="invalid-feedback" role="alert" id="newletter-error">
+                                 <strong></strong>
+                             </span>
+                           </label>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                           <label>
+                             <input type="checkbox" name="privacy" />
+                             <span>I accept the <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms of Conditions</a></span>
+                             <span class="invalid-feedback" role="alert" id="privacy-error">
+                                 <strong></strong>
+                             </span>
+                           </label>
+                        </div>
+                        <input type="hidden" name="role_id" value="3"/>
+                        <input type="hidden" name="partner_id" value="1"/>
+                        <div class="input-field col s12 m12 l12 crtdv">
+                           <button type="button" class="waves-effect createbtn RegisterMbtnSubmit" id="crtfunadiq" onclick="register('uc')">Create Account</button>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                           <a href="javascript:void(0)" class="waves-effect bdrbtn loginMbtn" id="loginMbtn">Login</a>
+                        </div>
+
+
+                       </form>                      
+                  </div><!-- umrahDv -->        
+
+                
+              </div><!-- signWRaps ends -->
+               <!-- Check your email -->
+                  <div class="signWRaps2" style="display: none;">
+                     <h2 class="main-heading">Hi John! <span class="lightHeading"> Check your email to activate your account</span></h2>
+                     <div class="textSuccess">
+                        <p>We just sent a link to <a href="javascript:void(0)" class="emailAdd">johndoe@email.com.</a> Didn’t receive the email?</p>
+                        <a href="javascript:void(0)" class="btn waves-effect waves-light h-btn-done viewBtn">Resend</a>
+                     </div>
+                     <div class="success-animation-1">
+                       <svg class="checkmark-d" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                         <path class="checkmark__check-d" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                      </svg>
+                      
+                   </div> 
+                </div>  <!-- Check your email -->       
+                
+           </div>
+           <!-- End Signup Form -->
+
+           
+          
+
+        </div>
+     </div>
+    </section>
+    </div>
+    <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
+</div><!-- Register Modal -->
+
+<!-- Password Reset Modal -->
+<style type="text/css">
+   .radio-item [type="radio"] {
+      display: none;
+   }
+   .radio-section{margin-bottom: 18px;}
+   .radio-section .radio-list{display:flex}
+   .radio-section .radio-item{margin-right:30px;}
+   .radio-item label {
+      display: block;
+      padding: 5px 48px;
+      background: var(--blue-color);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px !important;
+      font-weight: 400;
+      min-width: 200px;
+      white-space: nowrap;
+      position: relative;
+      transition: 0.4s ease-in-out 0s;
+      color: #fff;
+   }
+   .radio-item label:after,
+   .radio-item label:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+   }
+   .radio-item label:after {
+      height: 19px;
+    width: 19px;
+    border: 2px solid var(--dark-ocean);
+    left: 13%;
+    top: 50%;
+    transform: translate(-49%, -50%);
+   }
+   .radio-item label:before {
+      background: var(--dark-ocean);
+       height: 13.5px;
+       width: 13.5px;
+       left: 13%;
+       top: 50%;
+       transform: scale(5);
+       opacity: 0;
+       visibility: hidden;
+       transition: 0.4s ease-in-out 0s;
+       transform: translate(-50%, -50%);
+   }
+   .radio-item [type="radio"]:checked ~ label {
+      border-color: #524eee;
+   }
+   .radio-item [type="radio"]:checked ~ label::before {
+      opacity: 1;
+      visibility: visible;
+/*      transform: scale(1);*/
+   }
+</style>
+
+<div id="modalpassword" class="modal modal-register modalPass">
+    <div class="modal-content">
+    <section id="formHolder">
+     <div class="row">
+         <div class="col-12">
+            <div class="resetDv">
+               <h2>Reset Your Password</h2>
+               <p>Forgot your password? Don’t worry, enter your email address below and we’ll email you instructions on how to reset your password</p>
+               <div class="formP">
+                  <form action="https://umrahcompanions.com/forget-password" method="POST" id="resetform">
+                     <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
+
+                     <section class="radio-section">
+                        <div class="radio-list">
+                           <div class="radio-item"><input name="radio" id="radio1" type="radio" value="email" checked class="ResetRadioBtn"><label for="radio1">Email</label></div>
+                           <div class="radio-item"><input name="radio" id="radio2" type="radio" value="whatsapp" class="ResetRadioBtn"><label for="radio2">Whatsapp</label></div>
+                        </div>
+                     </section>
+
+                     <div class="InputEmail">
+                        <input type="email" class="" name="email"
+                          value="" required autocomplete="email" autofocus placeholder="Enter Email">
+                                             </div>
+
+                     <div class="InputWhatsapp" style="display:none;">
+                        <input type="number" class="" name="whatsapp_no"
+                          value="" required autocomplete="whatsapp_no" autofocus placeholder="92XXXXXXXXXX">
+                                             </div>
+
+                     <button type="button" class="waves-effect sendmbtn" onclick="passreset()">Send</button>
+                  </form>
+               </div>
+            </div>
+            <div class="formSuccess" style="display:none;">
+               <h2>Check Your Email</h2>
+               <p>Check your inbox and follow the instructions to reset your password. Didn’t get an email? Check your spam folder.</p>
+            </div>
+         </div>
+     </div>
+    </section>
+    </div>
+    <a href="#" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
+</div><!-- Password Reset Modal -->
 
     <!-- <div id="footer"></div> -->
 </body>
+<!-- Section Content -->
+
+<!-- Common Js -->
+   <script src="assets/frontend/js/common.js">
+</script>
+
+<script src="assets/frontend/js/modal.js"></script>
 <script>
       AOS.init();
 
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="assets/frontend/js/materialize.min.js"></script><script type="text/javascript" src="assets/frontend/js/select.js"></script>
+<script type="text/javascript" src="assets/frontend/js/javascript.js"></script>
+<script src="../cdn.jsdelivr.net/npm/jquery-validation%401.19.3/dist/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"crossorigin="anonymous"></script>
+<script src="assets/backoffice/vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+<script src="assets/frontend/js/intlTelInput.js"></script>
 
-<script type="text/javascript" src="assets/frontend/js/materialize.min.js"></script>
+<!-- Section Content -->
+
 <script src="assets/frontend/js/package-builder/flight-filter.js"></script>
 <script src="assets/frontend/js/package-builder/vehicle.js"></script>
 <script src="assets/frontend/js/main.js"></script>
