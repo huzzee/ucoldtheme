@@ -410,20 +410,19 @@ function initCounters() {
 }
 
 const toggleBtn = document.getElementById("toggleBreakdown");
+const toggleSpan = document.getElementById("toggleSpan")
 const breakdownCard = document.getElementById("breakdownCard");
 toggleBtn.addEventListener("click", function () {
-  if(bookingData.flight!==null){
     breakdownCard.classList.toggle("open");
     document.getElementsByClassName("breakdown-card")[0].style.display = "block";
 
     if (breakdownCard.classList.contains("open")) {
-      toggleBtn.textContent = "Hide Breakdown ";
+      toggleSpan.textContent = "Hide Breakdown ";
       document.getElementsByClassName("breakdown-card")[0].style.display = "block"
     } else {
-      toggleBtn.textContent = "Show Breakdown ";
+      toggleSpan.textContent = "Show Breakdown ";
       document.getElementsByClassName("breakdown-card")[0].style.display = "none";
 
-    }
   }
 });
 

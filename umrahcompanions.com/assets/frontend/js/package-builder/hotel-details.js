@@ -63,7 +63,8 @@ const madHotels=[
     },
 ];
 
-let hotelName=''
+let hotelName='';
+let destination='';
 function changeImage(el) {
   let mainImage = document.getElementById("mainImage");
   mainImage.src = el.src;
@@ -71,6 +72,8 @@ function changeImage(el) {
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
 hotelName = urlParams.get("hotel");
+destination= urlParams.get("destination");
+
  // Merge both hotel lists
   const allHotels = [...makHotels, ...madHotels];
   const selectedHotel = allHotels.find(h => h.name === hotelName);
@@ -79,6 +82,8 @@ hotelName = urlParams.get("hotel");
       accordion: true 
     });
   });
+
+  
 // Track selected rooms
 let selectedRooms = [];
 
@@ -120,21 +125,27 @@ function updateSelection(roomType, quantity, box) {
 
 function selectRoomsAndBack() {
   // Merge both hotel lists
-  const allHotels = [...makHotels, ...madHotels];
-  const selectedHotel = allHotels.find(h => h.name === hotelName);
-  // Build query string from selectedRooms
-  const query = selectedRooms
-    .map(r => `${encodeURIComponent(r.type)}=${encodeURIComponent(r.qty)}`)
-    .join("&");
+  
+    const allHotels = [...makHotels, ...madHotels];
+    const selectedHotel = allHotels.find(h => h.name === hotelName);
+    // Build query string from selectedRooms
+    const query = selectedRooms
+      .map(r => `${encodeURIComponent(r.type)}=${encodeURIComponent(r.qty)}`)
+      .join("&");
 
-  // Add hotel name and city into query
-  let extraParams = "";
-  if (selectedHotel) {
-    extraParams = `&hotel=${encodeURIComponent(selectedHotel.name)}&city=${encodeURIComponent(selectedHotel.city)}`;
+    // Add hotel name and city into query
+    let extraParams = "";
+    if (selectedHotel) {
+      extraParams = `&hotel=${encodeURIComponent(selectedHotel.name)}&city=${encodeURIComponent(selectedHotel.city)}`;
+    }
+
+  if(destination=="" || destination==null){// Redirect back with rooms + hotel + city
+    window.location.href =
+      `/umrahcompanions.com/BuildUmrahPackage.html?tab=2&step=another-hotel&${query}${extraParams}`;
+  }else{
+     window.location.href =
+      `/umrahcompanions.com/checkout.html?${query}${extraParams}`;
+
   }
-
-  // Redirect back with rooms + hotel + city
-  window.location.href =
-    `/umrahcompanions.com/BuildUmrahPackage.html?tab=2&step=another-hotel&${query}${extraParams}`;
 }
 

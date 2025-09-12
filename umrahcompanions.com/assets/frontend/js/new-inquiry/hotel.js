@@ -46,7 +46,7 @@ function addFormRow() {
         </div>
 
         <div class="col s12 l8" style="margin-left:0px !important">
-          <div class="hotel-item" style="width:97%">
+          <div class="hotel-item select" >
             <select class="browser-default hotel-select" name="hotels[${hotelIndex}][prefered_hotels]" data-index="${hotelIndex}" style="width:100%;" multiple>
               <option value="">Select Hotel</option>
             </select>

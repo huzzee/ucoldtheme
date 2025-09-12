@@ -29,7 +29,7 @@
 .package-builder-hotel-details{
  font-family: 'Inter', sans-serif;
   margin: 0;
-  background: #f3f9ff;
+  background: #f7f7f7;
   padding: 2rem;
   color: #1d2b53;
 }
@@ -46,7 +46,7 @@ h3.heading{
     color: var(--primary-color);
     font-size: 18px;
     font-weight: 600;
-    margin: 0px !important;
+    margin: 5px 0px !important;
 }
 .row_hotel_detail{
     margin: 0px !important;
@@ -73,6 +73,7 @@ h3.heading{
     padding: 0px !important;
 }
 img.responsive-img{
+  width: 90%;
     border-radius: 15px;
 }
 

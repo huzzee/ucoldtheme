@@ -26,6 +26,7 @@ $(function () {
   });
     $("#register-Modal").load("assets/frontend/shared/register-modal.html");
 
+  $("#contact-card").load("assets/frontend/shared/contact-card.html");
 
   // Load footer content
   $("#footer").load("assets/frontend/shared/footer.html");

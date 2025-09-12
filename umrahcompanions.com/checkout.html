@@ -78,145 +78,377 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <link rel="stylesheet" type="text/css" href="assets/frontend/css/intlTelInput.css">
 <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  />
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/common.css">
+<link rel="stylesheet" href="assets/frontend/css/checkout.css">
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/footer.css">
-<link rel="stylesheet" href="assets/frontend/css/package-builder.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <!-- tabs -->
 <body>
     <div id="header"></div>
-    <section class="package-builder wrapper">
-    <!-- Tabs Header -->
-     <main class="wrapper">
-        <div class="tabs-header">
-            <div class="tab active " data-aos="fade-down" data-aos-duration="1000"
-                data-tab="assets/frontend/shared/tabs/pilgrim-information.html">1. Pilgrim Information </div>
-            <hr>
-            <div class="tab " data-aos="fade-down" data-aos-duration="1000" 
-            data-tab="assets/frontend/shared/tabs/customize-tab.html">2. Customization</div>
-            <hr>
-            <div class="tab " data-aos="fade-down" data-aos-duration="1000" 
-            data-tab="assets/frontend/shared/tabs/confirmation.html">3. Confirmation</div>
+<div class="checkout-section wrapper">
+        <div class="container">
+            <button class="btn-outline">Back to details</button>
+            <div class="row form-row tabs-section">
+                <ul class="tabs">
+                    <li>
+                        <img src="assets/frontend/img/check-circle.svg" alt="">
+                        <p>Selection</p> 
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="assets/frontend/img/file-text.svg" alt="">
+                        <p>Review</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="assets/frontend/img/phone.svg" alt="">
+                        <p>Contact</p>  
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="assets/frontend/img/wallet.svg" alt="">
+                        <p>Payment</p> 
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="assets/frontend/img/handshakeGrey.svg " alt="">
+                        <p>Confirmation</p> 
+                    </li>
+                </ul>
+            </div>
+            <div class="row form-row row-checkout">
+                <div class="col l7 s12">
+                    <div class="main-content">
+                        <form action="">   
+                            <ul class="collapsible popout contact" id="passenger-section">
+                                <h3>Passengers</h3>
+                                <li>
+                                    <div class="collapsible-header">
+                                        Contact Details
+                                    </div>  
+                                    <div class="collapsible-body" style="display: block;">
+                                        <hr>
+                                        <h6>Traveler 1</h6>
+                                        <div class="row form-row checkout-row">
+                                            <div class="col s12 m6 l12 wrap_spacing">
+                                                <input type="text" class="form-control active-state" name="fullname" placeholder="Full Name">
+                                            </div>
+                                            <div class="col s12 l12 wrap_spacing">
+                                                <input
+                                                    class="active-state"
+                                                    placeholder=""
+                                                    style=""
+                                                    id="phone"
+                                                    type="tel"
+                                                    name="phoneno"
+                                                    onkeypress="return onlyNumberKey(event)" />
+                                            
+                                            </div>
+                                            <div class="col s12 m6 l12 wrap_spacing">
+                                                <input type="text" class="form-control active-state" name="email" placeholder="Email">
+                                            </div>
+
+                                        </div>
+                                        <hr>
+                                        <div class="row form-row checkout-row">
+                                            <div class="col l12" style="display: flex; justify-content: start; align-items:center;">
+                                                <input type="checkbox" name="account" id="account">
+                                                <label for="account">Create my account.</label>
+                                                
+                                            </div>
+                                            <div class="col l12" style="display: flex; justify-content: start; align-items:center;">
+                                                <input type="checkbox" name="agree" id="agree">
+                                                <label for="agree">I agree to the terms & conditions.</label>
+                                                
+                                            </div>
+                                            <div>
+                                                By agreeing to these terms and conditions, 
+                                                you consent to the creation of an account using the provided details.
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <h3>Guest Information</h3>
+                                <li>
+                                    <div class="collapsible-header">
+                                        Contact Details
+                                    </div>
+                                    
+                                    <div class="collapsible-body">
+                                        <hr>
+                                        <div class="row form-row checkout-row">
+                                            <div class="col s12 m6 l12 wrap_spacing">
+                                                <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
+                                            </div>
+                                            <div class="col s12 l12 wrap_spacing">
+                                                <input
+                                                    class="active-state"
+                                                    placeholder=""
+                                                    style=""
+                                                    id="guestPhone"
+                                                    type="tel"
+                                                    name="phoneno"
+                                                    onkeypress="return onlyNumberKey(event)" />
+                                            </div>
+                                            <div class="col s12 m6 l12 wrap_spacing">
+                                                <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
+                                            </div>
+
+                                        </div>                                
+                                    </div>
+                                </li>
+
+                            </ul>
+                            <ul class="collapsible popout payment" id="payment-section" style="display: none;">
+                                <h3>Payment</h3>
+                                <li>
+                                    <div class="collapsible-header">
+                                        Secure Online Checkout
+                                    </div>  
+                                    <div class="collapsible-body" style="display: block;">
+                                        <hr>
+                                        <div>
+                                            <h6>Select Payment Option</h6>
+                                            <p>Please select your option of payment from the options seen below:</p>
+                                            <p>Get <span class="text-green">5% off</span> on online payment.</p>
+                                        </div>
+                                        <div class="payment-cards">
+                                            <div class="payment-card active" data-method="credit">
+                                                <img src="assets/frontend/img/CreditCardDark.svg" alt="Credit Card">
+                                                <span>Credit Card</span>
+                                            </div>
+                                            <div class="payment-card" data-method="bank">
+                                                <img src="assets/frontend/img/Bank.svg" alt="Bank">
+                                                <span>Bank Transfer</span>
+                                            </div>
+                                            <div class="payment-card" data-method="cash">
+                                                <img src="assets/frontend/img/MoneyWavy.svg" alt="Cash">
+                                                <span>Cash</span>
+                                            </div>
+                                        </div>
+
+                                        <div id="credit-section" class="payment-section"> 
+                                            <div class="row form-row credit-cards">
+                                                <div class="card">
+                                                    <img  src="assets/frontend/img/masterCard.png" alt="">
+                                                </div>
+                                                <div class="card ">
+                                                    <img src="assets/frontend/img/discover.png" alt="">
+
+                                                </div>
+                                                <div class="card">
+                                                    <img src="assets/frontend/img/American-Express.png" alt="">
+
+                                                </div>
+                                                <div class="card ">
+                                                    <img src="assets/frontend/img/visa.png" alt="">
+                                                </div>
+                                            </div>
+                                            <h6>Credit Card Payment</h6>
+                                            <hr>
+                                            <strong style="margin: 10px 0px;">Fill Your Card Information</strong>
+                                            <div class="row form-row checkout-row">
+                                                <div class="col s12 m6 l12 wrap_spacing">
+                                                 <input type="text" class="form-control" placeholder="Card Holder Name">
+                                                   
+                                                </div>
+                                                <div class="col s12 m6 l12 wrap_spacing">
+                                                <input type="text" class="form-control" placeholder="Card Number">
+
+                                                </div>
+                                                <div class="col s12 m6 l5 wrap_spacing">
+                                                 <input type="text" class="form-control" placeholder="Expiry">
+                                                   
+                                                </div>
+                                                <div class="col s12 m6 l5 wrap_spacing">
+                                                 <input type="text" class="form-control" placeholder="CVV">
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="bank-section" class="payment-section" style="display:none;">
+                                            <div class="row form-row">
+                                                <h6>Select Payment Option</h6>
+                                                <p>Please select your option of payment from the options seen below:</p>
+                                                <p>Get <span class="text-green">5% off</span> on online payment.</p>
+                                            </div>
+                                            <div class="row form-row credit-cards " style="gap: 20px ; ">
+                                                <div class="card">
+                                                    <img  src="assets/frontend/img/flagpk.svg" alt=""> Pakistan
+                                                </div>
+                                                <div class="card ">
+                                                    <img src="assets/frontend/img/flagcanada.svg" alt="">Canada
+
+                                                </div>
+                                                <div class="card">
+                                                    <img src="assets/frontend/img/flagUAE.svg" alt="">UAE
+
+                                                </div>
+                                                <div class="card ">
+                                                    <img src="assets/frontend/img/flagUK.svg" alt="">UK
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="green-card">
+                                                    <div class="row form-row" style="margin:10px 0px;">
+                                                        <h6 class="col l10" style="padding: 0px;">Islamabad, Pakistan</h6>
+                                                        <img src="assets/frontend/img/flagrect.svg" alt="">
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <h6 class="col l4">Bank Name</h6>
+                                                        <p class="col l8">Saudi National Bank</p>                                             
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <h6 class="col l4">Account Name</h6>
+                                                        <p class="col l8">Company Al Ashab for Information Technology</p>                                             
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <h6 class="col l4">IBAN</h6>
+                                                        <p class="col l8">SA34 1000 0086 1000 0179 4305</p>                                             
+                                                    </div>
+                                                    <div class="row form-row">
+                                                        <h6 class="col l4">Swift Code</h6>
+                                                        <p class="col l8">NCBKSAJE</p>                                             
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div id="cash-section" class="payment-section" style="display:none;">
+                                            <div class="outline-box">
+                                                <p><strong>Note:</strong> Once payment is made at the start of the journey, the driver will give you an invoice.</p>
+
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </li>
+
+                               
+
+                            </ul>
+
+
+                                
+                        </form>
+                        
+
+                    </div>
+                </div>
+                <div class="col l5 s12">
+                    <div class="box"  >
+                        <h3 class="heading" style="margin-bottom: 10px !important;">Cart</h3>
+                        <div class="hotel">
+                            <img width="30%" src="assets/frontend/img/hotel1.png" alt="">
+                            <div >
+                                <h6>Crown Plaza Madinah</h6>
+                                <div class="" style="display: flex; justify-content: start; align-items: start;">
+                                    <img src="assets/frontend/img/MapPin.svg" alt="">
+                                    <address>1st Ring Road, Between, King Faisal Street, Madinah Saudi Arabia</address>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="details">
+                            <div class="box-border">
+                                <div class="row form-row">
+                                    <div class="col l6">
+                                        <span>Check in Date</span>
+                                        <p>Jul 25, 2024</p>
+                                    </div>
+                                    <div class="col l5">
+                                        <span>Check Out Date</span>
+                                        <p>Jul 25, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-border">
+                                <div class="row form-row">
+                                    <div class="col l6">
+                                        <span>Hotel Name</span>
+                                        <p>Crown Plaza Madinah</p>
+                                    </div>
+                                    <div class="col l5">
+                                        <span>Total Nights</span>
+                                        <p>04 Nights</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-border">
+                                <div class="row form-row">
+                                    <div class="col l6">
+                                        <span>No Of Rooms</span>
+                                        <p>2 Rooms</p>
+                                    </div>
+                                    <div class="col l5">
+                                        <span>Room Type</span>
+                                        <p>Double</p>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <button class="btn primary-btn" style="width: 100%;" onclick="goToPayment()">
+                                Confrim & Continue
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
-            <!-- Dynamic content container -->
-            <div id="tab-content" class="tab-content" >
-                <!-- Content from other files will load here -->
-            </div>
-     </main> 
-       
-    
     </section>
-   <div id="custom-footer" class="builder-footer" style="display: none;">
-        <div class="">
-            <div class="row form-row" style="display:flex; justify-content: space-between; align-items: center;">
-            <div class="col l2" style="display: flex; justify-content: start;">
-                <button type="button" class="secondary-btn" onclick="showPrev()">Back</button>
-            </div>
 
-            <div class="col l5" id="toggleBreakdown"  style="display: flex; justify-content: center;gap:20px; flex-wrap: wrap; align-items: center; cursor: pointer;">
-                <span class="footer-span">Total Package Cost</span>
-                <h5 class="sub-heading" style="margin: 5px 0px;">PKR 120,000</h5>
-                <span class="footer-span" id="toggleSpan" style="cursor:pointer;">Show Breakdown </span>
-            </div>
-
-            <div class="col l5 footer-col" style="display: flex; justify-content: end; gap:10px">
-                <button class="btn btn-outline skip-flight-btn" onclick="skip()">Skip Flight</button>
-                <button type="button" id="next" class="btn primary-btn" disabled onclick="showNext()">Next</button>
-            </div>
-            </div>
-        </div>
-
-        <!-- Collapsible Breakdown -->
-        <div id="breakdownCard" class="breakdown-card">
-            <h6>Cost Breakdown</h6>
-            <div class="row breakdown-item">
-                <div class="col l8 s6">
-                    <p class="heading">Visa</p>
-                    <span>Umrah visa</span>
-                </div>
-                <h6 id="visaCost">PKR 90,000</h6>
-            </div>
-            <div class="row breakdown-item">
-                <div class="col l8 s6">
-                    <p class="heading">Flight</p>
-                    <span>PIA (Pakistan international airline) - Round tRIP</span>
-                </div>
-                <h6 id="flightCost">PKR 120,000</h6>
-            </div>
-            <div class="row breakdown-item total">
-                <div class="col l8 s6">
-                    <h6>Total</h6>
-
-                </div>
-                <h6 id="totalBreakdown">PKR 155,000</h6>
-            </div>
-        </div>
-    </div>
-
+    <div id="contact-card"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
 </div> 
 
 
 <div class="overlay-search-2"></div>
 <!-- fixed button -->
+<!-- Confirmation modal -->
+ <!-- Confirmation Modal -->
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <h4>Confirm Details</h4>
+    <p>Please confirm that your contact details are correct before proceeding to payment.</p>
+    <ul>
+      <li><strong>Name:</strong> <span id="confirmName"></span></li>
+      <li><strong>Phone:</strong> <span id="confirmPhone"></span></li>
+      <li><strong>Email:</strong> <span id="confirmEmail"></span></li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close btn-flat">Cancel</a>
+    <a href="#!" id="confirmProceed" class="modal-close btn primary-btn">Proceed</a>
+  </div>
+</div>
 
 
 <!-- Login Modal -->
 <!-- Modal Structure -->
-   <div id="modalLogin" class="modal modal-register">
-    <div class="modal-content">
-    <section id="formHolder">
-     <div class="row">
-        <!-- Brand Box -->
-        <div class="col s5 brand">
-          
-           <div class="brand-text">
-              <h2>Nice To See You Again!</h2>
-              <p>Login to your Umrah Companions account and start browsing our Umrah packages today. Customize your own package or select one of our curated itineraries, all for unbeatable prices. Experience everything Umrah Companions has to offer all at your fingertips!</p>
-              <ul>
-                  <li>Comprehensive platform allows you to book flights, hotels, excursions, ground transportation and apply for e-visas delivered right to your inbox all in one place.</li>
-                  <li>DIY Umrah Packages that suit everyone’s needs</li>
-                  <li>Personal dashboard to organize your bookings</li>
-                  <li>And much more!</li>
-              </ul>
-           </div>
-           
-        </div>
-        <!-- Form Box -->
-        <div class="col s12 l7 form">
-           <!-- Login Form -->
-           <div class="login form-peice">
-              <form class="login-form" method="post" action="https://umrahcompanions.com/login" id="loginform">
-                  <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
-                 <h2>Login</h2>
-                 <div class="input-field input-field1">
-                     <input type="email" class="" name="email" value="" autocomplete="email" autofocus placeholder="Enter Email">
-                                      </div>
-                 <div class="input-field input-field1">
-                     <input id="password" type="password" class=""
-                       name="password" autocomplete="current-password" placeholder="Enter Password">
-                                      </div>
-                 <div class="input-field input-field1 loginfields">
-                    <button type="button" class="waves-effect loginMbtnSubmit" onclick="login()">Login</button>
-                 </div>
-                 <div class="CTA">
-                    <a href="#" class="waves-effect switch registerMbtn" id="rg-btn">Register</a>
-                 </div>
-                 <div class="CTA">
-                    <a href="#" class="switch" id="forgotModalbtn">Forgot Password</a>
-                 </div>
-              </form>
-           </div>
-           <!-- End Login Form -->
-          </div>
-     </div>
-    </section>
-    </div>
-    <a href="#" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
-   </div>
+   <!-- Success Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content center-align">
+    <img src="assets/frontend/img/check-circle.svg" alt="Success" style="width:60px; margin-bottom:15px;">
+    <h4>Booking Confirmed!</h4>
+    <p>Your booking has been successfully submitted. We’ll contact you shortly with the details.</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close btn primary-btn">OK</a>
+  </div>
+</div>
+
 <!-- modal1-end --><!-- Login Modal -->
 
 <!-- Register Modal -->
@@ -582,11 +814,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- Section Content -->
 
 <script src="assets/frontend/js/package-builder/flight-filter.js"></script>
-<script src="assets/frontend/js/package-builder/vehicle.js"></script>
 <script src="assets/frontend/js/main.js"></script>
-<script src="assets/frontend/js/package-builder/package-builder.js"></script>
-<script src="assets/frontend/js/package-builder/visa.js"></script>
-<script src="assets/frontend/js/package-builder/flight.js"></script>
-<script src="assets/frontend/js/package-builder/hotel.js"></script>
-<script src="assets/frontend/js/package-builder/checkout.js"></script>
+<script src="assets/frontend/js/checkout/checkout.js"></script>
+
 </html>
