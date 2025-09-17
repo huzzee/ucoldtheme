@@ -188,10 +188,13 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
 <!-- website styling -->
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" 
+integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- fancy box -->
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-   integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" 
+integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/home.css">
 
@@ -275,9 +278,6 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       object-fit: cover;
    }
 
-   .partnerslogos {
-      height: 100px;
-   }
    @media (max-width:600px){
       .partnerslogos.zindagi{
          width:70%;
@@ -321,9 +321,6 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- Popbox Css -->
 </head>
 <body class="bodyHome">
-
-  
-
    <!-- page loader start -->
       <div class="main-loader">
           <div class="preloader-wrapper big active">
@@ -341,7 +338,6 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
           </div>
       </div>
    <!-- page loader end -->
-
    <div class="popup-wrapper">
     <div class="popup-box">
       <h2>SIGN UP & GET 10% OFF</h2>
@@ -355,12 +351,11 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       </div>
     </div>
    </div>
-   
    <div data-scroll-container>
                   
       <!-- Header -->
          <!-- Top Header -->
-<div class="topbar">
+<!-- <div class="topbar">
     <div class="container">
         <div class="topbar-Text">
             <span class="sp1">Select Pre Designed Umrah Package or Customize it for personalized Spiritual
@@ -382,9 +377,12 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
             
         </div>
     </div>
-</div><!-- Top Header -->
+</div> -->
+
+<div id="header"></div>
+<!-- Top Header -->
 <!-- nav bar -->
-<div class="forScrolltopbar innerHeader sticky">
+<!-- <div class="forScrolltopbar innerHeader sticky">
    <div class="h-w2">
       <div class="container-n">
          <div class="linkWrapper">
@@ -456,11 +454,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                </div>
             </div>
             
-                        <!-- linkC -->
          </div>
       </div>
    </div>
-   <!-- h-w2 -->
    <ul class="sidenav" id="mobile-nav">
 
       <li class="menu-item-has-child">
@@ -514,311 +510,331 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
       
    </ul>
-</div>      <!-- Header -->
+</div>   -->
+    <!-- Header -->
 
       <!-- Section Content -->
-         
-
-
 <!-- Banner -->
-<section class="innerBanner" data-scroll-section data-scroll-repeat>
+<section class="innerBanner" data-scroll-section data-scroll-repeat >
    <img data-scroll data-scroll-direction="vertical" data-scroll-speed="0" data-scroll-offset="1%"
-      src="approot/storage/app/public/images/frontend/banner.webp" alt="umrah">
+      src="approot/storage/app/public/images/frontend/banner.webp" class="innerBanner-img" alt="umrah">
    <div class="secDiv">
       <div class="container">
-         <div class="row">
-            <div class="col s12 mb-5">
-               <ul class="tabs homepage-tabs">
-                  <li class="tab"><a class="active" href="#test1"><i class="fas fa-box-open"></i>Packages</a></li>
-                  <li class="tab"><a href="#test2"><i class="fas fa-bed"></i>Hotels</a></li>
-                  <li class="tab"><a href="#test3"><i class="fas fa-car"></i>Transport</a></li>
-                  
-               </ul>
-            </div>
-            <div class="formBox">
-               <div class=" formDiv new-form">
-
-                  <!-- Package tab start -->
-                  <div id="test1" class="col s12 bannerForm">
-                     <form method="GET" action="https://umrahcompanions.com/packages">
-                        <div class="row">
-                           <div class="input-field col s12 m6 l3">
-                              <label>Season</label>
-                              <select name="season">
-                                 <option value="" disabled selected>Select Season</option>
-                                                                                                                                    <option value="52">Safar 1447</option>
-                                                                  <option value="53">Rabi Ul Awal 1447</option>
-                                                                  <option value="54">Rabi Ul Thani 1447</option>
-                                                                  <option value="55">Jamad Ul Awal 1447</option>
-                                                                  <option value="56">Jamad Ul Akhir 1447</option>
-                                                                  <option value="57">Rajab 1447</option>
-                                                                                                </select>
-                           </div>
-                           <!-- col l3 end -->
-                           
-                           <div class="input-field col s12 m6 l3">
-                              <label>Package Type</label>
-                              <select name="package_type" class="">
-                                 <option value="" disabled selected>Select Package Type</option>
-                                                                                                                                    <option value="3">Budget $</option>
-                                                                  <option value="1">Economy $$</option>
-                                                                  <option value="2">Premium $$$</option>
-                                                                                                </select>
-                           </div>
-                           <div class="input-field col s12 m6 l3">
-                              <label>Pilgrim</label>
-                              <select name="passenger" class="">
-                                 <option value="" disabled selected>Number of Pilgrims</option>
-                                  <option value="1">1</option>
-                                     <option value="2">2</option>
-                                     <option value="3">3</option>
-                                     <option value="4">4</option>
-                                     <option value="5">5</option>
-                                     <option value="6">6</option>
-                                     <option value="7">7</option>
-                                     <option value="8">8</option>
-                                     <option value="9">9</option>
-                                     <option value="10">10</option>
-                                                                  </select>
-                           </div>
-
-                           
-                           <!-- col l3 end -->
-                           
-
-                           
-                           <!-- col l4 end -->
-                           <div class="col s12 m6 l3">
-                              <div class="srchbtn searchButton">
-                                 <button type="submit"
-                                    class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
-                              </div>
-                           </div>
-                           <!-- col l2 end -->
-                           
-                        </div>
-                     </form>
-                     <!-- row end -->
+         <div class="row first-section">
+            <div class="partner">
+                <div class="custom-card">
+                  <div class="">
+                    <img src="assets/frontend/img/handshakedark.png" alt="">
+                    <p >Nusuk Partner</p>
                   </div>
-                  <!-- package tab end -->
+                  <!-- <span class="vr"></span> -->
+                  <div class="">
+                    <img src="assets/frontend/img/GlobeSimple.png"  alt="">
+                    <p>Global Offices</p>
+                  </div>
+                  <!-- <span class="vr"></span> -->
+                  <div class="">
+                    <img src="assets/frontend/img/SealCheck.png" alt="">
+                    <p>Local Support</p>
+                  </div>
+                </div>
+            </div>    
+            <h1 class="main-heading">Best Price Umrah Packages</h1>       
+            <div style="display: flex; flex-direction:column; align-items:center;">
+               <div class="col s12 mb-5 tabs-col" >
+                  <ul class="tabs homepage-tabs">
+                     <li class="tab"><a class="active" href="#test1"><i class="fas fa-box-open"></i>Packages</a></li>
+                     <li class="tab"><a href="#test2"><i class="fas fa-bed"></i>Hotels</a></li>
+                     <li class="tab"><a href="#test3"><i class="fas fa-car"></i>Transport</a></li>
+                  </ul>
+               </div>
+               <div class="formBox">
+                  <div class=" formDiv new-form">
 
-                  <!-- Transport tab start -->
-                  <div id="test3" class="col s12 bannerForm transport-tab">
+                     <!-- Package tab start -->
+                     <div id="test1" class=" bannerForm">
+                        <form method="GET" action="https://umrahcompanions.com/packages">
+                           <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
+                              <div class="input-field col s12 m6 l3">
+                                 <label>Season</label>
+                                 <select name="season">
+                                    <option value="" disabled selected>Select Season</option>
+                                                                                                                                       <option value="52">Safar 1447</option>
+                                                                     <option value="53">Rabi Ul Awal 1447</option>
+                                                                     <option value="54">Rabi Ul Thani 1447</option>
+                                                                     <option value="55">Jamad Ul Awal 1447</option>
+                                                                     <option value="56">Jamad Ul Akhir 1447</option>
+                                                                     <option value="57">Rajab 1447</option>
+                                                                                                   </select>
+                              </div>
+                              <!-- col l3 end -->
+                              
+                              <div class="input-field col s12 m6 l3">
+                                 <label>Package Type</label>
+                                 <select name="package_type" class="">
+                                    <option value="" disabled selected>Select Package Type</option>
+                                                                                                                                       <option value="3">Budget $</option>
+                                                                     <option value="1">Economy $$</option>
+                                                                     <option value="2">Premium $$$</option>
+                                                                                                   </select>
+                              </div>
+                              <div class="input-field col s12 m6 l3">
+                                 <label>Pilgrim</label>
+                                 <select name="passenger" class="">
+                                    <option value="" disabled selected>Number of Pilgrims</option>
+                                    <option value="1">1</option>
+                                       <option value="2">2</option>
+                                       <option value="3">3</option>
+                                       <option value="4">4</option>
+                                       <option value="5">5</option>
+                                       <option value="6">6</option>
+                                       <option value="7">7</option>
+                                       <option value="8">8</option>
+                                       <option value="9">9</option>
+                                       <option value="10">10</option>
+                                                                     </select>
+                              </div>
 
-                     
-                     <form method="GET" action="https://umrahcompanions.com/reservetransport">
-                        <input type="hidden" name="step" value="1">
-                        <div class="row">
-                           <div class="input-field col s12 m6 l3 selectRoute">
-                              <label>Route</label>
-                              <select name="route" required>
-                                 <option value="" disabled selected>Select Route</option>
-                                                                                                   <option value="1">Jeddah Airport / Makkah / Jeddah Airport</option>
-                                                                  <option value="2">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
-                                                                  <option value="3">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
-                                                                  <option value="4">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
-                                                                  <option value="5">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
-                                                                  <option value="6">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
-                                                                  <option value="7">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
-                                                                  <option value="8">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
-                                                                  <option value="9">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
-                                                                  <option value="10">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
-                                                                  <option value="11">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
-                                                                  <option value="39">Makkah to Taif to Makkah</option>
-                                                                  <option value="41">Makkah to Al baha to Makkah</option>
-                                                                  <option value="42">Jeddah to Al baha to Jeddah</option>
-                                                                  <option value="44">Jeddah Airport To Makkah Hotel</option>
-                                                                  <option value="45">Makkah Hotel To Jeddah Airport</option>
-                                                                  <option value="46">Jeddah Airport To Madinah Hotel</option>
-                                                                  <option value="47">Madinah Hotel To Jeddah Airport</option>
-                                                                  <option value="54">Jeddah Hotel To Jeddah City Tour</option>
-                                                                  <option value="55">Makkah Hotel To Jeddah City Tour</option>
-                                                                  <option value="56">Madinah Airport To Madinah Hotel</option>
-                                                                  <option value="57">Madinah Hotel To Madinah Airport</option>
-                                                                  <option value="58">Makkah Hotel To Madinah Hotel</option>
-                                                                  <option value="59">Madinah HotelTo Makkah Hotel</option>
-                                                                  <option value="60">Makkah Hotel To Makkah Ziyarat</option>
-                                                                  <option value="61">Madinah Hotel To Madinah Ziyarat</option>
-                                                                  <option value="62">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
-                                                                  <option value="63">Makkah Hotel To Taif Ziarat</option>
-                                                                  <option value="64">Madinah Hotel To Badar Ziarat</option>
-                                                                  <option value="65">Makkah Hotel To Makkah Train Station</option>
-                                                                  <option value="66">Makkah Train Station To Makkah Hotel</option>
-                                                                  <option value="67">Madinah Hotel To Madinah Train Station</option>
-                                                                  <option value="68">Madinah Train Station To Madinah Hotel</option>
-                                                                  <option value="69">Makkah Hotel To Masjid Ayesha Meeqat</option>
-                                                                  <option value="70">Makkah Hotel To Masjid Jurana Meeqat</option>
-                                                                                                </select>
-                           </div>
-                           <!-- col l3 end -->
+                              
+                              <!-- col l3 end -->
+                              
 
-                           <div class="input-field col s12 m6 l3 selectVehicle">
-                              <label>Vehicle</label>
-                              <select name="vehicle">
-                                 <option value="" disabled selected style="visibility:hidden;">Select Vehicle</option>
-                                                                                                   <option value="1">Car</option>
-                                                                  <option value="4">HiAce</option>
-                                                                  <option value="5">Coaster</option>
-                                                                  <option value="6">Bus</option>
-                                                                  <option value="7">H1</option>
-                                                                  <option value="8">GMC</option>
-                                                                  <option value="9">Staria</option>
-                                                                                                </select>
-                           </div>
-                           <!-- col l2 end -->
-
-                           <div class="input-field col s12 m6 l3 selectPassengers">
-                              <label>Passengers</label>
-                              <input type="number" min="1" value="1" name="passengers">
+                              
+                              <!-- col l4 end -->
+                              <div class="col s12 m6 l2">
+                                 <div class="srchbtn searchButton">
+                                    <button type="submit"
+                                       class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+                                 </div>
+                              </div>
+                              <!-- col l2 end -->
                               
                            </div>
-                           <!-- col l2 end -->
-                           <div class="col s12 m6 l3">
-                              <div class="srchbtn searchButton">
-                                 <button type="submit"
-                                    class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
-                              </div>
-                           </div>
-                           <!-- col l2 end -->
-                        </div>
+                        </form>
                         <!-- row end -->
-                     </form>
-                  </div>
-                  <!-- Transport tab end -->
+                     </div>
+                     <!-- package tab end -->
 
-                  <!-- Hotel tab start -->
-                  <div id="test2" class="col s12 bannerForm hotel-tab">
-                     <form method="GET" action="https://umrahcompanions.com/reservehotel">
-                        <div class="row">
-                           <div class="col s12 m6 l3 ">
-                              <div class="input-field fielDv">
-                                 <label>Location</label>
-                                 <ul class="radioUl">
-                                    <li>
-                                       <label>
-                                          <input name="city" value="56772" type="radio" checked />
-                                          <span><em>Makkah</em></span>
-                                       </label>
-                                    </li>
-                                    <li>
-                                       <label>
-                                          <input name="city" value="56773" type="radio" />
-                                          <span><em>Madinah</em></span>
-                                       </label>
-                                    </li>
-                                 </ul>
+                     <!-- Transport tab start -->
+                     <div id="test3" class="col s12 bannerForm transport-tab">
+
+                        
+                        <form method="GET" action="https://umrahcompanions.com/reservetransport">
+                           <input type="hidden" name="step" value="1">
+                           <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
+                              <div class="input-field col s12 m6 l3 selectRoute">
+                                 <label>Route</label>
+                                 <select name="route" required>
+                                    <option value="" disabled selected>Select Route</option>
+                                                                                                      <option value="1">Jeddah Airport / Makkah / Jeddah Airport</option>
+                                                                     <option value="2">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
+                                                                     <option value="3">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
+                                                                     <option value="4">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
+                                                                     <option value="5">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
+                                                                     <option value="6">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
+                                                                     <option value="7">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
+                                                                     <option value="8">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
+                                                                     <option value="9">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
+                                                                     <option value="10">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
+                                                                     <option value="11">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
+                                                                     <option value="39">Makkah to Taif to Makkah</option>
+                                                                     <option value="41">Makkah to Al baha to Makkah</option>
+                                                                     <option value="42">Jeddah to Al baha to Jeddah</option>
+                                                                     <option value="44">Jeddah Airport To Makkah Hotel</option>
+                                                                     <option value="45">Makkah Hotel To Jeddah Airport</option>
+                                                                     <option value="46">Jeddah Airport To Madinah Hotel</option>
+                                                                     <option value="47">Madinah Hotel To Jeddah Airport</option>
+                                                                     <option value="54">Jeddah Hotel To Jeddah City Tour</option>
+                                                                     <option value="55">Makkah Hotel To Jeddah City Tour</option>
+                                                                     <option value="56">Madinah Airport To Madinah Hotel</option>
+                                                                     <option value="57">Madinah Hotel To Madinah Airport</option>
+                                                                     <option value="58">Makkah Hotel To Madinah Hotel</option>
+                                                                     <option value="59">Madinah HotelTo Makkah Hotel</option>
+                                                                     <option value="60">Makkah Hotel To Makkah Ziyarat</option>
+                                                                     <option value="61">Madinah Hotel To Madinah Ziyarat</option>
+                                                                     <option value="62">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
+                                                                     <option value="63">Makkah Hotel To Taif Ziarat</option>
+                                                                     <option value="64">Madinah Hotel To Badar Ziarat</option>
+                                                                     <option value="65">Makkah Hotel To Makkah Train Station</option>
+                                                                     <option value="66">Makkah Train Station To Makkah Hotel</option>
+                                                                     <option value="67">Madinah Hotel To Madinah Train Station</option>
+                                                                     <option value="68">Madinah Train Station To Madinah Hotel</option>
+                                                                     <option value="69">Makkah Hotel To Masjid Ayesha Meeqat</option>
+                                                                     <option value="70">Makkah Hotel To Masjid Jurana Meeqat</option>
+                                                                                                   </select>
                               </div>
-                           </div>
-                           <!-- col l3 end -->
-                           <div class="col s12 m6 l3 ">
-                              <div class="input-field fielDv">
-                                 <label>Check-in Check-out</label>
-                                 <input type="text" id="daterange" placeholder="Add Dates" name="dates">
+                              <!-- col l3 end -->
+
+                              <div class="input-field col s12 m6 l3 selectVehicle">
+                                 <label>Vehicle</label>
+                                 <select name="vehicle">
+                                    <option value="" disabled selected style="visibility:hidden;">Select Vehicle</option>
+                                                                                                      <option value="1">Car</option>
+                                                                     <option value="4">HiAce</option>
+                                                                     <option value="5">Coaster</option>
+                                                                     <option value="6">Bus</option>
+                                                                     <option value="7">H1</option>
+                                                                     <option value="8">GMC</option>
+                                                                     <option value="9">Staria</option>
+                                                                                                   </select>
                               </div>
+                              <!-- col l2 end -->
+
+                              <div class="input-field col s12 m6 l3 selectPassengers">
+                                 <label>Passengers</label>
+                                 <input type="number" min="1" value="1" name="passengers">
+                                 
+                              </div>
+                              <!-- col l2 end -->
+                              <div class="col s12 m6 l2">
+                                 <div class="srchbtn searchButton">
+                                    <button type="submit"
+                                       class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+                                 </div>
+                              </div>
+                              <!-- col l2 end -->
                            </div>
-                           <!-- col l4 end -->
+                           <!-- row end -->
+                        </form>
+                     </div>
+                     <!-- Transport tab end -->
+
+                     <!-- Hotel tab start -->
+                     <div id="test2" class="col s12 bannerForm hotel-tab">
+                        <form method="GET" action="https://umrahcompanions.com/reservehotel">
+                           <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
+                              <!-- <div class=""> -->
+                                 <div class="input-field col s12 m6 l3">
+                                    <label>Location</label>
+                                    <ul class="radioUl">
+                                       <li>
+                                          <label>
+                                             <input name="city" value="56772" type="radio" checked />
+                                             <span><em>Makkah</em></span>
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <input name="city" value="56773" type="radio" />
+                                             <span><em>Madinah</em></span>
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 <!-- </div> -->
+                              </div>
+                              <!-- col l3 end -->
+                              <!-- <div class=""> -->
+                                 <div class="input-field col s12 m6 l3 ">
+                                    <label>Check-in Check-out</label>
+                                    <input type="text" id="daterange" placeholder="Add Dates" name="dates">
+                                 </div>
+                              <!-- </div> -->
+                              <!-- col l4 end -->
 
 
-                           <div class="col s12 m6 l3 ">
-                              <div class="input-field fielDv">
-                                 <div class="input-field fielDv4">
-                                    <label>Pilgrims | Rooms</label>
-                                    <div class="inputForm prsnF">
-                                       <div class="numberPersons">
-                                          <h4 class="quanBtn">
-                                             <strong class="numberQ">
-                                                <em><b class="adNos">2 </b>Adult</em>
+                              <!-- <div class=" "> -->
+                                 <!-- <div class="input-field "> -->
+                                    <div class="input-field fielDv4 col s12 m6 l3">
+                                       <label>Pilgrims | Rooms</label>
+                                       <div class="inputForm prsnF">
+                                          <div class="numberPersons">
+                                             <h4 class="quanBtn">
+                                                <strong class="numberQ">
+                                                   <em><b class="adNos">2 </b>Adult</em>
+                                                   <small>-</small>
+                                                   <em><b class="newNos">0 </b>Child</em>
+                                                </strong>
                                                 <small>-</small>
-                                                <em><b class="newNos">0 </b>Child</em>
-                                             </strong>
-                                             <small>-</small>
-                                             <em><b class="chdNos">1 </b>Room</em>
-                                          </h4>
-                                          <input type="hidden" name="total_travellers" value="2">
-                                          <input type="hidden" name="total_rooms" value="1">
-                                          <div class="person-boxdate" style="display: none;">
-                                             <div class="inputBox">
-                                                <div class="MainAppend">
-                                                   <div class="MainInputs">
-                                                      <div class="inputStp inputStp1">
-                                                         <div class="i-left">
-                                                            Adult/Room
+                                                <em><b class="chdNos">1 </b>Room</em>
+                                             </h4>
+                                             <input type="hidden" name="total_travellers" value="2">
+                                             <input type="hidden" name="total_rooms" value="1">
+                                             <div class="person-boxdate" style="display: none;">
+                                                <div class="inputBox">
+                                                   <div class="MainAppend">
+                                                      <div class="MainInputs">
+                                                         <div class="inputStp inputStp1">
+                                                            <div class="i-left">
+                                                               Adult/Room
+                                                            </div>
+                                                            <div class="i-right">
+                                                               <button type="button" class="travellersMinusBtn"
+                                                                  data-key="0"><i class="fa fa-minus"></i></button>
+                                                               <span id="travellersNumber-0">2</span>
+                                                               <input type="hidden" name="rooms[adults][]" value="2"
+                                                                  min="0" class="AdultInput" id="AdultInput-0">
+                                                               <button type="button" class="travellersPlusBtn"
+                                                                  data-key="0"><i class="fa fa-plus"></i></button>
+                                                            </div>
                                                          </div>
-                                                         <div class="i-right">
-                                                            <button type="button" class="travellersMinusBtn"
-                                                               data-key="0"><i class="fa fa-minus"></i></button>
-                                                            <span id="travellersNumber-0">2</span>
-                                                            <input type="hidden" name="rooms[adults][]" value="2"
-                                                               min="0" class="AdultInput" id="AdultInput-0">
-                                                            <button type="button" class="travellersPlusBtn"
-                                                               data-key="0"><i class="fa fa-plus"></i></button>
+                                                         <div class="inputStp">
+                                                            <div class="i-left">
+                                                               Child
+                                                            </div>
+                                                            <div class="i-right">
+                                                               <button type="button" class="childMinusBtn" data-key="0"><i
+                                                                     class="fa fa-minus"></i></button>
+                                                               <span id="childNumber-0">0</span>
+                                                               <input type="hidden" name="rooms[childs][]" value="0"
+                                                                  min="0" class="ChildInput" id="ChildInput-0">
+                                                               <button type="button" class="childPlusBtn" data-key="0"><i
+                                                                     class="fa fa-plus"></i></button>
+                                                            </div>
                                                          </div>
-                                                      </div>
-                                                      <div class="inputStp">
-                                                         <div class="i-left">
-                                                            Child
-                                                         </div>
-                                                         <div class="i-right">
-                                                            <button type="button" class="childMinusBtn" data-key="0"><i
-                                                                  class="fa fa-minus"></i></button>
-                                                            <span id="childNumber-0">0</span>
-                                                            <input type="hidden" name="rooms[childs][]" value="0"
-                                                               min="0" class="ChildInput" id="ChildInput-0">
-                                                            <button type="button" class="childPlusBtn" data-key="0"><i
-                                                                  class="fa fa-plus"></i></button>
-                                                         </div>
-                                                      </div>
-                                                      <div class="inputStp">
-                                                         <div class="i-left">
-                                                            Room
-                                                         </div>
-                                                         <div class="i-right">
-                                                            <button type="button" class="roomMinusBtn" data-key="0"><i
-                                                                  class="fa fa-minus"></i></button>
-                                                            <span id="roomNumber-0" class="roomNumber">1</span>
-                                                            <input type="hidden" name="rooms[room][]" class="RoomInput"
-                                                               value="1" min="0" id="RoomInput-0">
-                                                            <button type="button" class="roomPlusBtn" data-key="0"><i
-                                                                  class="fa fa-plus"></i></button>
-                                                         </div>
+                                                         <div class="inputStp">
+                                                            <div class="i-left">
+                                                               Room
+                                                            </div>
+                                                            <div class="i-right">
+                                                               <button type="button" class="roomMinusBtn" data-key="0"><i
+                                                                     class="fa fa-minus"></i></button>
+                                                               <span id="roomNumber-0" class="roomNumber">1</span>
+                                                               <input type="hidden" name="rooms[room][]" class="RoomInput"
+                                                                  value="1" min="0" id="RoomInput-0">
+                                                               <button type="button" class="roomPlusBtn" data-key="0"><i
+                                                                     class="fa fa-plus"></i></button>
+                                                            </div>
 
-                                                         <button type="button" class="addMoreRoom"><i
-                                                               class="fas fa-plus"></i></button>
+                                                            <button type="button" class="addMoreRoom"><i
+                                                                  class="fas fa-plus"></i></button>
+                                                         </div>
                                                       </div>
                                                    </div>
-                                                </div>
-                                                <div class="frow">
-                                                   <div class="roomWrapers"></div>
-                                                   <a class="done-traveller">Done</a>
+                                                   <div class="frow">
+                                                      <div class="roomWrapers"></div>
+                                                      <a class="done-traveller">Done</a>
+                                                   </div>
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
+                                 <!-- </div> -->
+                              <!-- </div> -->
+
+                              <div class="col s12 m6 l2">
+                                 <div class="srchbtn searchButton">
+                                    <button type="submit"
+                                       class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
                                  </div>
                               </div>
+                              <!-- col l2 end -->
                            </div>
-
-                           <div class="col s12 m6 l3">
-                              <div class="srchbtn">
-                                 <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
-                              </div>
-                           </div>
-                           <!-- col l2 end -->
-                        </div>
-                        <!-- row end -->
-                     </form>
+                           <!-- row end -->
+                        </form>
+                     </div>
+                     <!-- Hotel tab end -->
+                     
+                     <!-- transport tab end -->
+                     <!-- group flight tab start -->
+                     <!-- group flight tab end -->
                   </div>
-                  <!-- Hotel tab end -->
-                  
-                  <!-- transport tab end -->
-                  <!-- group flight tab start -->
-                  <!-- group flight tab end -->
+                  <!-- form div end -->
                </div>
-               <!-- form div end -->
-            </div>
+            </div> 
+            
 
-            <div class="bannerText webText">
+            <!-- <div class="bannerText webText">
                <div class="row">
                   <div class="col s12">
                      <h1>Customize your Umrah Package 2025.</h1>
@@ -829,8 +845,8 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                   </div>
                </div>
 
-            </div>
-            <div class="bannerText webText banner-text2">
+            </div> -->
+            <!-- <div class="bannerText webText banner-text2">
                <div class="row">
                   <div class="col s12">
                      <h3>Not sure where to go? We got you covered...</h3>
@@ -838,7 +854,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                         class="btn waves-effect waves-light h-btn-done bannerBtn">Show me Options</a>
                   </div>
                </div>
-            </div>
+            </div> -->
          </div>
          <!-- row -->
       </div>
@@ -846,926 +862,136 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       <img src="approot/storage/app/public/images/frontend/homemobile.svg" class="h-mobile-mosq" alt="family umrah packages 2022">
 </section>
 <!-- Banner -->
-
-<!-- aim-section -->
-<section class="aimS" data-scroll-section data-scroll-repeat>
-   <div class="container">
-      <div class="aimWrap">
-         <div class="row">
-            <div class="col s12">
-               <div class="chng-head">
-                  <h3>We aim to be your <strong>Companion and Friend</strong> on <span> your visit to the House of
-                        Allah</span> </h3>
-                  <p>Our mission is to connect people to Makkah and Madinah. No matter how far away you might be, we
-                     will help you find the Umrah trip that’s right for you! </p>
-               </div>
-            </div>
-            <div class="col s12 m5 l5">
-               <div class="aimLeft">
-                  <img src="approot/storage/app/public/images/frontend/pair.webp" data-scroll-repeat data-scroll
-                     data-scroll-direction="vertical" data-scroll-speed="2.1" alt="cheap umrah packages">
-               </div>
-            </div>
-            <div class="col s10 m7 l6  offset-l1 offset-s1">
-               <div class="innerAim">
-                  <h6>As easy as:</h6>
-                  <hr>
-                  <div class="numDiv" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="1">
-                     <strong class="abstNum">1</strong>
-                     <h6>Select / Customize / Build your own Package</h6>
-                     <img class="abstImg" src="approot/storage/app/public/images/frontend/box.webp" alt="umrah packages">
-                  </div>
-                  <div class="numDiv numDiv2" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="1">
-                     <strong class="abstNum">2</strong>
-                     <h6>Make your Booking</h6>
-                     <img class="abstImg" src="approot/storage/app/public/images/frontend/credit-card.webp" alt="ramadan package">
-                  </div>
-                  <div class="numDiv numDiv3" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="1">
-                     <strong class="abstNum">3</strong>
-                     <h6>Get ready to travel</h6>
-                     <img class="abstImg" src="approot/storage/app/public/images/frontend/visa-1.webp" alt="umrah package">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+<section class="affiliate-sec5" data-scroll-section data-scroll-repeat>
+  <div class="row">
+    <div class="col s12">
+      <div class="owl-carousel owl-theme" id="partners"></div>
+    </div>
+  </div>
 </section>
-<!-- aim-section-end -->
-
 <!-- Packages -->
 <section class="main-sec packageS" data-scroll-section data-scroll-repeat>
    <div class="container">
       <div class="row">
-         <div class="col s12 packageSpacing">
+         <div class="col l12 packageSpacing">
             <div class="headingbtn">
                <h2 class="main-heading">Popular Umrah Packages 2025</h2>
-               <a href="packages.html" class="btn waves-effect waves-light h-btn-done viewBtn">View all</a>
+               <p>Explore a range of thoughtfully curated Umrah packages 
+                  designed to suit your travel dates, budget, and preferences. 
+                  Whether you seek comfort, flexibility, or convenience, there’s 
+                  a package made just for you. Begin your spiritual journey with 
+                  <span class="text-blue">trusted partner</span> and complete peace of mind.</p>
+               <!-- <a href="packages.html" class="btn waves-effect waves-light h-btn-done viewBtn">View all</a> -->
             </div>
             <hr>
          </div>
       </div>
-      <!-- row -->
-      <div class="row package-slickSlider">
-                  <div class="slick-slider" id="slick-2">
-                        
-            <!-- slider -->
-            <div class="pakgWrap">
-               <div class="innerWrap">
-                  <div class="leftWrap">
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="head-pack packageHeading" style="min-height:80px;">
-                              <a href="https://umrahcompanions.com/detail/UPN2507-026">
-                                 <h3 class="pakg-heading"><strong>August | 14 Nights | Land Package <span>&nbsp;Economy $$</span></strong></h3>
-                              </a>
-                              <div class="icon-Package">
-                                 <strong>
-                                                                        Fixed Departure
-                                                                     </strong>
-                              </div>
-                           </div>
+      <div class="row" id="packagesRow"></div>
 
-                           <div class="seperatorDashed"></div>
 
-                           <h5 class="routeHeading">Routes:</h5>
-                           <ul class="packageRoute">
-
-                              
-                                                            <li class="flexRoute">Jeddah Airport </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Makkah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Madinah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Jeddah Airport </li>
-                                                                                       </ul>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="incluWrap rightLine">
-                              <h5>Inclusion:</h5>
-                              <ul class="packageInclusion">
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <img src="approot/storage/app/public/images/frontend/visaicon.png" alt="umrah package">
-                                       <h6>Visa</h6>
-                                    </div>
-                                 </li>
-                                 
-                                                                                                   <li>
-                                    <div class="incD">
-                                       <i class="fas fa-car"></i>
-                                       <h6>Transfer</h6>
-                                    </div>
-                                 </li>
-                                                                  
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <i class="fas fa-hotel"></i>
-                                       <h6>Hotel</h6>
-                                    </div>
-                                 </li>
-                                                               </ul>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row distanceSpacing">
-                        <div class="col s12">
-                           <div class="incluWrap">
-                              <div class="dis--Dv">
-                                 <div class="dis--lft">
-                                    <h5>Distance:</h5>
-                                    <div class="packageDistance">
-                                                                                                                                                            <div class="disD">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/macca.webp" alt="umrah">
-                                             <h6>Makkah &nbsp;| &nbsp;1.4 KM
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                       
-                                       
-                                                                                                                                                            
-                                       
-                                                                              <div class="disD distanceImage">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/madinah.webp"
-                                                alt="umrah package from usa">
-                                             <h6>Madinah &nbsp;| &nbsp;800 m
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                                                                                                  </div>
-                                 </div>
-                                 <div class="dis--rht">
-                                    <h5>Travellers:</h5>
-                                    <div class="imf">
-                                       <input type="text" value="1" disabled>
-                                    </div>
-                                    <small>
-                                       PKR
-                                                                              107,074
-                                                                           </small>
-                                 </div>
-                              </div><!-- dis--Dv -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="rightWrap">
-                     <div class="col s12">
-                        <div class="priceList">
-                           <form>
-                              <strong>
-                                 <em>
-                                    <span>
-                                       <h3 class="wPricing">PKR
-                                          <strong class="wrap-Price">&nbsp;
-                                                                                          107,074
-                                          </strong>
-                                          / Pilgrim
-                                       </h3>
-                                    </span>
-                                 </em>
-                              </strong>
-                              <div class="row bookButton">
-                                 <button class="detail-Button">
-                                    <a href="https://umrahcompanions.com/detail/UPN2507-026"
-                                       class="bookNow-Button">Book Now</a>
-                                 </button>
-                                 <button class="detail-Button">
-                                    <a href="packagepdf/document.pdf" target="_blank"
-                                       class="bookNow-Button"><i class="fas fa-file-pdf"></i> PDF</a>
-                                 </button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-                        
-            <!-- slider -->
-            <div class="pakgWrap">
-               <div class="innerWrap">
-                  <div class="leftWrap">
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="head-pack packageHeading" style="min-height:80px;">
-                              <a href="https://umrahcompanions.com/detail/UPN2507-010">
-                                 <h3 class="pakg-heading"><strong>August I 14 Nights I 04 Person(s) I Land Package <span>&nbsp;Economy $$</span></strong></h3>
-                              </a>
-                              <div class="icon-Package">
-                                 <strong>
-                                                                        Fixed Departure
-                                                                     </strong>
-                              </div>
-                           </div>
-
-                           <div class="seperatorDashed"></div>
-
-                           <h5 class="routeHeading">Routes:</h5>
-                           <ul class="packageRoute">
-
-                              
-                                                            <li class="flexRoute">Jeddah Airport </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Makkah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Madinah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Madinah Airport </li>
-                                                                                       </ul>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="incluWrap rightLine">
-                              <h5>Inclusion:</h5>
-                              <ul class="packageInclusion">
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <img src="approot/storage/app/public/images/frontend/visaicon.png" alt="umrah packages 2022">
-                                       <h6>Visa</h6>
-                                    </div>
-                                 </li>
-                                 
-                                                                                                   <li>
-                                    <div class="incD">
-                                       <i class="fas fa-car"></i>
-                                       <h6>Transfer</h6>
-                                    </div>
-                                 </li>
-                                                                  
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <i class="fas fa-hotel"></i>
-                                       <h6>Hotel</h6>
-                                    </div>
-                                 </li>
-                                                               </ul>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row distanceSpacing">
-                        <div class="col s12">
-                           <div class="incluWrap">
-                              <div class="dis--Dv">
-                                 <div class="dis--lft">
-                                    <h5>Distance:</h5>
-                                    <div class="packageDistance">
-                                                                                                                                                            <div class="disD">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/macca.webp" alt="cheap umrah packages">
-                                             <h6>Makkah &nbsp;| &nbsp;1.6 KM
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                       
-                                       
-                                                                                                                                                            
-                                       
-                                                                              <div class="disD distanceImage">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/madinah.webp"
-                                                alt="umrah packages 2022">
-                                             <h6>Madinah &nbsp;| &nbsp;250 m
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                                                                                                  </div>
-                                 </div>
-                                 <div class="dis--rht">
-                                    <h5>Travellers:</h5>
-                                    <div class="imf">
-                                       <input type="text" value="4" disabled>
-                                    </div>
-                                    <small>
-                                       PKR
-                                                                              503,578
-                                                                           </small>
-                                 </div>
-                              </div><!-- dis--Dv -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="rightWrap">
-                     <div class="col s12">
-                        <div class="priceList">
-                           <form>
-                              <strong>
-                                 <em>
-                                    <span>
-                                       <h3 class="wPricing">PKR
-                                          <strong class="wrap-Price">&nbsp;
-                                                                                          125,894
-                                          </strong>
-                                          / Pilgrim
-                                       </h3>
-                                    </span>
-                                 </em>
-                              </strong>
-                              <div class="row bookButton">
-                                 <button class="detail-Button">
-                                    <a href="https://umrahcompanions.com/detail/UPN2507-010"
-                                       class="bookNow-Button">Book Now</a>
-                                 </button>
-                                 <button class="detail-Button">
-                                    <a href="packagepdf/document-2.pdf" target="_blank"
-                                       class="bookNow-Button"><i class="fas fa-file-pdf"></i> PDF</a>
-                                 </button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-                        
-            <!-- slider -->
-            <div class="pakgWrap">
-               <div class="innerWrap">
-                  <div class="leftWrap">
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="head-pack packageHeading" style="min-height:80px;">
-                              <a href="https://umrahcompanions.com/detail/UPN2507-025">
-                                 <h3 class="pakg-heading"><strong>09 - 29 August | 20 Nights | SV Flight Package - Islamabad <span>&nbsp;Economy $$</span></strong></h3>
-                              </a>
-                              <div class="icon-Package">
-                                 <strong>
-                                                                        Fixed Departure
-                                                                     </strong>
-                              </div>
-                           </div>
-
-                           <div class="seperatorDashed"></div>
-
-                           <h5 class="routeHeading">Routes:</h5>
-                           <ul class="packageRoute">
-
-                              
-                                                            <li class="flexRoute">Jeddah Airport </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Makkah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Madinah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Makkah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute">Jeddah Airport </li>
-                                                                                       </ul>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="incluWrap rightLine">
-                              <h5>Inclusion:</h5>
-                              <ul class="packageInclusion">
-                                                                  <li>
-                                    <div class="incD">
-                                       <i class="fas fa-plane"></i>
-                                       <h6>Flight</h6>
-                                    </div>
-                                 </li>
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <img src="approot/storage/app/public/images/frontend/visaicon.png" alt="family umrah packages 2022">
-                                       <h6>Visa</h6>
-                                    </div>
-                                 </li>
-                                 
-                                                                                                   <li>
-                                    <div class="incD">
-                                       <i class="fas fa-car"></i>
-                                       <h6>Transfer</h6>
-                                    </div>
-                                 </li>
-                                                                  
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <i class="fas fa-hotel"></i>
-                                       <h6>Hotel</h6>
-                                    </div>
-                                 </li>
-                                                               </ul>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row distanceSpacing">
-                        <div class="col s12">
-                           <div class="incluWrap">
-                              <div class="dis--Dv">
-                                 <div class="dis--lft">
-                                    <h5>Distance:</h5>
-                                    <div class="packageDistance">
-                                                                                                                                                            <div class="disD">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/macca.webp" alt="cheap umrah packages">
-                                             <h6>Makkah &nbsp;| &nbsp;750 m
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                       
-                                       
-                                                                                                                                                            
-                                       
-                                                                              <div class="disD distanceImage">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/madinah.webp"
-                                                alt="umrah packages">
-                                             <h6>Madinah &nbsp;| &nbsp;1 KM
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                                                                                                                                            
-                                                                              <div class="disD distanceImage">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/macca.webp" alt="umrah package from usa">
-                                             <h6>Makkah &nbsp;| &nbsp;750 m
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                       
-                                                                                                                  </div>
-                                 </div>
-                                 <div class="dis--rht">
-                                    <h5>Travellers:</h5>
-                                    <div class="imf">
-                                       <input type="text" value="1" disabled>
-                                    </div>
-                                    <small>
-                                       PKR
-                                                                              285,348
-                                                                           </small>
-                                 </div>
-                              </div><!-- dis--Dv -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="rightWrap">
-                     <div class="col s12">
-                        <div class="priceList">
-                           <form>
-                              <strong>
-                                 <em>
-                                    <span>
-                                       <h3 class="wPricing">PKR
-                                          <strong class="wrap-Price">&nbsp;
-                                                                                          285,348
-                                          </strong>
-                                          / Pilgrim
-                                       </h3>
-                                    </span>
-                                 </em>
-                              </strong>
-                              <div class="row bookButton">
-                                 <button class="detail-Button">
-                                    <a href="https://umrahcompanions.com/detail/UPN2507-025"
-                                       class="bookNow-Button">Book Now</a>
-                                 </button>
-                                 <button class="detail-Button">
-                                    <a href="packagepdf/document-3.pdf" target="_blank"
-                                       class="bookNow-Button"><i class="fas fa-file-pdf"></i> PDF</a>
-                                 </button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-                        
-            <!-- slider -->
-            <div class="pakgWrap">
-               <div class="innerWrap">
-                  <div class="leftWrap">
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="head-pack packageHeading" style="min-height:80px;">
-                              <a href="https://umrahcompanions.com/detail/UPN2507-011">
-                                 <h3 class="pakg-heading"><strong>August I 20 Nights I 04 Person(s) I Land Package <span>&nbsp;Economy $$</span></strong></h3>
-                              </a>
-                              <div class="icon-Package">
-                                 <strong>
-                                                                        Fixed Departure
-                                                                     </strong>
-                              </div>
-                           </div>
-
-                           <div class="seperatorDashed"></div>
-
-                           <h5 class="routeHeading">Routes:</h5>
-                           <ul class="packageRoute">
-
-                              
-                                                            <li class="flexRoute">Jeddah Airport </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Makkah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Madinah </li>
-                              <img src="approot/storage/app/public/images/frontend/arrow-right.svg"
-                                 alt="arrow">                                                            <li class="flexRoute"> Jeddah Airport </li>
-                                                                                       </ul>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row">
-                        <div class="col s12">
-                           <div class="incluWrap rightLine">
-                              <h5>Inclusion:</h5>
-                              <ul class="packageInclusion">
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <img src="approot/storage/app/public/images/frontend/visaicon.png" alt="umrah packages 2022">
-                                       <h6>Visa</h6>
-                                    </div>
-                                 </li>
-                                 
-                                                                                                   <li>
-                                    <div class="incD">
-                                       <i class="fas fa-car"></i>
-                                       <h6>Transfer</h6>
-                                    </div>
-                                 </li>
-                                                                  
-                                 
-                                                                  <li>
-                                    <div class="incD">
-                                       <i class="fas fa-hotel"></i>
-                                       <h6>Hotel</h6>
-                                    </div>
-                                 </li>
-                                                               </ul>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="seperatorDashed"></div>
-
-                     <!-- row -->
-                     <div class="row distanceSpacing">
-                        <div class="col s12">
-                           <div class="incluWrap">
-                              <div class="dis--Dv">
-                                 <div class="dis--lft">
-                                    <h5>Distance:</h5>
-                                    <div class="packageDistance">
-                                                                                                                                                            <div class="disD">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/macca.webp" alt="umrah packages 2022">
-                                             <h6>Makkah &nbsp;| &nbsp;1.6 KM
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                       
-                                       
-                                                                                                                                                            
-                                       
-                                                                              <div class="disD distanceImage">
-                                          <div class="hotelName">
-                                             <img src="approot/storage/app/public/images/frontend/madinah.webp"
-                                                alt="umrah">
-                                             <h6>Madinah &nbsp;| &nbsp;250 m
-                                             </h6>
-                                          </div>
-                                       </div>
-                                       
-                                       
-                                                                                                                  </div>
-                                 </div>
-                                 <div class="dis--rht">
-                                    <h5>Travellers:</h5>
-                                    <div class="imf">
-                                       <input type="text" value="4" disabled>
-                                    </div>
-                                    <small>
-                                       PKR
-                                                                              659,400
-                                                                           </small>
-                                 </div>
-                              </div><!-- dis--Dv -->
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="rightWrap">
-                     <div class="col s12">
-                        <div class="priceList">
-                           <form>
-                              <strong>
-                                 <em>
-                                    <span>
-                                       <h3 class="wPricing">PKR
-                                          <strong class="wrap-Price">&nbsp;
-                                                                                          164,850
-                                          </strong>
-                                          / Pilgrim
-                                       </h3>
-                                    </span>
-                                 </em>
-                              </strong>
-                              <div class="row bookButton">
-                                 <button class="detail-Button">
-                                    <a href="https://umrahcompanions.com/detail/UPN2507-011"
-                                       class="bookNow-Button">Book Now</a>
-                                 </button>
-                                 <button class="detail-Button">
-                                    <a href="packagepdf/document-4.pdf" target="_blank"
-                                       class="bookNow-Button"><i class="fas fa-file-pdf"></i> PDF</a>
-                                 </button>
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-                     </div>
-               </div>
    </div>
 </section>
-<!-- Packages -->
-
+<!-- Advantages-->
+ <section class="main-sec advantages" data-scroll-section data-scroll-repeat>
+   <div class="row advantage-row">
+      <div class="col s4 advantage">
+         <img src="assets/frontend/img/rocket.png">
+         <h2>Smoother</h2>
+      </div>
+      <hr class="vr">
+      <div class="col s4 advantage">
+         <img src="assets/frontend/img/hasselFree.png">
+         <h2>Hassle-free</h2>
+      </div>
+      <hr class="vr">
+      <div class="col s4 advantage">
+         <img src="assets/frontend/img/smarter.png">
+         <h2>Smarter</h2>
+      </div>
+   </div>
+   
+</section>
 <!-- Offer -->
 <section class="offer-you" data-scroll-section data-scroll-repeat>
    <div class="container">
-      <div class="row">
-         <div class="col s12">
+      <div class="row offer-you-row">
+         <div class="col s9">
             <div class="headingbtn">
                <h2 class="main-heading">What do we offer?</h2>
-
-               
             </div>
             <div>
-               <p>Everything you need for a seamless Umrah trip</p>
+               <p>
+                  Explore a range of thoughtfully curated Umrah packages 
+                  designed to suit your travel dates, budget, and preferences. 
+                  Begin your spiritual journey with trusted options and complete peace of mind.
+               </p>
             </div>
             <hr>
          </div>
-      </div>
-      <div class="LeftOffer">
-         <div class="offerInner">
-            <div class="row">
-               <ul class="offerLsts">
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/friend.webp" alt="umrah package from usa">
-                        </div>
-                        <p>Companion / Friend</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/flight.webp" alt="umrah">
-                        </div>
-                        <p>Flights</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/awesome-car.webp" alt="umrah packages">
-                        </div>
-                        <p>Transport</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/awesome-bed.webp" alt="family umrah packages 2022">
-                        </div>
-                        <p>Accomodation</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/award.webp" alt="umrah packages">
-                        </div>
-                        <p>Professionalism</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/visa2.webp" alt="umrah">
-                        </div>
-                        <p>Visa</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/awesome-flag.webp" alt="umrah package from usa">
-                        </div>
-                        <p>Tour Guide</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/contact.webp" alt="umrah package">
-                        </div>
-                        <p>Customer Service 24/7</p>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="my-div">
-                        <div class="my-div-2">
-                           <img src="approot/storage/app/public/images/frontend/help.webp" alt="family umrah packages 2022">
-                        </div>
-                        <p>Support</p>
-                     </a>
-                  </li>
+         <div class="col s1">
+            <button class="btn blue">
+               Book Now
+            </button>
 
-               </ul>
-
-            </div>
          </div>
-         <!-- col s8 -->
+      </div>
+      <div class="row offer-row" id="offer-row-container">
       </div>
    </div>
-   <div class="abs-slider" data-scroll-repeat data-scroll data-scroll-direction="vertical" data-scroll-speed="1.1">
-      <div class="slick-slider" id="slick-5">
-         <!-- slider -->
-         <div class="offerWrap">
-            <a href="#">
-               <img src="approot/storage/app/public/images/frontend/offer-1.jpg" alt="umrah packages">
-            </a>
-            <a href="#" class="offerText">
-               <h4>Affordable Rates for <span>for Muslims around the world</span></h4>
-            </a>
-         </div>
-         <!-- slider  -->
-         <div class="offerWrap">
-            <a href="#">
-               <img src="approot/storage/app/public/images/frontend/offer-1.jpg" alt="family umrah packages 2022">
-            </a>
-            <a href="#" class="offerText">
-               <h4>Reliable Team <span>at your service</span></h4>
-            </a>
-         </div>
-         <!-- slider  -->
-         <div class="offerWrap">
-            <a href="#">
-               <img src="approot/storage/app/public/images/frontend/offer-1.jpg" alt="umrah packages 2022">
-            </a>
-            <a href="#" class="offerText">
-               <h4>Complete Transparency <span>from A to Z</span></h4>
-            </a>
-         </div>
-      </div>
-   </div>
+
+     
    <img class="offerBg" src="approot/storage/app/public/images/frontend/l-flower.png" data-scroll-repeat data-scroll
       data-scroll-direction="horizontal" data-scroll-speed="1.1" alt="umrah package">
 </section>
 <!-- Offer -->
 
 <!-- Experience -->
-<section class="ExperienceS" data-scroll-section data-scroll-repeat>
+<!-- <section class="ExperienceS" data-scroll-section data-scroll-repeat>
+   
+</section> -->
+<!-- Experience -->
+ <section class="process" data-scroll-section data-scroll-repeat>
+   <div class="process-card">
+      <div class="process-header">
+         <h4>
+            We aim to be your Companion and Friend on your visit to the House of Allah
+         </h4>
+         <p>We are home to the DIY (Do-It-Yourself) Umrah Package. we believe in delivering a tailor-made experience for everyone! </p>
+      </div>
+      <div class="row process-row">
+         <div class="col l3 s12">
+            <div>
+               <img src="assets/frontend/img/own-package.svg" alt="">
+               <h6>Select / Build your own Package</h6>
+               <p>Choose from a variety of hotels, flights, and transport options.
+                Tailor every part of your Umrah journey to fit your needs and budget.</p>
+            </div>
+         </div>
+         <img src="assets/frontend/img/process-arrow.svg">
+          <div class="col l3 s12">
+            <div>
+               <img src="assets/frontend/img/booking.svg" alt="">
+               <h6>Make your booking</h6>
+               <p>Secure your selected package quickly with a simple booking process. 
+                  Pay safely through your preferred method — all in one place.</p>
+            </div>
+          </div>
+         <img src="assets/frontend/img/process-arrow.svg">
+          <div class="col l3 s12">
+            <div>
+               <img src="assets/frontend/img/travel.svg" alt="">
+               <h6>Get Ready to travel</h6>
+               <p>Receive your travel confirmations and important updates instantly. 
+                  Pack your bags — your spiritual journey is ready to begin.</p>
+            </div>
+          </div>
+         <img>
+
+      </div>
+
+   </div>
    
 </section>
-<!-- Experience -->
-
-<!-- About Us -->
-<section class="aboutS" data-scroll-section data-scroll-repeat>
-   <div class="container">
-      
-
-            
-
-      <div class="row">
-         <div class="col s12" style="padding-left: 0;">
-            <div class="headingbtn">
-               <h1 class="main-heading">Umrah Companions – Your Trusted Partner for a Blessed Journey</h1>
-               <p>Umrah Companions, powered by Funadiq, is an authorized and trusted companion for the Umrah journey. At
-                  Umrah Companions, we offer all-inclusive Umrah Packages 2025 for every budget. These best Umrah
-                  Packages for 2025 are thoughtfully designed to meet the unique needs of Umrah travelers. We are
-                  dedicated to providing the best Umrah Packages 2025 tailored to every budget and preference. Umrah
-                  Companions, utilizing years of experience and industry knowledge, ensures your journey to the Holy
-                  Cities of Makkah and Madinah is smooth and comfortable.
-                  <br>
-                  Our 2025 Umrah Packages are designed with your needs in mind. These packages for Umrah offer a variety
-                  of options to suit individuals, families, and groups. Choose from our all-inclusive Umrah packages
-                  2025, covering everything from visa assistance, luxurious accommodation, and reliable transportation
-                  to guided services throughout your Umrah journey. Our customized Umrah packages 2025 are best for
-                  those searching for flexibility; this flexibility will allow them to design a journey that fits unique
-                  preferences and schedules.
-                  <br>
-                  There are affordable Umrah packages 2025 for everyone. These Umrah Packages have something for
-                  everyone: from a premium experience with 5-star hotels with private transport to a budget hotel with
-                  shuttle service. Umrah Companions has got you covered. Our team is dedicated to ensuring every aspect
-                  of your Umrah journey is taken care of, allowing you to focus entirely on your prayers and devotion.
-               </p>
-            </div>
-            <hr>
-         </div>
-         
-
-      </div>
-      
-      
-
-         
-      <div class="row">
-         <div class="col s12 m12 l10 offset-l1">
-            <h2 class="mobileVisible">Our Core Values</h2>
-            <ul class="coreUl">
-               <li>
-                  <div class="coreWrap">
-                     <img src="approot/storage/app/public/images/frontend/happy.webp" data-scroll-repeat data-scroll
-                        data-scroll-direction="vertical" data-scroll-speed="1.1">
-                  </div>
-                  <strong>Happiness</strong>
-               </li>
-               <li>
-                  <div class="coreWrap">
-                     <img src="approot/storage/app/public/images/frontend/transperency.webp" data-scroll-repeat data-scroll
-                        data-scroll-direction="vertical" data-scroll-speed="1.1">
-                  </div>
-                  <strong>Transparency</strong>
-               </li>
-               <li>
-                  <div class="coreWrap">
-                     <img src="approot/storage/app/public/images/frontend/respon.webp" data-scroll-repeat data-scroll
-                        data-scroll-direction="vertical" data-scroll-speed="1.1">
-                  </div>
-                  <strong>Responsibility</strong>
-               </li>
-               <li>
-                  <div class="coreWrap">
-                     <img src="approot/storage/app/public/images/frontend/honesty.webp" data-scroll-repeat data-scroll
-                        data-scroll-direction="vertical" data-scroll-speed="1.1">
-                  </div>
-                  <strong>Honesty</strong>
-               </li>
-            </ul>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- About Us -->
-
 <!-- Gallary -->
 <section class="galleryS" data-scroll-section data-scroll-repeat>
    <div class="gallerWrap">
@@ -1885,220 +1111,53 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 </section>
 <!-- Gallary -->
 
-<!-- onlyTextS -->
-<section class="onlyTextS" data-scroll-section data-scroll-repeat>
-   <div class="container">
-      <div class="row">
-         <div class="col s12">
-            <div class="textS chng-head valign-wrapper">
-               <h3>We aim to be your <strong>Companion and Friend</strong> on <span>your visit to the House of
-                     Allah</span> </h3>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- onlyTextS -->
 
-<!-- Deals -->
-
-<!-- Deals -->
-
-<!-- Blogs -->
-
-<!-- Blogs -->
-
-<!-- Testimonial -->
 <section class="testimonialS" data-scroll-section data-scroll-repeat>
    <div class="container">
       <div class="row">
          <div class="col s12">
             <div class="headingbtn">
-               <h2 class="main-heading">Testimonials</h2>
+               <h2 class="main-heading">What Our Travelers Are Saying</h2>
+               <p>Real stories from people who booked with us and loved the journey.
+                   From smooth bookings to memorable stays hear it from them. 
+                   Your experience matters, and theirs speaks for it.</p>
                
             </div>
             <hr>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col s12">
-            <div class="testibtn">
-               <h2 class="star-heading">4.2</h2>
-               <img src="approot/storage/app/public/images/frontend/stars.png" alt="cheap umrah packages">
-               <span>Overall Google Rating, from 200+reviews</span>
-            </div>
          </div>
       </div>
       <div class="row">
          <div class="col s12">
             <div class="slick-slider" id="slick-1">
-                                             <div class="element element-1">
+               <div class="element element-1">
                   <div class="client_Image">
-                                          <div class="designation_Text">
+                     <div class="designation_Text">
                         <strong>Vali</strong>
-                                             </div>
+                      </div>
                   </div>
                   <p><p>It was an emotional, spiritual journey for us &ndash; we didn&rsquo;t want to leave! UmrahCompanions took care of every moment of our trip!</p></p>
                </div>
                <!-- slider  -->
-                              <div class="element element-1">
+               <div class="element element-1">
                   <div class="client_Image">
-                                          <div class="designation_Text">
+                     <div class="designation_Text">
                         <strong>Jae Deen</strong>
-                                             </div>
+                     </div>
                   </div>
                   <p><p>My first Umrah experience - Truly unforgettable. Team UmrahCompanions for life!</p></p>
                </div>
                <!-- slider  -->
-                                          </div>
+            </div>
          </div>
       </div>
    </div>
 </section>
-<!-- Testimonial -->
-<section class="affiliate-sec5" data-scroll-section data-scroll-repeat>
-   <div class="container">
-      <div class="row">
-         <div class="col s12">
-            <div class="headingbtn">
-               <h2 class="main-heading">Our Partners</h2>
-               
-            </div>
-            <hr>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col s12">
-            <div class="owl-carousel owl-theme">
-               <div class="item"><img class="partnerslogos" src="approot/storage/app/public/images/frontend/maqam_logo.svg"
-                     alt="umrah packages"></div>
-               <div class="item"><img class="partnerslogos" src="approot/storage/app/public/images/frontend/nusuk_logo.svg"
-                     alt="umrah"></div>
-               <div class="item"><img class="partnerslogos" src="approot/storage/app/public/images/frontend/saudi_logo.svg"
-                     alt="umrah"></div>
-               <div class="item"><img class="partnerslogos" src="approot/storage/app/public/images/frontend/ary_logo.svg"
-                     alt="umrah package"></div>
-               <div class="item"><img  class="partnerslogos zindagi"  src="approot/storage/app/public/images/frontend/zindigi_logo.svg"
-                     alt="family umrah packages 2022"></div>
 
-            </div>
-            
-         </div>
-      </div>
-      <!-- row -->
-   </div>
-</section>
 
-      <!-- Section Content -->
+<div id="contact-card"></div>
 
-      <!-- Footer -->
-         <footer class="footer" data-scroll-section data-scroll-repeat>
-    <div class="container">
-        <div class="topFooter">
-            <div class="row">
-                <div class="col s12 m12 l2 logo_Column">
-                    <div class="linkB" style="z-index: 9999;">
-                        <a href="index.html"><img src="approot/storage/app/public/images/frontend/new_UC_Logo.svg"></a>
-                    </div>
-                </div>
-                <div class="col s12 m4 l3 links_Column">
-                    <div class="colfooter">
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>Quick links</h6>
-                            <ul>
-                                <li><a href="packages.html">Packages</a></li>
-                                <li><a href="reservetransport.html">Transport</a></li>
-                                <li><a href="visaprices.html">Umrah Visa</a></li>
-                                
-                                <li><a href="who_we_are.html">Who We Are</a></li>
-                                <li><a href="umrah_packages_pakistan.html">Umrah packages Pakistan 2025</a></li>
-                                <li><a href="umrah_packages_canada.html">Umrah packages Canada</a></li>
-                                <li><a href="umrah_packages_uk.html">Umrah packages UK</a></li>
-                                <li><a href="umrah_packages_uae.html">Umrah packages UAE</a></li>
-                            </ul>
-                        </div>
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>support</h6>
-                            <ul>
-                                <li><a href="contact-us.html">Contact</a></li>
-                                <li><a href="faqs.html">FAQ's</a></li>
-                                <li><a href="affiliate.html">Affiliate Page</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col s12 m5 l4 newsletter_Column footer_Heading">
-                    <div class="wrapFooter">
-                        <h6>Newsletters</h6>
-                        <form>
-                            <div class="formFooter">
-                                <div class="input-field">
-                                    <input id="email" type="email" class="validate" placeholder="Enter Your Email">
-                                </div>
-                                <button
-                                    class="btn waves-effect waves-light h-btn-done subBtn"><span>Subscribe</span></button>
-                            </div>
-                        </form>
-                        <p>Subscribe to our mailing list to get the latest insights and updates about Umrah</p>
-                    </div>
-                </div>
-            </div>
-            <!-- top-footer-end -->
-            <div class="middleFooter">
-                <div class="row">
-                    <div class="col s12 m5 l5 colD colD_Align">
-                        <div class="wrapFooter cardWrap">
-                            <div class="colD-Left pricingImages">
-                                <ul>
-                                    <li><img src="approot/storage/app/public/images/frontend/visa.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/master.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/american.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/paypal.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/stripe.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/hyper.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/sadad.webp"></li>
-                                </ul>
-                            </div>
-
-                            <div class="wrapFooter socialIcon colD-Right column_Align">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/umrahcompanions/" target="_blank"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://instagram.com/umrahcompanion?utm_medium=copy_link"
-                                            target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://vm.tiktok.com/ZSewQQQtG/" target="_blank"><i
-                                                class="fab fa-tiktok"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/umrahcompanions" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- middle-footer-end -->
-            <div class="ftLink">
-                <div class="row">
-                    <div class="col s12 footer_links">
-                        <p class="center copy">Copyright 2025 © Umrah Companions and
-                            Powered by <a href="https://www.funadiq.com/">Funadiq.</a></p>
-                        <ul class="priv-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="col s12">
-                    <p>Copyright 2024 © <a href="#">Funadiq.</a> All rights reserved</p>
-                </div> -->
-            </div>
-            <!-- copy link end -->
-        </div>
-    </div>
-</footer>
+  <div id="footer"></div>
 
 </div>
 <!-- data-scroll-container close -->
@@ -2501,15 +1560,18 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 </div><!-- Password Reset Modal -->
 
       <!-- Footer -->
-
       <!-- Script -->
-         <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/countdown.js"></script>
 <script type="text/javascript" src="assets/frontend/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/select.js"></script>
 <script type="text/javascript" src="assets/frontend/js/javascript.js"></script>
-<script src="../cdn.jsdelivr.net/npm/jquery-validation%401.19.3/dist/jquery.validate.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+ integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/additional-methods.min.js" 
+ integrity="sha512-owaCKNpctt4R4oShUTTraMPFKQWG9UdWTtG6GRzBjFV4VypcFi6+M3yc4Jk85s3ioQmkYWJbUl1b2b2r41RTjA==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="assets/backoffice/vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 <script src="assets/frontend/js/intlTelInput.js"></script>
 
@@ -2525,46 +1587,20 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <script src="../cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script src="../code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="../cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
-   integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" 
+integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="assets/frontend/js/intlTelInput.js"></script>
 <!-- Owl JavaScript -->
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-   integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-   integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js" 
+integrity="sha512-9CWGXFSJ+/X0LWzSRCZFsOPhSfm6jbnL+Mpqo0o8Ke2SYr8rCTqb4/wGm+9n13HtDE1NQpAEOrMecDZw4FXQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="assets/frontend/js/main.js"></script>
+   <script src="assets/frontend/js/home/home.js"></script>
+   <script src="assets/frontend/js/home/offer.js"></script>
 <script>
    $(document).ready(function(){
          $('.datepicker').datepicker();
 
-
-         $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:30,
-            items : 5,
-            dots : true,
-            responsiveClass:true,
-            autoplay:true,
-            autoplayTimeout:2000,
-            responsive:{
-               0:{
-                     items:1,
-                     nav:true
-               },
-               600:{
-                     items:3,
-                     nav:false
-               },
-               1000:{
-                     items:5,
-                     nav:true
-                     
-               }
-            }
-         });
       });
 </script>
 <script>
@@ -3320,9 +2356,6 @@ $('.boxhotelInput2').on('click',function(){
          });
             
 </script>
-
-
-
 <script>
     
   const scroller = new LocomotiveScroll({
@@ -3438,7 +2471,6 @@ $('.boxhotelInput2').on('click',function(){
          }
 </script><!-- Home Js -->
 <!-- Section Content -->
-
 <!-- Common Js -->
    <script>
   $(document).ready(function(e){
@@ -4302,7 +3334,6 @@ function resendmail(id){
 }
   
 </script>
-
 <script>
   var input = document.querySelector("#phone4");
 
@@ -4479,7 +3510,6 @@ function resendmail(id){
         });
 
 </script><!-- Common Js -->
-
 <script type="text/javascript">
    function UpdateUrl(){
       history.replaceState('', '', '/inquiry');

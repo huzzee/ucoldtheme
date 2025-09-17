@@ -1,6 +1,9 @@
 /*BOOK HOTEL STYLING*/
 .first-section {
-  padding-top: 100px;
+  padding-top: 30px;
+}
+.first-section .row{
+  margin-bottom: 0px;
 }
 .top-List-deal {
   display: flex;
@@ -1109,6 +1112,9 @@ padding: 12px;
   display: flex;
   gap: 15px;
 }
+.fa-star{
+  color: #FDB022;
+}
 
 .grid-view .hotel-card {
   flex-direction: column;
@@ -1451,11 +1457,39 @@ div#test2 {
   }
 
   .form-top-detail .input-field {
-    flex: 0 0 100%;
+    flex: 0;
     max-width: 100%;
+    width: 100% !important;
     text-align: center;
+    margin:0px 0;
   }
+  .top-List-deal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 10%);
+    padding: 20px 0;
+    gap: 10px;
+}
+.list-view .hotel-card .hotel-inner {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
 
+
+.grid-view {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
   .form-top-detail form {
     flex-direction: column;
   }

@@ -106,7 +106,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                         <p>Contact</p>  
                     </li>
                     <hr>
-                    <li>
+                    <li id="payment-tab">
                         <img src="assets/frontend/img/wallet.svg" alt="">
                         <p>Payment</p> 
                     </li>
@@ -223,10 +223,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                                 <img src="assets/frontend/img/Bank.svg" alt="Bank">
                                                 <span>Bank Transfer</span>
                                             </div>
-                                            <div class="payment-card" data-method="cash">
+                                            <!-- <div class="payment-card" data-method="cash">
                                                 <img src="assets/frontend/img/MoneyWavy.svg" alt="Cash">
                                                 <span>Cash</span>
-                                            </div>
+                                            </div> -->
                                         </div>
 
                                         <div id="credit-section" class="payment-section"> 
@@ -275,7 +275,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                                 <p>Please select your option of payment from the options seen below:</p>
                                                 <p>Get <span class="text-green">5% off</span> on online payment.</p>
                                             </div>
-                                            <div class="row form-row credit-cards " style="gap: 20px ; ">
+                                            <div class="row form-row bank-cards " style="gap: 20px ; flex-wrap: wrap;">
                                                 <div class="card">
                                                     <img  src="assets/frontend/img/flagpk.svg" alt=""> Pakistan
                                                 </div>
@@ -294,24 +294,24 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                             <div class="row">
                                                 <div class="green-card">
                                                     <div class="row form-row" style="margin:10px 0px;">
-                                                        <h6 class="col l10" style="padding: 0px;">Islamabad, Pakistan</h6>
+                                                        <h6 class="col l10 s6" style="padding: 0px;">Islamabad, Pakistan</h6>
                                                         <img src="assets/frontend/img/flagrect.svg" alt="">
                                                     </div>
-                                                    <div class="row form-row">
-                                                        <h6 class="col l4">Bank Name</h6>
-                                                        <p class="col l8">Saudi National Bank</p>                                             
+                                                    <div class="row form-row" style="margin:10px 0px;">
+                                                        <h6 class="col l4 s3">Bank Name</h6>
+                                                        <p class="col l8 s9">Saudi National Bank</p>                                             
                                                     </div>
-                                                    <div class="row form-row">
-                                                        <h6 class="col l4">Account Name</h6>
-                                                        <p class="col l8">Company Al Ashab for Information Technology</p>                                             
+                                                    <div class="row form-row" style="margin:10px 0px;">
+                                                        <h6 class="col l4 s3">Account Name</h6>
+                                                        <p class="col l8 s9">Company Al Ashab for Information Technology</p>                                             
                                                     </div>
-                                                    <div class="row form-row">
-                                                        <h6 class="col l4">IBAN</h6>
-                                                        <p class="col l8">SA34 1000 0086 1000 0179 4305</p>                                             
+                                                    <div class="row form-row" style="margin:10px 0px;">
+                                                        <h6 class="col l4 s3">IBAN</h6>
+                                                        <p class="col l8 s9">SA34 1000 0086 1000 0179 4305</p>                                             
                                                     </div>
-                                                    <div class="row form-row">
-                                                        <h6 class="col l4">Swift Code</h6>
-                                                        <p class="col l8">NCBKSAJE</p>                                             
+                                                    <div class="row form-row" style="margin:10px 0px;">
+                                                        <h6 class="col l4 s3">Swift Code</h6>
+                                                        <p class="col l8 s9">NCBKSAJE</p>                                             
                                                     </div>
 
                                                 </div>
@@ -319,13 +319,13 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                             </div>
                                         </div>
 
-                                        <div id="cash-section" class="payment-section" style="display:none;">
+                                        <!-- <div id="cash-section" class="payment-section" style="display:none;">
                                             <div class="outline-box">
                                                 <p><strong>Note:</strong> Once payment is made at the start of the journey, the driver will give you an invoice.</p>
 
                                             </div>
                                             
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </li>
 
@@ -418,21 +418,15 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- fixed button -->
 <!-- Confirmation modal -->
  <!-- Confirmation Modal -->
-<div id="confirmModal" class="modal">
+<!-- <div id="confirmModal" class="modal">
   <div class="modal-content">
-    <h4>Confirm Details</h4>
-    <p>Please confirm that your contact details are correct before proceeding to payment.</p>
-    <ul>
-      <li><strong>Name:</strong> <span id="confirmName"></span></li>
-      <li><strong>Phone:</strong> <span id="confirmPhone"></span></li>
-      <li><strong>Email:</strong> <span id="confirmEmail"></span></li>
-    </ul>
+    <h4>Your code has been verified!</h4>
+    <p>Your discount has been applied successfully. Enjoy your savings on your Umrah package!</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-close btn-flat">Cancel</a>
-    <a href="#!" id="confirmProceed" class="modal-close btn primary-btn">Proceed</a>
+    <a href="#!" id="confirmProceed" class="modal-close btn primary-btn">Go to Dashboard</a>
   </div>
-</div>
+</div> -->
 
 
 <!-- Login Modal -->
@@ -440,12 +434,14 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
    <!-- Success Modal -->
 <div id="successModal" class="modal">
   <div class="modal-content center-align">
-    <img src="assets/frontend/img/check-circle.svg" alt="Success" style="width:60px; margin-bottom:15px;">
-    <h4>Booking Confirmed!</h4>
-    <p>Your booking has been successfully submitted. We’ll contact you shortly with the details.</p>
+    <div class="check-image">
+        <i class="fa fa-check"  aria-hidden="true"></i>
+    </div>
+    <h4>Your code has been verified!</h4>
+    <p>Your discount has been applied successfully. Enjoy your savings on your Umrah package!</p>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-close btn primary-btn">OK</a>
+    <a href="#!" id="confirmProceed" class=" btn primary-btn">Go to Dashboard</a>
   </div>
 </div>
 

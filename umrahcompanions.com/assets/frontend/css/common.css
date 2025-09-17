@@ -582,6 +582,7 @@ span {
   color: #000 !important;
 } 
 
+
 .unitTop select:focus {
   outline: 0;
   border: none;
@@ -993,7 +994,7 @@ li ul.sub-menu {
   width: 55px;
 }
 .fixed .lineNav {
-  background: #fff;
+  /* background: #fff; */
 }
 /*end menu*/
 .bannerText {
@@ -1120,7 +1121,7 @@ body {
 .fixed .h-w2 {
   position: fixed;
   top: 0;
-  background: var(--blue-color);
+  background: white;
   box-shadow: 0 0px 10px #111;
   left: 0;
   right: 0;
@@ -1158,7 +1159,7 @@ Inner Header
 }
 .navscrolled .innerHeader .center li a,
 .fixed .center li a {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .navscrolled .innerHeader .center li ul.sub-menu li a,
 .fixed .center li ul.sub-menu li a {
@@ -1166,13 +1167,13 @@ Inner Header
 }
 .navscrolled .innerHeader .center li ul.sub-menu li:hover a,
 .fixed .center li ul.sub-menu li:hover a {
-  color: #fff;
+  color: var(--blue-color);
 }
 .navscrolled .innerHeader .border-btn,
 .navscrolled .innerHeader .loginBtn,
 .fixed .border-btn,
 .fixed .loginBtn {
-  color: var(--white-color);
+  color: var(--blue-color);
 }
 
 /*===============

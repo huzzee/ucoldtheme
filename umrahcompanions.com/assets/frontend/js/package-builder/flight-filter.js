@@ -78,7 +78,7 @@ function renderFlights(data) {
         <div class="row form-row form-row-package flex-row" style="width:100%;">
           <div class="col l7 s12 d-flex">
             <div class="rounded-circle">
-              <img src="assets/frontend/img/flight.svg" alt="">
+              <img src="assets/frontend/img/light-flight.svg" alt="">
             </div>
             <h3 style="margin:0px;">${flight.airline}</h3>
           </div>

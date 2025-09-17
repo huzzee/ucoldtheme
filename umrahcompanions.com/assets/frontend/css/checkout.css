@@ -21,7 +21,7 @@ text-transform: capitalize;
 color: #1E3A6D;
 }
 
-.container{
+.checkout-section .container{
     padding: 20px 0px;
 }
 .tabs-section{
@@ -109,7 +109,7 @@ text-transform: capitalize;
   padding: 9px 10px 9px 10px !important;
   color: var(--placeholder-color) !important;
   background-color: #F1F5F9 !important;
-  font-size: 12px !important;
+  font-size: 16px !important;
   margin: 0 !important;
   border-bottom: none !important;
   transition: none !important;
@@ -229,7 +229,7 @@ color: white;
 .text-green{
     color: #C0D857;
 }
-.payment-cards, .credit-cards{
+.payment-cards, .credit-cards, .bank-cards{
     display: flex;
     justify-content: start;
     align-items: center;
@@ -243,7 +243,7 @@ padding-right: 20px;
 padding-bottom: 12px;
 padding-left: 20px;
 background: #fff;
-width: 30%;
+width: 25%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -251,7 +251,21 @@ height: 50px;
 
 
 }
-.credit-cards .card.active {
+.bank-cards .card{
+opacity: 1;
+gap: 15px;
+padding-top: 12px;
+padding-right: 20px;
+padding-bottom: 12px;
+padding-left: 20px;
+background: #fff;
+width: 22%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+}
+.credit-cards .card.active, .bank-cards .card.active {
   border: 1px solid #1d3b6f; /* highlight active one */
   background: #fff;
 }
@@ -266,6 +280,38 @@ img.credit-card-icon {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.modal{
+    padding:20px 10px;
+
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    h4{
+        margin: 0px;
+    }
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check-image{
+    width: 70px;
+    height: 70px;
+    background-color: #1d3b6f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        color: #fff;
+        font-size: 38px;
+        /* font-weight: 500; */
+    }
 }
 
 .payment-card img {
@@ -334,11 +380,22 @@ border: 1px solid var(--lighter-stroke, #EBEBEB)
     .collapsible-body {
     padding: 10px;
     }
-    .credit-cards .card {
-    padding-top: 12px;
+    .credit-cards .card{
+           padding-top: 12px;
     padding-right: 10px;
     padding-bottom: 12px;
     padding-left: 10px;
     }
+    .bank-cards .card {
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    width: 45%;
+
+    }
+    .green-card {
+    width: 330px;
+}
     
 }

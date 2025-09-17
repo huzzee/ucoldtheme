@@ -13,7 +13,7 @@
     title: "Flight Package",
     tags: [{name:"Complete Umrah Package", color:'#24B3BA'},
       {name: "Budget Friendly", color:'#24B3BA"'}],
-    img:"assets/frontend/img/flight.svg",
+    img:"assets/frontend/img/light-flight.svg",
     details: ["flights", "hotel accommodations", "Transport", "Visa"],
     tagsStyle:'start'
 

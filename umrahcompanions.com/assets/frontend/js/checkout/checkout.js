@@ -28,12 +28,13 @@ let hotelName = urlParams.get("hotel");
   const sections = {
     credit: document.getElementById("credit-section"),
     bank: document.getElementById("bank-section"),
-    cash: document.getElementById("cash-section"),
   };
 
   function showSection(method) {
+    console.log(method)
     // hide all
     Object.keys(sections).forEach(key => {
+      console.log(key)
       sections[key].style.display = (key === method) ? "block" : "none";
     });
   }
@@ -61,11 +62,25 @@ const creditCards = document.querySelectorAll(".credit-cards .card");
       // add active to clicked one
       card.classList.add("active");
     });
+  });  
+  const bankCards = document.querySelectorAll(".bank-cards .card");
+
+  bankCards.forEach(card => {
+    card.addEventListener("click", () => {
+      // remove active from all
+      bankCards.forEach(c => c.classList.remove("active"));
+      // add active to clicked one
+      card.classList.add("active");
+    });
   });
 
     var modals = document.querySelectorAll('.modal');
   M.Modal.init(modals);
+
+
 });
+
+
 function validatePassengerForm() {
   let valid = true;
 
@@ -149,13 +164,10 @@ function goToPayment() {
   const passengerSection = document.getElementById('passenger-section');
   const paymentSection = document.getElementById('payment-section');
 
-  // check if passenger section is still visible
   if (passengerSection && passengerSection.style.display !== "none") {
-    // 🔹 First step: validate passenger form (Name, Phone, Email)
     let isValid = validatePassengerForm(); // <- your existing validation
     if (!isValid) return;
 
-    // Hide passenger & open payment
     const passenger = M.Collapsible.getInstance(passengerSection);
     if (passenger) passenger.close(0);
     passengerSection.style.display = "none";
@@ -166,11 +178,8 @@ function goToPayment() {
     paymentSection.scrollIntoView({ behavior: "smooth" });
 
   } else {
-    // 🔹 Second step: already on payment section, validate payment form
     let isValidPayment = validatePaymentForm();
     if (!isValidPayment) return;
-
-    // ✅ Open success modal
     var successModal = M.Modal.getInstance(document.getElementById('successModal'));
     successModal.open();
   }

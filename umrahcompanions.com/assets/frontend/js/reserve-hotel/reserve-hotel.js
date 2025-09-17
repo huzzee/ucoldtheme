@@ -104,20 +104,41 @@ function openHotelDetails(hotel) {
 
 
 // View toggle
+// View toggle
 document.getElementById("listView").addEventListener("click", () => {
-  document.getElementById("hotelContainer").classList.remove("grid-view");
+  document.getElementById("hotelContainer").style.display = "block";
+  document.getElementById("hotelTableContainer").style.display = "none";
+
   document.getElementById("hotelContainer").classList.add("list-view");
+  document.getElementById("hotelContainer").classList.remove("grid-view");
+
   document.getElementById("listView").classList.add("active");
   document.getElementById("gridView").classList.remove("active");
-
+  document.getElementById("tableView").classList.remove("active");
 });
 
 document.getElementById("gridView").addEventListener("click", () => {
-  document.getElementById("hotelContainer").classList.remove("list-view");
-  document.getElementById("hotelContainer").classList.add("grid-view");
-  document.getElementById("gridView").classList.add("active");
-    document.getElementById("listView").classList.remove("active");
+  document.getElementById("hotelContainer").style.display = "flex";
+  document.getElementById("hotelTableContainer").style.display = "none";
 
+  document.getElementById("hotelContainer").classList.add("grid-view");
+  document.getElementById("hotelContainer").classList.remove("list-view");
+
+  document.getElementById("gridView").classList.add("active");
+  document.getElementById("listView").classList.remove("active");
+  document.getElementById("tableView").classList.remove("active");
 });
+
+document.getElementById("tableView").addEventListener("click", () => {
+  document.getElementById("hotelContainer").style.display = "none";
+  document.getElementById("hotelTableContainer").style.display = "block";
+
+  document.getElementById("tableView").classList.add("active");
+  document.getElementById("listView").classList.remove("active");
+  document.getElementById("gridView").classList.remove("active");
+});
+
+
+
 
 

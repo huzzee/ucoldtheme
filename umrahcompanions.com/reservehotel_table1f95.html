@@ -248,7 +248,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         color: #333333;
         margin-bottom: 20px;
     }
-
+    table.dataTable.no-footer {
+     border-bottom: 1px solid #ccc;
+    }
     /* DataTables Custom Theme */
     .dataTables_wrapper .dataTables_filter input {
         border: 1px solid #ccc;
@@ -281,7 +283,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
     table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
     table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
-        background-color: #24b3ba;
+        background-color: #143159;
         /* Secondary color 2 for expand icon */
     }
 
@@ -290,18 +292,66 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         background-color: #143159;
         /* Primary color for collapse icon */
     }
+    .dataTables_length{
+      display: none;
+    }
 
     table.dataTable thead th,
     table.dataTable tbody td {
-        color: #333333;
+        color: #737373 !important;
         /* Default text color for table */
     }
-
-    table.dataTable thead th {
-        background-color: #f8f8f8;
-        /* Light header background */
-        border-bottom: 1px solid #ddd;
+    table.dataTable thead th:first-child{
+      border-top-left-radius:10px;
     }
+    table.dataTable thead th:last-child{
+      border-top-right-radius: 10px;
+    }
+    table .btn{
+      background-color: #15325a;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #15325a !important;
+    /* border: 1px solid #979797; */
+    border: none;
+    padding: 0px !important;
+    background-color: #ccc !important;
+    background: linear-gradient(to bottom, #dce9fcc4 0%, #eff3f9b4 100%);
+}
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+          color: #15325a8e;
+          font-size: 12px;
+      }
+
+    table.dataTable thead th, table.dataTable tfoot th {
+          color: #15325abe !important;
+          font-weight: 500;
+  }
+  table.dataTable thead th {
+    background-color: #EFF3F9 !important;
+    border-bottom: 1px solid #ddd !important;
+}
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #eff3f97a;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #eff3f9be;
+}
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+    background-color: #e7effa;
+}
+.datatable-scroll {
+  width: 100%;
+  overflow-x: auto;           /* horizontal swipe */
+  overflow-y: auto;           /* vertical scroll if tall */
+  -webkit-overflow-scrolling: touch;
+  max-height: 420px;          /* adjust as you like */
+}
+
+
+/* table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1:hover {
+    background-color: #e7effa;
+} */
 </style>
 <!-- Section Style -->   <!-- Style -->
 
@@ -436,6 +486,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                               <div id="gridView" class="horizontal-grid">
                                 <i class="fa fa-th" aria-hidden="true"></i> Grid
                               </div>
+                               <div id="tableView" class="tabel">
+                                <i class="fa fa-list" aria-hidden="true"></i> Table
+                              </div>
                           </div>
                           <!-- search form end -->
                       </div>
@@ -450,10 +503,10 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
             <div class="container umrah-data-table-section">
               <div id="hotelContainer" class="list-view"></div>
 
-                <!-- <div class="row">
+              <div class="row tabel-view" id="hotelTableContainer" style="display:none;" >
                     <div class="col s12">
-
-                        <table id="umrah-data-table" class="display responsive nowrap" style="width:100%">
+                      <div id="dt-wrap" class="datatable-scroll">
+                        <table id="umrah-data-table" class="display responsive nowrap" >
                             <thead>
                                 <tr>
                                     <th><i class="fas fa-list"></i></th>
@@ -665,8 +718,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                 </tr>
                                                                                                                             </tbody>
                         </table>
+                      </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </section>
         <!-- Hotel Listing -->

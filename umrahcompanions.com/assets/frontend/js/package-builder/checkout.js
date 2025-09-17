@@ -39,10 +39,18 @@ function LoadData() {
         <div class="row form-row col l12">
           <div class="col l3 s12">
             <p>${data.flight.departureCity}</p>
-            <p>${data.flight.departureTime}</p>
-            <p>${data.flight.departureDate}</p>
+            <p>${data.flight.departTime}</p>
+            <p>${data.flight.departDate}</p>
           </div>
-          <div class="col l6 s12"><div class="flight-flex">…</div></div>
+          <div class="col l6 s12"><div class="flight-flex">
+                <img src="assets/frontend/img/depart.svg" alt="">
+                <div class="flex">
+                  <img src="assets/frontend/img/flight-circle.svg" alt="">
+                  <hr>
+                  <img src="assets/frontend/img/flight-circle.svg" alt="">
+                </div>                            
+                <img src="assets/frontend/img/return-flight.svg" alt="">
+              </div></div>
           <div class="col l3 s12 right-align">
             <p>${data.flight.returnCity}</p>
             <p>${data.flight.returnTime}</p>
@@ -58,11 +66,19 @@ function LoadData() {
             <p>${data.flight.returnTime}</p>
             <p>${data.flight.returnDate}</p>
           </div>
-          <div class="col l6 s12"><div class="flight-flex">…</div></div>
+          <div class="col l6 s12"><div class="flight-flex">
+                <img src="assets/frontend/img/depart.svg" alt="">
+                <div class="flex">
+                  <img src="assets/frontend/img/flight-circle.svg" alt="">
+                  <hr>
+                  <img src="assets/frontend/img/flight-circle.svg" alt="">
+                </div>                            
+                <img src="assets/frontend/img/return-flight.svg" alt="">
+              </div></div>
           <div class="col l3 s12 right-align">
-           <p>${data.flight.departureCity}</p>
-            <p>${data.flight.departureTime}</p>
-            <p>${data.flight.departureDate}</p>
+           <p>${data.flight.departCity}</p>
+            <p>${data.flight.departTime}</p>
+            <p>${data.flight.departDate}</p>
           </div>
         </div>
       </div>

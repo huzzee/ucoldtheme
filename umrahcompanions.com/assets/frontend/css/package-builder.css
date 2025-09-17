@@ -923,8 +923,11 @@ color: #454F5B;
   background-color: #17a2b8;
   color: #fff;
 }
-
+.checkout-btns{
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
 @media (max-width:1023px) {
+
   .tabs-header{
     width: 300px;
     flex-wrap: wrap;
@@ -1002,8 +1005,13 @@ color: #454F5B;
   width: 200px;
 }
 
+
+.collapsible li.active {
+    background: transparent;
+    border: none;
 }
-@media (max-width:1024px) {
-  
-  
+.checkout-btns{
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;
+}
+
 }
