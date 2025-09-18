@@ -1069,7 +1069,18 @@ li ul.sub-menu {
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  height: auto;  
+  overflow-x: hidden;     /* let content define height */
+  overflow-y: auto;   /* required for Locomotive */
+
+}
+html {
+  scroll-behavior: smooth;
+}
+[data-scroll-container] {
+  min-height: 100%;
+  height: auto;
 }
 .landingDv {
   background: rgba(0, 0, 0, 0.5);
@@ -1228,15 +1239,6 @@ Hotel
   position: relative;
   padding: 120px 0 0 0;
 }
-/* .hotelS:before {
-  content: "";
-  background: url(../img/third-line.png) no-repeat;
-  position: absolute;
-  bottom: -577px;
-  width: 100%;
-  height: 100%;
-  background-position: bottom;
-} */
 .hotel-flower {
   top: 0;
   right: 0;

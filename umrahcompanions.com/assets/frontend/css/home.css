@@ -1549,6 +1549,7 @@ background: #24B3BA;
   align-items: center;
   margin: 0;
 }
+
 .advantage-row .vr{
   height: 50px;
   width: 1px;
@@ -1625,7 +1626,7 @@ margin: 0px;
   transform: translate3d(100%, 0, 0);
   visibility: visible;
   top: 0;
-  height: 100vh;
+  min-height: 100vh;
   right: 0;
 }
 
@@ -2281,6 +2282,14 @@ a.contactButton:hover {
   height: 370px;
   width: 100%;
   bottom: 100px;
+}
+.owl-item{
+  width: 180px !important;
+}
+.owl-item .item{
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 
 .offerInner {
@@ -3413,22 +3422,33 @@ a.registerButton:hover {
 .designation_Text {
   display: flex;
   flex-direction: column;
-  color: var(--white-color);
+  color: black;
   padding-left: 15px;
   text-align: left;
 }
 
 .element {
-  background: var(--blue-color);
-  /* box-shadow: 0 0 10px #ccc; */
-  border-radius: 30px;
-  color: var(--text-color);
+  background: #fff;
+  opacity: 1;
+  border-radius: 12px;
+  box-shadow: 0px 4px 45px 0px #00000012;
+  color: black;
   margin-left: 7px;
   padding: 30px 25px 30px 25px;
   height: 310px;
+  
   text-align: center;
 }
-
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  img{
+    width: 20%;
+  }
+}
 .element .client_Image strong {
   font-size: 22px;
   font-style: normal;
@@ -3439,7 +3459,7 @@ a.registerButton:hover {
 .element p {
   font-size: 16px;
   font-weight: 300;
-  color: var(--white-color);
+  color: black;
   margin-top: 7px;
   margin-bottom: unset;
   text-align: left;
@@ -5950,7 +5970,63 @@ a.registerButton:hover {
   }
 
   .secDiv {
+    height: 102vh;
+
   }
+  .tab a span{
+    display: none;
+  }
+  .advantage-row{
+  flex-direction: column;
+  gap: 20px;
+}
+.advantage-row .col.s4, .offer-you-row .col.s8{
+margin-left: 0px;
+}
+.process{
+  padding: 10px;
+
+}
+.process-card{
+  padding: 30px 20px;
+  gap: 20px;
+}
+.process-header{
+  flex-direction: column;
+  gap: 20px;
+}
+.process-header h4{
+  font-size: 20px;
+}
+.process-header h4, .process-header p{
+  width: 100%;
+  margin: 0px;
+}
+.process-row{
+  flex-direction: column;
+}
+.advantage h2 {
+  font-size: 32px;
+}
+.advantage-row .vr{
+  height: 25px;
+}
+.offer-you {
+    padding: 55px 0px;
+}
+.innerBanner img.h-mobile-mosq {
+    display: block;
+    /* height: auto; */
+    position: relative;
+    min-width: 688px;
+    max-width:588px;
+    bottom: 0px;
+    height: 279px;
+    left: -119px;
+    right: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
 }
 
 @media only screen and (max-width: 480px) {

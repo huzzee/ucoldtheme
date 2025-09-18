@@ -35,8 +35,8 @@
 .form_row_inquiry .col{
   margin-left: 0px !important;
 }
-.form_row_inquiry .col.l4 {
-        width: 31.333333% !important; }
+/* .form_row_inquiry .col.l4 {
+        width: 31.333333% !important; } */
 input::placeholder{
   color: var(--placeholder-color)  !important;
 }
@@ -216,6 +216,7 @@ label.toggle span{
     border-radius: 10px !important;
     background-color: #F1F5F9 !important;
     display: flex !important;
+
     align-items: center !important;
 }
  

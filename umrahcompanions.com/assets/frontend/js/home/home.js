@@ -7,11 +7,11 @@
     { src: "assets/frontend/img/aryLogo.svg", alt: "umrah packages" },
     { src: "assets/frontend/img/wosolLogo.svg", alt: "umrah packages" },
     { src: "assets/frontend/img/STALogo.svg", alt: "umrah packages" },
-    { src: "approot/storage/app/public/images/frontend/maqam_logo.svg", alt: "umrah packages" },
-    { src: "approot/storage/app/public/images/frontend/nusuk_logo.svg", alt: "umrah" },
-    { src: "approot/storage/app/public/images/frontend/saudi_logo.svg", alt: "umrah" },
-    { src: "approot/storage/app/public/images/frontend/ary_logo.svg", alt: "umrah package" },
-    { src: "approot/storage/app/public/images/frontend/zindigi_logo.svg", alt: "family umrah packages 2022", extraClass: "zindagi" }
+    // { src: "approot/storage/app/public/images/frontend/maqam_logo.svg", alt: "umrah packages" },
+    // { src: "approot/storage/app/public/images/frontend/nusuk_logo.svg", alt: "umrah" },
+    // { src: "approot/storage/app/public/images/frontend/saudi_logo.svg", alt: "umrah" },
+    // { src: "approot/storage/app/public/images/frontend/ary_logo.svg", alt: "umrah package" },
+    // { src: "approot/storage/app/public/images/frontend/zindigi_logo.svg", alt: "family umrah packages 2022", extraClass: "zindagi" }
   ];
 
   // Insert dynamically into carousel
@@ -37,14 +37,16 @@
       loop: true,
       margin: 10,
       nav: false,
-      autoPlay: true,
-      autoPlayTimeout: 2000,
+      autoPlay: false,          
+      autoPlayTimeout: 1000,   
+      autoPlayHoverPause: true, // optional, pause on hover
       responsive: {
         0: { items: 2 },
-        600: { items: 4 },
-        1000: { items: 6 }
+        600: { items: 8 },
+        1000: { items: 12 }
       }
     });
+
   });
 
    // Array of packages
