@@ -100,7 +100,7 @@ li{
     box-sizing: border-box;
     background-color: #FFFFFF;
     border-bottom: 1px solid rgb(221, 221, 221);
-    padding: 2rem;
+    padding: 1rem 2rem;
     position: relative;
     bottom: 20px;
     border-bottom-left-radius: 13px;
@@ -176,10 +176,14 @@ vertical-align: bottom;
 color: #161C28;
 
 }
+.row_hotel_detail .col.l7, .row_hotel_detail .col.l5{
+  padding: 0px;
+  
+}
 .counter-container {
     background-color: transparent;
     border-radius: 10px;
-    padding: 8px 14px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
     justify-content: start;

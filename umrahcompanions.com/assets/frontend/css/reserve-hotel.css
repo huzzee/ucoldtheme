@@ -7,3 +7,131 @@ text-align: center;
 text-transform: capitalize;
 color: #15325A;
 }
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  font-weight: #848484;
+  span{font-size: 10px !important;}
+
+}
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+    .filter-desktop{
+        display: none !important;
+    }
+    .form-top-detail {
+    padding: 5px 10px !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    border: 0px !important;
+    border-radius: 30px;
+    display: flex;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    justify-content: start !important;
+    align-items: center;
+    margin-top: 12px;
+}
+.update-search{
+    margin: 0px !important;
+}
+  .filter-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 0px;
+  }
+  
+  .open-sidebar-btn {
+    background-color: #15325A;
+    box-shadow: none;
+    color: white;
+    padding: 0px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    i{
+        font-size: 14px;
+    }
+  }
+
+  .open-sidebar-btn:focus {
+    outline: none;
+  }
+
+    .sidebar {
+    position: fixed;
+    top: 145px;
+    right: -300px;
+    width: 300px;
+    height: 50%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0px;
+}
+.searchButton button.searchBtn {
+    display: flex;
+padding: 14px 26px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+    width: 100%;
+    margin: 0px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+}
+  .sidebar.open {
+    right: 0; /* Move sidebar into view */
+  }
+
+  .sidebar .close-btn {
+    font-size: 30px;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .input-field {
+    margin-bottom: 15px;
+  }
+
+  .input-field input, .input-field select {
+    width: 100%;
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 769px) {
+  .filter-btn-container {
+    display: none; /* Hide filter button on desktop */
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar completely */
+  }
+  .filter-desktop{
+    display: flex;
+  }
+}

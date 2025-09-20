@@ -60,7 +60,11 @@ li , .collapsible-header{
     border-radius: 13px !important;
     margin: 10px 0px;
 }
+.collapsible-header{
+    padding: 30px 20px;
+}
 li{
+    
     margin-left: 0px !important;
     margin-right: 0px !important;
     box-shadow: none !important;
@@ -68,6 +72,8 @@ li{
 }
 .collapsible-body {
     box-sizing: border-box;
+    border-top: 1px solid #EBECEC;
+
     background-color: #FFFFFF;
     border-bottom: 1px solid rgb(221, 221, 221);
     padding: 2rem;
@@ -78,30 +84,31 @@ li{
     border-bottom-right-radius: 13px;
 }
 .collapsible-header{
-font-weight: 600;
-font-size: 16px;
-line-height: 16px;
-letter-spacing: 0%;
+color: var(--Heading, #161C24);
 text-align: center;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px; /* 64% */
 text-transform: capitalize;
 }
 .iti{
     border-radius: 10px !important;
     background-color: #F1F5F9 !important;
-    width: 100%;
-    height: 58px;
+    width: 98%;
+    height: 45px;
     display: flex;
     align-items: center;
 }
 .iti input{
-    width: 100%;
+    width: 94%;
     background-color: transparent !important;
     color: var(--placeholder-color) !important;
     margin: 0 !important;
     height: auto;
     border-bottom: none !important;
     transition: none !important;
-    line-height: 28px !important;
+    line-height: 18px !important;
 
 }
 .form-control, .form_row input, .form-select {
@@ -109,11 +116,12 @@ text-transform: capitalize;
   padding: 9px 10px 9px 10px !important;
   color: var(--placeholder-color) !important;
   background-color: #F1F5F9 !important;
-  font-size: 16px !important;
+  font-size: 12px !important;
   margin: 0 !important;
   border-bottom: none !important;
   transition: none !important;
   line-height: 28px !important;
+  height: 28px !important;
   z-index: 0;
   width: 95% !important;
 }
@@ -128,6 +136,46 @@ text-transform: capitalize;
 .checkout-row .l5{
     margin: 0px !important;
     width: 47%  ;
+}
+.details .detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+
+    span{
+        color: var(--text, #454F5B);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 106.667% */
+    }
+    p{
+        color: var(--Headings, #161C28);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 106.667% */
+    }
+
+}
+.form-row-detail{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.card-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 161px;
+    height: 78px;
+    flex-shrink: 0;border-radius: 7px;
+    border: 1px solid var(--lighter-stroke, #EBEBEB);
+}
+.card-payment-row{
+    padding: 20px 0px;
 }
 h3{
 font-weight: 600;
@@ -229,25 +277,52 @@ color: white;
 .text-green{
     color: #C0D857;
 }
-.payment-cards, .credit-cards, .bank-cards{
+.tabs li p{
+color: var(--Blue, #1E3A6D);
+text-align: center;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.tabs li{
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin:10px 0px;
+    gap: 10px;
+    align-self: stretch;
+    margin: 0px;
+}
+.tabs li img{
+    width: 22.931px;
+height: 20px;
+}
+.payment-cards{
+display: flex;
+align-items: flex-start;
+align-self: stretch;
+}
+ .credit-cards, .bank-cards{
+   display: flex;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
 }
 .credit-cards .card{
-opacity: 1;
-gap: 15px;
-padding-top: 12px;
-padding-right: 20px;
-padding-bottom: 12px;
-padding-left: 20px;
+width: 22%;
+height: 78px;
+flex-shrink: 0;
+border-radius: 7px;
+border: 1px solid var(--lighter-stroke, #EBEBEB);
 background: #fff;
-width: 25%;
+display: flex;
+justify-content: center;
+box-shadow: none;
+align-items: center;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 50px;
 
 
 }
@@ -283,6 +358,9 @@ img.credit-card-icon {
 }
 .modal{
     padding:20px 10px;
+
+}
+.card-payment{
 
 }
 .modal-content{

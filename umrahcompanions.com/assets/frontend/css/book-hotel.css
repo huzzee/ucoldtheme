@@ -177,8 +177,9 @@
 
 }
 .form-top-detail .input-field {
-  flex: 0 0 17%;
+  flex: 1 0 0;
   max-width: 17%;
+  height: 59px;
   text-align: left;
   justify-content: space-between;
   opacity: 1;
@@ -188,6 +189,7 @@
   padding-left: 12px;
   border-radius: 10px;
   background-color: #EFF3F9;
+
 }
 
 .form-top-detail .input-field input,
@@ -222,7 +224,7 @@
   /* background-image: linear-gradient(to right, #a7e9e133, #c0d8571a); */
   background-color: transparent;
   border: 1px solid #E5E5E5;
-  border-radius: 30px;
+  border-radius: 12px;
   display: flex;
   vertical-align: top;
   position: relative;
@@ -231,7 +233,7 @@
   align-items: center;
   margin-top: 12px;
 }
-.form-top-detail form {
+.form-top-detail form .filter-desktop{
   display: flex;
   justify-content: start;
   align-items: center;
@@ -287,17 +289,17 @@
   text-align: center;
 }
 .noUi-horizontal {
-    height: 13px !important;
-    border-radius: 30px !important;
+    height: 7px !important;
+    border-radius: 10px !important;
 }
 .noUi-target {
     margin: 4px 0px !important;
 }
 .noUi-horizontal .noUi-handle {
-    width: 15px !important;
-    height: 15px !important;
+    width: 10px !important;
+    height: 10px !important;
     border-radius: 30px !important;
-    right: -14px !important;
+    right: 0px !important;
     top: -3px !important;
 }
 .noUi-handle:after, .noUi-handle:before {
@@ -1046,7 +1048,7 @@ padding: 12px;
   }
 }
 .grid-view .hotel-card{
-   width: 300px;
+   width: 379px;
   height: 385;
   opacity: 1;
   border-radius: 13px;
@@ -1056,7 +1058,26 @@ padding: 12px;
   border: 1px solid var(--lighter-stroke, #EBEBEB);
   box-shadow: 0px 4px 25px 0px #0000000A;
 }
-
+.list-view .inclusion{
+  display: none;
+}
+.grid-view .inclusion{
+  display: block !important;
+  text-align: left;
+  color: var(--Heading, #071A26);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 12px */
+}
+.grid-view hr{
+    border-bottom: 1px dashed rgba(49, 49, 49, 0.60);
+    opacity: 0.5;
+    margin-top: 10px;
+    /* opacity: 1; */
+    width: 100%;
+    border-top:none
+}
 .grid-view .hotel-card .hotel-info{
     background: white;
     padding-top: 30px;
@@ -1068,9 +1089,9 @@ padding: 12px;
 
   .features-div{
     display: flex;
-    justify-content:space-between;
+    justify-content: start;
     align-items: center;
-    margin: 0px 5px;
+    gap: 20px;
   }
    .features{
     font-weight: 400;
@@ -1083,13 +1104,30 @@ padding: 12px;
     min-width: 10%;
     justify-content: center;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 
   }
+  .grid-view .features{
+    color: #434343;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 190.909% */
+    border-radius: 5px;
+    padding: 2px 1px;
+    background: #F7F7F7;
+  }
+  .grid-view .features-div{
+    gap: 10px;
+  }
+  .grid-view .hotel-card img{
+      width: 12px;
 
+  }
 .hotel-card img {
   border-radius: 6px;
   object-fit: cover;
+  width: 16px;
 }
 
 /* List view (default) */
@@ -1131,6 +1169,7 @@ padding: 12px;
   width: 100%;
 }
 .grid-view .price{
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1138,24 +1177,33 @@ padding: 12px;
   gap: 75px;
 }
 h5.sub-heading{
+color: #1E3A6D;
+font-size: 15px;
+margin: 0px;
+font-style: normal;
+margin: 0px;
 font-weight: 600;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0px;
-margin: 0px !important;
-text-align: start;
+margin: 0px;
+line-height: 16px; /* 106.667% */
 }
 .active{
-background-color: var(--blue-color);
-color: white !important;
+background-color: #EFF3F9;
+color: var(--blue-color) !important;
 opacity: 1;
 gap: 10px;
+border: 0px !important;
 border-radius: 5px;
 padding-top: 10px;
 padding-right: 12px;
 padding-bottom: 10px;
 padding-left: 12px;
 
+}
+.hotel-info{
+      display: flex
+;
+    flex-direction: column;
+    gap: 15px;
 }
 
 
@@ -1427,11 +1475,11 @@ div#test2 {
     padding-right: unset;
   }
 
-  .sp1 strong,
+  /* .sp1 strong,
   .unitTop,
   span.sp2 {
     display: none !important;
-  }
+  } */
 
   .registerBtn,
   .loginBtn,
@@ -1568,7 +1616,7 @@ div#test2 {
     font-size: 14px;
   }
   .top-List-deal {
-    padding-bottom: 60px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (max-width: 340px) {

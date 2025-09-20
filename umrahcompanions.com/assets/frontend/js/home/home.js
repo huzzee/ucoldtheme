@@ -148,3 +148,25 @@
     var elems = document.querySelectorAll('select');
     M.FormSelect.init(elems);
   });
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.counter-box').forEach(counter => {
+    const input = counter.querySelector('.pilgrims');
+    const incrementBtn = counter.querySelector('.increment');
+    const decrementBtn = counter.querySelector('.decrement');
+
+    incrementBtn.addEventListener('click', () => {
+      let value = parseInt(input.value);
+      if (value < parseInt(input.max)) {
+        input.value = value + 1;
+      }
+    });
+
+    decrementBtn.addEventListener('click', () => {
+      let value = parseInt(input.value);
+      if (value > parseInt(input.min)) {
+        input.value = value - 1;
+      }
+    });
+  });
+});
+

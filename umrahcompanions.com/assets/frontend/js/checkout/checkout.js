@@ -114,34 +114,34 @@ function validatePassengerForm() {
   return valid;
 }
 
-function validatePaymentForm() {
-  let valid = true;
-  const activeMethod = document.querySelector(".payment-card.active").dataset.method;
+// function validatePaymentForm() {
+//   let valid = true;
+//   const activeMethod = document.querySelector(".payment-card.active").dataset.method;
 
-  // reset errors
-  document.querySelectorAll(".text-danger").forEach(el => el.remove());
+//   // reset errors
+//   document.querySelectorAll(".text-danger").forEach(el => el.remove());
 
-  if (activeMethod === "credit") {
-    const cardNumber = document.querySelector("input[placeholder='Card Number']");
-    const cvv = document.querySelector("input[placeholder='CVV']");
+//   if (activeMethod === "credit") {
+//     const cardNumber = document.querySelector("input[placeholder='Card Number']");
+//     const cvv = document.querySelector("input[placeholder='CVV']");
 
-    if (!cardNumber.value.trim()) {
-      showError(cardNumber, "Card number is required");
-      valid = false;
-    }
-    if (!cvv.value.trim()) {
-      showError(cvv, "CVV is required");
-      valid = false;
-    }
-      [cardNumber, cvv].forEach(el => {
-   if (el)  el.addEventListener('change', function(){
-          clearErrors(el);
-    })
-  });
-  }
-  // bank or cash don’t require extra fields here
-  return valid;
-}
+//     if (!cardNumber.value.trim()) {
+//       showError(cardNumber, "Card number is required");
+//       valid = false;
+//     }
+//     if (!cvv.value.trim()) {
+//       showError(cvv, "CVV is required");
+//       valid = false;
+//     }
+//       [cardNumber, cvv].forEach(el => {
+//    if (el)  el.addEventListener('change', function(){
+//           clearErrors(el);
+//     })
+//   });
+//   }
+//   // bank or cash don’t require extra fields here
+//   return valid;
+// }
 
 function showError(element, message) {
   const error = document.createElement("span");
@@ -178,8 +178,7 @@ function goToPayment() {
     paymentSection.scrollIntoView({ behavior: "smooth" });
 
   } else {
-    let isValidPayment = validatePaymentForm();
-    if (!isValidPayment) return;
+    
     var successModal = M.Modal.getInstance(document.getElementById('successModal'));
     successModal.open();
   }

@@ -128,7 +128,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                         Contact Details
                                     </div>  
                                     <div class="collapsible-body" style="display: block;">
-                                        <hr>
+                                        <!-- <hr> -->
                                         <h6>Traveler 1</h6>
                                         <div class="row form-row checkout-row">
                                             <div class="col s12 m6 l12 wrap_spacing">
@@ -182,7 +182,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                             <div class="col s12 m6 l12 wrap_spacing">
                                                 <input type="text" class="form-control active-state" name="dep_city" placeholder="Departure City">
                                             </div>
-                                            <div class="col s12 l12 wrap_spacing">
+                                            <div class="col s12 l11 wrap_spacing">
                                                 <input
                                                     class="active-state"
                                                     placeholder=""
@@ -208,7 +208,6 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                         Secure Online Checkout
                                     </div>  
                                     <div class="collapsible-body" style="display: block;">
-                                        <hr>
                                         <div>
                                             <h6>Select Payment Option</h6>
                                             <p>Please select your option of payment from the options seen below:</p>
@@ -246,27 +245,38 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                                     <img src="assets/frontend/img/visa.png" alt="">
                                                 </div>
                                             </div>
-                                            <h6>Credit Card Payment</h6>
-                                            <hr>
-                                            <strong style="margin: 10px 0px;">Fill Your Card Information</strong>
-                                            <div class="row form-row checkout-row">
-                                                <div class="col s12 m6 l12 wrap_spacing">
-                                                 <input type="text" class="form-control" placeholder="Card Holder Name">
-                                                   
-                                                </div>
-                                                <div class="col s12 m6 l12 wrap_spacing">
-                                                <input type="text" class="form-control" placeholder="Card Number">
+                                            <div class="card-payment-row ">
+                                                <h6>Select Card Payment</h6>
+                                                <div class="row form-row checkout-row">
+                                                        <div class="card-payment">
+                                                            <img  src="assets/frontend/img/flagpk.svg" alt=""> Stripe
+                                                        </div>
+                                                        <div class="card-payment">
+                                                            <img src="assets/frontend/img/flagcanada.svg" alt="">Payfast
+
+                                                        </div>
 
                                                 </div>
-                                                <div class="col s12 m6 l5 wrap_spacing">
-                                                 <input type="text" class="form-control" placeholder="Expiry">
-                                                   
-                                                </div>
-                                                <div class="col s12 m6 l5 wrap_spacing">
-                                                 <input type="text" class="form-control" placeholder="CVV">
-                                                   
-                                                </div>
+                                                <!-- <div class="row form-row checkout-row">
+                                                    <div class="col s12 m6 l12 wrap_spacing">
+                                                    <input type="text" class="form-control" placeholder="Card Holder Name">
+                                                    
+                                                    </div>
+                                                    <div class="col s12 m6 l12 wrap_spacing">
+                                                    <input type="text" class="form-control" placeholder="Card Number">
+
+                                                    </div>
+                                                    <div class="col s12 m6 l5 wrap_spacing">
+                                                    <input type="text" class="form-control" placeholder="Expiry">
+                                                    
+                                                    </div>
+                                                    <div class="col s12 m6 l5 wrap_spacing">
+                                                    <input type="text" class="form-control" placeholder="CVV">
+                                                    
+                                                    </div>
+                                                </div> -->
                                             </div>
+                                            
                                         </div>
 
                                         <div id="bank-section" class="payment-section" style="display:none;">
@@ -356,36 +366,36 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                         </div>
                         <div class="details">
                             <div class="box-border">
-                                <div class="row form-row">
-                                    <div class="col l6">
+                                <div class="form-row-detail">
+                                    <div class="detail">
                                         <span>Check in Date</span>
                                         <p>Jul 25, 2024</p>
                                     </div>
-                                    <div class="col l5">
+                                    <div class=" detail">
                                         <span>Check Out Date</span>
                                         <p>Jul 25, 2024</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="box-border">
-                                <div class="row form-row">
-                                    <div class="col l6">
+                                <div class="form-row-detail">
+                                    <div class="detail">
                                         <span>Hotel Name</span>
                                         <p>Crown Plaza Madinah</p>
                                     </div>
-                                    <div class="col l5">
+                                    <div class=" detail">
                                         <span>Total Nights</span>
                                         <p>04 Nights</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="box-border">
-                                <div class="row form-row">
-                                    <div class="col l6">
+                                <div class="form-row-detail">
+                                    <div class=" detail">
                                         <span>No Of Rooms</span>
                                         <p>2 Rooms</p>
                                     </div>
-                                    <div class="col l5">
+                                    <div class=" detail">
                                         <span>Room Type</span>
                                         <p>Double</p>
                                     </div>

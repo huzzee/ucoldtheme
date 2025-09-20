@@ -1,18 +1,40 @@
 $(document).ready(function () {
-  var slider = document.getElementById('test-slider');
-  noUiSlider.create(slider, {
-   start: [20, 80],
-   connect: true,
-   step: 1,
-   orientation: 'horizontal', // 'horizontal' or 'vertical'
-   range: {
-     'min': 0,
-     'max': 100
-   },
-   format: wNumb({
-     decimals: 0
-   })
-  });
+ var mobslider = document.getElementById('mob-slider');
+var desktopslider = document.getElementById('desktop-slider');
+
+[mobslider, desktopslider].forEach(function (slider) {
+  if (slider && !slider.noUiSlider) {
+    noUiSlider.create(slider, {
+      start: [100, 4500],
+      connect: true,
+      step: 1,
+      orientation: 'horizontal',
+      range: {
+        min: 0,
+        max: 10000
+      },
+      format: wNumb({
+        decimals: 0
+      })
+    });
+    const container = slider.parentElement;
+    const priceMin = container.querySelector('.price-min');
+    const priceMax = container.querySelector('.price-max');
+
+    slider.noUiSlider.on('update', function (values, handle) {
+      const sarValue = `SAR ${values[handle]}`;
+      if (handle === 0) {
+        priceMin.innerHTML = sarValue;
+      } else {
+        priceMax.innerHTML = sarValue;
+      }
+    });
+
+  }
+});
+
+
+  
 });
 
 const hotels = [
@@ -60,11 +82,13 @@ function renderHotels() {
       <div class="hotel-inner"> 
         <img class="hotel-img" src="${hotel.img}" alt="${hotel.name}">
         <div class="hotel-info">
-          <h5 class="sub-heading" style="width: 100%;">${hotel.name} <span class="list-rating">${`<img src="assets/frontend/img/rating.svg"  alt="">`.repeat(hotel.rating)}</span></h5>
+          <h5 class="sub-heading" style="width: 100%; display:flex; gap:19px">${hotel.name} <span class="list-rating">${`<img src="assets/frontend/img/rating.svg"  alt="">`.repeat(hotel.rating)}</span></h5>
           <p>Luxury hotel with stunning views of the Holy Mosque</p>
           <hr>
+          <div>          <p class="inclusion">Inclusions</p>
+</div>
           <div class="features-div">
-            <span class="features"><img src="assets/frontend/img/Kabah.svg"  alt="">${hotel.city} | ${hotel.distance} km</span>
+            <span class="features"><img src="assets/frontend/img/Kabah.svg"  alt="">${hotel.city} &nbsp; | &nbsp; ${hotel.distance} km &nbsp;| &nbsp; 10 Minutes Walk</span>
             <span class="features"><img src="assets/frontend/img/night.svg"  alt=""> ${hotel.nights} Nights</span>
             <span class="features grid-rating"><img src="assets/frontend/img/rating.svg" class=""  alt=""> ${hotel.rating} Star</span>
           </div>
@@ -137,6 +161,30 @@ document.getElementById("tableView").addEventListener("click", () => {
   document.getElementById("listView").classList.remove("active");
   document.getElementById("gridView").classList.remove("active");
 });
+
+// Open sidebar when clicking the filter button
+document.querySelector('.open-sidebar-btn').addEventListener('click', function() {
+  const sidebar = document.getElementById('filterSidebar');
+  if (sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  } else {
+    sidebar.classList.add('open');
+  }
+});
+
+// Close sidebar when clicking the close button
+document.querySelector('.close-btn').addEventListener('click', function() {
+  document.getElementById('filterSidebar').classList.remove('open');
+});
+
+// Close sidebar when clicking outside of it (optional)
+document.addEventListener('click', function(event) {
+  var sidebar = document.getElementById('filterSidebar');
+  if (!sidebar.contains(event.target) && !event.target.matches('.open-sidebar-btn')) {
+    sidebar.classList.remove('open');
+  }
+});
+
 
 
 

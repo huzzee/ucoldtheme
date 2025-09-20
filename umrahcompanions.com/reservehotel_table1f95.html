@@ -390,14 +390,9 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
    <!-- Popbox Css -->
 </head>
 <body class="bodyHome">
-
-  
-
    <!-- page loader start -->
          <div id="loader-container"></div>
-
    <!-- page loader end -->
-
    <div class="popup-wrapper">
     <div class="popup-box">
       <h2>SIGN UP & GET 10% OFF</h2>
@@ -413,8 +408,6 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
    </div>
    
    <div data-scroll-container>
-                  
-
       <!-- Header -->
       <div id="header"></div>
       <!-- Header -->
@@ -430,43 +423,106 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
                   <div class="update-search">
                     <div class="form-top-detail">
                       <form>
-                        <div class="input-field fielDv">
-                            <label>Check-In</label>
-                            <input type="date" class="form-control" id="checkin" name="checkin" value="">
+                        <div class="filter-btn-container">
+                          <!-- Button to open sidebar on mobile -->
+                          <button type="button" class="btn open-sidebar-btn">Filters <i class="fa fa-filter" aria-hidden="true"></i></button>
                         </div>
-                        <div class="input-field fielDv">
-                            <label>Check-Out</label>
-                            <input type="date" class="form-control" id="checkout" name="checkout" value="">
-                        </div>
+                        
+                        <!-- Sidebar (hidden on desktop, visible on mobile) -->
+                        <div id="filterSidebar" class="sidebar">
+                          <button type="button" class="close-btn">&times;</button>
+                          <div class="sidebar-content">
+                              <div class="input-field fielDv">
+                              <label>Check-In</label>
+                              <input type="date" class="form-control" id="checkin" name="checkin" value="">
+                            </div>
+                            <div class="input-field fielDv">
+                              <label>Check-Out</label>
+                              <input type="date" class="form-control" id="checkout" name="checkout" value="">
+                            </div>
 
-                        <div class="input-field fielDv">
-                            <label>Room Type</label>
-                            <select name="room" class="filte-room">
-                              <option value="" selected>All</option>
-                              <option value="double" >Double</option>
-                              <option value="triplet" >triple</option>
-                              <option value="quad" >Quad</option>
-                            </select>
-                        </div>
+                            <div class="input-field fielDv">
+                              <label>Room Type</label>
+                              <select name="room" class="filte-room">
+                                <option value="" selected>All</option>
+                                <option value="double">Double</option>
+                                <option value="triplet">Triple</option>
+                                <option value="quad">Quad</option>
+                              </select>
+                            </div>
 
-                        <div class="input-field fielDv">
-                          <label>Number of Guests</label>
-                          <div class="counter-controls">
-                            <button type="button" class="counter-btn minus">−</button>
-                            <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
-                            <span id="infants" class="counter-value">00</span>
-                            <button type="button" class="counter-btn plus">+</button>
+                            <div class="input-field fielDv">
+                              <label>Number of Guests</label>
+                              <div class="counter-controls">
+                                <button type="button" class="counter-btn minus">−</button>
+                                <input style="display:none;" class="counter-input" type="number" name="input-field3" id="counter3">
+                                <span id="infants" class="counter-value">00</span>
+                                <button type="button" class="counter-btn plus">+</button>
+                              </div>
+                            </div>
+
+                            <div class="input-field fielDv">
+                              <label>Price Range</label>
+                              <div id="mob-slider"></div>
+                              <div class="price-values">
+                              <!-- NEW -->
+                              <span class="price-min">SAR 0</span>
+                              <span class="price-max">SAR 0</span>
+
+                            </div>
+                            </div>
+
+                            <div class="srchbtn searchButton">
+                              <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+                            </div>   
                           </div>
-                        </div>
+                          
+                        </div>          
+                        <div id="desktop-filter" class="filter-desktop">
+                            <div class="input-field fielDv">
+                              <label>Check-In</label>
+                              <input type="date" class="form-control" id="checkin" name="checkin" value="">
+                          </div>
+                          <div class="input-field fielDv">
+                              <label>Check-Out</label>
+                              <input type="date" class="form-control" id="checkout" name="checkout" value="">
+                          </div>
 
-                        <div class="input-field fielDv">
-                            <label>Price Range</label>
-                            <div id="test-slider"></div>
+                          <div class="input-field fielDv">
+                              <label>Room Type</label>
+                              <select name="room" class="filte-room">
+                                <option value="" selected>All</option>
+                                <option value="double" >Double</option>
+                                <option value="triplet" >triple</option>
+                                <option value="quad" >Quad</option>
+                              </select>
+                          </div>
 
+                          <div class="input-field fielDv">
+                            <label>Number of Guests</label>
+                            <div class="counter-controls">
+                              <button type="button" class="counter-btn minus">−</button>
+                              <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                              <span id="infants" class="counter-value">00</span>
+                              <button type="button" class="counter-btn plus">+</button>
+                            </div>
+                          </div>
+
+                          <div class="input-field fielDv">
+                              <label>Price Range</label>
+                              <div id="desktop-slider"></div>
+                              <div class="price-values">
+                              <span class="price-min">SAR 0</span>
+                              <span class="price-max">SAR 0</span>
+
+                            </div>
+
+                          </div>
+                          <div class="srchbtn searchButton">
+                            <button class="btn waves-effect waves-light h-btn-done searchBtn">Filter</button>
+                          </div>  
                         </div>
-                        <div class="srchbtn searchButton">
-                          <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
-                        </div>                            
+                                                  
                       </form>
                     </div>
                   </div>
@@ -1139,7 +1195,12 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 <script type="text/javascript" src="assets/frontend/js/select.js"></script>
 <script type="text/javascript" src="assets/frontend/js/javascript.js"></script>
 <script src="../cdn.jsdelivr.net/npm/jquery-validation%401.19.3/dist/jquery.validate.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"
+  integrity="sha512-0dX9qKecxZnNSr7zj7sDjjXOU1QYMa+Hg5Rvh3Il3nX1I0nLtG8YYGpIVgikcFZgFAG3DFkuRl5VqK/EvAGr9w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 <script src="assets/backoffice/vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 <script src="assets/frontend/js/intlTelInput.js"></script>
 <script src="assets/frontend/js/main.js"></script>

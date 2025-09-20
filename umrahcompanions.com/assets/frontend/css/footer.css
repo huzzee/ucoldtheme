@@ -280,6 +280,7 @@ color: white;
   .ftLink ul li {
     font-size: 14px;
   }
+  
   .contact-card{
 width: 95%;
 height: 600px;
@@ -344,8 +345,6 @@ color: white;
     bottom: 0px;
 
 }
-
-
 }
 .formFooter .input-field input {
     border-radius: 0px !important;

@@ -350,8 +350,6 @@
          </div>
       </div>
       <div data-scroll-container>
-
-
       <div id="header"></div>
                <!-- Section Content -->
          <!-- Banner -->
@@ -390,140 +388,125 @@
                         </div>
                         <div class="formBox">
                            <div class=" formDiv new-form">
-
                               <!-- Package tab start -->
                               <div id="test1" class=" bannerForm">
                                  <form method="GET" action="https://umrahcompanions.com/packages">
                                     <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
-                                       <div class="input-field col s12 m6 l3">
+                                       <div class="input-field col s12 m12 l3">
                                           <label>Season</label>
                                           <select name="season">
                                              <option value="" disabled selected>Select Season</option>
-                                                                                                                                                <option value="52">Safar 1447</option>
-                                                                              <option value="53">Rabi Ul Awal 1447</option>
-                                                                              <option value="54">Rabi Ul Thani 1447</option>
-                                                                              <option value="55">Jamad Ul Awal 1447</option>
-                                                                              <option value="56">Jamad Ul Akhir 1447</option>
-                                                                              <option value="57">Rajab 1447</option>
-                                                                                                            </select>
+                                             <option value="52">Safar 1447</option>
+                                             <option value="53">Rabi Ul Awal 1447</option>
+                                             <option value="54">Rabi Ul Thani 1447</option>
+                                             <option value="55">Jamad Ul Awal 1447</option>
+                                             <option value="56">Jamad Ul Akhir 1447</option>
+                                             <option value="57">Rajab 1447</option>
+                                          </select>
                                        </div>
                                        <!-- col l3 end -->
-                                       
-                                       <div class="input-field col s12 m6 l3">
+                                       <div class="input-field col s12 m12 l3">
                                           <label>Package Type</label>
                                           <select name="package_type" class="">
                                              <option value="" disabled selected>Select Package Type</option>
-                                                                                                                                                <option value="3">Budget $</option>
-                                                                              <option value="1">Economy $$</option>
-                                                                              <option value="2">Premium $$$</option>
-                                                                                                            </select>
+                                             <option value="3">Budget $</option>
+                                             <option value="1">Economy $$</option>
+                                             <option value="2">Premium $$$</option>
+                                          </select>
                                        </div>
-                                       <div class="input-field col s12 m6 l3">
-                                          <label>Pilgrim</label>
-                                          <select name="passenger" class="">
-                                             <option value="" disabled selected>Number of Pilgrims</option>
-                                             <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                                                              </select>
+                                       <div class="input-field col s12 m12 l3">
+                                          <label for="pilgrims" class="active">Pilgrim</label>
+                                          <div style="width:100%; display:flex; justify-content:center; ">
+                                             <div class="counter-box">
+                                             <button type="button" class="btn-small decrement">-</button>
+                                             <input type="number" class="pilgrims" name="passenger" value="1" min="1" max="10" readonly>
+                                             <button type="button" class="btn-small increment">+</button>
+                                             </div>
+                                          </div>
                                        </div>
-
-                                       
-                                       <!-- col l3 end -->
-                                       
-
-                                       
                                        <!-- col l4 end -->
-                                       <div class="col s12 m6 l2">
+                                       <div class="col s12 m12 l2">
                                           <div class="srchbtn searchButton">
                                              <button type="submit"
                                                 class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
                                           </div>
                                        </div>
                                        <!-- col l2 end -->
-                                       
                                     </div>
                                  </form>
                                  <!-- row end -->
                               </div>
                               <!-- package tab end -->
-
                               <!-- Transport tab start -->
                               <div id="test3" class="col s12 bannerForm transport-tab">
-
-                                 
                                  <form method="GET" action="https://umrahcompanions.com/reservetransport">
                                     <input type="hidden" name="step" value="1">
                                     <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
-                                       <div class="input-field col s12 m6 l3 selectRoute">
+                                       <div class="input-field col s12 m12 l3 selectRoute">
                                           <label>Route</label>
                                           <select name="route" required>
                                              <option value="" disabled selected>Select Route</option>
-                                                                                                               <option value="1">Jeddah Airport / Makkah / Jeddah Airport</option>
-                                                                              <option value="2">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
-                                                                              <option value="3">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
-                                                                              <option value="4">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
-                                                                              <option value="5">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
-                                                                              <option value="6">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
-                                                                              <option value="7">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
-                                                                              <option value="8">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
-                                                                              <option value="9">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
-                                                                              <option value="10">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
-                                                                              <option value="11">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
-                                                                              <option value="39">Makkah to Taif to Makkah</option>
-                                                                              <option value="41">Makkah to Al baha to Makkah</option>
-                                                                              <option value="42">Jeddah to Al baha to Jeddah</option>
-                                                                              <option value="44">Jeddah Airport To Makkah Hotel</option>
-                                                                              <option value="45">Makkah Hotel To Jeddah Airport</option>
-                                                                              <option value="46">Jeddah Airport To Madinah Hotel</option>
-                                                                              <option value="47">Madinah Hotel To Jeddah Airport</option>
-                                                                              <option value="54">Jeddah Hotel To Jeddah City Tour</option>
-                                                                              <option value="55">Makkah Hotel To Jeddah City Tour</option>
-                                                                              <option value="56">Madinah Airport To Madinah Hotel</option>
-                                                                              <option value="57">Madinah Hotel To Madinah Airport</option>
-                                                                              <option value="58">Makkah Hotel To Madinah Hotel</option>
-                                                                              <option value="59">Madinah HotelTo Makkah Hotel</option>
-                                                                              <option value="60">Makkah Hotel To Makkah Ziyarat</option>
-                                                                              <option value="61">Madinah Hotel To Madinah Ziyarat</option>
-                                                                              <option value="62">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
-                                                                              <option value="63">Makkah Hotel To Taif Ziarat</option>
-                                                                              <option value="64">Madinah Hotel To Badar Ziarat</option>
-                                                                              <option value="65">Makkah Hotel To Makkah Train Station</option>
-                                                                              <option value="66">Makkah Train Station To Makkah Hotel</option>
-                                                                              <option value="67">Madinah Hotel To Madinah Train Station</option>
-                                                                              <option value="68">Madinah Train Station To Madinah Hotel</option>
-                                                                              <option value="69">Makkah Hotel To Masjid Ayesha Meeqat</option>
-                                                                              <option value="70">Makkah Hotel To Masjid Jurana Meeqat</option>
-                                                                                                            </select>
+                                             <option value="1">Jeddah Airport / Makkah / Jeddah Airport</option>
+                                             <option value="2">Jeddah Airport / Makkah / Madinah / Jeddah Airport </option>
+                                             <option value="3">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport </option>
+                                             <option value="4">Jeddah Airport / Makkah / Madinah / Madinah Airport </option>
+                                             <option value="5">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
+                                             <option value="6">Jeddha Airport / Makkah / Jeddah Airport Including Mazarat</option>
+                                             <option value="7">Jeddah Airport / Makkah / Madinah / Jeddah Airport Including Mazarat</option>
+                                             <option value="8">Jeddah Airport / Makkah / Madinah / Makkah /Jeddah Airport Including Mazarat</option>
+                                             <option value="9">Jeddah Airport / Makkah / Madinah / Madinah Airport Including Mazarat</option>
+                                             <option value="10">Madinah Airport / Madinah / Makkah / Jeddah Airport Including Mazarat</option>
+                                             <option value="11">Jeddah Airport / Madinah / Makkah /Jeddah Airport</option>
+                                             <option value="39">Makkah to Taif to Makkah</option>
+                                             <option value="41">Makkah to Al baha to Makkah</option>
+                                             <option value="42">Jeddah to Al baha to Jeddah</option>
+                                             <option value="44">Jeddah Airport To Makkah Hotel</option>
+                                             <option value="45">Makkah Hotel To Jeddah Airport</option>
+                                             <option value="46">Jeddah Airport To Madinah Hotel</option>
+                                             <option value="47">Madinah Hotel To Jeddah Airport</option>
+                                             <option value="54">Jeddah Hotel To Jeddah City Tour</option>
+                                             <option value="55">Makkah Hotel To Jeddah City Tour</option>
+                                             <option value="56">Madinah Airport To Madinah Hotel</option>
+                                             <option value="57">Madinah Hotel To Madinah Airport</option>
+                                             <option value="58">Makkah Hotel To Madinah Hotel</option>
+                                             <option value="59">Madinah HotelTo Makkah Hotel</option>
+                                             <option value="60">Makkah Hotel To Makkah Ziyarat</option>
+                                             <option value="61">Madinah Hotel To Madinah Ziyarat</option>
+                                             <option value="62">Madinah Hotel To Madinah Ziyarat &amp; Wadi Jin</option>
+                                             <option value="63">Makkah Hotel To Taif Ziarat</option>
+                                             <option value="64">Madinah Hotel To Badar Ziarat</option>
+                                             <option value="65">Makkah Hotel To Makkah Train Station</option>
+                                             <option value="66">Makkah Train Station To Makkah Hotel</option>
+                                             <option value="67">Madinah Hotel To Madinah Train Station</option>
+                                             <option value="68">Madinah Train Station To Madinah Hotel</option>
+                                             <option value="69">Makkah Hotel To Masjid Ayesha Meeqat</option>
+                                             <option value="70">Makkah Hotel To Masjid Jurana Meeqat</option>
+                                          </select>
                                        </div>
                                        <!-- col l3 end -->
-
-                                       <div class="input-field col s12 m6 l3 selectVehicle">
+                                       <div class="input-field col s12 m12 l3 selectVehicle">
                                           <label>Vehicle</label>
                                           <select name="vehicle">
                                              <option value="" disabled selected style="visibility:hidden;">Select Vehicle</option>
-                                                                                                               <option value="1">Car</option>
-                                                                              <option value="4">HiAce</option>
-                                                                              <option value="5">Coaster</option>
-                                                                              <option value="6">Bus</option>
-                                                                              <option value="7">H1</option>
-                                                                              <option value="8">GMC</option>
-                                                                              <option value="9">Staria</option>
-                                                                                                            </select>
+                                             <option value="1">Car</option>
+                                             <option value="4">HiAce</option>
+                                             <option value="5">Coaster</option>
+                                             <option value="6">Bus</option>
+                                             <option value="7">H1</option>
+                                             <option value="8">GMC</option>
+                                             <option value="9">Staria</option>
+                                          </select>
                                        </div>
                                        <!-- col l2 end -->
-
-                                       <div class="input-field col s12 m6 l3 selectPassengers">
-                                          <label>Passengers</label>
-                                          <input type="number" min="1" value="1" name="passengers">
-                                          
+                                        <div class="input-field col s12 m12 l3">
+                                          <label for="pilgrims" class="active">Pilgrim</label>
+                                          <div style="width:100%; display:flex; justify-content:center; ">
+                                             <div class="counter-box">
+                                                <button type="button" class="btn-small decrement">-</button>
+                                                <input type="number" class="pilgrims" name="passenger" value="1" min="1" max="10" readonly>
+                                                <button type="button" class="btn-small increment">+</button>
+                                             </div>
+                                          </div>
                                        </div>
                                        <!-- col l2 end -->
                                        <div class="col s12 m6 l2">
@@ -538,120 +521,23 @@
                                  </form>
                               </div>
                               <!-- Transport tab end -->
-
                               <!-- Hotel tab start -->
                               <div id="test2" class="col s12 bannerForm hotel-tab">
                                  <form method="GET" action="https://umrahcompanions.com/reservehotel">
                                     <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
                                        <!-- <div class=""> -->
-                                          <div class="input-field col s12 m6 l3">
+                                          <div class="input-field col s12 m12 l4">
                                              <label>Location</label>
-                                             <ul class="radioUl">
-                                                <li>
-                                                   <label>
-                                                      <input name="city" value="56772" type="radio" checked />
-                                                      <span><em>Makkah</em></span>
-                                                   </label>
-                                                </li>
-                                                <li>
-                                                   <label>
-                                                      <input name="city" value="56773" type="radio" />
-                                                      <span><em>Madinah</em></span>
-                                                   </label>
-                                                </li>
-                                             </ul>
-                                          <!-- </div> -->
+                                             <select name="city">
+                                                <option value="56772">Makkah</option>
+                                                <option value="56773">Madinah</option>
+                                             </select>
                                        </div>
                                        <!-- col l3 end -->
-                                       <!-- <div class=""> -->
-                                          <div class="input-field col s12 m6 l3 ">
+                                          <div class="input-field col s12 m12 l4">
                                              <label>Check-in Check-out</label>
                                              <input type="text" id="daterange" placeholder="Add Dates" name="dates">
                                           </div>
-                                       <!-- </div> -->
-                                       <!-- col l4 end -->
-
-
-                                       <!-- <div class=" "> -->
-                                          <!-- <div class="input-field "> -->
-                                             <div class="input-field fielDv4 col s12 m6 l3">
-                                                <label>Pilgrims | Rooms</label>
-                                                <div class="inputForm prsnF">
-                                                   <div class="numberPersons">
-                                                      <h4 class="quanBtn">
-                                                         <strong class="numberQ">
-                                                            <em><b class="adNos">2 </b>Adult</em>
-                                                            <small>-</small>
-                                                            <em><b class="newNos">0 </b>Child</em>
-                                                         </strong>
-                                                         <small>-</small>
-                                                         <em><b class="chdNos">1 </b>Room</em>
-                                                      </h4>
-                                                      <input type="hidden" name="total_travellers" value="2">
-                                                      <input type="hidden" name="total_rooms" value="1">
-                                                      <div class="person-boxdate" style="display: none;">
-                                                         <div class="inputBox">
-                                                            <div class="MainAppend">
-                                                               <div class="MainInputs">
-                                                                  <div class="inputStp inputStp1">
-                                                                     <div class="i-left">
-                                                                        Adult/Room
-                                                                     </div>
-                                                                     <div class="i-right">
-                                                                        <button type="button" class="travellersMinusBtn"
-                                                                           data-key="0"><i class="fa fa-minus"></i></button>
-                                                                        <span id="travellersNumber-0">2</span>
-                                                                        <input type="hidden" name="rooms[adults][]" value="2"
-                                                                           min="0" class="AdultInput" id="AdultInput-0">
-                                                                        <button type="button" class="travellersPlusBtn"
-                                                                           data-key="0"><i class="fa fa-plus"></i></button>
-                                                                     </div>
-                                                                  </div>
-                                                                  <div class="inputStp">
-                                                                     <div class="i-left">
-                                                                        Child
-                                                                     </div>
-                                                                     <div class="i-right">
-                                                                        <button type="button" class="childMinusBtn" data-key="0"><i
-                                                                              class="fa fa-minus"></i></button>
-                                                                        <span id="childNumber-0">0</span>
-                                                                        <input type="hidden" name="rooms[childs][]" value="0"
-                                                                           min="0" class="ChildInput" id="ChildInput-0">
-                                                                        <button type="button" class="childPlusBtn" data-key="0"><i
-                                                                              class="fa fa-plus"></i></button>
-                                                                     </div>
-                                                                  </div>
-                                                                  <div class="inputStp">
-                                                                     <div class="i-left">
-                                                                        Room
-                                                                     </div>
-                                                                     <div class="i-right">
-                                                                        <button type="button" class="roomMinusBtn" data-key="0"><i
-                                                                              class="fa fa-minus"></i></button>
-                                                                        <span id="roomNumber-0" class="roomNumber">1</span>
-                                                                        <input type="hidden" name="rooms[room][]" class="RoomInput"
-                                                                           value="1" min="0" id="RoomInput-0">
-                                                                        <button type="button" class="roomPlusBtn" data-key="0"><i
-                                                                              class="fa fa-plus"></i></button>
-                                                                     </div>
-
-                                                                     <button type="button" class="addMoreRoom"><i
-                                                                           class="fas fa-plus"></i></button>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                            <div class="frow">
-                                                               <div class="roomWrapers"></div>
-                                                               <a class="done-traveller">Done</a>
-                                                            </div>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                </div>
-                                             </div>
-                                          <!-- </div> -->
-                                       <!-- </div> -->
-
                                        <div class="col s12 m6 l2">
                                           <div class="srchbtn searchButton">
                                              <button type="submit"
@@ -663,9 +549,6 @@
                                     <!-- row end -->
                                  </form>
                               </div>
-                              <!-- Hotel tab end -->
-                              
-                              <!-- transport tab -->
                            </div>
                            <!-- form div end -->
                         </div>
@@ -765,7 +648,7 @@
                   <p>We are home to the DIY (Do-It-Yourself) Umrah Package. we believe in delivering a tailor-made experience for everyone! </p>
                </div>
                <div class="row process-row">
-                  <div class="col l3 s12">
+                  <div class="col l3 m12 s12">
                      <div>
                         <img src="assets/frontend/img/own-package.svg" alt="">
                         <h6>Select / Build your own Package</h6>
@@ -774,7 +657,7 @@
                      </div>
                   </div>
                   <img src="assets/frontend/img/process-arrow.svg">
-                  <div class="col l3 s12">
+                  <div class="col l3 m12 s12">
                      <div>
                         <img src="assets/frontend/img/booking.svg" alt="">
                         <h6>Make your booking</h6>
@@ -783,7 +666,7 @@
                      </div>
                   </div>
                   <img src="assets/frontend/img/process-arrow.svg">
-                  <div class="col l3 s12">
+                  <div class="col l3 m12 s12">
                      <div>
                         <img src="assets/frontend/img/travel.svg" alt="">
                         <h6>Get Ready to travel</h6>
@@ -1002,48 +885,47 @@
          <div id="contact-card" ></div>
          <div id="footer" ></div>
       </div>
-
       <!-- data-scroll-container close -->
       <div class="overlay-search-2"></div>
-      <!-- fixed button -->
-
-
-      <!-- Login Modal -->
-      <!-- Modal Structure -->
       <div id="modalLogin" class="modal modal-register" style="">
          <div class="modal-content">
          <section id="formHolder">
          <div class="row">
             <!-- Brand Box -->
-            <div class="col s5 brand">
+            <div class="col s5 l6 brand">
                
                <div class="brand-text">
-                  <h2>Nice To See You Again!</h2>
+                  <div>
+                     <img src="assets/frontend/img/logo.svg" alt="">
+                     <p>Ease, Assurance, Affordability, and Expertise all in one place. Stay connected with us.</p>
+                  </div>
+                  <!-- <h2>Nice To See You Again!</h2>
                   <p>Login to your Umrah Companions account and start browsing our Umrah packages today. Customize your own package or select one of our curated itineraries, all for unbeatable prices. Experience everything Umrah Companions has to offer all at your fingertips!</p>
                   <ul>
                         <li>Comprehensive platform allows you to book flights, hotels, excursions, ground transportation and apply for e-visas delivered right to your inbox all in one place.</li>
                         <li>DIY Umrah Packages that suit everyone’s needs</li>
                         <li>Personal dashboard to organize your bookings</li>
                         <li>And much more!</li>
-                  </ul>
+                  </ul> -->
+                  <span>© 2024 Umrah Companions. All rights reserved.</span>
                </div>
                
             </div>
             <!-- Form Box -->
-            <div class="col s12 l7 form">
+            <div class="col s12 l6 form">
                <!-- Login Form -->
                <div class="login form-peice">
                   <form class="login-form" method="post" action="https://umrahcompanions.com/login" id="loginform">
                         <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
-                     <h2>Login</h2>
+                     <h2>Sign In</h2>
                      <div class="input-field input-field1">
-                           <input type="email" class="" name="email" value="" autocomplete="email" autofocus placeholder="Enter Email">
-                                          </div>
+                        <input type="email" class="" name="email" value="" autocomplete="email" autofocus placeholder="Enter Email">
+                     </div>
                      <div class="input-field input-field1">
-                           <input id="password" type="password" class=""
+                        <input id="password" type="password" class=""
                            name="password" autocomplete="current-password" placeholder="Enter Password">
-                                          </div>
-                     <div class="input-field input-field1 loginfields">
+                     </div>
+                     <div class="input-field1 loginfields">
                         <button type="button" class="waves-effect loginMbtnSubmit" onclick="login()">Login</button>
                      </div>
                      <div class="CTA">
@@ -1062,7 +944,6 @@
       <a href="#" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
       </div>
    <!-- modal1-end --><!-- Login Modal -->
-
    <!-- Register Modal -->
    <style type="text/css">
       .createForm .select-wrapper .select-dropdown{
@@ -1078,7 +959,6 @@
          padding-top: 20px;
       }
    </style>
-
    <div id="modalRegister" class="modal modal-register modalreg" style="">
       <div class="modal-content">
       <section id="formHolder">
@@ -1298,7 +1178,6 @@
       </div>
       <a href="javascript:void(0)" class="modal-close waves-effect waves-green btn-flat"><i class="fas fa-times"></i></a>
    </div><!-- Register Modal -->
-
    <!-- Password Reset Modal -->
    <style type="text/css">
       .radio-item [type="radio"] {
@@ -1357,7 +1236,6 @@
    /*      transform: scale(1);*/
       }
    </style>
-
    <div id="modalpassword" class="modal modal-register modalPass" style="">
       <div class="modal-content">
       <section id="formHolder">
@@ -1577,8 +1455,6 @@
       //   },200)
       // });
 
-
-
       $("#selectRoutsS").change(function(e) {
             var selectedVal = $("#selectRoutsS option:selected").val();
             var uid = $("#selectRoutsS option:selected").data('id');
@@ -1596,7 +1472,6 @@
       $('.person-boxdatepk').slideToggle();
       });
 
-
       $("#adulPlusBtn").on('click', function() {
             $("#psgr").val(parseInt($('#psgr').val(), 10)+1);
             $("#adultNoss").html(parseInt($('#adultNoss').html(), 10)+1);
@@ -1606,8 +1481,6 @@
             $("#adultNoss").html(parseInt($('#adultNoss').html(), 10)-1)
       });
 
-
-
       $("#childPlusBtn").on('click', function() {
             //$("#psgr").html(parseInt($('#psgr').html(), 10)+1);
             $("#childNoss").html(parseInt($('#childNoss').html(), 10)+1);
@@ -1616,47 +1489,25 @@
             $("#psgr").html(parseInt($('#psgr').html(), 10)-1);
             $("#childNoss").html(parseInt($('#childNoss').html(), 10)-1)
       });
-
-
       $('.done-travellerpk').on('click',function(){ 
          $('.person-boxdatepk').slideUp('fast');
       });
-
       //need flight passenger end
-
-
-
-         
-
-
-               $(".drop-down-btn").click(function(){
-               $(".inner-form").toggle();
-         });
-
-
-               //hotel list
-
-
-   $('.boxhotelInput').on('click',function(){
-      $('.hotelb').slideDown();
-   });
-      
-
-
+      $(".drop-down-btn").click(function(){
+         $(".inner-form").toggle();
+      });
+      $('.boxhotelInput').on('click',function(){
+         $('.hotelb').slideDown();
+      });
       $(".boxhotelInput").keyup(function() {
-         ///var toDate = $('.toDate');
          if ($(".boxhotelInput").val().length > 0) {
-         // toDate.slideDown();
          $('.hto-lst-location').slideDown();
          $('.hotel-empty-state').slideUp();
          } else {
-         //toDate.slideUp();
          $('.hto-lst-location').slideUp();
          $('.hotel-empty-state').slideDown();
          }
       });
-
-
       $('.hotel-searchlst li').each(function(x,y){
          $(y).on('click',function(){
                $('.boxhotelInput').val();
@@ -1679,16 +1530,10 @@
          $('.hotelb').slideUp();
    });
             
-            
-               
    // SCRIPT FOR DROPOFF LOCATION
-
-
-
    $('.boxhotelInput2').on('click',function(){
       $('.hotelc').slideDown();
    });
-      
 
       $(".boxhotelInput2").keyup(function() {
          ///var toDate = $('.toDate');
@@ -1702,7 +1547,6 @@
          $('.hotel-empty-state2').slideDown();
          }
       });
-
 
       $('.hotel-searchlst2 li').each(function(x,y){
          $(y).on('click',function(){
@@ -2762,18 +2606,13 @@ if (window.innerWidth < 768) {
 
       }
    /* Password Reset Function */
-
    /* Register Function */
       function register(type){
-
          if(type == 'uc'){
                var form = $("#UCRegisterForm");
          }else{
                var form = $("#FNRegisterForm");
          }
-
-         
-
          if(form.valid()){
                $(document).ready(function(){
 
@@ -2841,10 +2680,8 @@ if (window.innerWidth < 768) {
          }
       }
    /* Register Function */
-
    /* Register Function */
       function register1(type){
-
          if(type == 'uc'){
                var form = $("#DetailUCRegisterForm");
          }else{
@@ -2852,14 +2689,11 @@ if (window.innerWidth < 768) {
          }
          if(form.valid()){
                $(document).ready(function(){
-
                   $('.RegisterMbtnSubmit').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
-
                   setTimeout(()=>{
                      var registerForm = form;
                      var formData = registerForm.serialize();
                      var url = 'front/register.html';
-
                      $.ajax({
                            url:url,
                            type:'POST',
@@ -2917,7 +2751,6 @@ if (window.innerWidth < 768) {
          }
       }
    /* Register Function */
-
    function resendmail(id){
       $('.ResendMail').addClass('m-loader m-loader--light m-loader--right').attr('disabled',true);
       var url = 'https://umrahcompanions.com/resend-email/'+id;
@@ -2963,7 +2796,6 @@ if (window.innerWidth < 768) {
    </script>
    <script>
    var input = document.querySelector("#phone4");
-
          $(document).ready(function(){ 
                $('.main-loader').fadeOut(2000);
             })
@@ -3112,7 +2944,6 @@ if (window.innerWidth < 768) {
                $('.country_code').val(countryData.dialCode);
             });
          /* Phone */
-
          //open login from create account
          $('.open-login').on('click',function(e) {
             $('.form-button2Slide').show();
@@ -3136,21 +2967,17 @@ if (window.innerWidth < 768) {
             $('.form-button2Slide').slideDown();
          });
 
-   </script><!-- Common Js -->
+   </script>
+   <!-- Common Js -->
    <script type="text/javascript">
       function UpdateUrl(){
          history.replaceState('', '', '/inquiry');
       }
    </script>      <!-- Script -->
 
-         <script src="../www.google.com/recaptcha/apid41d.js?" async defer></script>
-
-
-         <script type="text/javascript">
-         
-         </script>
-         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210238043-1"></script>
-   
+   <script src="../www.google.com/recaptcha/apid41d.js?" async defer></script>
+   <script type="text/javascript"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210238043-1"></script>
    <script type="text/javascript">
       // $(document).ready(function() {
 
@@ -3186,7 +3013,6 @@ if (window.innerWidth < 768) {
          a.appendChild(r);
    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
    </script>
-
    <!-- Facebook Pixel Code -->
    <script>
       !function(f,b,e,v,n,t,s)
@@ -3206,7 +3032,6 @@ if (window.innerWidth < 768) {
    <!--Start of Tawk.to Script-->
 
    <!--End of Tawk.to Script-->
-
    <script type="text/javascript">
    
    </script>
@@ -3214,6 +3039,5 @@ if (window.innerWidth < 768) {
    <zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm914bpv5002b3dsuse89q9zf'></zapier-interfaces-chatbot-embed>
       </div>
    </body>
-
    <!-- Mirrored from umrahcompanions.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Jul 2025 13:30:26 GMT -->
    </html>
