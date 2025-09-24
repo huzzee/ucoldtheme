@@ -922,10 +922,14 @@ color: #FFFFFF !important;
   width: 60%;
 }
 .box.days{
-  width: 80%;
+  width: 70%;
 }
 .box.flight-details{
   width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
 }
 .box.transport-details{
   width: 80%;
@@ -1033,13 +1037,36 @@ color: #454F5B;
 .form-row-package .col.l4{
   width: 31%;
 }
+.form-row .col.l11
+{
+width: 90%;
+}
+.form-row .col.l1{
+  width:10%;
+}
 
 @media (max-width:1439px) {
 .hotel-card{
   width: 300px;
 }
 }
-
+@media (max-width:600px) {
+  .footer-span{
+  display: none !important;
+} .footer-col{
+    width: 150px;
+  }
+  .builder-footer{
+    padding: 10px 10px !important;
+  }
+  .footer-col-med {
+    /* max-width: 300px; */
+    width: 80%;
+}
+.form-row .col.s12{
+  width: 100%;
+}
+}
 @media (max-width:1023px) {
   .package-builder{
     min-height: 100%;
@@ -1058,6 +1085,7 @@ text-align: center;
 vertical-align: middle;
 text-transform: capitalize;
 color: #1d2b53;
+
 
   }
   .form-row-flight{

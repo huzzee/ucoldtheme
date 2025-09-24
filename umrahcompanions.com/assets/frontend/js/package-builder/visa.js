@@ -155,7 +155,7 @@ function showStep(stepId) {
 
   if (stepId === "transport-details") {
     document.querySelector(".skip-flight-btn").style.display = "inline-block";
-    document.querySelector(".skip-flight-btn").innerHTML = "Skip Transport";
+    document.querySelector(".skip-flight-btn").innerHTML = "Skip";
   }
 
   if (stepId === "hotel-details") {
