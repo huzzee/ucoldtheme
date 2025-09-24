@@ -43,7 +43,7 @@ function renderVisaCards() {
     const col = document.createElement("div");
     col.classList.add("col", "l4", "m6", "s12"); // safer than className
     col.innerHTML = `
-      <div class="card visa-card" data-aos="fade-right" data-aos-duration="1000"  data-visa="${card.title}">
+      <div class="card visa-card"  data-visa="${card.title}">
         <div class="flex">
           <div class="rounded-circle">
             <img src="assets/frontend/img/CreditCard.svg" alt="">

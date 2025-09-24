@@ -112,6 +112,8 @@
       <!-- Style -->
          <!-- Import Google Icon Font-->
          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
    <!--Import materialize.css-->
    <link type="text/css" rel="stylesheet" href="assets/frontend/css/materialize.min.css"  media="screen,projection"/>
    <!-- <link type="text/css" rel="stylesheet" href="assets/frontend/css/locomotive-scroll.css"/> -->
@@ -349,13 +351,13 @@
             </div>
          </div>
       </div>
-      <div data-scroll-container>
+      <div >
       <div id="header"></div>
                <!-- Section Content -->
          <!-- Banner -->
          <section class="innerBanner">
             <img data-scroll data-scroll-direction="vertical" data-scroll-speed="0" data-scroll-offset="1%"
-               src="approot/storage/app/public/images/frontend/banner.webp" class="innerBanner-img" alt="umrah">
+               src="approot/storage/app/public/images/frontend/banner-bg2.jpg" class="innerBanner-img" alt="umrah">
             <div class="secDiv">
                <div class="container">
                   <div class="row first-section">
@@ -380,10 +382,10 @@
                      <h1 class="main-heading">Best Price Umrah Packages</h1>       
                      <div style="display: flex; flex-direction:column; align-items:center;">
                         <div class="col s12 mb-5 tabs-col" >
-                           <ul class="tabs homepage-tabs">
-                              <li class="tab"><a class="active" href="#test1"><i class="fas fa-box-open"></i><span>Packages</span> </a></li>
-                              <li class="tab"><a href="#test2"><i class="fas fa-bed"></i><span>Hotels</span> </a></li>
-                              <li class="tab"><a href="#test3"><i class="fas fa-car"></i><span>Transport</span> </a></li>
+                           <ul class="tabs homepage-tabs">                                                   
+                              <li class="tab"><a class="active" href="#test2"><img width="20%" src="assets/frontend/img/BuildingApartment.svg" alt=""><span>Hotels</span> </a></li>
+                              <li class="tab"><a href="#test3"><img width="20%" src="assets/frontend/img/car_icon.svg" alt=""></i><span>Transport</span> </a></li>
+                              <li class="tab"><a  href="#test1"><img width="20%" src="assets/frontend/img/Line.svg" alt=""><span>Packages</span> </a></li>
                            </ul>
                         </div>
                         <div class="formBox">
@@ -526,7 +528,7 @@
                                  <form method="GET" action="https://umrahcompanions.com/reservehotel">
                                     <div class="row" style="display: flex; flex-wrap:wrap; gap: 10px; align-items:center;">
                                        <!-- <div class=""> -->
-                                          <div class="input-field col s12 m12 l4">
+                                          <div class="input-field col s12 m12 l3">
                                              <label>Location</label>
                                              <select name="city">
                                                 <option value="56772">Makkah</option>
@@ -534,9 +536,13 @@
                                              </select>
                                        </div>
                                        <!-- col l3 end -->
-                                          <div class="input-field col s12 m12 l4">
-                                             <label>Check-in Check-out</label>
-                                             <input type="text" id="daterange" placeholder="Add Dates" name="dates">
+                                          <div class="input-field col s12 m12 l3">
+                                             <label>Check-in Check</label>
+                                             <input type="date" id="checkinDate" placeholder="Add Dates" name="checkindate">
+                                          </div>
+                                          <div class="input-field col s12 m12 l3">
+                                             <label>Check-in Check</label>
+                                             <input type="date" id="checkoutDate" placeholder="Add Dates" name="checkoutdate">
                                           </div>
                                        <div class="col s12 m6 l2">
                                           <div class="srchbtn searchButton">
@@ -570,7 +576,9 @@
             <div class="container">
                <div class="row">
                   <div class="col l12 packageSpacing">
-                     <div class="headingbtn">
+                     <div class="headingbt">
+                        <p class="badge">PACKAGES</p>
+                        <div>
                         <h2 class="main-heading">Popular Umrah Packages 2025</h2>
                         <p>Explore a range of thoughtfully curated Umrah packages 
                            designed to suit your travel dates, budget, and preferences. 
@@ -578,8 +586,9 @@
                            a package made just for you. Begin your spiritual journey with 
                            <span class="text-blue">trusted partner</span> and complete peace of mind.</p>
                         <!-- <a href="packages.html" class="btn waves-effect waves-light h-btn-done viewBtn">View all</a> -->
+                         </div>
+
                      </div>
-                     <hr>
                   </div>
                </div>
                <div class="row" id="packagesRow"></div>
@@ -588,21 +597,21 @@
             </div>
          </section>
          <!-- Advantages-->
-         <section class="main-sec advantages" >
+         <section class="main-sec advantages" style="background-image: url('approot/storage/app/public/images/frontend/l-flower.png'); background-repeat: no-repeat;" >
             <div class="row advantage-row">
                <div class="col s12 l4 advantage">
-                  <img src="assets/frontend/img/rocket.png">
-                  <h2>Smoother</h2>
+                  <img style="width:15%" src="assets/frontend/img/seamless.png">
+                  <h2>Seamless</h2>
                </div>
                <hr class="vr">
                <div class="col s12 l4 advantage">
-                  <img src="assets/frontend/img/hasselFree.png">
-                  <h2>Hassle-free</h2>
+                  <img style="width:10%" src="assets/frontend/img/innovation.png">
+                  <h2>Innovative</h2>
                </div>
                <hr class="vr">
                <div class="col s12 l4 advantage">
-                  <img src="assets/frontend/img/smarter.png">
-                  <h2>Smarter</h2>
+                  <img style="width:10%" src="assets/frontend/img/companionship.png">
+                  <h2>Companionship</h2>
                </div>
             </div>
             
@@ -610,8 +619,8 @@
          <!-- Offer -->
          <section class="offer-you" >
             <div class="container">
-               <div class="row offer-you-row">
-                  <div class="col l9 s8" style="margin-left: 0px;">
+               <div class="offer-you-row">
+                  <div class="col l8 s8" style="margin-left: 0px;">
                      <div class="headingbtn">
                         <h2 class="main-heading">What do we offer?</h2>
                      </div>
@@ -622,7 +631,6 @@
                            Begin your spiritual journey with trusted options and complete peace of mind.
                         </p>
                      </div>
-                     <hr>
                   </div>
                   <div class="col l1 s2" style="margin-left: 0px;">
                      <button class="btn blue">
@@ -823,7 +831,7 @@
                               <p>It was an emotional, spiritual journey for us &ndash; we didn&rsquo;t want to leave! UmrahCompanions took care of every moment of our trip!</p>
 
                               <div class="client_Image">
-                                 <img style="width: 100%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
+                                 <img style="width: 50%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
                                  <div class="designation_Text">
                                     <strong>Vali</strong>
                                  </div>
@@ -838,7 +846,7 @@
                               <p>It was an emotional, spiritual journey for us &ndash; we didn&rsquo;t want to leave! UmrahCompanions took care of every moment of our trip!</p>
 
                               <div class="client_Image">
-                                 <img style="width: 100%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
+                                 <img style="width: 50%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
                                  <div class="designation_Text">
                                     <strong>Vali</strong>
                                  </div>
@@ -853,7 +861,7 @@
                               <p>It was an emotional, spiritual journey for us &ndash; we didn&rsquo;t want to leave! UmrahCompanions took care of every moment of our trip!</p>
 
                               <div class="client_Image">
-                                 <img style="width: 100%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
+                                 <img style="width: 50%; border-radius: 50%;" src="assets/frontend/img/testimonial.png" alt="">
                                  <div class="designation_Text">
                                     <strong>Vali</strong>
                                  </div>
@@ -925,15 +933,24 @@
                         <input id="password" type="password" class=""
                            name="password" autocomplete="current-password" placeholder="Enter Password">
                      </div>
-                     <div class="input-field1 loginfields">
+                     <div class="CTA">
                         <button type="button" class="waves-effect loginMbtnSubmit" onclick="login()">Login</button>
                      </div>
+                     <div class="hr-flex">
+                        <hr> or <hr>
+                     </div>
                      <div class="CTA">
+                        <a href="#" class="loginLinks"><img src="assets/frontend/img/google.svg">Continue with Google </a>
+                     </div>
+                     <div class="CTA">
+                        <a href="#" class="loginLinks"><img src="assets/frontend/img/facebook.svg">Continue with Facebook </a>
+                     </div>
+                     <!-- <div class="CTA">
                         <a href="#" class="waves-effect switch registerMbtn" id="rg-btn">Register</a>
-                     </div>
+                     </div>-->
                      <div class="CTA">
-                        <a href="#" class="switch" id="forgotModalbtn">Forgot Password</a>
-                     </div>
+                        <a href="#" class="switch" id="forgotModalbtn">Don’t have an account? <span class="text-blue"> Sign up now</span></a>
+                     </div> 
                   </form>
                </div>
                <!-- End Login Form -->

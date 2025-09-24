@@ -43,7 +43,7 @@
       responsive: {
         0: { items: 2 },
         600: { items: 8 },
-        1000: { items: 12 }
+        1000: { items: 8 }
       }
     });
 
@@ -100,7 +100,7 @@
           ${pkg.chips.map((chip, index) => `<div class="chip${index}">${chip}</div>`).join("")}
 
           <!-- Inclusions -->
-          <p class="grey-text text-darken-1" style="margin-top:15px;">Inclusions</p>
+          <p class="grey-text text-darken-1" style="margin:15px 0px;">Inclusions</p>
           <div class="row center-align">
             ${pkg.inclusions.map(item => `
               <div class="col s3 inclusion">

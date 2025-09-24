@@ -82,11 +82,10 @@ function renderHotels() {
       <div class="hotel-inner"> 
         <img class="hotel-img" src="${hotel.img}" alt="${hotel.name}">
         <div class="hotel-info">
-          <h5 class="sub-heading" style="width: 100%; display:flex; gap:19px">${hotel.name} <span class="list-rating">${`<img src="assets/frontend/img/rating.svg"  alt="">`.repeat(hotel.rating)}</span></h5>
+          <h5 class="sub-heading" style="width: 100%; display:flex; gap:19px; margin:0px; ">${hotel.name} <span class="list-rating">${`<img src="assets/frontend/img/rating.svg"  alt="">`.repeat(hotel.rating)}</span></h5>
           <p>Luxury hotel with stunning views of the Holy Mosque</p>
           <hr>
-          <div>          <p class="inclusion">Inclusions</p>
-</div>
+          <div class="inclusion"><p>Inclusions</p></div>
           <div class="features-div">
             <span class="features"><img src="assets/frontend/img/Kabah.svg"  alt="">${hotel.city} &nbsp; | &nbsp; ${hotel.distance} km &nbsp;| &nbsp; 10 Minutes Walk</span>
             <span class="features"><img src="assets/frontend/img/night.svg"  alt=""> ${hotel.nights} Nights</span>

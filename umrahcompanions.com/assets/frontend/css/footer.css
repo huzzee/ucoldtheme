@@ -1,3 +1,7 @@
+#contact-card{
+  padding: 50px 0px;
+}
+
 .footer {
   background:#15325A;
   padding: 100px;
@@ -200,6 +204,8 @@ padding-right: 25px;
 padding-bottom: 8px;
 padding-left: 25px;
 color: white;
+border: none;
+box-shadow: none;
 }
 .contact-img{
       position: relative;

@@ -111,7 +111,10 @@ text-transform: capitalize;
     line-height: 18px !important;
 
 }
-.form-control, .form_row input, .form-select {
+.iti input[type=tel] {
+    font-size: 12px;
+}
+.form-control, .checkout-row .form_row input, .form-select {
   border-radius: 10px !important;
   padding: 9px 10px 9px 10px !important;
   color: var(--placeholder-color) !important;
@@ -139,7 +142,8 @@ text-transform: capitalize;
 }
 .details .detail{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items:start;
     gap: 10px;
     width: 40%;
 
@@ -169,13 +173,13 @@ text-transform: capitalize;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 161px;
+    width: 270px;
     height: 78px;
     flex-shrink: 0;border-radius: 7px;
     border: 1px solid var(--lighter-stroke, #EBEBEB);
 }
 .card-payment-row{
-    padding: 20px 0px;
+    padding: 0px 0px;
 }
 h3{
 font-weight: 600;
@@ -185,6 +189,23 @@ letter-spacing: 0%;
 text-transform: capitalize;
 color: #161C24;
 }
+#successModal{
+width: 45%;
+padding:50px 10px;
+border-radius: 10px;
+
+.primary-btn{
+    background-color:#1d3b6f;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 3rem;
+    padding: 10px 20px
+}
+}
+
  .box{
   background-color: #FFFFFF;
   width: 100%;
@@ -218,7 +239,7 @@ color: #161C24;
 justify-content: space-between;
 opacity: 1;
 border-radius: 10px;
-padding: 20px;
+padding: 10px;
 background: #EFF3F9;
 .row{
     margin: 0px;
@@ -251,13 +272,15 @@ background: #EFF3F9;
     flex-direction: column;
     gap: 20px;
 }
-.primary-btn{
+.details .primary-btn{
 opacity: 1;
 border-radius: 10px;
 padding-top: 0px;
-padding-right: 113px;
-padding-bottom: 16px;
-padding-left: 113px;
+/* padding-right: 120px; */
+padding-bottom: 0px;
+height: 52px;
+width:100%;
+/* padding-left: 120px; */
 gap: 10px;
 background: #1E3A6D;
 color: white;
@@ -334,6 +357,9 @@ padding-right: 20px;
 padding-bottom: 12px;
 padding-left: 20px;
 background: #fff;
+border: 1px solid var(--lighter-stroke, #EBEBEB);
+box-shadow: none;
+border-radius: 7px;
 width: 22%;
 display: flex;
 justify-content: center;
@@ -342,19 +368,22 @@ height: 50px;
 }
 .credit-cards .card.active, .bank-cards .card.active {
   border: 1px solid #1d3b6f; /* highlight active one */
-  background: #fff;
+  background: hsla(0, 0%, 100%, 0.897);
 }
 img.credit-card-icon {
   filter: brightness(0) saturate(100%);
 }
 .payment-card {
-  flex: 1;
-  padding: 15px;
-  border-radius: 10px;
-  background: #f5f7fa;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+     display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: #f5f7fa;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .modal{
     padding:20px 10px;
@@ -395,7 +424,7 @@ img.credit-card-icon {
 .payment-card img {
   width: 30px;
   display: block;
-  margin: 0 auto 8px;
+  margin: 0 0px 8px;
 }
 
 .payment-card.active {
@@ -458,8 +487,12 @@ border: 1px solid var(--lighter-stroke, #EBEBEB)
     .collapsible-body {
     padding: 10px;
     }
+    .credit-cards{
+        flex-wrap:wrap;
+    }
     .credit-cards .card{
-           padding-top: 12px;
+        width:45%;
+    padding-top: 12px;
     padding-right: 10px;
     padding-bottom: 12px;
     padding-left: 10px;
@@ -475,5 +508,20 @@ border: 1px solid var(--lighter-stroke, #EBEBEB)
     .green-card {
     width: 330px;
 }
-    
+    .details .primary-btn{
+opacity: 1;
+border-radius: 10px;
+padding-top: 0px;
+padding-right: 80px;
+padding-bottom: 0px;
+height: 52px;
+width:100%;
+padding-left:80px;
+gap: 10px;
+background: #1E3A6D;
+color: white;
+}
+.card-payment {
+    width: 100%;
+}
 }

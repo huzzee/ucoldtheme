@@ -4,25 +4,25 @@
 <div class="" data-aos="fade-left" data-aos-duration="1000"  style="width: 100%; display:flex; justify-content:center;" id="customize-page">
     <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="package-type">
         <div class="box package-type">
-                <h5 class="sub-heading">Select Package Preference</h5>
-                <div class="row form-row" id="packageContainer"></div>
+                <h5 class="sub-heading" style="margin-top: 0px;">Select Package Preference</h5>
+                <div class="row form-row form-row-package" id="packageContainer"></div>
         </div>
     </div>
 <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="flight-type">
     <div class="box flight-type">
-            <h5 class="sub-heading">Select Package Duration</h5>
-            <div class="row form-row" id="packageDuration"></div>
+            <h5 class="sub-heading" style="margin-top: 0px;">Select Package Duration</h5>
+            <div class="row form-row form-row-package" id="packageDuration"></div>
     </div>
 </div>
-<div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="Days">
+<div class="custom-card"  style="max-width: 100%; min-width: 80%; display:flex; justify-content:center;" id="Days">
     <div class="box days" >
-            <h5 class="sub-heading">Select Number of Days</h5>
-            <div class="row form-row" id="packageDays"></div>
+            <h5 class="sub-heading" style="margin-top: 0px;">Select Number of Days</h5>
+            <div class="row form-row form-row-package" id="packageDays"></div>
     </div>
 </div>
 <div class="custom-card"  style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="flight-details">
     <div class="box  flight-details" id="flexible-flight">
-            <h5 class="sub-heading">Search your flight</h5>
+            <h5 class="sub-heading" style="margin-top: 0px;">Search your flight</h5>
             <div id="flight-wrapper" style="margin-bottom:10px;">
                 <div class="row form-row form-row-package" style="width: 100%;display:flex; align-items:center; gap:10px; flex-wrap:wrap;" id="Flight-detail">
                     <div class="col l4 m6 s12 wrap_spacing">
@@ -98,9 +98,9 @@
     </div>
 
     <div class="box"  id="fixed-flight">
-            <h5 class="sub-heading">Filter your Flight</h5>
-            <div class="row form-row form-row-package" id="packageFlights">
-                <div class="col l2 m6 s12" style="padding: 0px;">
+            <h5 class="sub-heading" style="margin-top: 0px;">Filter your Flight</h5>
+            <div class="form-row form-row-package-flight" id="packageFlights">
+                <div class="col l2 m6 s12 wrap_spacing" style="padding: 0px;">
                     <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
                         <option value="">All Months<span class="text-danger">*</span></option>
                     </select>
@@ -137,14 +137,14 @@
                 </div>
             </div>
     </div>
-    <div id="flightContainer"class="box" style="height: 50vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
+    <div id="flightContainer"class="box" style="height: 70vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
     </div>
 </div>
 <div class="custom-card"   style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
     <div class="box transport-details"  >
-            <h5 class="sub-heading">Search Transport</h5>
-            <div class="row form-row form-row-package" id="packageFlights">
-                <div class="col l10 m6 s12" style="padding: 0px;">
+            <h5 class="sub-heading" style="margin-top: 0px;">Search Transport</h5>
+            <div class="row form-row" id="packageFlights">
+                <div class="col l11 m6 s12" style="padding: 0px;">
                      <select class="form-select browser-default active-state route_id" id="route" onchange="selectRoute()" name="route">
                                               <option value="5" 
                               data-routedata="{&quot;id&quot;:5,&quot;description&quot;:&quot;Madinah Airport \/ Madinah \/ Makkah \/ Jeddah Airport&quot;,&quot;no_of_pickups&quot;:3,&quot;image_id&quot;:3,&quot;pickup1_code&quot;:&quot;MDA&quot;,&quot;dropof1_code&quot;:&quot;MAD&quot;,&quot;pickup2_code&quot;:&quot;MAD&quot;,&quot;dropof2_code&quot;:&quot;MAK&quot;,&quot;pickup3_code&quot;:&quot;MAK&quot;,&quot;dropof3_code&quot;:&quot;JED&quot;,&quot;pickup4_code&quot;:null,&quot;dropof4_code&quot;:null,&quot;pickup5_code&quot;:null,&quot;dropof5_code&quot;:null,&quot;pickup6_code&quot;:null,&quot;dropof6_code&quot;:null,&quot;active&quot;:true,&quot;mazarat&quot;:false,&quot;last_airport&quot;:&quot;JED&quot;}">Madinah Airport / Madinah / Makkah / Jeddah Airport</option>
@@ -211,12 +211,12 @@
                             
                           </select>
                 </div>
-                <div class="col l2 m6 s12">
+                <div class="col l1 m6 s12">
                     <button id="clearFilters" style="width: 100%;" class=" secondary-btn">Search</button>
                 </div>
             </div>
             <h5 class="sub-heading" >Select Vehicle</h5>
-            <div class="row form-row form-row-package" data-aos="fade-left" data-aos-duration="1000"  id="packageTransport">
+            <div class="row form-row" data-aos="fade-left" data-aos-duration="1000"  id="packageTransport">
                 <div class="col l1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
                     <div class="vehicle-boxes ">
                         <input type="checkbox" class="main-checkboxes" name="sedan" id="sedan">
@@ -227,7 +227,7 @@
 
                 <div class="col  l1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
                     <div class="vehicle-boxes ">
-                        <input class="form-control main-checkboxes" type="checkbox" name="GMC" id="GMC">
+                        <input class=" main-checkboxes" type="checkbox" name="GMC" id="GMC">
                         <label class="input_labels" for="GMC">GMC</label>
                     </div>
                 </div>
@@ -259,9 +259,9 @@
             </div>
     </div>
 
-    <div class="box"  style=" display: flex; flex-direction: column; gap: 20px;">
+    <div class="box transport-details"  style=" display: flex; flex-direction: column; gap: 20px;">
         <div>
-            <h5 class="sub-heading">Select Your Transport</h5>
+            <h5 class="sub-heading" style="margin-top: 0px;">Select Your Transport</h5>
         </div>
         <div id="vehicleContainer" class="row" style="width: 100%;display: flex;flex-wrap: wrap;  flex-direction: row; gap: 20px;">
             <div class="vehicle-card-wrapper">
@@ -271,10 +271,10 @@
 </div>
 <div class="custom-card" style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="hotel-details">
     <div class="box hotel-details"   id="search-hotel">
-        <h5 class="sub-heading">Search Hotels</h5>
-       <div class=" row form-row form-row-package">
+        <h5 class="sub-heading" style="margin-top: 0px;">Search Hotels</h5>
+       <div class=" row form-row">
         <div class="col l3 s12">
-            <div class="hotel-item">
+            <div>
                 <select class="form-select city-select browser-default" name="hotel-city" id="hotel-city" style="width:85%; height:2.5rem !important">
                 <option value="">City</option>
                 <option value="Mak">Makkah</option>
@@ -283,7 +283,7 @@
             </div>
         </div>
         <div class="col s12 m6 l3 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
+          <div >
             <input type="text" class="form-control active-state package-datepicker"
               placeholder="CheckIn Date*" aria-label="CheckIn Date" id="hotel-checkin" name="hotel-checkin"
               value="" />
@@ -291,7 +291,7 @@
         </div>
 
         <div class="col s12 m6 l3 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
+          <div >
             <input type="text" class="form-control active-state package-datepicker"
               placeholder="CheckOut Date*" aria-label="CheckOut Date" id="hotel-checkout" name="hotel-checkout"
               value="" />
@@ -306,10 +306,10 @@
        </div>
     </div>
     <div class="box hotel-details"  style="display: none;" id="filter-hotel">
-        <h5 class="sub-heading">Filter Hotel</h5>
-       <div class=" row form-row form-row-package">
+        <h5 class="sub-heading" style="margin-top: 0px;">Filter Hotel</h5>
+       <div class=" row form-row ">
         <div class="col l2 s12">
-            <div class="hotel-item">
+            <div >
                 <select class="form-select browser-default" name="price-range" id="price-range" style="width:85%;  ">
                 <option value="">Price Range</option>
                 <option value="Mak">Makkah</option>
@@ -318,7 +318,7 @@
             </div>
         </div>
         <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
+          <div>
             <input type="text" class="form-control active-state"
               placeholder="Area" id="area" name="area"
               value="" />
@@ -326,14 +326,14 @@
         </div>
 
         <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
-          <div class="hotel-item" style="height:100%">
+          <div >
             <input type="text" class="form-control active-state"
               placeholder="Distance" id="distance" name="distance"
               value="" />
           </div>
         </div>
         <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
-           <div class="hotel-item">
+           <div >
                 <select class="form-select browser-default" name="rating" id="rating" style="width:85%;  ">
                 <option value="">Star Rating</option>
                 <option value="Mak">5 star</option>
@@ -356,7 +356,7 @@
     </div>
      <div class="box hotel-details" id="show-hotels" style=" display: none; flex-direction: column; gap: 10px;">
         <div>
-            <h5 class="sub-heading">Filter Hotel</h5>
+            <h5 class="sub-heading" style="margin-top: 0px;">Filter Hotel</h5>
         </div>
         <div id="hotelContainer" class="row" style="width: 100%;display: flex;flex-wrap: wrap;  flex-direction: row; gap: 20px; ">
             <div class="vehicle-card-wrapper">
@@ -371,9 +371,12 @@
     <div class="box another-hotel"  style=" display: flex; flex-direction: column; align-items: center;" id="search-hotel">
         <img src="assets/frontend/img/another-hotel.png" alt="">
         <h5 class="sub-heading">Add another Hotel</h5>
-        <span style="text-align: center;">Easily book an extra hotel to cover your full journey or stay closer to different holy sites.</span>
+        <p style="text-align: center; ">Easily book an extra hotel to cover your full journey or stay closer to different holy sites.</p>
 
-        <div>
+        <div style="    width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 36px;">
             <button type="button" class="btn btn-outline outline-btn" onclick="checkout()">Checkout</button>
             <button type="button" id="next" class="btn  primary-btn" onclick="showStep('hotel-details')">Add Hotel</button>
         </div>

@@ -9,6 +9,7 @@ $(document).ready(function () {
     // add active class to tab 2
     const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]');
     tab2.addClass('active');
+    
 
     var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
     $('#tab-content').load(tabPath, function () {
