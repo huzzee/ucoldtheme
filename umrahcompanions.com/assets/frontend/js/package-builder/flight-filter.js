@@ -52,19 +52,18 @@ function renderFlights(data) {
   });
   if (data.length === 0) {
     container.innerHTML = `
-      <div class="no-flights">
-         <div class="row form-row flex-row">
-          <div class="col l12 d-flex" style="justify-content:center">
-            <div class="rounded-circle">
-              <img src="assets/frontend/img/grey-flight.svg" alt="">
+      <div class="no-flights" style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="row form-row flex-row">
+            <div class="col l12 d-flex" style="justify-content:center; flex-direction:column; gap:10px">
+              <div class="rounded-circle">
+                <img style="top:16px; left:16px" src="assets/frontend/img/grey-flight.svg" alt="">
+              </div>
+              <h5 class="sub-heading" style="margin:0px;">No flights found</h5>
             </div>
-            <h3 style="margin:0px;">No flights found</h3>
           </div>
-        </div>
         <div class="no-flight-text">
         <p class="text-center">Try adjusting filters to see more options</p>
         <button class="secondary-btn" id="continueWithoutFlight">Clear All Filters</button>
-
         </div>
       </div>
     `;

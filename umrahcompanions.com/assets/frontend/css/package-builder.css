@@ -130,10 +130,10 @@ background: #F7FFFF;
   background: #F7FFFF;
   border: 2px solid  #24B3BA;
 }
-.active{
+/* .active{
   background: #F7FFFF;
   border: 2px solid  #24B3BA;
-}
+} */
 
 .flight-card.active {
   position: relative;
@@ -584,7 +584,7 @@ background-color: #F7F7F7 ;
 .no-flight-text{
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
   justify-content: center;
   align-items: center;
 }
