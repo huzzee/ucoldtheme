@@ -69,12 +69,13 @@ function renderVehicles() {
         card.innerHTML = `
             <div class="vehicle-card" data-vehicle="${v}" data-aos="fade-left" data-aos-duration="1000" style="display:flex;flex-direction:column;gap:13px">
                 <img src="${v.img}" width="100%" alt="${v.name}">
-                <div class="row" style="width:100%;display:flex;justify-content:space-between;gap:20px;margin:0px 10px;">
-                    <div class="col l3">
+                <p class="vehicle-badge">Recommended</p>
+                <div class="" style="width:100%;flex-direction:row;display:flex;justify-content:space-between;gap:20px;">
+                    <div class="" style="width:30%;">
                         <h5 class="sub-heading" style="width:fit-content;">${v.name}</h5>
                     </div>
-                    <div class="col l8">
-                        <h5 class="sub-heading text-right">${v.price}/ <sub>Total</sub></h5>
+                    <div class="" style="width:40%; text-align:right;">
+                        <h5 class="sub-heading text-right">${v.price}</h5>
                     </div>
                 </div>
                 <hr>

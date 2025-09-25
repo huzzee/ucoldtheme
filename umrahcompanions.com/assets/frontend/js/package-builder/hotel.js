@@ -109,9 +109,9 @@ function createCards(hotels) {
             <span class="features"><img src="assets/frontend/img/night.svg" alt=""> ${hotel.nights} Nights</span>
             <span class="features"><img src="assets/frontend/img/rating.svg" alt=""> ${hotel.rating} Star</span>
           </div>
-          <div class="row form-row form-row-hotel" style="display:flex; align-items: center;justify-content:space-between; margin-top:20px;">
+          <div class=" form-row form-row-hotel" style="display:flex; align-items: center;justify-content:space-between; margin-top:20px;">
             <div class="col l8">
-              <h5 class="sub-heading"><span>From </span> PKR ${hotel.price} <span>/Night</span></h5>
+              <h5 class="sub-heading"><span>From</span> PKR ${hotel.price} <span>/Night</span></h5>
               <span>${hotel.pk_price}</span>
             </div>
             <div class="col l4">

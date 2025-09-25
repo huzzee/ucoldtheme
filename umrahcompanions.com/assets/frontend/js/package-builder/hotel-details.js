@@ -69,6 +69,10 @@ function changeImage(el) {
   let mainImage = document.getElementById("mainImage");
   mainImage.src = el.src;
 }
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.tooltipped');
+    M.Tooltip.init(elems);
+  });
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
 hotelName = urlParams.get("hotel");

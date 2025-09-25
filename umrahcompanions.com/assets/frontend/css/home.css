@@ -219,15 +219,20 @@
     padding: 0px 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     img{
       filter: brightness(0) saturate(69%) invert(1) sepia(1) hue-rotate(381deg) saturate(11);
     }
     p{
       color: #C0D857;
+      border-bottom: 1px dashed rgba(192, 216, 87, 0.41);
     }
+    .vr{
+      height: 20px;
+      border-left: 1px solid rgba(192, 216, 87, 0.41);
 
-
+    }
   }
    .custom-card div{
     display: flex;
@@ -239,6 +244,7 @@
     gap: 10px;
     align-items: center;
     color: white;
+
     padding: 0px 5px;
   }
   h1.main-heading{
@@ -302,7 +308,26 @@
   justify-items: center;
   gap: 8px;
 }
-
+.process-row{
+  margin: 0px!important;
+}
+.light-badge{
+  font-weight: 400;
+color: #24B3BA !important;
+font-family: 'Inter';
+font-size: 12px !important;
+font-style: normal;
+font-weight: 600 !important;
+line-height: normal;
+background: #ECFEFF !important;
+display: flex;
+padding: 6px 5px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin: 0px;
+  
+}
 .counter-box input {
   text-align: center;
   width: 50px !important;

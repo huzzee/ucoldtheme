@@ -111,6 +111,7 @@ function showStep(stepId) {
 
   // reset skip button
   document.querySelector(".skip-flight-btn").style.display = "none";
+    const isMobile = window.innerWidth <= 768;
 
   // special cases
   if (stepId === "flight-details") {
@@ -149,13 +150,14 @@ function showStep(stepId) {
       $("#fixed-flight").show();
     }
     initDatePickers();
+
     document.querySelector(".skip-flight-btn").style.display = "inline-block";
-    document.querySelector(".skip-flight-btn").innerHTML = "Skip Flights";
+    document.querySelector(".skip-flight-btn").innerHTML = isMobile ? "Skip" : "Skip Flights";
   }
 
   if (stepId === "transport-details") {
     document.querySelector(".skip-flight-btn").style.display = "inline-block";
-    document.querySelector(".skip-flight-btn").innerHTML = "Skip";
+    document.querySelector(".skip-flight-btn").innerHTML = isMobile ? "Skip" : "Skip Transport";
   }
 
   if (stepId === "hotel-details") {

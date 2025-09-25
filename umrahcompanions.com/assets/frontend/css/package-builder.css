@@ -26,6 +26,7 @@
   --tran-03: all 0.2s ease;
 }
 
+
 .package-builder {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -61,13 +62,16 @@ h5{
     font-family: Inter;
     font-weight: 700;
     font-style: Bold;
-    font-size: 17px;
+    font-size: 20px;
     leading-trim: NONE;
     line-height: 100%;
     letter-spacing: 2%;
     vertical-align: middle;
     text-transform: capitalize;
 
+}
+.form-row-footer .secondary-btn{
+padding:8px 25px !important
 }
 
 .tab {
@@ -221,7 +225,7 @@ text-align: center;
     padding: 8px 14px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 16px;
     width: 100%;
@@ -257,11 +261,37 @@ text-align: center;
 .counter-btn:hover {
   background-color: #cbd5e1;
 }
+.vehicle-badge{
+    display: inline-block;
+    width:fit-content;
+    padding: 3px 5px;
+    justify-content: center;
+    align-items: center;
+    background: #24B3BA;
+    color: #FFF !important;
+    margin: 0px;
+    gap: 6px;
+    opacity: 1;
+    border-radius: 6px;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
 
+  }
 .counter-value {
-  font-size: 14px;
-  font-weight: bold;
-  color: #1e3a6d;
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
   min-width: 20px;
   text-align: center;
 }
@@ -559,6 +589,7 @@ color: var(--primary-color) !important;
   margin-bottom: 0px;
 }
 .skip-flight-btn, .outline-btn{
+  content:"";
 gap: 9px;
 opacity: 1;
 width: max-content;
@@ -607,10 +638,29 @@ width: 100% !important;
  justify-content: center !important;
  gap:15px !important;
 }
+
 .vehicle-card.active {
     border: 2px solid #17a2b8;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     background-color: #f0fcff;
+}
+.vehicle-card.active::after {
+    content: "Selected \f1b9 "; /* fa-car Unicode + text */
+    font-family: "Font Awesome 5 Free", "Inter"; 
+    position: absolute;
+    top: 11px;
+    left: -35px;
+    background: #24b2ba;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 22px;
+    transform: rotate(0deg) translate(19px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 10;
+    text-align: center;
 }
 
 .vehicle-card.active .vehicle-button {
@@ -724,6 +774,7 @@ option{
   align-items: center;
   background: transparent;
   padding: 4px 1px;
+  gap: 10px;
 }
 
 .counter button {
@@ -763,7 +814,7 @@ option{
 }
 .hotel-card{
   width: 341px;
-  height: 385;
+  height: 406px;
   opacity: 1;
   border-radius: 13px;
   border-width: 1px;
@@ -792,6 +843,14 @@ letter-spacing: 2%;
 text-align: justify;
 vertical-align: middle;
 color: #75758F;
+}
+.hotel-card h5{
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+
 }
 .hotel-card hr{
   border-style:dashed;
@@ -1048,6 +1107,7 @@ width: 90%;
 @media (max-width:1439px) {
 .hotel-card{
   width: 300px;
+  height: 377px;
 }
 }
 @media (max-width:600px) {
@@ -1065,6 +1125,9 @@ width: 90%;
 }
 .form-row .col.s12{
   width: 100%;
+}
+.skip-flight-btn{
+  content: "Skip";
 }
 }
 @media (max-width:1023px) {
