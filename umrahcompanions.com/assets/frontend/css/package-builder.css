@@ -26,6 +26,9 @@
   --tran-03: all 0.2s ease;
 }
 
+.checkout-btns .primary-btn{
+width: auto;
+}
 
 .package-builder {
   font-family: 'Inter', sans-serif;
