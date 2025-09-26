@@ -71,10 +71,10 @@ function renderVehicles() {
                 <img src="${v.img}" width="100%" alt="${v.name}">
                 <p class="vehicle-badge">Recommended</p>
                 <div class="" style="width:100%;flex-direction:row;display:flex;justify-content:space-between;gap:20px;">
-                    <div class="" style="width:30%;">
+                    <div class="" style="">
                         <h5 class="sub-heading" style="width:fit-content;">${v.name}</h5>
                     </div>
-                    <div class="" style="width:40%; text-align:right;">
+                    <div class="" style=" text-align:right;">
                         <h5 class="sub-heading text-right">${v.price}</h5>
                     </div>
                 </div>
