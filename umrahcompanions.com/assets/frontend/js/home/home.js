@@ -130,7 +130,7 @@
         </div>
         <!-- Footer -->
         <div class="card-action" style="display:flex; justify-content:space-between; align-items:center; padding:5px 0px;">
-          <h6 style="margin:0;">SAR <b>${pkg.price}</b> <span class="grey-text text-darken-1">/Person</span></h6>
+          <h6 style="margin:0;"><sup class="grey-text text-darken-1" style="padding-bottom:5px;" >SAR </sup><b>${pkg.price}</b> <span class="grey-text text-darken-1">/Person</span></h6>
           <div style="width:45%;display:flex; align-items:center; gap:10px;">
             <a href="packagepdf/document-4.pdf" class="btn-flat waves-effect outline" style="margin-right:0px; padding:0px;">
             <img src="assets/frontend/img/pdf.svg"></a>

@@ -2286,7 +2286,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   text-decoration: underline;
   font-size: 13px;
 }
-.login-form h2 {
+.login-form h2, .signup h2 {
   margin: 40px 0px;
   color: var(--white-color);
   text-align: center;
@@ -2305,15 +2305,26 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   border-radius: 10px !important;
   border-width: 1px;
 }
-/* .login-form .input-field input{
-  border: 0px;
-  height: 2rem;
-} */
 .loginMbtn{
   background-color: #24B3BA;
 }
-/*end register modal*/
 
+#userTypeSwitcher{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+}
+#userTypeSwitcher{
+  display: flex;
+  padding: 23px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+  border: 1px solid #335086;
+}
+/*end register modal*/
 .signWRaps2 h2 {
   text-align: center;
 }
@@ -2327,6 +2338,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   flex-wrap: nowrap;
   padding-top: 20px;
 }
+
 .textSuccess .emailAdd {
   text-decoration: underline;
   color: var(--text-light);
@@ -2651,7 +2663,33 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   }
 }
 
+#modalLogin .loginMbtnSubmit:hover {
+    border-radius: 10px;
+    background: #24B3BA;
+    color: white;
+    display: flex
+;
+    width: 100%;
+    height: 60px
+}
 @media only screen and (max-width: 992px) {
+    .container-n {
+      width: 90%;
+      margin: 0 auto;
+  }
+  .loginLinks {
+    width: 100%;
+    padding: 5px 0px;
+    height: 60px;
+  }
+  #modalLogin .modal-content input {
+    height: 25px;
+    margin: 0px;
+    padding: 14px 12px;
+  }
+  .loginMbtnSubmit {
+    height: 60px
+  }
   .login-btn-div .linkA.linkA3 .linkA.linkA3 {
     padding-right: 15px;
     position: absolute;

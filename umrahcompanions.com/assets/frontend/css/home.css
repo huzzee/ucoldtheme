@@ -250,7 +250,7 @@
   h1.main-heading{
    color: #FFF;
     text-align: center;
-    font-family: Inter;
+    font-family: 'Inter';
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
@@ -285,6 +285,7 @@
     flex-direction:column;
     gap:10px;
   }
+  
   .homepage-tabs{
     width: 32%;
     background: white;
@@ -1459,7 +1460,7 @@ box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;*/
 
 }
 .homepage-tabs .tab a.active img {
-filter: grayscale(0);
+    filter: brightness(0) invert(1);
 }
 .tabs .tab a:focus, .tabs .tab a:focus.active {
     background-color: #24B3BA;
@@ -1562,6 +1563,20 @@ filter: grayscale(0);
     vertical-align: middle;
     color: #071A26 !important;
 
+  }
+  .offer-container{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+  }
+  span.grey-text.text-darken-1, sup.grey-text.text-darken-1{
+    color: var(--Heading, #071A26) !important;
+    text-align: center !important;
+    font-family: 'Inter';
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    line-height: normal;
   }
   .distance-row{
     display: flex;
@@ -2437,7 +2452,7 @@ flex-direction: column;
     line-height: 160%;
     letter-spacing: 0%;
     text-transform: capitalize;
-    width:50%
+    width:55%
 
   }
   p{
@@ -4807,9 +4822,12 @@ a.registerButton:hover {
     }
 
   .homepage-tabs li.tab {
-    height: 35px;
+    margin: 0px;
+    height: 45px;
     line-height: 35px;
     margin-bottom: 0px;
+    display: flex;
+    align-items: end;
   }
   .formBox {
     z-index: 0;

@@ -619,7 +619,7 @@
          </section>
          <!-- Offer -->
          <section class="offer-you" >
-            <div class="container">
+            <div class="container offer-container">
                <div class="offer-you-row">
                   <div class="col l8 s8" style="margin-left: 0px;">
                      <div class="headingbt">
@@ -991,39 +991,51 @@
          <div class="col s5 brand pinkbrans">
             
             <div class="brand-text">
-               <h2>New To Umrah Companions? Welcome Aboard!</h2>
-               <p>Creating an account will give you access to all the features and benefits our site has to offer including your own personal dashboard, the best deals on Umrah travel and much more!</p>
-               
-               <div id="travelAgentText" class="travelAgentText" style="display:none;">
-                     <h2>Sub-Travel Agents</h2>
-                     <p>
-                        We are happy to have you onboard and a part of the Umrah Companions family. Choose only the best for your clients, choose Umrah Companions. Our customizable and curated packages will check all your clients boxes and then some!
-                     </p>
+                  <div>
+                     <img src="assets/frontend/img/logo.svg" alt="">
+                     <p>Ease, Assurance, Affordability, and Expertise all in one place. Stay connected with us.</p>
+                  </div>
+                  <!-- <h2>Nice To See You Again!</h2>
+                  <p>Login to your Umrah Companions account and start browsing our Umrah packages today. Customize your own package or select one of our curated itineraries, all for unbeatable prices. Experience everything Umrah Companions has to offer all at your fingertips!</p>
+                  <ul>
+                        <li>Comprehensive platform allows you to book flights, hotels, excursions, ground transportation and apply for e-visas delivered right to your inbox all in one place.</li>
+                        <li>DIY Umrah Packages that suit everyone’s needs</li>
+                        <li>Personal dashboard to organize your bookings</li>
+                        <li>And much more!</li>
+                  </ul> -->
+                  <span>© 2024 Umrah Companions. All rights reserved.</span>
                </div>
-               <div id="umrahIndiText" class="travelAgentText umrahIndiText" style="display:none;">
-                     <h2>Individual</h2>
-                     <p>
-                        We are happy to have you onboard and a part of the Umrah Companions family. Create your account and start browsing the best deals on Umrah packages.
-                     </p>
-               </div>
-            </div>
             
          </div>
          <!-- Form Box -->
-         <div class="col s12 l7 form">
+         <div class="col s12 l6 form">
             
             <!-- Signup Form -->
             <div class="signup form-peice">
-               <div class="signWRaps">
-                  <h2>Create Account</h2>
+               <h2>Sign In</h2>
 
-                     <div class="createForm">
+               <div class="signWRaps">
+                  <!-- <h2>Create Account</h2> -->
+                   <!-- Role Selection using Radio Buttons -->
+                     <div id="userTypeSwitcher">
+                        <label>
+                           <input type="radio" name="user_type" value="user" onchange="updateFormBasedOnUserType()" checked>
+                           <span>User</span>
+                        </label>
+                        <label>
+                           <input type="radio" name="user_type" value="agent" onchange="updateFormBasedOnUserType()">
+                           <span>Travel Agent</span>
+                        </label>
+                     </div>
+
+                   
+                     <!-- <div class="createForm">
                         <select class="ProfileSelect">
                            <option  value="" selected disabled>Please select user profile</optio>
                            <option value="umrah">Individual</option>
                            <option value="funadiq">Travel / SubTravel Agent</option>
                         </select>
-                     </div>
+                     </div> -->
 
                   
                      
