@@ -30,6 +30,7 @@
 width: auto;
 }
 
+
 .package-builder {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -38,8 +39,10 @@ width: auto;
   color: #1d2b53;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* adjust based on header/footer height */
+  position: relative; /* needed for sticky children */
 }
+
 .tab-content{
   display: flex;
   justify-content: center;
@@ -136,7 +139,28 @@ background: #F7FFFF;
 .card.active{
   background: #F7FFFF;
   border: 2px solid  #24B3BA;
+  padding: 30px 15px;
 }
+.visa-card.active::after {
+    content: "Selected \00a0\f5ab"; /* fa-passport */
+    font-family: "Font Awesome 5 Free", "Inter";
+    font-weight: 600; /* Font Awesome solid icons need this */
+    position: absolute;
+     top: 11px;
+    left: -35px;
+    background: #24b2ba;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 22px;
+    transform: rotate(0deg) translate(19px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 10;
+    text-align: center;
+}
+
 /* .active{
   background: #F7FFFF;
   border: 2px solid  #24B3BA;
@@ -218,8 +242,22 @@ text-align: center;
   height: 115;
   border-radius: 20px;
   padding: 20px;
-  gap: 15px;
+  gap: 20px;
   opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+.box h5.sub-heading{
+font-family: 'Inter';
+font-weight: 700;
+font-style: Bold;
+font-size: 17px;
+line-height: 100%;
+letter-spacing: 2%;
+margin: 0px;
+vertical-align: middle;
+text-transform: capitalize;
+
 }
 
 .counter-container {
@@ -338,15 +376,17 @@ border-radius: 15px;
 gap: 20px;
 opacity: 1;
 border-width: 1px;
-padding:35px 20px;
+padding:18px 15px;
 background:#FFFFFF;
 box-shadow: 0px 4px 15px 0px #00000008;
-border: 1px solid var(--lighter-stroke, #EBEBEB)
-
+border: 1px solid #98ADD4
+}
+.innerHeader {
+    background-color: #f1f5f9;
 }
 .flex{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .d-flex{
@@ -390,40 +430,43 @@ border-radius: 25px;
 }
 
 .badge{
-border-radius: 6px;
-padding: 6px;
-gap: 6px;
+width: auto !important;
 opacity: 1;
 margin: 0px !important;
 background: #EBF9FA !important;
 font-weight: 500 !important;
 font-style: Medium;
 font-size: 10px !important;
-line-height: 16px;
-letter-spacing: 0%;
-vertical-align: middle;
+line-height: 16px !important;
+font-size: 10px !important;
 border-radius: 10px;
 float: left !important;
-color: #24B3BA !important;
-}
-
-.builder-footer{
-width: 100%;
-justify-content: space-between;
+width: 60px;
+height: 20px !important;
 opacity: 1;
-border-width: 1px;
-padding-top: 25px;
-padding-right: 256px;
-padding-bottom: 25px;
-padding-left: 256px;
-background-color: white;
-border-top-left-radius: 15px;
-border-top-right-radius: 15px;
-border: 1px solid  #EBEBEB;
-position: sticky;
-bottom: 0;
+border-radius: 4px;
+display: flex;
+align-items: center;
+padding: 0px 4px !important;
+border: 1px solid #24B3BA;
+color: #24B3BA !important;}
 
+.builder-footer {
+  width: 100%;
+  justify-content: space-between;
+  opacity: 1;
+  padding: 25px 256px;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 1px solid #EBEBEB;
+
+  /* Sticky footer */
+  position: sticky;
+  bottom: 0;
+  z-index: 999; /* Ensure it sits on top */
 }
+
 .primary-btn{
   background: var(--primary-color);
 gap: 9px;
@@ -478,7 +521,7 @@ font-size: 11px;
 line-height: 140%;
 letter-spacing: 2%;
 vertical-align: middle;
-text-align: center;
+text-align: start;
 color: #454F5B;
 margin-bottom: 10px;
 }
@@ -1176,7 +1219,7 @@ color: #1d2b53;
 .box {
     background-color: #FFFFFF;
     width: 1000px;
-    height: 115;
+    height: 270px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;

@@ -1,16 +1,16 @@
 $(document).ready(function () {
+
   const params = new URLSearchParams(window.location.search);
   const step = params.get("step");
   const tab = params.get("tab");
-  // first remove all active
-  $('.tab').removeClass('active');
 
+  $('.tab').removeClass('active');
   if (tab === '2') {
-    // add active class to tab 2
+     $('.package-builder').addClass('custom-height');
+
     const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]');
     tab2.addClass('active');
-    
-
+  
     var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
     $('#tab-content').load(tabPath, function () {
         const savedData = localStorage.getItem("bookingData");
@@ -18,6 +18,8 @@ $(document).ready(function () {
           bookingData = JSON.parse(savedData);
           console.log("Restored bookingData:", bookingData);
         }
+          $(".package-builder").addClass('custom-height');
+
        document.getElementById("custom-footer").style.display="block";
        const urlParams = new URLSearchParams(window.location.search);
         if (!bookingData.hotel) bookingData.hotel = {};
@@ -50,6 +52,8 @@ $(document).ready(function () {
     var firstTabPath = $('.tab.active').data('tab');
     $('#tab-content').load(firstTabPath, function () {      
       document.getElementById("custom-footer").style.display="none";
+      $(".package-builder").removeClass('custom-height');
+
       populateCountries();
       initCounters();
       renderVisaCards();
@@ -63,9 +67,13 @@ $('.tab').click(function() {
 
     $('#tab-content').load(tabPath, function () {
        if(tabPath=='assets/frontend/shared/tabs/customize-tab.html'){
+          $(".package-builder").addClass('custom-height');
+
        document.getElementById("custom-footer").style.display="block";
       }
       else{
+          $(".package-builder").removeClass('custom-height');
+
        document.getElementById("custom-footer").style.display="none";
       }
         populateCountries(); // call again when new tab loads

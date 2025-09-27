@@ -2,22 +2,22 @@
   // flight.js
   const packageCards = [
   {
+    title: "Flight Package",
+    tags: [{name:"Complete Umrah Package", color:'#24B3BA'},
+      {name: "Budget Friendly", color:'#24B3BA"'}],
+    img:"assets/frontend/img/flight-package.svg",
+    details: ["flights", "hotel accommodations", "Transport", "Visa"],
+    tagsStyle:'start'
+
+  }, {
     title: "Land Package",
     tags: [{name:"Budget Friendly", color:"#24B3BA"}],
-    img:"assets/frontend/img/land.svg",
+    img:"assets/frontend/img/land-package.svg",
     details: ["Hotel Accommodation", "Transportation", "Visa"],
     tagsStyle:'start'
 
   },
-  {
-    title: "Flight Package",
-    tags: [{name:"Complete Umrah Package", color:'#24B3BA'},
-      {name: "Budget Friendly", color:'#24B3BA"'}],
-    img:"assets/frontend/img/light-flight.svg",
-    details: ["flights", "hotel accommodations", "Transport", "Visa"],
-    tagsStyle:'start'
-
-  },
+ 
 ];
 
 const packageDurationCards=[
@@ -28,7 +28,7 @@ const packageDurationCards=[
       {name:"14 Days", color:'#24B3BA'},
       {name:'21 Days', color:'#24B3BA'}],
     desc:'Pre-planned packages with set itineraries.',
-    img:"assets/frontend/img/Clock.svg",
+    img:"assets/frontend/img/fixed.svg",
     details: ["Structured Itinerary", "Discounted Rates", "Guided experiences"],
     tagsStyle:'start'
 
@@ -37,7 +37,7 @@ const packageDurationCards=[
     title: "Flexible",
     tags: [{name:"Complete Flexible",color:'#1547A2'}],
     desc:"Customize your flight according to your preferences.",
-    img:"assets/frontend/img/CalendarBlank.svg",
+    img:"assets/frontend/img/flexible.svg",
     details: ["Custom Dates", "flexible itinerary ", "Multiple Choices"],
     tagsStyle:'start'
 
@@ -50,8 +50,8 @@ const daysCards=[
       {name:"Popular Choice",color:'#22A566'},
       {name: "Balanced", color:'#24B3BA'}],
     desc:'Perfect for first-time pilgrims.',
-    img:"assets/frontend/img/CalendarBlank.svg",
-    tagsStyle:'center'
+    img:"assets/frontend/img/flexible.svg",
+    tagsStyle:'start'
 
   },
   {
@@ -59,8 +59,8 @@ const daysCards=[
     tags: [{name:"Premium", color:'#901CCB'}, 
       {name:"Extended", color:'#24B3BA'}],
     desc:"Extended spiritual journey.",
-    img:"assets/frontend/img/CalendarBlank.svg",
-    tagsStyle:'center'
+    img:"assets/frontend/img/flexible.svg",
+    tagsStyle:'start'
   },
 ];
 
@@ -112,8 +112,8 @@ function renderCards(type) {
       {name:"Popular Choice",color:'#22A566'},
       {name: "Balanced", color:'#24B3BA'}],
     desc:'Perfect for first-time pilgrims.',
-    img:"assets/frontend/img/CalendarBlank.svg",
-    tagsStyle:'center'
+    img:"assets/frontend/img/flexible.svg",
+    tagsStyle:'start'
 
   },{
     title: "14 Days Package",
@@ -121,8 +121,8 @@ function renderCards(type) {
       {name:"Popular Choice",color:'#22A566'},
       {name: "Balanced", color:'#24B3BA'}],
     desc:'Perfect for first-time pilgrims.',
-    img:"assets/frontend/img/CalendarBlank.svg",
-    tagsStyle:'center'
+    img:"assets/frontend/img/flexible.svg",
+    tagsStyle:'start'
 
   },
   {
@@ -130,8 +130,8 @@ function renderCards(type) {
     tags: [{name:"Premium", color:'#901CCB'}, 
       {name:"Extended", color:'#24B3BA'}],
     desc:"Extended spiritual journey.",
-    img:"assets/frontend/img/CalendarBlank.svg",
-    tagsStyle:'center'
+    img:"assets/frontend/img/flexible.svg",
+    tagsStyle:'start'
   },
 ];
   }else{
@@ -163,15 +163,13 @@ function renderCards(type) {
     col.innerHTML = `
       <div class="card package-card" data-aos="fade-left" data-aos-duration="1000" data-package="${card.title}">
         <div class="flex">
-          <div class="rounded-circle">
+          <h3 style="margin:0px;">${card.title}</h3>
             <img src="${card.img}" alt="">
-          </div>
         </div>
-        <h3 style="margin-bottom:5px;">${card.title}</h3>
         <div class="desc">${card.desc?card.desc:''}</div>
 
         <div class="tags" style="justify-content:${card.tagsStyle}">
-          ${card.tags.map(tag => `<span class="badge" style="color:${tag.color} !important;">${tag.name}</span>`).join("")}
+          ${card.tags.map(tag => `<span class="badge" style="color:${tag.color} !important; border:1px solid ${tag.color} !important;">${tag.name}</span>`).join("")}
         </div>
         <ul>
           ${card.details?card.details.map(d => `<li>${d}</li>`).join(""):""}

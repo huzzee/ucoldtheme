@@ -1,17 +1,24 @@
 const visaCards = [
   {
     title: "Umrah Visa",
-    tags: ["Pilgrimage"],
+    img:"assets/frontend/img/visa2.svg",
+    tags: [
+    {name:"Pilgrimage",color:'#F6B3DC'}],
     details: ["For Makkah & Madinah", "90 Days validity", "Single entry"]
   },
   {
     title: "Tourist Visa",
-    tags: ["Tourism", "Pilgrimage"],
+    img:"assets/frontend/img/tourist-visa.svg",
+     tags: [
+      {name:"Tourism",color:'#9CDDE0'},
+      {name: "Pilgrimage", color:'#F6B3DC'}],
     details: ["90 days per visit", "Valid 1 year", "Leisure travel and Pilgrimage"]
   },
   {
     title: "Visa not required",
-    tags: ["Existing"],
+    img:"assets/frontend/img/no-visa.svg",
+    tags: [
+    {name:"Existing",color:'#EACCA5'}],
     details: ["Already have one", "Not required"]
   }
 ];
@@ -43,15 +50,15 @@ function renderVisaCards() {
     const col = document.createElement("div");
     col.classList.add("col", "l4", "m6", "s12"); // safer than className
     col.innerHTML = `
-      <div class="card visa-card"  data-visa="${card.title}">
+      <div class="card visa-card" data-visa="${card.title}">
         <div class="flex">
-          <div class="rounded-circle">
-            <img src="assets/frontend/img/CreditCard.svg" alt="">
-          </div>
+          <h3 style="margin:0px;">${card.title}</h3>
+          <img src="${card.img}">
+          
         </div>
-        <h3>${card.title}</h3>
+        
         <div class="tags">
-          ${card.tags.map(tag => `<span class="badge">${tag}</span>`).join("")}
+          ${card.tags.map(tag => `<span class="badge" ">${tag.name}</span>`).join("")}
         </div>
         <ul>
           ${card.details.map(d => `<li>${d}</li>`).join("")}
@@ -64,23 +71,34 @@ function renderVisaCards() {
 
 // ---- Handle Visa Card Click ----
 $(document).on("click", ".visa-card", function () {
+  const $this = $(this);
+
+  // Mark clicked card as active
+  $(".visa-card").removeClass("active");
+  $this.addClass("active");
+
   // Save visa selection
-  bookingData.visaType = $(this).data("visa");
-  // Save traveler info
+  bookingData.visaType = $this.data("visa");
   bookingData.nationality = $("#nationality").val();
   bookingData.adults  = parseInt($("#adults").text(), 10) || 0;
   bookingData.child   = parseInt($("#child").text(), 10) || 0;
   bookingData.infants = parseInt($("#infants").text(), 10) || 0;
-  // Load Customize page
-  const nextTabPath = "assets/frontend/shared/tabs/customize-tab.html";
-  $("#tab-content").load(nextTabPath, function () {
-    document.getElementById("custom-footer").style.display="block";
-    showStep("package-type");
-    const urlParams = new URLSearchParams(window.location.search);
-  });
-  $(".tab").removeClass("active");
-  $('div.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]').addClass("active");
+
+  // Wait 500ms before switching tab (for UX feedback)
+  setTimeout(function () {
+    const nextTabPath = "assets/frontend/shared/tabs/customize-tab.html";
+    $("#tab-content").load(nextTabPath, function () {
+       $(".package-builder").addClass('custom-height');
+      document.getElementById("custom-footer").style.display = "block";
+      showStep("package-type");
+      const urlParams = new URLSearchParams(window.location.search);
+    });
+
+    $(".tab").removeClass("active");
+    $('div.tab[data-tab="assets/frontend/shared/tabs/customize-tab.html"]').addClass("active");
+  }, 1000); // 500ms delay
 });
+
 // ---- Handle Package Card Click ----
 const steps = [
   "package-type",
