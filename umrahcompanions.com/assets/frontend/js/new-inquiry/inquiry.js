@@ -315,19 +315,31 @@ routecheckboxes.forEach((checkbox) => {
     toggleContainer.style.backgroundColor = '#1e3a6d21';
     toggleContainer.style.border='1px solid #1e3a6da4';    
     label.style.color = 'black';
-
-      if(checkbox.id=="others"){
-      otherRoute.style.display='block';
-      otherRouteHeading.style.display='block';
-      }else{
-
         otherRoute.style.display='none';
         otherRouteHeading.style.display='none';
-      }
 
     
   });
 });
+const otherLink = document.getElementById('others-link');
+
+otherLink.addEventListener('click', () => {
+  // Reset other route selections
+  routecheckboxes.forEach((cb) => {
+    const container = cb.closest('.input_Labels');
+    const label = container.querySelector('label');
+
+    cb.checked = false;
+    container.style.backgroundColor = '#F1F5F9';
+    container.style.border = '1px solid #F1F5F9';
+    label.style.color = '#292d32';
+  });
+
+  // Show the other route section
+  otherRoute.style.display = 'block';
+  otherRouteHeading.style.display = 'block';
+});
+
 
 
 
