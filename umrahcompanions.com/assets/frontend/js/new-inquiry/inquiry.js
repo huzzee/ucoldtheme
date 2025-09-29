@@ -264,7 +264,6 @@ checkboxes.forEach((checkbox) => {
     const label = toggleContainer.querySelector('.toggle-label');
 
     if (checkbox.checked) {
-      console.log(checkbox.id)
       toggleContainer.style.backgroundColor = '#1E3A6D';
       label.style.color = 'white';
     } else {
@@ -300,24 +299,33 @@ routecheckboxes.forEach((checkbox) => {
     routecheckboxes.forEach((cb) => {
       const container = cb.closest('.input_Labels');
       const label = container.querySelector('label');
+    
       
       cb.checked = false;
       container.style.backgroundColor = '#F1F5F9';
       container.style.border='1px solid #F1F5F9'
       otherRoute.style.display='block';
       otherRouteHeading.style.display='block';
-
       label.style.color = '#292d32';
-    });
 
+    });
     checkbox.checked = true;
     const toggleContainer = checkbox.closest('.input_Labels');
     const label = toggleContainer.querySelector('label');
     toggleContainer.style.backgroundColor = '#1e3a6d21';
-    toggleContainer.style.border='1px solid #1e3a6da4';
-    otherRoute.style.display='none';
-    otherRouteHeading.style.display='none';
+    toggleContainer.style.border='1px solid #1e3a6da4';    
     label.style.color = 'black';
+
+      if(checkbox.id=="others"){
+      otherRoute.style.display='block';
+      otherRouteHeading.style.display='block';
+      }else{
+
+        otherRoute.style.display='none';
+        otherRouteHeading.style.display='none';
+      }
+
+    
   });
 });
 
