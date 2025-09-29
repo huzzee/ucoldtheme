@@ -93,7 +93,7 @@ function renderFlights(data) {
         <div class="row form-row depart">
           <div><span class="badge depart-badge">Depart</span></div>
           <div class=" form-row form-row-flight col l12">
-            <div class="col l3 s4">
+            <div class="col l3 s5">
               <p style="color:#1E3A6D;font-weight:600;">${flight.departureCity}</p>
               <p>${flight.departTime}</p>
               <p>${flight.departDate}</p>
@@ -108,7 +108,7 @@ function renderFlights(data) {
                 </div>                            
               </div>
             </div>
-            <div class="col l3 s4 right-align">
+            <div class="col l3 s5 right-align">
               <p style="color:#1E3A6D; font-weight:600;">${flight.arrivalCity}</p>
               <p>${flight.departTime}</p>
               <p>${flight.departDate}</p>
@@ -120,7 +120,7 @@ function renderFlights(data) {
         <div class="row form-row return" style="width:100%; ">
           <div><span class="badge return-badge">Return</span></div>
           <div class=" form-row col l12">
-            <div class="col l3 s4">
+            <div class="col l3 s5">
               <p style="color:#1E3A6D;font-weight:600;">${flight.returnCity}</p>
               <p>${flight.returnTime}</p>
               <p>${flight.returnDate}</p>
@@ -135,7 +135,7 @@ function renderFlights(data) {
                 </div>                            
               </div>
             </div>
-            <div class="col l3 s4 right-align">
+            <div class="col l3 s5 right-align">
               <p style="color:#1E3A6D;font-weight:600;">${flight.departureCity}</p>
               <p>${flight.returnTime}</p>
               <p>${flight.returnDate}</p>

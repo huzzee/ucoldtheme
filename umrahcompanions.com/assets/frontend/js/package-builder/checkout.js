@@ -34,49 +34,48 @@ function LoadData() {
   // Flight
   if (data.flight) {
     document.getElementById("flight-section").innerHTML = `
-      <div class="row form-row form-row-package depart">
+      <div class="row form-row form-row-package-flights depart">
         <div><span class="badge depart-badge">Depart</span></div>
         <div class="row form-row col l12">
-          <div class="col l3 s12">
-            <p>${data.flight.departureCity}</p>
+          <div class="col l3 s5">
+            <p style="color:#1E3A6D;font-weight:600;">${data.flight.departureCity}</p>
             <p>${data.flight.departTime}</p>
             <p>${data.flight.departDate}</p>
           </div>
-          <div class="col l6 s12"><div class="flight-flex">
+          <div class="col l6 s1"><div class="flight-flex">
                 <img src="assets/frontend/img/depart.svg" alt="">
                 <div class="flex">
                   <img src="assets/frontend/img/flight-circle.svg" alt="">
                   <hr>
                   <img src="assets/frontend/img/flight-circle.svg" alt="">
                 </div>                            
-                <img src="assets/frontend/img/return-flight.svg" alt="">
               </div></div>
-          <div class="col l3 s12 right-align">
-            <p>${data.flight.returnCity}</p>
+          <div class="col l3 s5 right-align">
+            <p style="color:#1E3A6D;font-weight:600;">${data.flight.returnCity}</p>
             <p>${data.flight.returnTime}</p>
             <p>${data.flight.returnDate}</p>
           </div>
         </div>
       </div>
-      <div class="row form-row form-row-package return">
+      <div class="row form-row form-row-package-flights return">
         <div><span class="badge return-badge">Return</span></div>
         <div class="row form-row col l12">
-          <div class="col l3 s12">
-            <p>${data.flight.returnCity}</p>
+          <div class="col l3 s5">
+            <p style="color:#1E3A6D;font-weight:600;">${data.flight.returnCity}</p>
             <p>${data.flight.returnTime}</p>
             <p>${data.flight.returnDate}</p>
           </div>
-          <div class="col l6 s12"><div class="flight-flex">
+          <div class="col l6 s1"><div class="flight-flex">
                 <img src="assets/frontend/img/depart.svg" alt="">
                 <div class="flex">
                   <img src="assets/frontend/img/flight-circle.svg" alt="">
                   <hr>
                   <img src="assets/frontend/img/flight-circle.svg" alt="">
                 </div>                            
-                <img src="assets/frontend/img/return-flight.svg" alt="">
+                
               </div></div>
-          <div class="col l3 s12 right-align">
-           <p>${data.flight.departCity}</p>
+          <div class="col l3 s5 right-align">
+           <p style="color:#1E3A6D;font-weight:600;">${data.flight.departureCity}</p>
             <p>${data.flight.departTime}</p>
             <p>${data.flight.departDate}</p>
           </div>

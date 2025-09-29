@@ -160,6 +160,25 @@ background: #F7FFFF;
     z-index: 10;
     text-align: center;
 }
+.package-card.active::after {
+    content: "Selected \00a0\f5c1"; /* fa-suitcase-rolling */
+    font-family: "Font Awesome 5 Free", "Inter";
+    font-weight: 600; /* Required for solid Font Awesome icons */
+    position: absolute;
+    top: 11px;
+    left: -35px;
+    background: #24b2ba; /* Different color for package */
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 22px;
+    transform: translate(19px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 10;
+    text-align: center;
+}
+
 
 /* .active{
   background: #F7FFFF;
@@ -575,6 +594,7 @@ p{
   color: white !important;
   border-radius: 5px !important;
   font-size: 10px !important;
+  border: none;
 }
 .flight-flex{
   display:flex;
@@ -615,6 +635,7 @@ letter-spacing: 2%;
 text-align: justify;
 border-radius: 5px !important;
 vertical-align: middle;
+border: none;
 color: var(--primary-color) !important;
 
 }
@@ -744,6 +765,7 @@ width: 100% !important;
 }
 
   .vehicle-card{
+    position: relative;
     width: 300px;
     height: 385;
     opacity: 1;
@@ -924,7 +946,7 @@ li{
     border-bottom: 1px solid rgb(221, 221, 221);
     border-right: 1px solid rgb(221, 221, 221);
     border-left: 1px solid rgb(221, 221, 221);
-    padding: 0rem 1rem 2.5rem 1rem;
+    padding: 0rem 1rem 1.5rem 1rem;
     
     position: relative;
     bottom: 20px;
@@ -954,10 +976,11 @@ gap: 15px;
 border-radius: 3px !important;
 padding-top: 0px !important;
 padding-right: 5px !important;
-padding-bottom: 3px !important;
+padding-bottom: 0px !important;
 padding-left: 5px !important;
 background-color: #F1F5F9 !important;
 margin: 0px 10px;
+border: none;
 }
 .primary-box{
 opacity: 1;
@@ -1149,6 +1172,54 @@ width: 90%;
 .form-row .col.l1{
   width:10%;
 }
+.checkout-details{
+  width: 626;
+  height: 85;
+  angle: 0 deg;
+  opacity: 1;
+  gap: 10px;
+  display: flex;
+
+}
+.checkout-badges{
+  display:flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.details{
+width: 202px;
+height: 120px;
+gap: 15px;
+opacity: 1;
+border-radius: 7px;
+border-width: 1px;
+padding-top: 20px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 15px;
+display: flex;
+flex-direction: column;
+border: 1px solid var(--lighter-stroke, #EBEBEB)
+
+}
+.details .text{
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 12px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 2%;
+  vertical-align: middle;
+  text-transform: capitalize;
+
+}
+.collapsible-body{
+  display: flex !important;
+  gap: 10px;
+}
 
 @media (max-width:1439px) {
 .hotel-card{
@@ -1175,6 +1246,35 @@ width: 90%;
 .skip-flight-btn{
   content: "Skip";
 }
+.checkout-details{
+  flex-wrap: wrap;
+}
+.details{
+  width:100%;
+  height: 85px;
+}
+.collapsible-body{
+  flex-wrap: wrap;
+}
+.flight-flex{
+  width: 100%;
+}
+.right-align{
+text-align: end !important;
+display: flex;
+justify-content: end;
+flex-wrap: wrap;
+
+}
+.days .form-row-package .col.s12{
+  height: 70%;
+}
+.checkout-btns .primary-btn, .checkout-btns .btn-outline{
+  width: 100%;
+}
+.counter-container {
+    padding: 8px 8px
+  }
 }
 @media (max-width:1023px) {
   .package-builder{
@@ -1216,10 +1316,13 @@ color: #1d2b53;
   border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+.box.bg-white, #fixed-flight, #flexible-flight{
+  height: auto;
+}
 .box {
     background-color: #FFFFFF;
     width: 1000px;
-    height: 270px;
+    height: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -1227,6 +1330,10 @@ color: #1d2b53;
     gap: 15px;
     opacity: 1;
 }
+.card {
+    width: 100%;
+    height: 70%;
+  }
 
 .hotel-card{
   width: 300px;

@@ -67,7 +67,7 @@ function renderVehicles() {
         const card = document.createElement("div");
         card.classList.add("vehicle-card-wrapper");
         card.innerHTML = `
-            <div class="vehicle-card" data-vehicle="${v}" data-aos="fade-left" data-aos-duration="1000" style="display:flex;flex-direction:column;gap:13px">
+            <div class="vehicle-card" data-vehicle="${v}"  style="display:flex;flex-direction:column;gap:13px">
                 <img src="${v.img}" width="100%" alt="${v.name}">
                 <p class="vehicle-badge">Recommended</p>
                 <div class="" style="width:100%;flex-direction:row;display:flex;justify-content:space-between;gap:20px;">
