@@ -6,6 +6,7 @@ let hotelName = urlParams.get("hotel");
     M.Collapsible.init(elems, {
       accordion: true 
     });
+    console.log(JSON.parse(localStorage.getItem("bookingData")));
 
   
 

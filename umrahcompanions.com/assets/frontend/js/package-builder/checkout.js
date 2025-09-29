@@ -84,3 +84,9 @@ function LoadData() {
     `;
   }
 }
+
+function gotoCheckout(){
+    const data = JSON.parse(localStorage.getItem("bookingData")) || bookingData;
+     window.location.href =
+      `/umrahcompanions.com/checkout.html`;
+}
