@@ -1082,7 +1082,9 @@ input[type="checkbox"].agreement::after {
     z-index: 1;
     fill: rgba(0, 0, 0, 0.87);
 }
-
+.other-routes .select-wrapper .caret {
+  display:none;
+}
 
   .form_row_inquiry h6.selct_passengers {
     color: var(--sub-heading-color);
