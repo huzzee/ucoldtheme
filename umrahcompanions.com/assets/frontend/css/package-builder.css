@@ -1276,6 +1276,13 @@ flex-wrap: wrap;
     padding: 8px 8px
   }
 }
+@media (max-width: 760px) {
+    .card {
+        width: 100%;
+        height: 80%;
+    }
+}
+
 @media (max-width:1023px) {
   .package-builder{
     min-height: 100%;
@@ -1332,7 +1339,7 @@ color: #1d2b53;
 }
 .card {
     width: 100%;
-    height: 70%;
+    height: 100%;
   }
 
 .hotel-card{
@@ -1376,7 +1383,7 @@ width: 31%;
         flex-direction: column;
         overflow-x: scroll;
         overflow-y: hidden;
-        height: 45vh;
+        height: 50vh;
   }
   .form-row{
   flex-wrap: wrap;
@@ -1435,7 +1442,13 @@ h5{
 .form-row-package .col.s12{
   padding:0px;
   width: 240px;
-  height: 100%;
+  height: 80%;
+}
+.days .form-row-package .col.s12{
+  height: 50%;
+}
+.days .form-row-package{
+  height: auto;
 }
 .footer-col{
   flex-wrap: wrap;
