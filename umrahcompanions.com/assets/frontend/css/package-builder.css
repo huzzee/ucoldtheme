@@ -109,9 +109,7 @@ padding:8px 25px !important
   border-width: 1px;
   margin: 0px;
 }
-h5{
-font-size: 14px;
-}
+
 
 /* Title */
 .page-title {
@@ -1459,6 +1457,9 @@ width: 31%;
 }
 h5{
   margin: 0px;
+}
+h5{
+font-size: 14px;
 }
 .box.flight-details{
   width: 100%;
