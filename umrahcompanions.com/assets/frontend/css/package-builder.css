@@ -95,7 +95,7 @@ padding:8px 25px !important
 }
 
 .tab.active {
-  background: var(--primary-color);
+  background: rgb(23, 162, 184);
   color: #ffffff;
   border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -108,7 +108,9 @@ padding:8px 25px !important
   opacity: 1;
   border-width: 1px;
   margin: 0px;
-
+}
+h5{
+font-size: 14px;
 }
 
 /* Title */
@@ -1334,11 +1336,13 @@ color: #1d2b53;
     display: none;
   }
 .tab{
-  display: none;
+  display: block;
+  padding:9px 15px;
+  font-size: 12px;
 }
   .tab.active {
     display: block;
-  background: var(--primary-color);
+  background: rgb(23, 162, 184);
   color: #ffffff;
   border: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -1366,7 +1370,7 @@ color: #1d2b53;
   width: 300px;
 }
 .tabs-header hr{
-  display:none;
+  display:block;
 }
 .counter-row .col.s3{
 width: 31%;
@@ -1390,9 +1394,6 @@ width: 31%;
     width: 300px;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  .tab{
-    width: 100%;
   }
   .box{
     width: 100%;

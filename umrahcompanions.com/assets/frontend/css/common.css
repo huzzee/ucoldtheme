@@ -618,6 +618,7 @@ background: #15325A;
 .linkWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .border-btn {
   font-size: 14px;
@@ -641,8 +642,15 @@ background: #15325A;
   font-weight: 500;
   cursor: pointer;
   display: inline-block;
+  color: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   /* letter-spacing: 0.21em; */
-  padding-right: 25px;
   text-transform: capitalize;
 }
 .linkB {
@@ -696,7 +704,7 @@ background: #15325A;
   font-weight: 500;
   border: 2px solid var(--dark-ocean);
   background: var(--dark-ocean);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 6px 40px 6px 40px;
   color: var(--white-color);
   display: inline-block;
@@ -979,6 +987,9 @@ li ul.sub-menu {
 }
 .login-btn-div {
   display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
   /* padding-left: 14px; */
 }
 .login-btn-div .linkA.linkA3 {
@@ -2793,7 +2804,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
     height: 40px;
     line-height: 40px;
     padding: 5px;
-    background: #24b3ba;
+    background: transparent;
     border-radius: 10px;
     position: absolute;
     right: 81px;
@@ -2809,7 +2820,7 @@ top: 5px;*/
     height: 30px;
     vertical-align: middle;
     margin: 0;
-    color: var(--white-color);
+    color: var(--blue-color);
   }
   .homeBtn {
     position: absolute;
@@ -3227,7 +3238,7 @@ top: 5px;*/
 @media (max-width: 510px) {
   nav a.sidenav-trigger {
     right: 58px;
-    top: 6px;
+    /* top: 6px; */
   }
   .linkA3 {
     right: 110px;
@@ -3264,8 +3275,11 @@ top: 5px;*/
   .registerBtn,
   .loginBtn,
   .border-btn {
-    font-size: 13px;
+    font-size: 12px;
     padding: 6px 12px;
+    border: 1px solid var(--blue-color) !important;
+    color: var(--blue-color) !important;
+    border-radius: 8px;
   }
   .linkA3 {
     right: 90px;

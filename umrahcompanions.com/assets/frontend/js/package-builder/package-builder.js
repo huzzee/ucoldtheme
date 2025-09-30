@@ -3,6 +3,12 @@ $(document).ready(function () {
   const params = new URLSearchParams(window.location.search);
   const step = params.get("step");
   const tab = params.get("tab");
+    const isMobile = window.innerWidth <= 768;
+    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/customize-tab.html']").innerHTML = isMobile ? "2" : "2. Customization";
+    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/pilgrim-information.html']").innerHTML = isMobile ? "1" : "1. Customization";
+    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/confirmation.html']").innerHTML = isMobile ? "3" : "3. Customization";
+
+
 
   $('.tab').removeClass('active');
   if (tab === '2') {
