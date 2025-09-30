@@ -35,6 +35,7 @@ const packageDurationCards=[
   },
   {
     title: "Flexible",
+    disabled: true, // <-- DISABLED
     tags: [{name:"Complete Flexible",color:'#1547A2'}],
     desc:"Customize your flight according to your preferences.",
     img:"assets/frontend/img/flexible.svg",
@@ -155,13 +156,16 @@ function renderCards(type) {
   data.forEach(card => {
     const col = document.createElement("div");
     console.log(currentIndex)
+      const disabledClass = card.disabled ? 'disabled-card' : '';
+       const disabledStyle = card.disabled ? 'pointer-events: none; opacity: 0.5;' : '';
+
     if(bookingData.packageType=="Land Package" && currentIndex===2){
       col.className = "col l4 m6 s12";
     }else{
       col.className = "col l6 m6 s12";
     }
     col.innerHTML = `
-      <div class="card package-card" data-aos="fade-left" data-aos-duration="1000" data-package="${card.title}">
+      <div class="card package-card ${disabledClass}" style="${disabledStyle}"  data-aos="fade-left" data-aos-duration="1000" data-package="${card.title}">
         <div class="flex">
           <h3 style="margin:0px;">${card.title}</h3>
             <img src="${card.img}" alt="">

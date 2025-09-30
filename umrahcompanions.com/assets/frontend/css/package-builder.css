@@ -1220,6 +1220,28 @@ border: 1px solid var(--lighter-stroke, #EBEBEB)
   display: flex !important;
   gap: 10px;
 }
+.checkout-row{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    gap:20px
+}
+/* .checkout-row .l5{
+    margin: 0px !important;
+    width: 47%  ;
+} */
+.card-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 165px;
+    height: 58px;
+    flex-shrink: 0;border-radius: 7px;
+    border: 1px solid var(--lighter-stroke, #EBEBEB);
+}
 
 @media (max-width:1439px) {
 .hotel-card{
@@ -1266,9 +1288,7 @@ justify-content: end;
 flex-wrap: wrap;
 
 }
-.days .form-row-package .col.s12{
-  height: 70%;
-}
+
 .checkout-btns .primary-btn, .checkout-btns .btn-outline{
   width: 100%;
 }
@@ -1385,6 +1405,18 @@ width: 31%;
         overflow-y: hidden;
         height: 50vh;
   }
+  .pilgrim  .form-row-package{
+        height: 30vh;
+  }
+  #package-type  .form-row-package{
+        height: 40vh;
+  }
+  #flight-type  .form-row-package{
+        height: 38vh;
+  }
+  #Days  .form-row-package{
+        height: 30vh;
+  }
   .form-row{
   flex-wrap: wrap;
 }
@@ -1444,12 +1476,7 @@ h5{
   width: 240px;
   height: 80%;
 }
-.days .form-row-package .col.s12{
-  height: 50%;
-}
-.days .form-row-package{
-  height: auto;
-}
+
 .footer-col{
   flex-wrap: wrap;
 }
