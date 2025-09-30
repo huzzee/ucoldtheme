@@ -72,6 +72,10 @@ h3.heading{
   display: flex; 
   justify-content: center; 
   gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .thumb:hover {
