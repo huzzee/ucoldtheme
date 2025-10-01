@@ -1970,8 +1970,8 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   padding: 0px 0;
 }
 .col.s5.brand {
-  padding: 59px 44px;
-  width: 43.667%;
+  padding: 59px 14px;
+  /* width: 45.667%; */
 }
 .modal ::placeholder {
   color: #959595;
@@ -2257,7 +2257,10 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   top: 0;
   left: -30%;
   width: 112%;
-  overflow: hidden;
+  height:500px;
+  scroll-behavior: smooth;
+    overflow-y: auto;
+    scrollbar-width: none;
   border-radius: 22px 1px 1px 20px;
   margin-left: -50px;
   padding-left: 50px;

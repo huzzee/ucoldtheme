@@ -175,6 +175,49 @@ function showStep(stepId) {
   }
 
   if (stepId === "transport-details") {
+    const routecheckboxes = document.querySelectorAll('.route');
+    const otherRoute = document.querySelector('.other-routes');
+    otherRoute.style.display="none";
+// const otherRouteHeading = document.querySelector('.other-routes-heading');
+    const otherLink = document.getElementById('others-link');
+    console.log()
+routecheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    routecheckboxes.forEach((cb) => {
+      const container = cb.closest('.input_Labels');
+      const label = container.querySelector('label');
+    
+      
+      cb.checked = false;
+      container.style.backgroundColor = '#F1F5F9';
+      container.style.border='1px solid #F1F5F9'
+      otherRoute.style.display='none';
+      label.style.color = '#292d32';
+    });
+    checkbox.checked = true;
+    const toggleContainer = checkbox.closest('.input_Labels');
+    const label = toggleContainer.querySelector('label');
+    toggleContainer.style.backgroundColor = '#F7FFFF';
+    toggleContainer.style.border='1px solid #24B3BA';    
+    label.style.color = 'black';
+    otherRoute.style.display='none';
+  });
+});
+      otherLink.addEventListener('click', () => {
+        // Reset other route selections
+        routecheckboxes.forEach((cb) => {
+          const container = cb.closest('.input_Labels');
+          const label = container.querySelector('label');
+
+          cb.checked = false;
+          container.style.backgroundColor = '#F1F5F9';
+          container.style.border = '1px solid #F1F5F9';
+          label.style.color = '#292d32';
+        });
+        // Show the other route section
+        otherRoute.style.display = 'flex';
+      });
+
     document.querySelector(".skip-flight-btn").style.display = "inline-block";
     document.querySelector(".skip-flight-btn").innerHTML = isMobile ? "Skip" : "Skip Transport";
   }
@@ -194,10 +237,11 @@ function showStep(stepId) {
 function showNext() {
   if (currentIndex < steps.length - 1) {
     currentIndex++;
+   console.log(bookingData.packageType, steps[currentIndex])
 
     // skip logic inline
     if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
-      currentIndex++; // skip flight-type for Land Package
+      currentIndex=currentIndex+2; // skip flight-type for Land Package
     }
     if(bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
       currentIndex++; // skip flight-type for Land Package
@@ -234,14 +278,14 @@ function showPrev() {
     if (currentIndex > 0) {
     currentIndex--;
     
-   
+   console.log(bookingData.packageType, steps[currentIndex])
     // reverse skip logic
-    if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-type") {
-      currentIndex--;
+    if (bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
+      currentIndex=currentIndex-3;
     }
-    if(bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
-      currentIndex--; // skip flight-type for Land Package      
-    }
+    // if(bookingData.packageType === "Land Package" && steps[currentIndex] === "flight-details") {
+    //   currentIndex--; // skip flight-type for Land Package      
+    // }
     if (
       bookingData.packageType === "Flight Package" &&
       bookingData.flight_type === "Flexible" &&

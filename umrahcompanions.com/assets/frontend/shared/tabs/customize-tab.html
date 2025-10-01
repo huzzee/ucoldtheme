@@ -142,8 +142,51 @@
 </div>
 <div class="custom-card"   style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
     <div class="box transport-details"  >
-            <h5 class="sub-heading" style="margin-top: 0px;">Search Transport</h5>
-            <div class="row form-row" id="packageFlights">
+            <h5 class="sub-heading" style="margin-top: 0px;">Route</h5>
+            <div class="row form_row_inquiry" style="padding: 0 !important; justify-content: start;">
+                        <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
+                        <div class="switch" style="height: 100%;">
+                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <input type="radio" style="accent-color: #1E3A6D;" id="route1" class="checkbox-main route" name="route">
+                            <label for="route1" class="wrap_Labels col l11">Jeddah to Makkah to Madinah to Jeddah</label>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route2" class="checkbox-main route" name="route">
+                              <label for="route2" class="wrap_Labels col l11">Jeddah to Makkah to Madinah to Makkah to Jeddah</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route3" class="checkbox-main route" name="route">
+                              <label for="route3" class="wrap_Labels col l11 transport_check">Jeddha to Makkah to Madinah to Madinah airport</label>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
+                          <div class="switch"  style="height: 100%;">
+                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">                      
+                              <input type="radio" style="accent-color: #1E3A6D;" id="route4" class="checkbox-main hotel_check route" name="route">
+                              <label for="route4" class="wrap_Labels  col l11">Madinah to Makkah to Madinah</label>  
+                           
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 l2 wrap_spacing" style="margin-left: 0px;">
+                          <div class=""  style="height: 100%;">
+                            <a id="others-link" class="wrap_Labels col l11" style="cursor: pointer; text-decoration: underline; color: #1E3A6D;">
+                              Other Routes
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+            <div class="row form-row other-routes" id="packageFlights">
                 <div class="col l11 m6 s12" style="padding: 0px;">
                      <select class="form-select browser-default form-control active-state route_id" id="route" onchange="selectRoute()" name="route">
                         <option value="" selected> Select Route</option>
