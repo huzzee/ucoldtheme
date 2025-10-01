@@ -85,8 +85,17 @@ function LoadData() {
   }
 }
 
+
+
 function gotoCheckout(){
     const data = JSON.parse(localStorage.getItem("bookingData")) || bookingData;
-     window.location.href =
-      `/umrahcompanions.com/checkout.html`;
+    console.log(data)
+    if(data.paymentMethod=='stripe'){
+      console.log("payment gateway stripe")
+
+    }else{
+      console.log("payment gateway payfast")
+    }
+    //  window.location.href =
+    //   `/umrahcompanions.com/checkout.html`;
 }

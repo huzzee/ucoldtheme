@@ -34,6 +34,7 @@ let bookingData = {
   flight_type:null,
   flight:null,
   hotels:null,
+  paymentMethod:null,
   adults: 0,
   child: 0,
   infants: 0

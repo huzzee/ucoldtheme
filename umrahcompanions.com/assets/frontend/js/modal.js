@@ -130,23 +130,23 @@
         });
 
         /* Phone */
-          var input = document.querySelector("#phone3");
-          var instance = window.intlTelInput(input, {
-            separateDialCode: true,
-            initialCountry: "auto",
-            geoIpLookup: function(success, failure) {
-                $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
-                    var countryCode = (resp && resp.country) ? resp.country : "us";
-                    success(countryCode);
-                });
-            },
-          });
-          var countryData = instance.getSelectedCountryData();
-          $('.country_code').val(countryData.dialCode);
-          input.addEventListener("countrychange",function() {
-              var countryData = instance.getSelectedCountryData();
-              $('.country_code').val(countryData.dialCode);
-          });
+          // var input = document.querySelector("#phone");
+          // var instance = window.intlTelInput(input, {
+          //   separateDialCode: true,
+          //   initialCountry: "auto",
+          //   geoIpLookup: function(success, failure) {
+          //       $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+          //           var countryCode = (resp && resp.country) ? resp.country : "us";
+          //           success(countryCode);
+          //       });
+          //   },
+          // });
+          // var countryData = instance.getSelectedCountryData();
+          // $('.country_code').val(countryData.dialCode);
+          // input.addEventListener("countrychange",function() {
+          //     var countryData = instance.getSelectedCountryData();
+          //     $('.country_code').val(countryData.dialCode);
+          // });
         /* Phone */
 
         //open login from create account

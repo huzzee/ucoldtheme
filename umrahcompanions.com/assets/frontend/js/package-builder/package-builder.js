@@ -8,7 +8,7 @@ $(document).ready(function () {
     document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/pilgrim-information.html']").innerHTML = isMobile ? "1" : "1. Customization";
     document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/confirmation.html']").innerHTML = isMobile ? "3" : "3. Customization";
 
-
+  
 
   $('.tab').removeClass('active');
   if (tab === '2') {
@@ -100,6 +100,18 @@ function checkout(){
     tab2.addClass('active');
     var tabPath= "assets/frontend/shared/tabs/confirmation.html"
     $('#tab-content').load(tabPath, function () {
+      const cards = document.querySelectorAll(".card-paymented");
+      console.log(cards)
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          cards.forEach(c => c.classList.remove("active"));
+          card.classList.add("active");
+          let bookingData = JSON.parse(localStorage.getItem("bookingData")) || {};
+          bookingData.paymentMethod = card.id;
+          localStorage.setItem("bookingData", JSON.stringify(bookingData));
+         console.log("Selected Payment:", bookingData.paymentMethod); 
+        });
+      });
       LoadData()
       var elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems, {
@@ -440,4 +452,8 @@ toggleBtn.addEventListener("click", function () {
 
   }
 });
+
+// document.addEventListener('DOMContentLoaded', function () {
+
+// });
 
