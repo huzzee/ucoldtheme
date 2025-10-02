@@ -177,9 +177,14 @@ function showStep(stepId) {
   if (stepId === "transport-details") {
     const routecheckboxes = document.querySelectorAll('.route');
     const otherRoute = document.querySelector('.other-routes');
+    const mainRoute = document.querySelector('.main-routes');
+
     otherRoute.style.display="none";
 // const otherRouteHeading = document.querySelector('.other-routes-heading');
     const otherLink = document.getElementById('others-link');
+    const mainLink = document.getElementById('main-link');
+
+
     console.log()
 routecheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', () => {
@@ -216,6 +221,22 @@ routecheckboxes.forEach((checkbox) => {
         });
         // Show the other route section
         otherRoute.style.display = 'flex';
+        mainRoute.style.display='none'
+      });
+       mainLink.addEventListener('click', () => {
+        // Reset other route selections
+        routecheckboxes.forEach((cb) => {
+          const container = cb.closest('.input_Labels');
+          const label = container.querySelector('label');
+
+          cb.checked = false;
+          container.style.backgroundColor = '#F1F5F9';
+          container.style.border = '1px solid #F1F5F9';
+          label.style.color = '#292d32';
+        });
+        // Show the other route section
+        mainRoute.style.display = 'flex';
+        otherRoute.style.display='none'
       });
 
     document.querySelector(".skip-flight-btn").style.display = "inline-block";

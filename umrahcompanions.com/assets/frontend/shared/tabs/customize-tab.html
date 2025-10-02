@@ -143,7 +143,7 @@
 <div class="custom-card"   style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
     <div class="box transport-details"  >
             <h5 class="sub-heading" style="margin-top: 0px;">Route</h5>
-            <div class="row form_row_inquiry" style="padding: 0 !important; justify-content: start;">
+            <div class="row form_row_inquiry main-routes" style="padding: 0 !important; justify-content: start;">
                         <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
                         <div class="switch" style="height: 100%;">
                           <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
@@ -186,8 +186,8 @@
                           </div>
                         </div>
                       </div>
-            <div class="row form-row other-routes" id="packageFlights">
-                <div class="col l11 m6 s12" style="padding: 0px;">
+            <div class="row form-row other-routes" style="display: flex; flex-wrap: wrap;" id="packageFlights" >
+                <div class="col l10 m6 s12" style="padding: 0px;">
                      <select class="form-select browser-default form-control active-state route_id" id="route" onchange="selectRoute()" name="route">
                         <option value="" selected> Select Route</option>
                                 <option value="1"
@@ -266,6 +266,13 @@
                 <div class="col l1 m6 s12">
                     <button id="clearFilters" style="width: 100%;" class=" secondary-btn">Search</button>
                 </div>
+                <div class="col s12 l2 wrap_spacing" style="margin-left: 0px;">
+                    <div class=""  style="height: 100%;">
+                        <a id="main-link" class="wrap_Labels col l11" style="cursor: pointer; text-decoration: underline; color: #1E3A6D;">
+                            Main Routes
+                        </a>
+                    </div>
+                </div>
             </div>
             <h5 class="sub-heading" >Select Vehicle</h5>
             <div class="row form-row" data-aos="fade-left" data-aos-duration="1000"  id="packageTransport">
@@ -325,7 +332,7 @@
     <div class="box hotel-details"   id="search-hotel">
         <h5 class="sub-heading" style="margin-top: 0px;">Enter Hotel Details</h5>
        <div class=" row form-row">
-        <div class="col l2 m5 s12">
+        <div class="col l3 m5 s12">
             <div>
                 <select class="form-select city-select browser-default" name="hotel-city" id="hotel-city" style="width:85%; height:2.5rem !important">
                 <option value="">City</option>
@@ -358,9 +365,9 @@
        </div>
     </div>
     <div class="box hotel-details"  style="display: none;" id="filter-hotel">
-        <h5 class="sub-heading" style="margin-top: 0px;">Filter Hotel</h5>
+        <h5 class="sub-heading" style="margin-top: 0px; margin-bottom: 10px;">Filter Hotel</h5>
        <div class=" row form-row ">
-        <div class="col l2 s12">
+        <div class="col l3 s12">
             <div >
                 <select class="form-select browser-default" name="price-range" id="price-range" style="width:85%;  ">
                 <option value="">Price Range</option>

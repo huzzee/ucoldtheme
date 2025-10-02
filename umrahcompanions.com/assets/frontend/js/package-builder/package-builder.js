@@ -100,19 +100,86 @@ function checkout(){
     tab2.addClass('active');
     var tabPath= "assets/frontend/shared/tabs/confirmation.html"
     $('#tab-content').load(tabPath, function () {
-      const cards = document.querySelectorAll(".card-paymented");
-      console.log(cards)
-      cards.forEach(card => {
-        card.addEventListener("click", () => {
-          cards.forEach(c => c.classList.remove("active"));
-          card.classList.add("active");
-          let bookingData = JSON.parse(localStorage.getItem("bookingData")) || {};
-          bookingData.paymentMethod = card.id;
-          localStorage.setItem("bookingData", JSON.stringify(bookingData));
-         console.log("Selected Payment:", bookingData.paymentMethod); 
+      
+        document.querySelectorAll("#phone, #guestPhone").forEach(input => {
+          window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function(callback) {
+              fetch('https://ipinfo.io/json?token=your_token') 
+                .then(res => res.json())
+                .then(data => callback(data.country))
+                .catch(() => callback('us'));
+            },
+            nationalMode: false,
+            formatOnDisplay: true,
+            autoPlaceholder: "polite",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+          });
         });
-      });
-      LoadData()
+          const cards = document.querySelectorAll(".payment-card");
+            const sections = {
+              credit: document.getElementById("credit-section"),
+              bank: document.getElementById("bank-section"),
+            };
+
+            function showSection(method) {
+              console.log(method)
+              // hide all
+              Object.keys(sections).forEach(key => {
+                console.log(key)
+                sections[key].style.display = (key === method) ? "flex" : "none";
+              });
+
+                const paymentcards = document.querySelectorAll(".card-paymented");
+                console.log(cards)
+                paymentcards.forEach(card => {
+                  card.addEventListener("click", () => {
+                    paymentcards.forEach(c => c.classList.remove("active"));
+                    card.classList.add("active");
+                    let bookingData = JSON.parse(localStorage.getItem("bookingData")) || {};
+                    bookingData.paymentMethod = card.id;
+                    document.getElementById('credit-cards').style.display="none";
+                    localStorage.setItem("bookingData", JSON.stringify(bookingData));
+                  console.log("Selected Payment:", bookingData.paymentMethod); 
+                  });
+
+                });
+            }
+
+            cards.forEach(card => {
+              card.addEventListener("click", () => {
+                // remove active from all
+                cards.forEach(c => c.classList.remove("active"));
+                // activate clicked
+                card.classList.add("active");
+                // show section
+                const method = card.getAttribute("data-method");
+                showSection(method);
+              });
+            });
+          showSection("credit");
+          const creditCards = document.querySelectorAll(".credit-cards .card");
+
+            creditCards.forEach(card => {
+              card.addEventListener("click", () => {
+                // remove active from all
+                creditCards.forEach(c => c.classList.remove("active"));
+                // add active to clicked one
+                card.classList.add("active");
+              });
+            });  
+            const bankCards = document.querySelectorAll(".bank-cards .card");
+
+            bankCards.forEach(card => {
+              card.addEventListener("click", () => {
+                // remove active from all
+                bankCards.forEach(c => c.classList.remove("active"));
+                // add active to clicked one
+                card.classList.add("active");
+              });
+            });
+
+      // LoadData()
       var elems = document.querySelectorAll('.collapsible');
       M.Collapsible.init(elems, {
         accordion: true 

@@ -134,12 +134,16 @@ text-transform: capitalize;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 10px 0px;
-    gap:20px
+    gap:10px
+}
+.checkout-row .l6{
+    width: 49% !important;
 }
 .checkout-row .l5{
     margin: 0px !important;
     width: 47%  ;
 }
+
 .details .detail{
     display: flex;
     flex-direction: row;
