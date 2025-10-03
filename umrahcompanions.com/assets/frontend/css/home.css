@@ -1675,7 +1675,7 @@ background: #24B3BA;
 .advantage h2{
 font-weight: 700;
 font-style: Bold;
-font-size: 40px;
+font-size: 36px;
 line-height: 100%;
 letter-spacing: 0px;
 text-transform: capitalize;
@@ -2273,12 +2273,9 @@ a.contactButton:hover {
 }
 
 .offer-you {
-  background: url(../img/flower1.png);
-  background-position: 65% center;
-  background-repeat: no-repeat;
   padding: 100px 0;
   position: relative;
-  padding-bottom: 0px;
+  padding-bottom: 50px;
 }
 
 .offer-you .my-div .my-div-2 {
@@ -2387,17 +2384,6 @@ a.contactButton:hover {
   .col.s9, .col.s2{
     margin:0px
   }
-}
-.offer-you:after {
-  content: "";
-  position: absolute;
-  background: url(../img/l-flower.png);
-  background-position: -6%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 370px;
-  width: 100%;
-  bottom: 100px;
 }
 .owl-item{
   width: 180px !important;

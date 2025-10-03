@@ -1613,7 +1613,7 @@ sup{
     width: 150px;
   }
   .builder-footer{
-    padding: 10px 10px !important;
+    padding: 20px 30px !important;
   }
   .footer-col-med {
     /* max-width: 300px; */
@@ -1693,8 +1693,8 @@ flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .mob-heading{
-    display: block;
-  display: block;
+display: block;
+display: block;
 font-weight: 700;
 font-style: Bold;
 font-size: 23px;
