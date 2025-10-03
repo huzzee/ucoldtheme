@@ -26,6 +26,7 @@ let hotelName = urlParams.get("hotel");
   });
 });
   const cards = document.querySelectorAll(".payment-card");
+
   const sections = {
     credit: document.getElementById("credit-section"),
     bank: document.getElementById("bank-section"),
@@ -74,6 +75,15 @@ const creditCards = document.querySelectorAll(".credit-cards .card");
       card.classList.add("active");
     });
   });
+
+   const paymentcards = document.querySelectorAll(".card-paymented");
+    console.log(cards)
+    paymentcards.forEach(card => {
+      card.addEventListener("click", () => {
+        paymentcards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+      });
+    });
 
     var modals = document.querySelectorAll('.modal');
   M.Modal.init(modals);
@@ -175,6 +185,7 @@ function goToPayment() {
 
     const payment = M.Collapsible.getInstance(paymentSection);
     if (payment) payment.open(0);
+    document.querySelector("#payment-tab").classList.add('active')  
     paymentSection.style.display = "block";
     paymentSection.scrollIntoView({ behavior: "smooth" });
 

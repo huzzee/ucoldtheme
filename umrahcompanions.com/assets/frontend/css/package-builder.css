@@ -1546,7 +1546,7 @@ border: 1px solid var(--lighter-stroke, #EBEBEB)
     gap: 30px;
     width: 48%;
     height: 68px;
-  padding: 30px 15px;
+    padding: 30px 15px;
     flex-shrink: 0;border-radius: 7px;
     border: 1px solid var(--lighter-stroke, #EBEBEB);
 }

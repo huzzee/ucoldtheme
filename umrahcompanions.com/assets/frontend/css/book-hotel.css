@@ -1468,6 +1468,23 @@ div#test2 {
 }
 
 @media only screen and (max-width: 767px) {
+  .grid-view .hotel-inner{
+        height: 337px;
+
+  }
+  .list-view .hotel-info p{
+    display: none;
+  }
+  .list-view .list-rating {
+    display: none;
+  }
+  .list-view .features-div{
+    display: none;
+  }
+  .list-view .hotel-card .hotel-img {
+    width: 153px;
+    height: 79px;
+}
   .topbar {
     padding-top: unset;
     padding-bottom: unset;
@@ -1536,6 +1553,11 @@ div#test2 {
     gap: 20px;
     width: 80%;
 }
+.grid-view .features-div {
+    gap: 1px;
+}
+
+
 
 
 .grid-view {

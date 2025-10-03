@@ -85,9 +85,9 @@ function renderHotels() {
           <h5 class="sub-heading" style="width: 100%; display:flex; gap:19px; margin:0px; ">${hotel.name} <span class="list-rating">${`<img src="assets/frontend/img/rating.svg"  alt="">`.repeat(hotel.rating)}</span></h5>
           <p>Luxury hotel with stunning views of the Holy Mosque</p>
           <hr>
-          <div class="inclusion"><p>Inclusions</p></div>
+          <div class="inclusion"><span>Inclusions</span></div>
           <div class="features-div">
-            <span class="features"><img src="assets/frontend/img/Kabah.svg"  alt="">${hotel.city} &nbsp; | &nbsp; ${hotel.distance} km &nbsp;| &nbsp; 10 Minutes Walk</span>
+            <span class="features"><img src="assets/frontend/img/Kabah.svg"  alt="">${hotel.city} | ${hotel.distance} km &nbsp;| 10 Minutes Walk</span>
             <span class="features"><img src="assets/frontend/img/night.svg"  alt=""> ${hotel.nights} Nights</span>
             <span class="features grid-rating"><img src="assets/frontend/img/rating.svg" class=""  alt=""> ${hotel.rating} Star</span>
           </div>

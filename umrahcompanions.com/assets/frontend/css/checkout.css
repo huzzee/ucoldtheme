@@ -86,7 +86,7 @@ li{
 .collapsible-header{
 color: var(--Heading, #161C24);
 text-align: center;
-font-size: 25px;
+font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: 16px; /* 64% */
@@ -193,6 +193,10 @@ letter-spacing: 0%;
 text-transform: capitalize;
 color: #161C24;
 }
+#payment-tab.active img{
+  filter:brightness(0) saturate(100%) invert(17%) sepia(25%) saturate(1832%) hue-rotate(195deg) brightness(95%) contrast(94%) !important;
+
+}
 #successModal{
 width: 45%;
 padding:50px 10px;
@@ -224,7 +228,8 @@ border-radius: 10px;
 .row-checkout{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap-reverse;
+    gap: 30px;
+    /* flex-wrap: wrap-reverse; */
     align-items: start;
     margin-bottom: 90px !important;
 }
@@ -280,14 +285,32 @@ background: #EFF3F9;
 opacity: 1;
 border-radius: 10px;
 padding-top: 0px;
-/* padding-right: 120px; */
 padding-bottom: 0px;
 height: 52px;
 width:100%;
-/* padding-left: 120px; */
 gap: 10px;
 background: #1E3A6D;
 color: white;
+}
+.card-paymented{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 48%;
+    height: 68px;
+    padding: 30px 15px;
+    flex-shrink: 0;border-radius: 7px;
+    border: 1px solid var(--lighter-stroke, #EBEBEB);
+}
+.card-paymented.active{
+  background: #F7FFFF;
+  border: 2px solid  #24B3BA;
+  padding: 30px 15px;
+}
+.modal-content p{
+        width: 80%;
+
 }
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
     position: relative;
@@ -478,15 +501,44 @@ padding-bottom: 40px;
 padding-left: 20px;
 border: 1px solid var(--lighter-stroke, #EBEBEB)
 }
+.row-checkout .col.l5{
+    width: 40%;
+}
+.row-checkout .col.l7{
+    width: 60%;
+}
 .text-danger{
     color: rgb(221, 6, 6);
 }
 @media (max-width:767px) {
+    .collapsible-header {
+    font-size: 16px;
+}
+
+.collapsible-header {
+    padding: 20px 20px;
+}
+.row-checkout .col.l5{
+    width: 100%;
+}
+.row-checkout .col.l7{
+    width: 100%;
+}
+    .row-checkout {
+    gap: 78px;
+    flex-wrap: wrap-reverse;
+    }
+    .iti{
+        width: 100%;
+    }
+    .form-control{
+        width: 94% !important;
+    }
     .tabs-section{
         display:none;
     }
     .payment-card {
-    height: 113px;
+    height: 70px;
     }
     .collapsible-body {
     padding: 10px;
