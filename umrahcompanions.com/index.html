@@ -1014,7 +1014,7 @@
                <div class="signWRaps">
                   <!-- <h2>Create Account</h2> -->
                    <!-- Role Selection using Radio Buttons -->
-                     <div id="userTypeSwitcher">
+                     <!-- <div id="userTypeSwitcher">
                         <label>
                            <input type="radio" name="user_type" value="user" onchange="updateFormBasedOnUserType()" checked>
                            <span>User</span>
@@ -1023,8 +1023,69 @@
                            <input type="radio" name="user_type" value="agent" onchange="updateFormBasedOnUserType()">
                            <span>Travel Agent</span>
                         </label>
+                     </div> -->
+                     <div id="userTypeSwitcher" class="form-group">
+                           <label>
+                           <input type="radio" name="user_type" value="individual" onchange="updateFormBasedOnUserType()" checked>
+                           <span>Individual</span>
+                           </label>
+                           &nbsp;&nbsp;
+                           <label>
+                           <input type="radio" name="user_type" value="agent" onchange="updateFormBasedOnUserType()">
+                           <span>Travel Agent</span>
+                           </label>
                      </div>
 
+                        <!-- Single Form -->
+                        <form class="row form-row" style="display:flex; flex-wrap: wrap; row-gap: 5px; margin-top: 20px;" id="registrationForm" method="POST" action="#">
+                           <!-- Name -->
+                           <div class="col l6 s12">
+                              <div class="input-field input-field1">
+                                 <input type="text" name="name" id="userName" placeholder="Full Name (Individual)">
+                              </div>
+                           </div>  
+                           <!-- Email -->
+                           <div class="col l6 s12">
+                              <div class="input-field input-field1">
+                                 <input type="email" name="email" id="userEmail" placeholder="Email Address">
+                              </div>
+                           </div>
+                         
+                           <!-- Business Name (only for agents) -->
+                            <div class="col l12 s12">
+                              <div class="input-field input-field1 hidden" id="businessNameField">
+                                 <input type="text" name="business_name" id="businessName" placeholder="Business Name">
+                              </div>
+                            </div>
+                           
+                           <!-- Phone -->
+                           <div class="col l12 s12">
+                              <div class="input-field input-field1">
+                                 <input type="tel" name="phone" id="userPhone" placeholder="Phone Number">
+                              </div>
+                           </div>
+
+                           <!-- Password -->
+                           <div class="col l6 s12">
+                              <div class="input-field input-field1">
+                              <input type="password" name="password" id="userPassword" placeholder="Password">
+                              </div>
+                           </div>
+                           <div class="col l6 s12">
+                              <div class="input-field input-field1">
+                              <input type="password" name="password" id="confirmPassword" placeholder="Password">
+                              </div>
+                           </div>
+                           <!-- Hidden role_id field -->
+                           <input type="hidden" name="role_id" id="roleId" value="3" />
+
+                           <!-- Submit -->
+                              <a href="javascript:void(0)" class="waves-effect bdrbtn loginMbtn loginMbtnSubmit" id="loginMbtn">Create Account</a>
+                           <!-- <button class="waves-effect loginMbtnSubmit" type="submit">Create Account</button> -->
+                           <div class="CTA">
+                              <a href="#" class="loginLinks">Cancel </a>
+                           </div>
+                        </form>
                    
                      <!-- <div class="createForm">
                         <select class="ProfileSelect">
@@ -1036,7 +1097,7 @@
 
                   
                      
-                     <div id="fundaiqRegDv" class="fundaiqRegDv" style="display: none;">
+                     <!-- <div id="fundaiqRegDv" class="fundaiqRegDv" style="display: none;">
                         <form method="POST" action="https://umrahcompanions.com/front/register" id="FNRegisterForm">
                            <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">                        <div class="input-field">
                               <input type="text" name="name" placeholder="Full Name" class="name">
@@ -1109,8 +1170,9 @@
                               <a href="javascript:void(0)" class="waves-effect bdrbtn loginMbtn" id="loginMbtn">Login</a>
                            </div>
                         </form>                      
-                     </div><!-- fundaiqDv --> 
-                     <div id="umrahRegDv" class="fundaiqRegDv umrahRegDv" style="display: none;">
+                     </div> -->
+                     <!-- fundaiqDv --> 
+                     <!-- <div id="umrahRegDv" class="fundaiqRegDv umrahRegDv" style="display: none;">
                         <form method="POST" action="https://umrahcompanions.com/front/register" id="UCRegisterForm">
                            <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">                        <input type="hidden" name="u_code" value="uc">
                            <div class="input-field col s12 m6 l12">
@@ -1179,10 +1241,12 @@
 
 
                         </form>                      
-                     </div><!-- umrahDv -->        
+                     </div> -->
+                     <!-- umrahDv -->        
 
                   
-               </div><!-- signWRaps ends -->
+               </div>
+               <!-- signWRaps ends -->
                   <!-- Check your email -->
                      <div class="signWRaps2" style="display: none;">
                         <h2 class="main-heading">Hi John! <span class="lightHeading"> Check your email to activate your account</span></h2>
@@ -1487,6 +1551,30 @@
       //     }
       //   },200)
       // });
+  function updateFormBasedOnUserType() {
+      const userType = document.querySelector('input[name="user_type"]:checked').value;
+      const businessField = document.getElementById('businessNameField');
+      const roleId = document.getElementById('roleId');
+
+      if (userType === 'agent') {
+        // Show Business Name field
+        businessField.classList.remove('hidden');
+
+        // Update placeholders and values
+        document.getElementById('userName').placeholder = "Full Name (Agent)";
+        roleId.value = "4"; // Agent role ID
+      } else {
+        // Hide Business Name field
+        businessField.classList.add('hidden');
+
+        // Update placeholders and values
+        document.getElementById('userName').placeholder = "Full Name (Individual)";
+        roleId.value = "3"; // Individual role ID
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', updateFormBasedOnUserType);
 
       $("#selectRoutsS").change(function(e) {
             var selectedVal = $("#selectRoutsS option:selected").val();
@@ -2248,7 +2336,7 @@ if (window.innerWidth < 768) {
                      $('.modal select').formSelect();
                      
                      /* Phone 3 */
-                           var input = document.querySelector("#phone3");
+                           var input = document.querySelector("#userPhone");
                            var instance = window.intlTelInput(input, {
                               separateDialCode: true,
                               initialCountry: "auto",
@@ -2267,17 +2355,17 @@ if (window.innerWidth < 768) {
                            });
                      /* Phone 3 */
 
-                     var input = document.querySelector("#phone4");
-                     var instance = window.intlTelInput(input, {
-                           separateDialCode: true,
-                           initialCountry: "auto",
-                           geoIpLookup: function(success, failure) {
-                              $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
-                                 var countryCode = (resp && resp.country) ? resp.country : "us";
-                                 success(countryCode);
-                              });
-                           },
-                     });
+                     // var input = document.querySelector("#phone4");
+                     // var instance = window.intlTelInput(input, {
+                     //       separateDialCode: true,
+                     //       initialCountry: "auto",
+                     //       geoIpLookup: function(success, failure) {
+                     //          $.get("https://ipinfo.io/", function() {}, "jsonp").always(function(resp) {
+                     //             var countryCode = (resp && resp.country) ? resp.country : "us";
+                     //             success(countryCode);
+                     //          });
+                     //       },
+                     // });
                      var countryData = instance.getSelectedCountryData();
                      $('.country_code').val(countryData.dialCode);
                      input.addEventListener("countrychange",function() {

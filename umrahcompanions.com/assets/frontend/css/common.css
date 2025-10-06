@@ -374,7 +374,7 @@ span {
   color: white;
   display: flex;
   width:100%;
-  height: 75px;
+  height: 46px;
   padding: 16px 113px;
   justify-content: center;
   align-items: center;
@@ -402,15 +402,21 @@ background: #15325A;
 }
 .loginLinks{
   display: flex;
-  height: 75px;
+  height: 46px;
   padding: 16px 113px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   align-self: stretch;
   border-radius: 10px;
+  margin:0 10px;
   border: 1px solid #3E5C96;
 }
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
+    border: 2px solid white;
+}
+
+
 
 /*/ Loader /*/
 .m-loader.m-loader--right.btn {
@@ -1691,6 +1697,9 @@ gap: 10px;
 border-radius: 12px;
 
 }
+.input-field{
+  margin: 5px 0px !important;
+}
 .formFooter .input-field input.invalid[type="email"]:not(.browser-default) {
   border: none;
 }
@@ -1904,14 +1913,15 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   color: var(--blue-color);
 }
 .loginMbtn {
-  background: transparent;
-  border: 2px solid var(--blue-color);
-  color: var(--blue-color);
+  background: #24B3BA;
   width: 100%;
-  border-radius: 30px;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
   padding: 12px 10px 13px;
   font-size: 17px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
   font-weight: 700;
   margin-top: 30px;
@@ -1939,7 +1949,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
 #formHolder .row {
   margin-bottom: 0;
   display: flex;
-  min-height: 460px;
+  /* min-height: 460px; */
 }
 .modal .modal-close i {
   font-size: 14px;
@@ -2054,14 +2064,14 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   margin-top: 1px !important;
 }
 .modal .bdrbtn {
-  background: transparent;
+  /* background: transparent; */
   border: none;
-  color: var(--blue-color);
-  width: 230px;
-  border-radius: 30px;
-  padding: 7px 10px 9px;
+  /* color: var(--blue-color); */
+  /* width: 230px; */
+  /* border-radius: 30px; */
+  /* padding: 7px 10px 9px; */
   font-size: 17px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
   font-weight: 600;
   margin-top: 30px;
@@ -2069,8 +2079,8 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   display: block;
   text-align: center;
   text-decoration: none;
-  margin: 0 auto;
-  border: 2px solid var(--blue-color);
+  margin: 0 10px;
+  /* border: 2px solid var(--blue-color); */
 }
 .modal .input-field.crtdv {
   margin-bottom: 0;
@@ -2293,6 +2303,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   margin-bottom: 20px;
 }
 .CTA {
+  width: 100%;
   text-align: center;
   margin-top: 13px;
 }
@@ -2306,13 +2317,13 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   color: var(--white-color);
   text-align: center;
 }
-.login-form .input-field input{
+.login-form .input-field input, .signup .input-field input{
   background: #FFFFFF !important;
   border: 1px solid #EBEBEB !important;
   opacity: 1;
   gap: 10px;
-  width:91%;
-  height:2rem;
+  width: 88%;
+  height:1rem;
   padding-top: 18px;
   padding-right: 20px;
   padding-bottom: 18px;
@@ -2320,6 +2331,13 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   border-radius: 10px !important;
   border-width: 1px;
 }
+.login-form .input-field input{
+  width: 92%;
+}
+.iti input{
+  width: 94%;
+}
+
 .loginMbtn{
   background-color: #24B3BA;
 }
@@ -2327,17 +2345,23 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
 #userTypeSwitcher{
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 20px;
   align-items: center;
 }
-#userTypeSwitcher{
-  display: flex;
-  padding: 23px 30px;
+#userTypeSwitcher label{
+  display: flex; 
+  padding: 11px 25px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 100px;
   border: 1px solid #335086;
+}
+#userTypeSwitcher label span{
+  color: white;
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color: white !important;
 }
 /*end register modal*/
 .signWRaps2 h2 {
@@ -2352,6 +2376,9 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
   justify-content: space-between;
   flex-wrap: nowrap;
   padding-top: 20px;
+}
+.hidden{
+  display: none;
 }
 
 .textSuccess .emailAdd {
@@ -2548,7 +2575,7 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
     margin-left: 30px;
   }
   #modalLogin .modal-content input {
-    height: 30px;
+    height: 20px;
     line-height: 30px;
     font-size: 14px;
   }
@@ -2682,28 +2709,38 @@ input[type=date]:not(.browser-default):focus:not([readonly]){
     border-radius: 10px;
     background: #24B3BA;
     color: white;
-    display: flex
-;
+    display: flex;
     width: 100%;
-    height: 60px
+    height: 46px;
 }
+
 @media only screen and (max-width: 992px) {
+  [type="radio"]:not(:checked)+span, [type="radio"]:checked+span {
+    padding-left: 27px;
+  }
+#userTypeSwitcher label {
+    padding: 11px 10px;
+    width: 100%;
+}
+  #userTypeSwitcher {
+    gap:0px;
+  }
     .container-n {
       width: 90%;
       margin: 0 auto;
   }
   .loginLinks {
-    width: 100%;
+    width: 95%;
     padding: 5px 0px;
-    height: 60px;
-  }
+    height: 40px;
+}
   #modalLogin .modal-content input {
     height: 25px;
     margin: 0px;
     padding: 14px 12px;
   }
   .loginMbtnSubmit {
-    height: 60px
+    height: 46px
   }
   .login-btn-div .linkA.linkA3 .linkA.linkA3 {
     padding-right: 15px;

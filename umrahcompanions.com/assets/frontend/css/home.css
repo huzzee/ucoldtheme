@@ -2057,7 +2057,10 @@ a.contactButton:hover {
 .iti--separate-dial-code input[type="text"],
 .iti--separate-dial-code input[type="tel"] {
   padding-left: 0;
-  margin-left: 52px;
+  margin-left: 0px;
+}
+.iti input{
+  width: 93% !important;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -4533,6 +4536,9 @@ a.registerButton:hover {
 }
 
 @media only screen and (max-width: 992px) {
+  .iti input{
+  width: 80% !important;
+}
   .linkA.linkA1 {
     margin-left: 18px;
     width: 16%;
