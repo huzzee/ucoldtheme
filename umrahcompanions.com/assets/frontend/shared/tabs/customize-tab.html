@@ -107,37 +107,22 @@
                 </div>
                 <div class="col l2 m6 s12 wrap_spacing">
                     <input type="text" class="form-control active-state" placeholder="departure-city" name="departure-city" id="departure-city">
-                    <!-- <select class="form-select browser-default active-state" name="departure-city" id="departure-city">
-                        <option value="">Departure City<span class="text-danger">*</span></option>
-                    </select> -->
                 </div>
                 <div class="col l2 m6 s12 wrap_spacing">
                     <input type="text" class="form-control active-state" onchange="applyFilters()" placeholder="arrival-city" name="arrival-city" id="arrival-city">
-
-                    <!-- <select class="form-select browser-default active-state" name="arrival-city" id="arrival-city">
-                        <option value="">Arrival City<span class="text-danger">*</span></option>
-                    </select> -->
                 </div>
                 <div class="col l2 m6 s12 wrap_spacing">
                     <input type="text" class="form-control active-state" placeholder="duration" name="duration" id="duration">
-
-                    <!-- <select class="form-select browser-default active-state" name="duration" id="duration">
-                        <option value="">All Duration<span class="text-danger">*</span></option>
-                    </select> -->
                 </div>
                 <div class="col l2 m6 s12 wrap_spacing">
                     <input type="text" class="form-control active-state" placeholder="airlines" name="airlines" id="airlines">
-
-                    <!-- <select class="form-select browser-default active-state" name="airlines" id="airlines">
-                        <option value="">All Airlines<span class="text-danger">*</span></option>
-                    </select> -->
                 </div>
                 <div class="col l3 m6 s12">
                     <button id="clearFilters" style="width: 100%;" class="btn primary-btn">Search</button>
                 </div>
             </div>
     </div>
-    <div id="flightContainer"class="box" style="height: 70vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;">
+    <div id="flightContainer"class="box">
     </div>
 </div>
 <div class="custom-card"   style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
@@ -417,7 +402,7 @@
         <div>
             <h5 class="sub-heading" style="margin-top: 0px;">Filter Hotel</h5>
         </div>
-        <div id="hotelContainer" class="row" style="width: 100%;display: flex;flex-wrap: wrap;  flex-direction: row; gap: 20px; ">
+        <div id="hotelContainer" class="row" style="">
             <div class="vehicle-card-wrapper">
             </div>
         </div>

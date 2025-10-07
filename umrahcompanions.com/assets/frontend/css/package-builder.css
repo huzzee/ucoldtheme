@@ -275,7 +275,7 @@ text-align: center;
 }
 
 .form_row{
-  justify-content: center !important;
+  justify-content: start !important;
 }
 
 .card li::before {
@@ -610,8 +610,8 @@ p{
 .form-row-package-flight{
   width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 7px;
+  justify-content: start;
+  gap: 17px;
   align-items: center;
 }
 .form-row-package-flight col{
@@ -711,7 +711,7 @@ background-color: #F7F7F7 ;
 .no-flight-text{
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -1428,12 +1428,14 @@ color: #454F5B;
   align-items: center;
 }
 .footer-col{
-  max-width: 300px;
+  width: 30%;
 }
 .footer-col-med{
   max-width: 300px;
 }
-
+.builder-footer .primary-btn{
+  width: auto;
+}
 .breakdown-item.total {
   font-weight: bold;
   border-top: 1px solid #ddd;
@@ -1444,6 +1446,9 @@ color: #454F5B;
   background-color: #17a2b8;
   color: #fff;
 }
+#flightContainer{
+  height: 70vh; overflow-y: scroll; display: flex; flex-direction: column; gap: 20px;
+}
 .checkout-btns{
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
 }
@@ -1451,7 +1456,7 @@ color: #454F5B;
   display: flex;
   justify-content: center;
   align-items: center;
-gap: 11px;
+gap: 20px;
 }
 .counter-row .col.l3{
   width: 23%;
@@ -1598,6 +1603,9 @@ sup{
     pointer-events: none;
     width: min-content;
 }
+#hotelContainer{
+  width: 100%;display: flex;flex-wrap: wrap;  flex-direction: row; gap: 20px; 
+}
 
 
 @media (max-width:1439px) {
@@ -1607,6 +1615,26 @@ sup{
 }
 }
 @media (max-width:600px) {
+  #flightContainer {
+    height: 49vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#hotelContainer{
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 48vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+  .no-flight-text button {
+    width: 80%;
+}
   .footer-span{
   display: none !important;
 } .footer-col{
@@ -1806,7 +1834,7 @@ width: 31%;
         height: 32vh;
   }
   #package-type  .form-row-package{
-        height: 37vh;
+        height: 42vh;
   }
   #flight-type  .form-row-package{
         height: 35vh;

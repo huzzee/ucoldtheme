@@ -54,7 +54,7 @@ function renderFlights(data) {
     container.innerHTML = `
       <div class="no-flights" style="display: flex; flex-direction: column; gap: 10px;">
           <div class="row form-row flex-row">
-            <div class="col l12 d-flex" style="justify-content:center; flex-direction:column; gap:10px">
+            <div class="col l12 s12 d-flex" style="justify-content:center; flex-direction:column; gap:10px">
               <div class="rounded-circle">
                 <img style="top:16px; left:16px" src="assets/frontend/img/grey-flight.svg" alt="">
               </div>

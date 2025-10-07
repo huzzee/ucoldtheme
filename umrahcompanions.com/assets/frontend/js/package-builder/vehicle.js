@@ -53,6 +53,8 @@ function renderVehicles() {
     document.getElementById("sedan").checked = true;
     document.querySelectorAll(".main-checkboxes").forEach(cb => {
         cb.addEventListener("change", renderVehicles);
+                toggleParentColor(cb);
+
     });
     const container = document.getElementById("vehicleContainer");
     if (!container) {
@@ -61,7 +63,7 @@ function renderVehicles() {
     container.innerHTML = ""; // clear
     document.querySelectorAll(".main-checkboxes:checked").forEach(cb => {
         const v = vehicles[cb.id];
-        toggleParentColor(cb);
+        // toggleParentColor(cb);
         if (!v) return;
 
         const card = document.createElement("div");
@@ -146,9 +148,11 @@ function toggleParentColor(cb) {
         label.style.color="#fff"
         parent.style.borderRadius = "6px";
         parent.style.padding = "8px";
-    } else {
+    } else if (!cb.checked) {
         parent.style.backgroundColor = "#f8f8f8"; // reset
         parent.style.color = "#000";
+        label.style.color="#000"
+
     }
 }
 

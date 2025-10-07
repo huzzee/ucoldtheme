@@ -285,6 +285,11 @@ padding-left: 25px;
   border: 2px solid #1976d2;
   background: #f0f8ff;
 }
+.hotel-rooms{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 @media (max-width:1023px) {
    .form-row-package{
@@ -321,6 +326,19 @@ flex-direction: row;
 .room{
   flex-direction: row-reverse;
   gap: 5px!important;
+}
+.rooms-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 23vh;
+    overflow-x: scroll;
+}
+.hotel-rooms{
+  display: block;
 }
 }
 
