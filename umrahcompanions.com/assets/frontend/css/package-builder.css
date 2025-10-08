@@ -1642,6 +1642,7 @@ sup{
   }
   .builder-footer{
     padding: 20px 30px !important;
+    z-index: 0;
   }
   .footer-col-med {
     /* max-width: 300px; */
