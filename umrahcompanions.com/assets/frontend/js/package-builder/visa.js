@@ -134,6 +134,27 @@ function showStep(stepId) {
 
   // special cases
   if (stepId === "flight-details") {
+    document.querySelector('.open-sidebar-btn').addEventListener('click', function() {
+  const sidebar = document.getElementById('flightfilterSidebar');
+  if (sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+  } else {
+    sidebar.classList.add('open');
+  }
+});
+
+// Close sidebar when clicking the close button
+document.querySelector('.close-btn').addEventListener('click', function() {
+  document.getElementById('flightfilterSidebar').classList.remove('open');
+});
+
+// Close sidebar when clicking outside of it (optional)
+document.addEventListener('click', function(event) {
+  var sidebar = document.getElementById('flightfilterSidebar');
+  if (!sidebar.contains(event.target) && !event.target.matches('.open-sidebar-btn')) {
+    sidebar.classList.remove('open');
+  }
+});
     if (bookingData.flight_type === "Flexible") {
       $("#flexible-flight").show();
         document.querySelectorAll('.flight').forEach(container => {
@@ -244,7 +265,35 @@ routecheckboxes.forEach((checkbox) => {
   }
 
   if (stepId === "hotel-details") {
-    initDatePickers();
+
+    
+  // Toggle sidebar open/close
+document.querySelectorAll('.open-sidebar-btn').forEach(function(btn) {
+  btn.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent it from triggering the "outside click" handler
+    const sidebar = document.getElementById('hotelfilterSidebar');
+    sidebar.classList.toggle('open');
+  });
+});
+
+// Close sidebar when clicking the close button
+document.querySelector('.close-btn').addEventListener('click', function(event) {
+  event.stopPropagation();
+  document.getElementById('hotelfilterSidebar').classList.remove('open');
+});
+
+// Optional: Close sidebar when clicking outside of it
+document.addEventListener('click', function(event) {
+  const sidebar = document.getElementById('hotelfilterSidebar');
+  const isClickInsideSidebar = sidebar.contains(event.target);
+  const isClickOnToggleButton = event.target.closest('.open-sidebar-btn');
+
+  if (!isClickInsideSidebar && !isClickOnToggleButton) {
+    sidebar.classList.remove('open');
+  }
+});
+
+initDatePickers();
   }
 
   if (stepId === "another-hotel") {

@@ -96,10 +96,15 @@
 
             </div>
     </div>
-
-    <div class="box"  id="fixed-flight">
+            <div class="filter-btn-container">
+                <!-- Button to open sidebar on mobile -->
+                <a type="button" class=" open-sidebar-btn">Filters <i class="fa fa-filter" aria-hidden="true"></i>
+                </a>
+            </div>
+    <div class="box filter-desktop"  id="fixed-flight">
             <h5 class="sub-heading" style="margin-top: 0px;">Filter your Flight</h5>
-            <div class="form-row form-row-package-flight" id="packageFlights">
+             
+            <div class="form-row form-row-package-flight " id="packageFlights">
                 <div class="col l2 m6 s12 wrap_spacing" style="padding: 0px;">
                     <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
                         <option value="">All Months<span class="text-danger">*</span></option>
@@ -121,6 +126,7 @@
                     <button id="clearFilters" style="width: 100%;" class="btn primary-btn">Search</button>
                 </div>
             </div>
+            
     </div>
     <div id="flightContainer"class="box">
     </div>
@@ -314,7 +320,7 @@
     </div>
 </div>
 <div class="custom-card" style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="hotel-details">
-    <div class="box hotel-details"   id="search-hotel">
+    <div class="box hotel-details" id="search-hotel">
         <h5 class="sub-heading" style="margin-top: 0px;">Enter Hotel Details</h5>
        <div class=" row form-row">
         <div class="col l3 m5 s12">
@@ -349,9 +355,14 @@
 
        </div>
     </div>
-    <div class="box hotel-details"  style="display: none;" id="filter-hotel">
-        <h5 class="sub-heading" style="margin-top: 0px; margin-bottom: 10px;">Filter Hotel</h5>
-       <div class=" row form-row ">
+    <div class="filter-btn-container" >
+        <!-- Button to open sidebar on mobile -->
+        <a type="button" class=" open-sidebar-btn">Filters <i class="fa fa-filter" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="box hotel-details "  style="display: none;" id="filter-hotel">
+        <h5 class="sub-heading filter-desktop" style="margin-top: 0px; margin-bottom: 10px;">Filter Hotel</h5>
+       <div class=" row form-row filter-desktop">
         <div class="col l3 s12">
             <div >
                 <select class="form-select browser-default" name="price-range" id="price-range" style="width:85%;  ">
@@ -399,9 +410,6 @@
        </div>
     </div>
      <div class="box hotel-details" id="show-hotels" style=" display: none; flex-direction: column; gap: 10px;">
-        <div>
-            <h5 class="sub-heading" style="margin-top: 0px;">Filter Hotel</h5>
-        </div>
         <div id="hotelContainer" class="row" style="">
             <div class="vehicle-card-wrapper">
             </div>

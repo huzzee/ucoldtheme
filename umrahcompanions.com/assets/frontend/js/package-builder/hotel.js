@@ -63,13 +63,25 @@ const madHotels=[
     },
 ];
 
+
 function searchHotel(){
+   const isMobile = window.innerWidth <= 768;
   const city = document.getElementById("hotel-city").value;
   const checkin = document.getElementById("hotel-checkin").value;
   const checkout = document.getElementById("hotel-checkout").value;
   console.log(city, checkin, checkout)
   document.getElementById("search-hotel").style.display="none";
-  document.getElementById("filter-hotel").style.display="block";
+  if(isMobile){
+    document.querySelector('.filter-btn-container').style.display="flex";
+      document.getElementById("filter-hotel").style.display="none";
+
+
+  }else{
+  document.getElementById("filter-hotel").style.display="flex";
+      document.querySelector('.filter-btn-container').style.display="none";
+
+
+  }
   document.getElementById("show-hotels").style.display="flex";
 
 //   let hotels=[];

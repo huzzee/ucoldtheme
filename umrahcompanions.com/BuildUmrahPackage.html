@@ -157,7 +157,82 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
             </div>
         </div>
     </div>
+<div id="flightfilterSidebar" class="sidebar">
+   <button type="button" class="close-btn">&times;</button>
+   <div class="sidebar-content form-row form-row-package-flight">
+   <div class="col l2 m6 s5 wrap_spacing" style="padding: 0px;">
+      <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
+            <option value="">All Months<span class="text-danger">*</span></option>
+      </select>
+   </div>
+   <div class="col l2 m6 s5 wrap_spacing">
+      <input type="text" class="form-control active-state" placeholder="departure-city" name="departure-city" id="departure-city">
+   </div>
+   <div class="col l2 m6 s5 wrap_spacing">
+      <input type="text" class="form-control active-state" onchange="applyFilters()" placeholder="arrival-city" name="arrival-city" id="arrival-city">
+   </div>
+   <div class="col l2 m6 s5 wrap_spacing">
+      <input type="text" class="form-control active-state" placeholder="duration" name="duration" id="duration">
+   </div>
+   <div class="col l2 m6 s5 wrap_spacing">
+      <input type="text" class="form-control active-state" placeholder="airlines" name="airlines" id="airlines">
+   </div>
+   </div>
 
+
+   <div class="srchbtn searchButton">
+      <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+   </div>   
+                
+</div> 
+<div id="hotelfilterSidebar" class="sidebar">
+   <button type="button" class="close-btn">&times;</button>
+   <div class="sidebar-content form-row form-row-package-flight">
+       <div class="col l2 s5">
+            <div >
+                <select class="form-select browser-default" name="price-range" id="price-range" style="width:85%;  ">
+                <option value="">Price Range</option>
+                <option value="Mak">Makkah</option>
+                <option value="Mad">Madinah</option>
+                </select>
+            </div>
+        </div>
+        <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
+          <div>
+            <input type="text" class="form-control active-state"
+              placeholder="Area" id="area" name="area"
+              value="" />
+          </div>
+        </div>
+
+        <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
+          <div >
+            <input type="text" class="form-control active-state"
+              placeholder="Distance" id="distance" name="distance"
+              value="" />
+          </div>
+        </div>
+        <div class="col s12 m6 l2 wrap_spacing wrap_datePicker">
+           <div >
+                <select class="form-select browser-default" name="rating" id="rating" style="width:85%;  ">
+                <option value="">Star Rating</option>
+                <option value="Mak">5 star</option>
+                <option value="Mad">4 star</option>
+                <option value="Mad">3 star</option>
+                <option value="Mad">2 star</option>
+                <option value="Mad">1 star</option>
+
+
+                </select>
+            </div>
+        </div>
+   </div>
+
+   <div class="srchbtn searchButton">
+      <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+   </div>   
+                
+</div> 
 
 </div> 
 

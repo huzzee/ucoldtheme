@@ -32,6 +32,7 @@ const flights = [
 
 // Render flights
 function renderFlights(data) {
+  
   const container = document.getElementById("flightContainer");
  
   if (!container) {

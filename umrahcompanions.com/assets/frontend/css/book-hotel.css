@@ -1498,6 +1498,7 @@ div#test2 {
     padding-right: unset;
   }
 
+
   /* .sp1 strong,
   .unitTop,
   span.sp2 {
@@ -1528,11 +1529,10 @@ div#test2 {
   }
 
   .form-top-detail .input-field {
-    flex: 0;
-    max-width: 100%;
-    width: 100% !important;
-    text-align: center;
-    margin:0px 0;
+    flex: 1 1 48%; /* Adjust width per element */
+  max-width: 48%; /* Ensures two fit side by side with margin */
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  text-align: center;
   }
   .top-List-deal {
     display: flex;
