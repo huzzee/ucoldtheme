@@ -6,7 +6,7 @@
             img: "assets/frontend/img/camry.png",
             capacity: "4 people",
             model: "Hyundai Sonata",
-            luggage: "2 Luggages"
+            luggage: "2 baggage"
         },
         GMC: {
             name: "GMC",
@@ -14,7 +14,7 @@
             img: "assets/frontend/img/GMC.png",
             capacity: "6 people",
             model: "GMC Yukon",
-            luggage: "4 Luggages"
+            luggage: "4 baggage"
         },
         staria: {
             name: "Staria",
@@ -22,7 +22,7 @@
             img: "assets/frontend/img/staria.png",
             capacity: "6 people",
             model: "Hyundai Staria",
-            luggage: "3 Luggages"
+            luggage: "3 baggage"
         },
         hiace: {
             name: "HiAce",
@@ -30,7 +30,7 @@
             img: "assets/frontend/img/hiace.png",
             capacity: "10 people",
             model: "Toyota HiAce",
-            luggage: "5 Luggages"
+            luggage: "5 baggage"
         },
         coaster: {
             name: "Coaster",
@@ -38,7 +38,7 @@
             img: "assets/frontend/img/coaster.png",
             capacity: "22 people",
             model: "Toyota Coaster",
-            luggage: "8 Luggages"
+            luggage: "8 baggage"
         },
         bus: {
             name: "Bus",
@@ -46,7 +46,7 @@
             img: "assets/frontend/img/bus.png",
             capacity: "45 people",
             model: "Luxury Bus",
-            luggage: "20 Luggages"
+            luggage: "20 baggage"
         }
     };
 function renderVehicles() {
