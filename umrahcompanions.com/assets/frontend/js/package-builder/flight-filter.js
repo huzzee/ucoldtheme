@@ -76,21 +76,22 @@ function renderFlights(data) {
     container.innerHTML += `
       <div class="flight-card" data-index="${flight.index}">
         <div class=" form-row flex-row" style="width:100%;">
-          <div class="col l7 s12 d-flex">
+          <div class="col l7 s5 d-flex">
             <div class="rounded-circle" style="width:35px; height:35px;">
               <img src="assets/frontend/img/light-flight.svg" style="top:8px; left:9px; width:17px; height:17px;" alt="">
             </div>
             <h3 style="margin:0px;">${flight.airline}</h3>
           </div>
-          <div class="col l4 s12" style="display: flex; justify-content: end;">
+          <div class="col l4 s5" style="display: flex; justify-content: end;">
             <div style="text-align: end;">
-              <h5 class="sub-heading" style="margin:0px">PKR ${flight.price.toLocaleString()}</h5>
+              <h5 class="sub-heading flight" style="margin:0px "> ${flight.price.toLocaleString()}</h5>
               <span>Per person</span>
             </div>
           </div>
         </div>
 
         <!-- Depart -->
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; width:100%;flex-wrap:wrap;">
         <div class="row form-row depart">
           <div><span class="badge depart-badge">Depart</span></div>
           <div class=" form-row form-row-flight col l12">
@@ -118,7 +119,7 @@ function renderFlights(data) {
         </div>
 
         <!-- Return -->
-        <div class="row form-row return" style="width:100%; ">
+        <div class="row form-row return">
           <div><span class="badge return-badge">Return</span></div>
           <div class=" form-row col l12">
             <div class="col l3 s4">
@@ -142,6 +143,7 @@ function renderFlights(data) {
               <p>${flight.returnDate}</p>
             </div>
           </div>
+        </div>
         </div>
       </div>`;
   });

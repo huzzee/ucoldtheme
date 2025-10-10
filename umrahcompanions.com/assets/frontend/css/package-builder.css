@@ -42,7 +42,9 @@ width: auto;
   min-height: calc(100vh - 80px); /* adjust based on header/footer height */
   position: relative; /* needed for sticky children */
 }
-
+.swipe{
+  display: none;
+}
 .tab-content{
   display: flex;
   justify-content: center;
@@ -271,7 +273,7 @@ text-align: center;
   letter-spacing: 2%;
   vertical-align: middle;
   text-transform: capitalize;
-  color: #6E6E6E;
+  color: #15325A;
 }
 
 .form_row{
@@ -555,13 +557,16 @@ padding-left: 10px;
   margin-left: 0px !important;
 }
 .footer-span{
-color: var(--text, #454F5B);
+color: var(--text, #15325A);
 font-weight: 400;
 font-size: 11px;
 line-height: 100%;
 letter-spacing: 2%;
 text-align: center;
 vertical-align: middle;
+}
+.wrap_Labels{
+  color: #15325A;
 }
 .desc{
 font-weight: 400;
@@ -570,7 +575,7 @@ line-height: 140%;
 letter-spacing: 2%;
 vertical-align: middle;
 text-align: start;
-color: #454F5B;
+color: #15325A;
 margin-bottom: 10px;
 }
 .flight-card{
@@ -591,7 +596,7 @@ border: 1px solid #8c9b9c88;
 box-shadow: 0px 4px 20px 0px #00000008;
 }
 .depart{
-width: 100%;
+width: 49%;
 gap: 13px;
 opacity: 1;
 border-radius: 12px;
@@ -641,6 +646,7 @@ p{
   margin-top: 0px;
 }
 .return{
+  width: 49%;
   background: #EAF0FA;
 gap: 13px;
 opacity: 1;
@@ -721,7 +727,7 @@ background-color: #F7F7F7 ;
   font-weight: bold !important;
 }
 .no-flight-text p{
-  color: #454F5B !important;
+  color: #15325A !important;
 }
 .vehicle-boxes{
 opacity: 1;
@@ -823,7 +829,7 @@ width: 100% !important;
     line-height: 21px;
     letter-spacing: 0%;
     vertical-align: middle;
-    color: #434343;
+    color: #161C24;
     display: flex;
     min-width: 10%;
     justify-content: center;
@@ -939,7 +945,7 @@ line-height: 100%;
 letter-spacing: 2%;
 text-align: justify;
 vertical-align: middle;
-color: #75758F;
+color: #161C24;
 }
 .hotel-card h5{
   font-weight: 600;
@@ -1419,7 +1425,7 @@ line-height: 100%;
 letter-spacing: 2%;
 text-align: justify;
 vertical-align: middle;
-color: #454F5B;
+color: #15325A;
 
 }
 .form-row-footer{
@@ -1700,6 +1706,12 @@ flex-wrap: wrap;
 }
 
 @media (max-width:1023px) {
+  .depart, .return{
+    width: 100%;
+  }
+  .box h5.subheading.flight{
+    font-size:14px;
+  }
   .checkout-row-form .l6 {
     width: 100% !important;
   }
@@ -2024,6 +2036,11 @@ sup img{
         height: 31%;
         background-color: #fff;
   }
+  .swipe{
+    display: block;
+    font-size: 10px;
+    color: #1d2b53;
+  }
 
     .sidebar {
     display: none;
@@ -2048,7 +2065,7 @@ sup img{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 30px 0px;
+    padding: 30px 15px;
 }
 .form-top-detail .srchbtn {
     display: flex;
@@ -2063,7 +2080,8 @@ sup img{
   }
   .searchButton{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
 .searchButton button.searchBtn {
