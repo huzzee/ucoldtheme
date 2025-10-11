@@ -5,8 +5,8 @@ $(document).ready(function () {
   const tab = params.get("tab");
     const isMobile = window.innerWidth <= 768;
     document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/customize-tab.html']").innerHTML = isMobile ? "2" : "2. Customization";
-    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/pilgrim-information.html']").innerHTML = isMobile ? "1" : "1. Customization";
-    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/confirmation.html']").innerHTML = isMobile ? "3" : "3. Customization";
+    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/pilgrim-information.html']").innerHTML = isMobile ? "1" : "1. Pilgrim Information";
+    document.querySelector(".tab[data-tab='assets/frontend/shared/tabs/confirmation.html']").innerHTML = isMobile ? "3" : "3. Confirmation";
 
   
 
@@ -19,6 +19,9 @@ $(document).ready(function () {
   
     var tabPath = "assets/frontend/shared/tabs/customize-tab.html";
     $('#tab-content').load(tabPath, function () {
+    
+        document.getElementById('main-heading').innerHTML="Customize Your Umrah Journey";
+      
         const savedData = localStorage.getItem("bookingData");
         if (savedData) {
           bookingData = JSON.parse(savedData);
@@ -56,7 +59,17 @@ $(document).ready(function () {
     // default tab (first one)
     $('.tab').first().addClass('active');
     var firstTabPath = $('.tab.active').data('tab');
-    $('#tab-content').load(firstTabPath, function () {      
+    $('#tab-content').load(firstTabPath, function () {   
+     document.getElementById('main-heading').innerHTML="Customize Your Umrah Journey";
+   
+      console.log($('#main-heading'))
+      // if(tabPath=='assets/frontend/shared/tabs/confirmation.html'){
+      //  document.getElementById.innerHTML="Finalize Your Umrah Package";
+      // }
+      // else{
+      //   document.getElementById.innerHTML="Customize Your Umrah Journey";
+
+      // }
       document.getElementById("custom-footer").style.display="none";
       $(".package-builder").removeClass('custom-height');
 
@@ -71,7 +84,11 @@ $('.tab').click(function() {
     var tabPath = $(this).data('tab');
     tabPath.addClass('active');
 
+
     $('#tab-content').load(tabPath, function () {
+      console.log($('#main-heading'))
+        document.getElementById('main-heading').innerHTML="Finalize Your Umrah Package";
+      
        if(tabPath=='assets/frontend/shared/tabs/customize-tab.html'){
           $(".package-builder").addClass('custom-height');
 
@@ -82,6 +99,8 @@ $('.tab').click(function() {
 
        document.getElementById("custom-footer").style.display="none";
       }
+
+      
         populateCountries(); // call again when new tab loads
         initCounters();
         var elems = document.querySelectorAll('.collapsible');
@@ -95,12 +114,16 @@ $('.tab').click(function() {
     });
 });
 function checkout(){
+   console.log($('#main-heading'))
+        document.getElementById('main-heading').innerHTML="Finalize Your Umrah Package";
     $('.tab').removeClass('active');
     const tab2 = $('.tab[data-tab="assets/frontend/shared/tabs/confirmation.html"]');
     tab2.addClass('active');
     var tabPath= "assets/frontend/shared/tabs/confirmation.html"
+
     $('#tab-content').load(tabPath, function () {
-      
+              $('main-heading').innerHTML="Finalize Your Umrah Package";
+
         document.querySelectorAll("#phone, #guestPhone").forEach(input => {
           window.intlTelInput(input, {
             initialCountry: "auto",

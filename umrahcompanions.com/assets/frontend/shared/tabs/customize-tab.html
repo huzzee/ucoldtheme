@@ -1,5 +1,5 @@
 <!--  -->
-<h1 class="page-title" data-aos="fade-right" data-aos-duration="1000" >Customize Your Umrah Journey</h1>
+<!-- <h1 class="page-title" data-aos="fade-right" data-aos-duration="1000" >Customize Your Umrah Journey</h1> -->
 
 <div class="" data-aos="fade-left" data-aos-duration="1000"  style="width: 100%; display:flex; justify-content:center;" id="customize-page">
     <div class="custom-card"  style="width: 100%; display:flex; justify-content:center;" id="package-type">
@@ -107,7 +107,7 @@
             <div class="form-row form-row-package-flight " id="packageFlights">
                 <div class="col l2 m6 s12 wrap_spacing" style="padding: 0px;">
                     <select class="form-select browser-default active-state" onchange="applyFilters()" name="months" id="months">
-                        <option value="">All Months<span class="text-danger">*</span></option>
+                        <option value="">All Months</option>
                     </select>
                 </div>
                 <div class="col l2 m6 s12 wrap_spacing">
@@ -128,7 +128,11 @@
             </div>
             
     </div>
-    <div id="flightContainer"class="box">
+    <div  class="box">
+         <a class="scroll-hint" onclick="scrollLeft()">Scroll <i class="fa fa-arrow-right"></i></a>
+        <div id="flightContainer"></div>
+        
+
     </div>
 </div>
 <div class="custom-card"   style="width: 100%;flex-direction: column; align-items: center; gap:20px;  display:flex; justify-content:center;" id="transport-details">
@@ -137,36 +141,36 @@
             <div class="row form_row_inquiry main-routes" style="padding: 0 !important; justify-content: start;">
                         <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
                         <div class="switch" style="height: 100%;">
-                          <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                          <label for="route1" class="input_Labels" >
                             <input type="radio" style="accent-color: #1E3A6D;" id="route1" class="checkbox-main route" name="route">
                             <label for="route1" class="wrap_Labels col l11">Jeddah to Makkah to Madinah to Jeddah</label>
-                          </div>
+                          </label>
                         </div>
                         </div>
                         <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
                           <div class="switch"  style="height: 100%;">
-                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <label for="route2" class="input_Labels" >
                               <input type="radio" style="accent-color: #1E3A6D;" id="route2" class="checkbox-main route" name="route">
                               <label for="route2" class="wrap_Labels col l11">Jeddah to Makkah to Madinah to Makkah to Jeddah</label>
-                            </div>
+                            </label>
                           </div>
                         </div>
                         <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
                           <div class="switch"  style="height: 100%;">
-                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">
+                            <label for="route3" class="input_Labels" >
                               <input type="radio" style="accent-color: #1E3A6D;" id="route3" class="checkbox-main route" name="route">
                               <label for="route3" class="wrap_Labels col l11 transport_check">Jeddha to Makkah to Madinah to Madinah airport</label>
                               
-                            </div>
+                            </label>
                           </div>
                         </div>
                         <div class="col s12 l6 wrap_spacing" style="margin-left: 0px;">
                           <div class="switch"  style="height: 100%;">
-                            <div class="input_Labels" style="width:100% !important; height:100% !important;  border-radius: 10px;">                      
+                            <label for="route4" class="input_Labels" >                      
                               <input type="radio" style="accent-color: #1E3A6D;" id="route4" class="checkbox-main hotel_check route" name="route">
                               <label for="route4" class="wrap_Labels  col l11">Madinah to Makkah to Madinah</label>  
                            
-                            </div>
+                            </label>
                           </div>
                         </div>
                         <div class="col s12 l2 wrap_spacing" style="margin-left: 0px;">
@@ -268,42 +272,42 @@
             <h5 class="sub-heading" >Select Vehicle Type</h5>
             <div class="row form-row" data-aos="fade-left" data-aos-duration="1000"  id="packageTransport">
                 <div class="col l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes ">
+                    <label for="sedan" class="vehicle-boxes ">
                         <input type="checkbox" class="main-checkboxes" name="sedan" id="sedan">
                         <label for="sedan">Sedan</label>
-                    </div>
+                    </label>
                     
                 </div>
 
                 <div class="col  l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes ">
+                    <label for="GMC" class="vehicle-boxes ">
                         <input class=" main-checkboxes" type="checkbox" name="GMC" id="GMC">
                         <label class="input_labels" for="GMC">GMC</label>
-                    </div>
+                    </label>
                 </div>
                 <div class="col l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes">
+                    <label for="staria" class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="staria" id="staria">
                         <label for="staria">Staria</label>
-                    </div>
+                    </label>
                 </div>
                 <div class="col l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes">
+                    <label for="hiace" class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="hiace" id="hiace">
                         <label for="hiace">HiAce</label>
-                    </div>
+                    </label>
                 </div>
                 <div class="col l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes">
+                    <label for="coaster" class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="coaster" id="coaster">
                         <label for="coaster">Coaster</label>
-                    </div>
+                    </label>
                 </div>
                 <div class="col l1 m1 s6"  data-aos="fade-left" data-aos-duration="1000"  >
-                    <div class="vehicle-boxes">
+                    <label for="bus" class="vehicle-boxes">
                         <input type="checkbox" class="main-checkboxes" name="bus" id="bus">
                         <label for="bus">Bus</label>
-                    </div>
+                    </label>
                 </div>
 
             </div>

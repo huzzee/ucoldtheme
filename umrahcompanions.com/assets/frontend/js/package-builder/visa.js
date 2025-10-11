@@ -148,6 +148,7 @@ document.querySelector('.close-btn').addEventListener('click', function() {
   document.getElementById('flightfilterSidebar').classList.remove('open');
 });
 
+
 // Close sidebar when clicking outside of it (optional)
 document.addEventListener('click', function(event) {
   var sidebar = document.getElementById('flightfilterSidebar');
@@ -155,6 +156,11 @@ document.addEventListener('click', function(event) {
     sidebar.classList.remove('open');
   }
 });
+document.querySelector('.scroll-hint').addEventListener('click',function() {
+    const container = document.getElementById('flightContainer');
+    container.scrollBy({ left: 250, behavior: 'smooth' });
+  });
+
     if (bookingData.flight_type === "Flexible") {
       $("#flexible-flight").show();
         document.querySelectorAll('.flight').forEach(container => {
