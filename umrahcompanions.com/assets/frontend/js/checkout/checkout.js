@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const urlParams = new URLSearchParams(window.location.search);
+   const data = localStorage.getItem("cartItems");
+   console.log(data)
+  // return data ? JSON.parse(data) : [];
+
 let hotelName = urlParams.get("hotel");
 
     var elems = document.querySelectorAll('.collapsible');
@@ -195,5 +199,179 @@ function goToPayment() {
     successModal.open();
   }
 }
+function renderCart() {
+  const data = localStorage.getItem("cartItems");
+  cartItems=data ? JSON.parse(data) : [];
+  console.log(cartItems)
+  const container = document.getElementById("cart-container");
+  container.innerHTML = "";
+
+ cartItems.forEach((item, index) => {
+    console.log(item)
+    let html = "";
+
+    if (item.type === "hotel") {
+      html = `
+        <div class="hotel">
+          <img width="30%" src="${item.img}" alt="">
+          <div style="width:80%;">
+            <div style="width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center">
+                <h6 style="width:60%;">${item.name}</h6>
+                <div style="width:20%; display:flex; align-items:center ; justify-content:space-between;gap:15px;">
+                  <a style="width:35%;" href=""><img style="width:20px;" src="assets/frontend/img/Pencil.svg"></a>
+                  <a style="width:50%;"><img  src="assets/frontend/img/delete.svg"></a>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:start;">
+              <img src="assets/frontend/img/MapPin.svg" alt="">
+              <address style="font-style: normal;">${item.address}</address>
+            </div>
+          </div>
+         
+        </div>
+        <div class="details">
+          <div class="box-border">
+            <div class="form-row-detail">
+              <div class="detail">
+                <img src="assets/frontend/img/CalendarDots.svg" alt="">
+                <div>
+                  <span>Check in Date</span>
+                  <p>${item.checkin}</p>
+                </div>
+              </div>
+              <div class="detail">
+                <img src="assets/frontend/img/CalendarDots.svg" alt="">
+                <div>
+                  <span>Check out Date</span>
+                  <p>${item.checkout}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-border">
+            <div class="form-row-detail">
+              <div class="detail">
+                <img src="assets/frontend/img/Moon.svg" width="15%" alt="">
+                <div>
+                  <span>Total Nights</span>
+                  <p>${item.nights} Nights</p>
+                </div>
+              </div>
+              <div class="detail">
+                <img src="assets/frontend/img/Bed.svg" alt="">
+                <div>
+                  <span>Room Type</span>
+                  <p>${item.room_type}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    if (item.type === "transport") {
+       html = `
+        <div class="hotel">
+          <img width="20%" src="${item.img}" alt="">
+          <div style="width:80%;">
+            <div style="width:100%;">
+              <div style="display:flex; justify-content:space-between; align-items:center">
+                <h6 style="width:60%;">${item.name}</h6>
+                <div style="width:20%; display:flex; align-items:center ; justify-content:space-between;gap:15px;">
+                  <a style="width:35%;" href=""><img style="width:20px;" src="assets/frontend/img/Pencil.svg"></a>
+                  <a class="remove-btn"  data-index="${index}" style="width:50%;"><img  src="assets/frontend/img/delete.svg"></a>
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:start;">
+              <img src="assets/frontend/img/MapPin.svg" alt="">
+              <address style="font-style: normal;">${item.route}</address>
+            </div>
+          </div>
+        </div>
+        <div class="details">
+          <div class="box-border">
+            <div class="form-row-detail">
+              <div class="detail">
+                <img src="assets/frontend/img/CalendarDots.svg" alt="">
+                <div>
+                  <span>Pick Up at</span>
+                  <p>${item.checkIn}</p>
+                </div>
+              </div>
+              <div class="detail">
+                <img src="assets/frontend/img/CalendarDots.svg" alt="">
+                <div>
+                  <span>Drop off at</span>
+                  <p>${item.checkOut}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-border">
+            <div class="form-row-detail">
+              <div class="detail">
+                <img src="assets/frontend/img/users.svg" width="15%" alt="">
+                <div>
+                  <span>Pilgrims</span>
+                  <p>${item.pilgrims}</p>
+                </div>
+              </div>
+              <div class="detail">
+                <img src="assets/frontend/img/baggages.svg"  width="15%" alt="">
+                <div>
+                  <span>Storage</span>
+                  <p>${item.storage}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="width:100%; margin:0px;">
+          <div style="display:flex; justify-content:space-between; width:100%; align-item:center;">
+            <div>
+              <p>Quantity &nbsp; ${item.quantity}</p>
+            </div>
+            <div>
+              <p>PKR &nbsp; <strong style="font-size:18px;">${item.price}</strong></p>
+              
+            </div>
+
+          </div>
+        </div>`;
+    }
+
+    if (item.type === "package") {
+      html = `
+        <div class="package">
+          <img width="30%" src="${item.image}" alt="">
+          <div>
+            <h6>${item.name}</h6>
+            <p><strong>Duration:</strong> ${item.duration}</p>
+            <p><strong>Includes:</strong> ${item.services.join(", ")}</p>
+            <p><strong>Price:</strong> ${item.price}</p>
+          </div>
+        </div>`;
+    }
+    container.innerHTML += `<div class="" style="padding-bottom:20px;">${html}</div>`;
+  });
+  document.querySelectorAll(".remove-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      let index = btn.getAttribute("data-index");
+      removeFromCart(index);
+    });
+  });
+}
+
+renderCart();
+function removeFromCart(index) {
+  let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+  cart.splice(index, 1); // remove one item
+  localStorage.setItem("cartItems", JSON.stringify(cart));
+  renderCart(); // refresh UI
+}
+
+
 
 

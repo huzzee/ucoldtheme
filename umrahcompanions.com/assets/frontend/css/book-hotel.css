@@ -181,6 +181,27 @@
 
 
 }
+.form-top-detail .input-field.fielDvTransport {
+  flex: 1 0 auto;
+  height: 59px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background-color: #EFF3F9;
+  margin-right: 10px; /* spacing */
+}
+
+/* Wide input */
+.form-top-detail .input-field.fielDvTransport.wide {
+  flex: 2;      /* take more space */
+  max-width: 40%;
+}
+
+/* Narrow input */
+.form-top-detail .input-field.fielDvTransport.narrow {
+  flex: 1;      /* smaller */
+  max-width: 15%;
+}
+
 .form-top-detail .input-field {
   flex: 1 0 0;
   max-width: 17%;
@@ -286,13 +307,19 @@
 .counter-btn:hover {
   background-color: #cbd5e1;
 }
-
 .counter-value {
   font-size: 14px;
   font-weight: bold;
   color: #1e3a6d;
   min-width: 92px;
   text-align: center;
+}
+#quantity.counter-value{
+    min-width: 42px;
+
+}
+.quantity .book-btn{
+  width: 50%;
 }
 .noUi-horizontal {
     height: 7px !important;
@@ -1055,7 +1082,7 @@ padding: 12px;
 }
 .grid-view .hotel-card{
    width: 379px;
-  height: 385;
+  min-height: 440px;
   opacity: 1;
   border-radius: 13px;
   border-width: 1px;
@@ -1064,9 +1091,72 @@ padding: 12px;
   border: 1px solid var(--lighter-stroke, #EBEBEB);
   box-shadow: 0px 4px 25px 0px #0000000A;
 }
+.grid-view .hotel-card .transports .hotel-info {
+  bottom: 5px;
+  padding-top: 10px;
+
+}
+.grid-view .transports{
+display: flex;
+z-index: 1;
+padding: 20px 5px;
+flex-direction: column;
+align-items: flex-start;
+gap: 25px;
+align-self: stretch;
+border-radius: 20px;
+position: relative;
+bottom: 10px;
+border: 1px solid #E8E8E8;
+background: #FFF;
+box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.03);
+}
+.list-view .transports{
+  border-radius: 20px;
+border: none;
+
+background: transparent;
+box-shadow: none;
+}
 .list-view .inclusion{
   display: none;
 }
+.list-view .quantity{
+  display:none;
+}
+.grid-view .quantity{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:5px;
+  border-radius:10px;
+  border: 1px solid var(--lighter-stroke, #EBEBEB);
+
+}
+.list-view .features{
+  font-size:11px;
+}
+
+.list-view .grid-view-price{
+display: none;
+}
+
+.grid-view .grid-view-price, .grid-view .grid-view-price p{
+  display: block !important;
+
+
+}
+.grid-view-price p{
+font-weight: 400;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 2%;
+text-align: justify;
+vertical-align: middle;
+color: var(--blue-color);
+  
+}
+
 .grid-view .inclusion{
   display: block !important;
   text-align: left;
@@ -1075,6 +1165,11 @@ padding: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 100%; /* 12px */
+}
+.transport-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 .grid-view hr{
     border-bottom: 1px dashed rgba(49, 49, 49, 0.60);
@@ -1222,7 +1317,7 @@ border-radius: 12px;
 
 
 }
-.price .book-btn{
+.price .book-btn, .quantity .book-btn{
     background: var(--blue-color);
 opacity: 1;
 gap: 10px;

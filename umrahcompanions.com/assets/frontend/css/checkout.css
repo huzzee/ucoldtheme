@@ -167,6 +167,9 @@ text-transform: capitalize;
     }
 
 }
+.btn-primary{
+    background-color: #1E3A6D !important;
+}
 .form-row-detail{
     display: flex;
     justify-content: space-between;
@@ -291,6 +294,25 @@ width:100%;
 gap: 10px;
 background: #1E3A6D;
 color: white;
+}
+ .primary-btn{
+opacity: 1;
+border-radius: 10px;
+padding-top: 0px;
+padding-bottom: 0px;
+height: 52px;
+width:100%;
+gap: 10px;
+background: #1E3A6D;
+color: white;
+}
+h6{
+    margin:0px;
+}
+.contact-card {
+    .primary-btn {
+        width:12%;
+    }
 }
 .card-paymented{
     display: flex;

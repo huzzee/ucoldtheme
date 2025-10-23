@@ -41,6 +41,12 @@ const hotels = [
   {
     name:'Pullman Zamzam Hotel',
     img:'assets/frontend/img/hotel1.png',
+    checkin:'Jul 25, 2024',
+    room_type:'double',
+    checkout:'Jul 25, 2024',
+    checkin:'Jul 25, 2024',
+    type:'hotel',
+    address:'1st Ring Road, Between, King Faisal Street, Madinah Saudi Arabia',
     city:'Madinah',
     distance:1.4,
     nights:7,
@@ -50,6 +56,11 @@ const hotels = [
   },
   {
     name:'Madinah Hilton',
+    type:'hotel',
+    address:'1st Ring Road, Between, King Faisal Street, Madinah Saudi Arabia',
+    room_type:'double',
+    checkin:'Jul 25, 2024',
+    checkout:'Jul 25, 2024',
     img:'assets/frontend/img/hotel2.png',
     city:'Madinah',
     distance:1.4,
@@ -60,6 +71,11 @@ const hotels = [
   },
   {
     name:'Al Madinah Concord',
+    type:'hotel',
+    address:'1st Ring Road, Between, King Faisal Street, Madinah Saudi Arabia',
+    room_type:'double',
+    checkin:'Jul 25, 2024',
+    checkout:'Jul 25, 2024',
     img:'assets/frontend/img/hotel3.png',
     city:'Madinah',
     distance:1.4,
@@ -118,9 +134,16 @@ function renderHotels() {
 
 // Initial render
 renderHotels();
+function getCartItems() {
+  const data = localStorage.getItem("cartItems");
+  return data ? JSON.parse(data) : [];
+}
 
 function openHotelDetails(hotel) {
   console.log("Selected Hotel:", hotel.name);
+   let cart = getCartItems();  // get existing
+  cart.push(hotel);            // add new
+  localStorage.setItem("cartItems", JSON.stringify(cart)); 
   const hotelParam = encodeURIComponent(hotel.name);
   window.location.href = `hoteldetails.html?hotel=${hotelParam}&destination=checkout`; 
 }
@@ -183,6 +206,7 @@ document.addEventListener('click', function(event) {
     sidebar.classList.remove('open');
   }
 });
+
 
 
 
