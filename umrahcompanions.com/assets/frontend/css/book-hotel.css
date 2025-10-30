@@ -1080,7 +1080,21 @@ padding: 12px;
     margin: 0px;
   }
 }
-.grid-view .hotel-card{
+.package-card {
+background: transparent;
+justify-content: space-between;
+opacity: 1;
+border-radius: 12px;
+padding: 12px;
+ margin: 17px 0px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  p, h4{
+    margin: 0px;
+  }
+}
+.grid-view .hotel-card, .grid-view .package-card{
    width: 379px;
   min-height: 440px;
   opacity: 1;
@@ -1287,7 +1301,7 @@ font-weight: 600;
 margin: 0px;
 line-height: 16px; /* 106.667% */
 }
-.active{
+.grid-btn .active{
 background-color: #EFF3F9;
 color: var(--blue-color) !important;
 opacity: 1;
@@ -1648,6 +1662,7 @@ div#test2 {
     gap: 20px;
     width: 80%;
 }
+
 .grid-view .features-div {
     gap: 1px;
 }
