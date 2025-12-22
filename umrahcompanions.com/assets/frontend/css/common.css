@@ -1680,22 +1680,23 @@ input[type="text"]:not(.browser-default),
 .formFooter {
   display: flex;
   height: 45px;
+  align-items: center;
   border-radius: 30px;
   gap: 10px;
 }
 .formFooter .input-field {
-  background: var(--white-color);
-  flex: 0 0 65%;
-  max-width: 65%;
-  margin: 0;
-opacity: 1;
-padding-top: 5px;
-padding-right: 10px;
-padding-bottom: 5px;
-padding-left: 10px;
-gap: 10px;
-border-radius: 12px;
-
+    background: var(--white-color);
+    flex: 0 0 65%;
+    max-width: 65%;
+    margin: 0;
+    opacity: 1;
+    height: 40px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    gap: 10px;
+    border-radius: 12px;
 }
 .input-field{
   margin: 5px 0px !important;
