@@ -1752,6 +1752,17 @@ input[type="text"]:not(.browser-default),
 .socialIcon ul li:first-child {
   margin-left: 0;
 }
+.location_card{
+font-family: 'Inter';
+width: 424;
+height: 183;
+border-radius: 20px;
+padding: 20px;
+gap: 25px;
+angle: 0 deg;
+opacity: 1;
+background: #1B3C6B;
+}
 .socialIcon ul li i {
   font-size: 20px;
   transition: all 0.3s;

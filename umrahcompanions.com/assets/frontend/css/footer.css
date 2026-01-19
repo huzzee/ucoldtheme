@@ -50,8 +50,8 @@
 }
 
 .wrapFooter.col-lft.footer_Heading {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 65%;
+  max-width: 65%;
   padding-left: 20px;
   padding-right: 30px;
   color: white;
