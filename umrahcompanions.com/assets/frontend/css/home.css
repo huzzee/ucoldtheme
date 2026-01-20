@@ -4912,6 +4912,12 @@ a.registerButton:hover {
     gap: 5px;
     row-gap: 10px;
 }
+.advantages{
+  display: none;
+}
+.custom-card p{
+font-size: 10px;
+}
 .daterangepicker .drp-buttons .btn {
     margin-left: 8px;
     font-size: 12px;

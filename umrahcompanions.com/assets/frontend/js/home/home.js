@@ -7,46 +7,24 @@
     { src: "assets/frontend/img/aryLogo.svg", alt: "umrah packages" },
     { src: "assets/frontend/img/wosolLogo.svg", alt: "umrah packages" },
     { src: "assets/frontend/img/STALogo.svg", alt: "umrah packages" },
-    // { src: "approot/storage/app/public/images/frontend/maqam_logo.svg", alt: "umrah packages" },
-    // { src: "approot/storage/app/public/images/frontend/nusuk_logo.svg", alt: "umrah" },
-    // { src: "approot/storage/app/public/images/frontend/saudi_logo.svg", alt: "umrah" },
-    // { src: "approot/storage/app/public/images/frontend/ary_logo.svg", alt: "umrah package" },
-    // { src: "approot/storage/app/public/images/frontend/zindigi_logo.svg", alt: "family umrah packages 2022", extraClass: "zindagi" }
   ];
 
-  // Insert dynamically into carousel
-  const partnersContainer = document.getElementById("partners");
-
-  partnerLogos.forEach(logo => {
-    const div = document.createElement("div");
-    div.classList.add("item");
-
-    const img = document.createElement("img");
-    img.classList.add("partnerslogos");
-    if (logo.extraClass) img.classList.add(logo.extraClass);
-    img.src = logo.src;
-    img.alt = logo.alt;
-
-    div.appendChild(img);
-    partnersContainer.appendChild(div);
-  });
-
-  // Reinitialize owl-carousel after adding items
-  $(document).ready(function () {
-    $("#partners").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      autoPlay: false,          
-      autoPlayTimeout: 1000,   
-      autoPlayHoverPause: true, // optional, pause on hover
-      responsive: {
-        0: { items: 2 },
-        600: { items: 8 },
-        1000: { items: 8 }
-      }
-    });
-
+  // Initialize carousel on DOM ready
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('logoCarousel');
+    
+    if (carousel) {
+      // Add logos twice for seamless infinite loop
+      const duplicatedLogos = [...partnerLogos, ...partnerLogos];
+      
+      duplicatedLogos.forEach(logo => {
+        const img = document.createElement('img');
+        img.src = logo.src;
+        img.alt = logo.alt;
+        img.className = 'partnerslogos';
+        carousel.appendChild(img);
+      });
+    }
   });
 
    // Array of packages

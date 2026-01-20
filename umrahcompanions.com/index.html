@@ -253,6 +253,70 @@
          padding: 50px 0;
       }
 
+      .affiliate-sec5 .container {
+         width: 100%;
+      }
+
+      .partners-title {
+         margin-bottom: 30px;
+         font-size: 24px;
+         font-weight: 600;
+      }
+
+      .logo-carousel-wrapper {
+         overflow: hidden;
+         position: relative;
+         width: 100%;
+      }
+
+      .logo-carousel {
+         display: flex;
+         align-items: center;
+         gap: 40px;
+         animation: scroll 70s linear infinite;
+         width: max-content;
+      }
+
+      .logo-carousel img {
+         /* border: 2px solid #e0e0e0;
+         border-radius: 11px; */
+         padding: 10px;
+         height: 60px;
+         width: auto;
+         object-fit: contain;
+         flex-shrink: 0;
+         opacity: 0.8;
+         transition: opacity 0.3s ease;
+      }
+
+      .logo-carousel img:hover {
+         opacity: 1;
+      }
+
+      @keyframes scroll {
+         0% {
+            transform: translateX(0);
+         }
+         100% {
+            transform: translateX(-50%);
+         }
+      }
+
+      @media (max-width:600px){
+         .partners-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+         }
+
+         .logo-carousel {
+            gap: 15px;
+            animation: scroll 20s linear infinite;
+         }
+
+         .logo-carousel img {
+            height: 45px;
+         }
+      }
 
       .affiliate-sec5 .logo-ul-affiliate ul {
          display: flex;
@@ -566,9 +630,16 @@
          </section>
          <!-- Banner -->
          <section class="affiliate-sec5" >
-            <div class="row">
-               <div class="col s12">
-                  <div class="owl-carousel owl-theme" id="partners"></div>
+            <div class="container">
+               <div class="row">
+                  <div class="row ">
+                     <h4 class="partners-title col s2" style="text-align: left;">Trusted by</h4>
+                     <div class="logo-carousel-wrapper col s10">
+                        <div class="logo-carousel" id="logoCarousel">
+                           <!-- Logos will be inserted here by JavaScript -->
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </section>
