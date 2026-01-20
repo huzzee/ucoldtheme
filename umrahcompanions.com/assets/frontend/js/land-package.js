@@ -17,20 +17,20 @@
             $(".routNameShow li#"+uid).addClass('activeRoute');
           });
 
-          var max_amount = $('#amount2').val();
-            $( "#slider-range" ).slider({
-               range: true,
-               min: 0,
-               max: max_amount,
-               values: [ 0, max_amount ],
-               slide: function( event, ui ) {
-                  $( "#amount" ).html( "<span>" + ui.values[ 0 ] + "</span>"  + "<span>" + ui.values[ 1 ] + "</span>" );
-                  $( "#amount1" ).val(ui.values[ 0 ]);
-                  $( "#amount2" ).val(ui.values[ 1 ]);
-               }
-            });
-            $( "#amount" ).html( "<span>" + $( "#slider-range" ).slider( "values", 0 ) + "</span>"  + "<span>" + $( "#slider-range" ).slider( "values", 1 ) )+"</span>";
-         });
+        //   var max_amount = $('#amount2').val();
+        //     $( "#slider-range" ).slider({
+        //        range: true,
+        //        min: 0,
+        //        max: max_amount,
+        //        values: [ 0, max_amount ],
+        //        slide: function( event, ui ) {
+        //           $( "#amount" ).html( "<span>" + ui.values[ 0 ] + "</span>"  + "<span>" + ui.values[ 1 ] + "</span>" );
+        //           $( "#amount1" ).val(ui.values[ 0 ]);
+        //           $( "#amount2" ).val(ui.values[ 1 ]);
+        //        }
+        //     });
+        //     $( "#amount" ).html( "<span>" + $( "#slider-range" ).slider( "values", 0 ) + "</span>"  + "<span>" + $( "#slider-range" ).slider( "values", 1 ) )+"</span>";
+          });
          
          
          $(".drop-down-btn").click(function(){

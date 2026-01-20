@@ -101,6 +101,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  />
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/common.css">
 <link type="text/css" rel="stylesheet" href="assets/frontend/css/footer.css">
+<link rel="stylesheet" href="assets/frontend/css/reserve-hotel.css">
 <style type="text/css">
       .iti__flag {background-image: url(approot/storage/app/public/images/frontend/flags.png) !important}
       .wrapper{
@@ -169,6 +170,15 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 <!-- DataTables Responsive CSS -->
 <link rel="stylesheet" type="text/css"
     href="../cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+    <!-- noUiSlider CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet" />
+
+<!-- noUiSlider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+<!-- wNumb (for formatting numbers) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+
 
 <style type="text/css">
     .form-top-detail form {
@@ -231,14 +241,16 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         padding: 20px;
         background-color: #ffffff;
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: none;
     }
 
     .umrah-data-table-section h5 {
         color: #333333;
         margin-bottom: 20px;
     }
-
+    table.dataTable.no-footer {
+     border-bottom: 1px solid #ccc !important;
+    }
     /* DataTables Custom Theme */
     .dataTables_wrapper .dataTables_filter input {
         border: 1px solid #ccc;
@@ -271,7 +283,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
 
     table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
     table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
-        background-color: #24b3ba;
+        background-color: #143159;
         /* Secondary color 2 for expand icon */
     }
 
@@ -280,18 +292,66 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         background-color: #143159;
         /* Primary color for collapse icon */
     }
+    .dataTables_length{
+      display: none;
+    }
 
     table.dataTable thead th,
     table.dataTable tbody td {
-        color: #333333;
+        color: #737373 !important;
         /* Default text color for table */
     }
-
-    table.dataTable thead th {
-        background-color: #f8f8f8;
-        /* Light header background */
-        border-bottom: 1px solid #ddd;
+    table.dataTable thead th:first-child{
+      border-top-left-radius:10px;
     }
+    table.dataTable thead th:last-child{
+      border-top-right-radius: 10px;
+    }
+    table .btn{
+      background-color: #15325a;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #15325a !important;
+    /* border: 1px solid #979797; */
+    border: none;
+    padding: 0px !important;
+    background-color: #ccc !important;
+    background: linear-gradient(to bottom, #dce9fcc4 0%, #eff3f9b4 100%);
+}
+      .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+          color: #15325a8e;
+          font-size: 12px;
+      }
+
+    table.dataTable thead th, table.dataTable tfoot th {
+          color: #15325abe !important;
+          font-weight: 500;
+  }
+  table.dataTable thead th {
+    background-color: #EFF3F9 !important;
+    border-bottom: 1px solid #ddd !important;
+}
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #eff3f97a;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #eff3f9be;
+}
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+    background-color: #e7effa;
+}
+.datatable-scroll {
+  width: 100%;
+  overflow-x: auto;           /* horizontal swipe */
+  overflow-y: auto;           /* vertical scroll if tall */
+  -webkit-overflow-scrolling: touch;
+  max-height: 420px;          /* adjust as you like */
+}
+
+
+/* table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1:hover {
+    background-color: #e7effa;
+} */
 </style>
 <!-- Section Style -->   <!-- Style -->
 
@@ -330,27 +390,9 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
    <!-- Popbox Css -->
 </head>
 <body class="bodyHome">
-
-  
-
    <!-- page loader start -->
-      <div class="main-loader">
-          <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue-only">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-      </div>
+         <div id="loader-container"></div>
    <!-- page loader end -->
-
    <div class="popup-wrapper">
     <div class="popup-box">
       <h2>SIGN UP & GET 10% OFF</h2>
@@ -366,354 +408,162 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
    </div>
    
    <div data-scroll-container>
-                  
       <!-- Header -->
-         <!-- Top Header -->
-<div class="topbar">
-    <div class="container">
-        <div class="topbar-Text">
-            <span class="sp1">Select Pre Designed Umrah Package or Customize it for personalized Spiritual
-                Experience
-        </div>
-        <div class="unitTop">
-            <div class="pricD">
-                <select class="browser-default changecurrency">
-                                                                                 <option value="SAR">SAR</option>
-                                                                                    <option value="USD">USD</option>
-                                                                                    <option value="GBP">GBP</option>
-                                                                                    <option value="CAD">CAD</option>
-                                                                                    <option value="PKR" selected style="background-color: #ccc;">PKR</option>
-                                                       </select>
-                <form id="currency-form" action="https://umrahcompanions.com/currencychange" method="POST" style="display: none;">
-                   <input type="hidden" name="_token" value="Qwau1qQfgjGfw5iXxsh8S2jo0m5otwdzBDePbBtb">
-                </form>
-            </div>
-            
-        </div>
-    </div>
-</div><!-- Top Header -->
-<!-- nav bar -->
-<div class="forScrolltopbar innerHeader sticky">
-   <div class="h-w2">
-      <div class="container-n">
-         <div class="linkWrapper">
-            <div class="linkB" style="z-index: 9999;">
-               <a href="index.html"><img src="approot/storage/app/public/images/frontend/new_UC_Logo.svg"></a>
-            </div>
-                        <nav>
-               <div class="nav-wrapper">
-                  <a href="javascript:void(0)" class="sidenav-trigger" data-target="mobile-nav">
-                     <i class="material-icons">menu</i></a>
-                  <ul class="hide-on-med-and-down center">
-                     <li class="menu-item-has-child">
-                        <a href="packages.html" class="">Packages<i
-                              class="fas fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                           <li><a href="packages4cc0.html?type=flight_package">Flight Packages</a></li>
-                           <li><a href="packagesbc9d.html?type=land_package">Land Packages</a></li>
-                           <li><a href="packages4b15.html?type=umrah_plus">Umrah Plus</a></li>
-                           
-                           
-                           
-                        </ul>
-                     </li>
-                     <li><a href="visaprices.html">Umrah Visa</a></li>
-                     
-                           
-                           
-                           
-                           
-                           
-                           
-                     <li class="menu-item-has-child">
-                        <a href="experiences.html">Experiences</a>
-                     </li>
-                     <li class="menu-item-has-child">
-                        <a
-                           href="reservehotel_table1f95.html?city=56772&amp;dates=2025-07-31+-+2025-08-01&amp;total_travellers=2&amp;total_rooms=1&amp;rooms%5Badults%5D%5B%5D=2&amp;rooms%5Bchilds%5D%5B%5D=0&amp;rooms%5Broom%5D%5B%5D=1">Hotels</a>
-                     </li>
-
-                     <li><a href="inquiry.html">Inquire Now</a></li>
-                     <li class="menu-item-has-child">
-                        <a class="dropdown-trigger" data-target="dropdown1" href="javascript:void(0)">Support<i
-                              class="fas fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                           <li><a href="contact-us.html">Contact</a></li>
-                           <li><a href="faqs.html">FAQ's</a></li>
-                           <li><a href="affiliate.html">Affiliate Page</a></li>
-                           
-                           <li><a href="blog.html">Blog</a></li>
-                           <li><a href="who_we_are.html">Who We Are</a></li>
-                        </ul>
-                     </li>
-                     
-                     
-                  </ul>
-               </div>
-            </nav>
-            
-
-                        <div class="login-btn-div">
-               <div class="linkA linkA3 ">
-                  <a class="loginBtn modal-trigger" data-target="modalLogin">Login</a>
-               </div>
-               <div class="linkC linkA2">
-                  <div class="lnkIn">
-                     <a href="javascript:void(0)" class="registerBtn modal-trigger"
-                        data-target="modalRegister">Register</a>
-                  </div>
-               </div>
-            </div>
-            
-                        <!-- linkC -->
-         </div>
-      </div>
-   </div>
-   <!-- h-w2 -->
-   <ul class="sidenav" id="mobile-nav">
-
-      <li class="menu-item-has-child">
-         <a href="index.html" class="active"><i class="fa fa-home"></i></a>
-      </li>
-
-      <li class="menu-item-has-child">
-         <a href="packages.html" class="">Packages</a>
-         <i class="fas fa-angle-down droptrigger" id=""></i>
-         <ul class=" dropcontent">
-            <li><a href="packages4cc0.html?type=flight_package">Packages with Flights</a></li>
-            <li><a href="packagesbc9d.html?type=land_package">Land Packages</a></li>
-            <li><a href="packages4b15.html?type=umrah_plus">Umrah Plus</a></li>
-            
-         </ul>
-      </li>
-
-      <li><a href="visaprices.html">Umrah Visa</a></li>
-
-      <li><a href="reservetransport.html">Transport</a></li>
-
-      <li class="menu-item-has-child"><a href="experiences.html">Experiences</a></li>
-
-
-
-      <li><a
-            href="reservehotel_table1f95.html?city=56772&amp;dates=2025-07-31+-+2025-08-01&amp;total_travellers=2&amp;total_rooms=1&amp;rooms%5Badults%5D%5B%5D=2&amp;rooms%5Bchilds%5D%5B%5D=0&amp;rooms%5Broom%5D%5B%5D=1">Hotels</a>
-      </li>
-
-
-
-      <li><a href="inquiry.html">Inquire Now</a></li>
-
-      <li class="menu-item-has-child">
-         <a href="javascript:void(0)">Support</a>
-         <i class="fas fa-angle-down droptrigger" id=""></i>
-         <ul class=" dropcontent">
-            <li><a href="contact-us.html">Contact</a></li>
-            <li><a href="faqs.html">FAQ's</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="who_we_are.html">Who We Are</a></li>
-         </ul>
-      </li>
-
-      <li class="menu-item-has-child">
-         <a href='javascript:void(0);' data-target='modalLogin' class="active modal-trigger">Login</a>
-      </li>
-      <li class="menu-item-has-child">
-         <a href="javascript:void(0);" data-target='modalRegister' class="modal-trigger active">Register</a>
-      </li>
-
-      
-   </ul>
-</div>      <!-- Header -->
+      <div id="header"></div>
+      <!-- Header -->
 
       <!-- Section Content -->
           
         <!-- Filter -->
         <section class="first-section">
             <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <h2 class="main-heading"><i class="material-icons">hotel</i>Book Hotels </h2>
-                        <div class="update-search">
-                            <div class="form-top-detail">
-                                <form>
-                                    <div class="input-field fielDv">
-                                        <label>Location</label>
-                                        <ul class="radioUl">
-                                            <li>
-                                                <label>
-                                                    <input name="city" value="56772" type="radio"
-                                                         checked
-                                                        >
-                                                    <span><em>Makkah</em></span>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label>
-                                                    <input name="city" value="56773" type="radio"
-                                                        >
-                                                    <span><em>Madinah</em></span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="input-field fielDv">
-                                        <label>Check-in Check-out</label>
-                                        <input type="text" id="daterange" name="dates" value="2025-07-31 - 2025-08-01">
-                                    </div>
-
-                                    <div class="input-field fielDv">
-                                        <label>Distance</label>
-                                                                                <select name="distance" class="filter-distance">
-                                            <option value="" selected>All</option>
-                                                                                                                                    <option value="1,200" >1 Metre - 200 Metres</option>
-                                                                                        <option value="200,500" >200 Metres - 500 Metres</option>
-                                                                                        <option value="500,800" >500 Metres - 800 Metres</option>
-                                                                                        <option value="800,1200" >800 Metres - 1200 Metres</option>
-                                                                                        <option value="1200,13000" >Below 1200 Metres</option>
-                                                                                                                                </select>
-                                    </div>
-
-                                    <div class="input-field fielDv">
-                                        <label>Star</label>
-                                                                                <select name="star" class="filter-star">
-                                            <option value="" selected>All</option>
-                                                                                                                                    <option value="1" >1 Star</option>
-                                                                                        <option value="2" >2 Stars</option>
-                                                                                        <option value="3" >3 Stars</option>
-                                                                                        <option value="4" >4 Stars</option>
-                                                                                        <option value="5" >5 Stars</option>
-                                                                                                                                </select>
-                                    </div>
-
-                                    <div class="input-field fielDv">
-                                        <label>Pilgrims | Rooms</label>
-                                        <div class="inputForm prsnF">
-                                            <div class="numberPersons">
-                                                <h4 class="quanBtn">
-                                                    <strong class="numberQ">
-                                                        <em><b class="adNos">2 </b>Adult</em>
-                                                        <small>-</small>
-                                                        <em><b class="newNos">0 </b>Child</em>
-                                                    </strong>
-                                                    <small>-</small>
-                                                    <em><b class="chdNos">1 </b>Room</em>
-                                                </h4>
-                                                <input type="hidden" name="total_travellers"
-                                                    value="2">
-                                                <input type="hidden" name="total_rooms"
-                                                    value="1">
-                                                <div class="person-boxdate" style="display: none;">
-                                                    <div class="inputBox">
-                                                        <div class="MainAppend">
-
-                                                             <div
-                                                                class="MainInputs">
-                                                                <div class="inputStp inputStp1">
-                                                                    <div class="i-left">Adult/Room</div>
-                                                                    <div class="i-right">
-                                                                        <button type="button" class="travellersMinusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-minus"></i></button>
-                                                                        <span id="travellersNumber-0">2</span>
-                                                                        <input type="hidden" name="rooms[adults][]"
-                                                                            value="2"
-                                                                            min="0" class="AdultInput"
-                                                                            id="AdultInput-0">
-                                                                        <button type="button" class="travellersPlusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-plus"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="inputStp">
-                                                                    <div class="i-left">
-                                                                        Child
-                                                                    </div>
-                                                                    <div class="i-right">
-                                                                        <button type="button" class="childMinusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-minus"></i></button>
-                                                                        <span id="childNumber-0">0</span>
-                                                                        <input type="hidden" name="rooms[childs][]"
-                                                                            value="0"
-                                                                            min="0" class="ChildInput"
-                                                                            id="ChildInput-0">
-                                                                        <button type="button" class="childPlusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-plus"></i></button>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="inputStp">
-                                                                    <div class="i-left">
-                                                                        Room
-                                                                    </div>
-                                                                    <div class="i-right">
-                                                                        <button type="button" class="roomMinusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-minus"></i></button>
-                                                                        <span id="roomNumber-0"
-                                                                            class="roomNumber">1</span>
-                                                                        <input type="hidden" name="rooms[room][]"
-                                                                            class="RoomInput"
-                                                                            value="1"
-                                                                            min="0" id="RoomInput-0">
-                                                                        <button type="button" class="roomPlusBtn"
-                                                                            data-key="0"><i
-                                                                                class="fa fa-plus"></i></button>
-                                                                    </div>
-
-                                                                                                                                        <button type="button" class="addMoreRoom"><i
-                                                                            class="fas fa-plus"></i></button>
-                                                                    
-                                                                </div>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    <div class="frow">
-                                                        <div class="roomWrapers"></div>
-                                                        <a class="done-traveller">Done</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="srchbtn searchButton">
-                                <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- row end -->
-            <div class="row">
+              <div class="row">
                 <div class="col s12">
-                    <div class="top-List-deal">
-                        <div class="topText-deal">
-                            
+                  <h2 class="main-heading">Find The Best Hotels</h2>
+                  <div class="update-search">
+                    <div class="form-top-detail">
+                      <form>
+                        <div class="filter-btn-container">
+                          <!-- Button to open sidebar on mobile -->
+                          <a type="button" class="open-sidebar-btn">Filters <i class="fa fa-filter" aria-hidden="true"></i>
+                          </a>
                         </div>
-                        <div class="grid-btn">
-                            <div class="vertical-grid">
+                        
+                        <!-- Sidebar (hidden on desktop, visible on mobile) -->
+                        <div id="filterSidebar" class="sidebar">
+                          <button type="button" class="close-btn">&times;</button>
+                          <div class="sidebar-content">
+                              <div class="input-field fielDv">
+                              <label>Check-In</label>
+                              <input type="date" class="form-control" id="checkin" name="checkin" value="">
                             </div>
-                            <div class="horizontal-grid">
+                            <div class="input-field fielDv">
+                              <label>Check-Out</label>
+                              <input type="date" class="form-control" id="checkout" name="checkout" value="">
                             </div>
+
+                            <div class="input-field fielDv">
+                              <label>Room Type</label>
+                              <select name="room" class="filte-room">
+                                <option value="" selected>All</option>
+                                <option value="double">Double</option>
+                                <option value="triplet">Triple</option>
+                                <option value="quad">Quad</option>
+                              </select>
+                            </div>
+
+                            <div class="input-field fielDv">
+                              <label>Number of Guests</label>
+                              <div class="counter-controls">
+                                <button type="button" class="counter-btn minus">−</button>
+                                <input style="display:none;" class="counter-input" type="number" name="input-field3" id="counter3">
+                                <span id="infants" class="counter-value">00</span>
+                                <button type="button" class="counter-btn plus">+</button>
+                              </div>
+                            </div>
+
+                            <div class="input-field fielDv">
+                              <label>Price Range</label>
+                              <div id="mob-slider"></div>
+                              <div class="price-values">
+                              <!-- NEW -->
+                              <span class="price-min">SAR 0</span>
+                              <span class="price-max">SAR 0</span>
+
+                            </div>
+                            </div>
+
+                            <div class="srchbtn searchButton">
+                              <button class="btn waves-effect waves-light h-btn-done searchBtn">Search</button>
+                            </div>   
+                          </div>   
+                          
+                        </div>          
+                        <div id="desktop-filter" class="filter-desktop">
+                            <div class="input-field fielDv">
+                              <label>Check-In</label>
+                              <input type="date" class="form-control" id="checkin" name="checkin" value="">
+                          </div>
+                          <div class="input-field fielDv">
+                              <label>Check-Out</label>
+                              <input type="date" class="form-control" id="checkout" name="checkout" value="">
+                          </div>
+
+                          <div class="input-field fielDv">
+                              <label>Room Type</label>
+                              <select name="room" class="filte-room">
+                                <option value="" selected>All</option>
+                                <option value="double" >Double</option>
+                                <option value="triplet" >triple</option>
+                                <option value="quad" >Quad</option>
+                              </select>
+                          </div>
+
+                          <div class="input-field fielDv">
+                            <label>Number of Guests</label>
+                            <div class="counter-controls">
+                              <button type="button" class="counter-btn minus">−</button>
+                              <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                              <span id="infants" class="counter-value">00</span>
+                              <button type="button" class="counter-btn plus">+</button>
+                            </div>
+                          </div>
+
+                          <div class="input-field fielDv">
+                              <label>Price Range</label>
+                              <div id="desktop-slider"></div>
+                              <div class="price-values">
+                              <span class="price-min">SAR 0</span>
+                              <span class="price-max">SAR 0</span>
+
+                            </div>
+
+                          </div>
+                          <div class="srchbtn searchButton">
+                            <button class="btn waves-effect waves-light h-btn-done searchBtn">Filter</button>
+                          </div>  
                         </div>
-                        <!-- search form end -->
+                                                  
+                      </form>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <!-- row end -->
+              </div>
+              <!-- row end -->
+              <div class="row">
+                  <div class="col s12">
+                      <div class="top-List-deal">
+                          <div class="topText-deal">
+                              <h6 class="grid">Available Hotels</h6>
+                          </div>
+                          <div class="grid-btn">
+                              <div id="listView" class="vertical-grid active">
+                                <i class="fa fa-bars" aria-hidden="true"></i>  List
+                              </div>
+                              <div id="gridView" class="horizontal-grid">
+                                <i class="fa fa-th" aria-hidden="true"></i> Grid
+                              </div>
+                               <div id="tableView" class="tabel">
+                                <i class="fa fa-list" aria-hidden="true"></i> Table
+                              </div>
+                          </div>
+                          <!-- search form end -->
+                      </div>
+                  </div>
+              </div>
+              <!-- row end -->
             </div>
         </section>
         <!-- Filter -->
                 <!-- Hotel Listing -->
         <section class="second-sec">
             <div class="container umrah-data-table-section">
-                <div class="row">
-                    <div class="col s12">
+              <div id="hotelContainer" class="list-view"></div>
 
-                        <table id="umrah-data-table" class="display responsive nowrap" style="width:100%">
+              <div class="row tabel-view" id="hotelTableContainer" style="display:none;" >
+                    <div class="col s12">
+                      <div id="dt-wrap" class="datatable-scroll">
+                        <table id="umrah-data-table" class="display responsive nowrap" >
                             <thead>
                                 <tr>
                                     <th><i class="fas fa-list"></i></th>
@@ -925,121 +775,17 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
                                 </tr>
                                                                                                                             </tbody>
                         </table>
+                      </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Hotel Listing -->
               <!-- Section Content -->
-
+      <div id="contact-card"></div>
       <!-- Footer -->
-         <footer class="footer" data-scroll-section data-scroll-repeat>
-    <div class="container">
-        <div class="topFooter">
-            <div class="row">
-                <div class="col s12 m12 l2 logo_Column">
-                    <div class="linkB" style="z-index: 9999;">
-                        <a href="index.html"><img src="approot/storage/app/public/images/frontend/new_UC_Logo.svg"></a>
-                    </div>
-                </div>
-                <div class="col s12 m4 l3 links_Column">
-                    <div class="colfooter">
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>Quick links</h6>
-                            <ul>
-                                <li><a href="packages.html">Packages</a></li>
-                                <li><a href="reservetransport.html">Transport</a></li>
-                                <li><a href="visaprices.html">Umrah Visa</a></li>
-                                
-                                <li><a href="who_we_are.html">Who We Are</a></li>
-                                <li><a href="umrah_packages_pakistan.html">Umrah packages Pakistan 2025</a></li>
-                                <li><a href="umrah_packages_canada.html">Umrah packages Canada</a></li>
-                                <li><a href="umrah_packages_uk.html">Umrah packages UK</a></li>
-                                <li><a href="umrah_packages_uae.html">Umrah packages UAE</a></li>
-                            </ul>
-                        </div>
-                        <div class="wrapFooter col-lft footer_Heading">
-                            <h6>support</h6>
-                            <ul>
-                                <li><a href="contact-us.html">Contact</a></li>
-                                <li><a href="faqs.html">FAQ's</a></li>
-                                <li><a href="affiliate.html">Affiliate Page</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div id="footer"></div>
 
-                <div class="col s12 m5 l4 newsletter_Column footer_Heading">
-                    <div class="wrapFooter">
-                        <h6>Newsletters</h6>
-                        <form>
-                            <div class="formFooter">
-                                <div class="input-field">
-                                    <input id="email" type="email" class="validate" placeholder="Enter Your Email">
-                                </div>
-                                <button
-                                    class="btn waves-effect waves-light h-btn-done subBtn"><span>Subscribe</span></button>
-                            </div>
-                        </form>
-                        <p>Subscribe to our mailing list to get the latest insights and updates about Umrah</p>
-                    </div>
-                </div>
-            </div>
-            <!-- top-footer-end -->
-            <div class="middleFooter">
-                <div class="row">
-                    <div class="col s12 m5 l5 colD colD_Align">
-                        <div class="wrapFooter cardWrap">
-                            <div class="colD-Left pricingImages">
-                                <ul>
-                                    <li><img src="approot/storage/app/public/images/frontend/visa.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/master.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/american.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/paypal.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/stripe.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/hyper.webp"></li>
-                                    <li><img src="approot/storage/app/public/images/frontend/sadad.webp"></li>
-                                </ul>
-                            </div>
-
-                            <div class="wrapFooter socialIcon colD-Right column_Align">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/umrahcompanions/" target="_blank"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://instagram.com/umrahcompanion?utm_medium=copy_link"
-                                            target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://vm.tiktok.com/ZSewQQQtG/" target="_blank"><i
-                                                class="fab fa-tiktok"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/umrahcompanions" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- middle-footer-end -->
-            <div class="ftLink">
-                <div class="row">
-                    <div class="col s12 footer_links">
-                        <p class="center copy">Copyright 2025 © Umrah Companions and
-                            Powered by <a href="https://www.funadiq.com/">Funadiq.</a></p>
-                        <ul class="priv-links">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="terms_and_conditions.html">Terms and Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <div class="col s12">
-                    <p>Copyright 2024 © <a href="#">Funadiq.</a> All rights reserved</p>
-                </div> -->
-            </div>
-            <!-- copy link end -->
-        </div>
-    </div>
-</footer>
 
 </div>
 <!-- data-scroll-container close -->
@@ -1444,18 +1190,26 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       <!-- Footer -->
 
       <!-- Script -->
-         <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/countdown.js"></script>
 <script type="text/javascript" src="assets/frontend/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/frontend/js/select.js"></script>
 <script type="text/javascript" src="assets/frontend/js/javascript.js"></script>
 <script src="../cdn.jsdelivr.net/npm/jquery-validation%401.19.3/dist/jquery.validate.js"></script>
-<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js" integrity="sha512-XZEy8UQ9rngkxQVugAdOuBRDmJ5N4vCuNXCh8KlniZgDKTvf7zl75QBtaVG1lEhMFe2a2DuA22nZYY+qsI2/xA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"
+  integrity="sha512-0dX9qKecxZnNSr7zj7sDjjXOU1QYMa+Hg5Rvh3Il3nX1I0nLtG8YYGpIVgikcFZgFAG3DFkuRl5VqK/EvAGr9w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 <script src="assets/backoffice/vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
 <script src="assets/frontend/js/intlTelInput.js"></script>
+<script src="assets/frontend/js/main.js"></script>
+<script src="assets/frontend/js/common.js"></script>
+<script src="assets/frontend/js/reserve-hotel/reserve-hotel.js"></script>
 
 <!-- Section Content -->
-           <script type="text/javascript" src="../cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="../cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="../cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js">
         </script>
         <script type="text/javascript" src="../cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -1477,7 +1231,7 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
       var end_date = '2025-08-01';
 
       //date range picker 
-        $('input[name="dates"]').daterangepicker({
+        $('input[name="dates2"]').daterangepicker({
          startDate: moment(start_date,"YYYY-MM-DD"),
          endDate: moment(end_date,"YYYY-MM-DD"),
          locale: {
@@ -1486,19 +1240,19 @@ src="https://www.facebook.com/tr?id=1207197573555085&amp;ev=PageView&amp;noscrip
         });
       
         //single date range 
-        $('#singleDate').daterangepicker({
-              singleDatePicker: true,
-        });
+        // $('#singleDate').daterangepicker({
+        //       singleDatePicker: true,
+        // });
         </script>
 
         <script type="text/javascript">
             $('.tabs').tabs();
 
-      $(document).ready(function() {
-          $('.datepicker').datepicker();
+      // $(document).ready(function() {
+      //     $('.datepicker').datepicker();
 
-          TotalCounts();
-      });
+      //     TotalCounts();
+      // });
 
       /* Adult */
         $(document).on('click','.travellersPlusBtn',function(){

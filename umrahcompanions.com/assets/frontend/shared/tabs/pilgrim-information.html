@@ -1,0 +1,60 @@
+<!-- pilgrim tab -->
+<!-- <h1 class="page-title">Customize Your Umrah Journey</h1> -->
+
+<div class="box bg-white rounded-lg">
+    <h5 class="sub-heading" style="margin-top: 0px;">Who is traveling?</h5>
+
+    <div class="form_row  counter-row" style="flex-wrap: wrap; flex-direction: row;">
+
+        <div class="col l3 m6 s12" >
+             <select class="form-select browser-default active-state" name="nationality" id="nationality">
+                <option value="">Nationality</option>
+            </select>
+        </div>
+        <div class="col l3 m6 s3">
+            <div class=" counter-container" data-type="Adults">
+                <label class="counter-label">Adults</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field1" id="counter1">
+                <span id="adults"  class="counter-value">01</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="col l3 m6 s3">
+            <div class="counter-container" data-type="Child">
+                <label class="counter-label">Child</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field2" id="counter2">
+                <span id="child" class="counter-value">00</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="col l3 m6 s3">
+            <div class="counter-container" data-type="Infants">
+                <label class="counter-label">Infants</label>
+                <div class="counter-controls">
+                <button type="button" class="counter-btn minus">−</button>
+                <input style="display:none;" class="counter-input" type="number"  name="input-field3" id="counter3">
+                <span id="infants" class="counter-value">00</span>
+                <button type="button" class="counter-btn plus">+</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+<div class="box pilgrim">
+        <div style="display: flex; justify-content: space-between; gap: 20px; align-items: baseline;">
+        <h5 class="sub-heading" style="margin-top: 0px;">Choose Your Visa Type</h5>
+        <!-- <sub class="swipe">Swipe Left >></sub> -->
+        </div>
+        <div class="form-row form-row-package form-row-visa" id="visaCardsContainer"></div>
+
+
+</div>
